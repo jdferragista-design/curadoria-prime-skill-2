@@ -1,0 +1,31 @@
+data,sku_id,codigo,variante,loja,tipo,preco_pix,preco_12x_parcela,preco_12x_total,de,vendedor,url,artigo,obs
+2026-07-30,galaxy-tab-s10-fe,SM-X520,wifi-128,ml,anuncio,2711,,,4799,terceiro,https://meli.la/28p6zuJ,/tablets-para-volta-as-aulas-2026/,texto no ar (captura declarada 30/07)
+2026-07-30,galaxy-tab-s10-fe,SM-X520,wifi-128,amazon,anuncio,2759,,,,,https://link.amazon/A0csPB6WL,/tablets-para-volta-as-aulas-2026/,texto no ar (captura declarada 30/07)
+2026-08-02,galaxy-tab-s10-fe,SM-X520,wifi-128,amazon,anuncio,2789,,,,,https://link.amazon/B0cjrRXRH,/tablets-para-volta-as-aulas-2026-2/,artigo -2
+2026-08-02,galaxy-tab-s10-fe,SM-X520,wifi-128,ml,anuncio,2800,,,,,https://meli.la/28p6zuJ,/tablets-para-volta-as-aulas-2026-2/,artigo -2
+2026-08-12,galaxy-tab-s10-fe,SM-X520,wifi-128,ml,anuncio,2746.46,305.16,3051.62,4799,terceiro,https://meli.la/28p6zuJ,/tablets-para-volta-as-aulas-2026/,Pix 10x no ML
+2026-08-12,galaxy-tab-s10-fe,SM-X520,wifi-128,amazon,anuncio,3127.07,283.33,3398.97,4199,loja-samsung,https://link.amazon/A0csPB6WL,/tablets-para-volta-as-aulas-2026/,primeira captura 12/08
+2026-08-12,galaxy-tab-s10-fe,SM-X520,wifi-128,samsung,tabela-marca,4415.08,,,4799,samsung-shop,https://www.samsung.com/br/tablets/galaxy-tab-s/galaxy-tab-s10-fe-gray-128gb-sm-x520nzadzto/,/tablets-para-volta-as-aulas-2026/,
+2026-08-12,galaxy-tab-s10-fe,SM-X520,wifi-128,amazon,anuncio,3195.06,283.25,3399,4199,loja-samsung,https://link.amazon/A0csPB6WL,/tablets-para-volta-as-aulas-2026/,recaptura editor (print)
+2026-08-12,ipad-11-a16,A3354,wifi-128,amazon,anuncio,4199,419.9,4199,4499,loja-apple,https://link.amazon/B0dByh7yb,/tablets-para-volta-as-aulas-2026/,azul; primeira captura 12/08
+2026-08-12,ipad-11-a16,A3354,wifi-128,ml,anuncio,4199,,,4199,loja-oficial-apple,https://meli.la/1Brwp49,/tablets-para-volta-as-aulas-2026/,azul A3354
+2026-08-12,ipad-11-a16,,wifi-128,apple,tabela-marca,5999,,,,,https://www.apple.com/br/shop/buy-ipad/ipad,/tablets-para-volta-as-aulas-2026/,
+2026-08-12,ipad-11-a16,,wifi-128-prateado,ml,catalogo,2969,,,,,https://meli.la/1XtPg7J,/tablets-para-volta-as-aulas-2026/,NAO usar em tendencia; catalogo terceiros
+2026-08-12,ipad-11-a16,,wifi-128-rosa,amazon,anuncio,4159,346.62,4159,4499,loja-apple,https://link.amazon/B0dByh7yb,/tablets-para-volta-as-aulas-2026/,recaptura editor rosa
+2026-08-12,galaxy-tab-a11-plus,SM-X230,wifi-128-6gb,amazon,anuncio,1471.07,133.25,1599,1799,loja-samsung,https://link.amazon/B01NynqgX,/tablets-para-volta-as-aulas-2026/,
+2026-08-12,galaxy-tab-a11-plus,,5g-128-6gb,ml,anuncio,1640.98,172.74,1727.35,2349,terceiro,https://meli.la/2Y6zTi5,/tablets-para-volta-as-aulas-2026/,primeira captura 12/08 era 5G
+2026-08-12,galaxy-tab-a11-plus,,wifi-128-6gb,ml,anuncio,1519.05,159.9,1599,2149,terceiro,,/tablets-para-volta-as-aulas-2026/,recaptura editor; anuncio wifi; sem short link novo
+2026-08-12,apple-pencil-usbc,,usbc,amazon,anuncio,749,74.9,749,899,loja-apple,https://link.amazon/B02d25CMR,/tablets-para-volta-as-aulas-2026/,
+2026-08-12,apple-pencil-usbc,,usbc,ml,anuncio,839,,,,,https://meli.la/121Ge3J,/tablets-para-volta-as-aulas-2026/,
+2026-08-12,apple-pencil-usbc,,usbc,apple,tabela-marca,899,,,,,https://www.apple.com/br/apple-pencil/,/tablets-para-volta-as-aulas-2026/,
+2026-08-02,lenovo-idea-tab,ZAFR0856BR,wifi-8-128,amazon,anuncio,1804,,,,,https://link.amazon/B07Y1ZY5w,/tablets-para-volta-as-aulas-2026-2/,
+2026-08-02,lenovo-idea-tab,ZAFR0856BR,wifi-8-128,ml,anuncio,1965,,,,,https://meli.la/1Ht9auN,/tablets-para-volta-as-aulas-2026-2/,
+2026-08-12,lenovo-idea-tab,ZAFR0856BR,wifi-8-128,amazon,anuncio,1800.36,158.4,1899.81,,loja-lenovo,https://link.amazon/B07Y1ZY5w,/alternativas-galaxy-tab-s10-fe-ipad-estudar/,
+2026-08-12,lenovo-idea-tab,ZAFR0856BR,wifi-8-128,ml,anuncio,1985.78,198.58,1985.78,2299,terceiro,https://meli.la/1Ht9auN,/alternativas-galaxy-tab-s10-fe-ipad-estudar/,
+2026-08-02,xiaomi-pad-7,,8-256,amazon,anuncio,2175,181.25,2175,,,https://link.amazon/B0ayENpXk,/tablets-para-volta-as-aulas-2026-2/,
+2026-08-12,xiaomi-pad-7,,8-256,amazon,anuncio,2170,180.87,2170,,,https://link.amazon/B0ayENpXk,/alternativas-galaxy-tab-s10-fe-ipad-estudar/,
+2026-08-02,galaxy-tab-s9-fe-plus,SM-X610,wifi-8-128,amazon,anuncio,3199,266.62,3199,,internacional,https://link.amazon/B0bH6Azvc,/tablets-para-volta-as-aulas-2026-2/,
+2026-08-12,galaxy-tab-s9-fe-plus,SM-X610,wifi-8-128,amazon,anuncio,3099,258.25,3099,,internacional,https://link.amazon/B0bH6Azvc,/alternativas-galaxy-tab-s10-fe-ipad-estudar/,nao indicar
+2026-08-12,galaxy-tab-s9-fe-plus,SM-X610NZADZTO,wifi-8-128,samsung,tabela-marca,4999,,,4999,samsung-shop,https://shop.samsung.com/br/galaxy-tab-s9-fe-plus/p,/alternativas-galaxy-tab-s10-fe-ipad-estudar/,nacional; fora da indicacao
+2026-08-02,ipad-10,A2696,wifi-64,ml,anuncio,2999,,,,,https://meli.la/2vRbXek,/tablets-para-volta-as-aulas-2026-2/,
+2026-08-12,ipad-10,A2696,wifi-64,ml,anuncio,3199,,,,,https://meli.la/2vXeFcf,/alternativas-galaxy-tab-s10-fe-ipad-estudar/,fora da indicacao
