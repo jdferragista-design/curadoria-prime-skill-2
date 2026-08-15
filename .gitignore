@@ -1,0 +1,10 @@
+# Fotos de referência baixadas da web (não são entregáveis; só insumo para gerar imagens)
+image-search/
+
+# Caches e ambientes locais
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+.DS_Store
