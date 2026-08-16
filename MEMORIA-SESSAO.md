@@ -50,8 +50,9 @@
 | 5 | `samsung-u8600f-vs-lg-au801-vs-philips-50pug7019` | Samsung U8600F vs LG AU801 vs Philips | `articles/samsung-u8600f-vs-lg-au801-vs-philips-50pug7019.html` | ✅ reescrito + validado (16/08) |
 | 6 | `samsung-hw-b400f-vs-jbl-cinema-sb180-vs-lg-sqc1` | Samsung HW-B400F vs JBL SB180 vs LG SQC1 | `articles/samsung-hw-b400f-vs-jbl-cinema-sb180-vs-lg-sqc1.html` | ✅ reescrito + validado (16/08) |
 | 7 | `samsung-s90f-qd-oled-review` | Samsung S90F QD-OLED | `articles/samsung-s90f-qd-oled-review.html` | ✅ reescrito + validado (16/08) |
+| 8 | `philips-50pug7019-review` | Philips 50PUG7019 | `articles/philips-50pug7019-review.html` | ✅ reescrito + validado (16/08) |
 
-**Dossiês em `audit/`:** `estado-3181.md`, `estado-3809.md`, `estado-3336.md`, `estado-4397.md`, `estado-4541.md`, `estado-3153.md`, `estado-3226.md`, `estado-3139.md` + análises de layout `analise-3336-layout.md`, `analise-4397-layout.md`.
+**Dossiês em `audit/`:** `estado-3181.md`, `estado-3809.md`, `estado-3336.md`, `estado-4397.md`, `estado-4541.md`, `estado-3153.md`, `estado-3226.md`, `estado-3139.md`, `estado-3183.md` + análises de layout `analise-3336-layout.md`, `analise-4397-layout.md`.
 
 ### 3153 (Samsung U8600F vs LG AU801 vs Philips 50PUG7019) — detalhes
 - 9 links sponsored (3 topo + 3 tabela + 3 rodapé); shortlink Amazon da Samsung unificado em `4biQQdq` (o `4rhzNx7` descartado — confirmar com o cliente).
@@ -68,6 +69,14 @@
 - Spec Samsung corrigida: 40W RMS (não "20W consumo"). Link "Veja também" quebrado corrigido.
 - ⚠️ LG SQC1 (2024) estoque reduzido; sucessora LG S40T (~R$ 894) caso queira trocar depois.
 - Pendências: colar no WP; título "JBL SB180"→"JBL Cinema SB180"; conferir specs LG (BT 4.0 / sem ARC).
+
+### 3183 (Philips 50PUG7019) — detalhes
+- 8 links sponsored (3 Philips 7019 + Samsung + LG + 2 da sucessora 7300); Samsung unificada em `4biQQdq` (o publicado usava `461ctv6`, mesma U8600F).
+- "líder de vendas"/"mais inteligente"/"não trava" suavizados; "compradores verificados" → "avaliações publicadas por compradores"; box metodologia.
+- Preços 16/08: 7019 (2024) fim de linha volátil; sucessora 50PUG7300 como OPÇÃO (R$ 1.935 ML / R$ 2.199 Amazon).
+- 3 slugs "Veja também" quebrados corrigidos (comparativo 3153, `samsung-u8600f-review`, `lg-au801-50-review`); legenda triplicada do comparativo removida.
+- JSON-LD: TechArticle + Product (8,7/10) + FAQ + Breadcrumb. Autor canônico.
+- ⚠️ 50PUG7019 fim de linha: monitorar estoque (possível 301 futuro p/ 7300 ou consolidação no 3153).
 
 ### 3139 (Samsung S90F QD-OLED) — detalhes
 - 4 links sponsored (2 Samsung + 2 LG); botões LG "Comparar Preços" do publicado estavam SEM href (quebrados) — corrigidos.
@@ -163,7 +172,7 @@
 ## 7. Fila restante (do briefing do cliente)
 
 - **Urgência falsa:** ~~3336~~ ✓ · ~~4397~~ ✓ · ~~4541~~ ✓ (reposicionado, ver §11).
-- **Comparativos P0 (sem sponsored):** ~~3153~~ ✓ · ~~3226~~ ✓ · ~~3139~~ ✓ (16/08) · **3183** (próximo, `philips-50pug7019-review`, 6/6 sem sponsored + sem divulg.) · 3033 · 2888 · 2884.
+- **Comparativos P0 (sem sponsored):** ~~3153~~ ✓ · ~~3226~~ ✓ · ~~3139~~ ✓ · ~~3183~~ ✓ (16/08) · **3033** (próximo, `good-vision-kit-cameras-wifi-review`, 3/3 sem sponsored + sem divulg.) · 2888 · 2884.
 - **Lote de schema (29):** 4414, 4474, 4456, 4254, 4251, 4185, 4159, 4155, 3871, 3858, 3924, 3835, 3548, 3550, 3523, 3320, 3310, 3250, 3169, 3126, 2982, 3002, 2954, 2935, 2921, 2905 (3809 e 3336 já feitos).
 - **Alegações de teste (18 artigos):** piores 3523 (7), 3002 (6), 4541 (4).
 - **3014 e 4537:** reconstruídos pelo cliente, falta colar no WP.
