@@ -1,6 +1,6 @@
 # ESTADO — 3183 (Philips 50PUG7019 review)
 
-**Status:** ✅ REWRITE CONCLUÍDO e validado (aguardando colagem no WP pelo cliente)
+**Status:** ✅ PUBLICADO NO AR (conferido 16/08/2026)
 
 - URL: https://curadoriaprime.com/philips-50pug7019-review/
 - Título: Philips 50PUG7019 Vale a Pena em 2026? Review Google TV 4K

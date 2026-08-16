@@ -189,6 +189,18 @@
 
 ---
 
+## 7b. ⭐ STATUS DOS 5 POSTS REESCRITOS — PUBLICADOS (conferido no ar 16/08/2026)
+
+Todos os 5 posts desta sequência foram colados pelo cliente e conferidos no ar:
+
+| Post | Estado no ar |
+|---|---|
+| 3153 (TVs) | ✅ correto (botões OK; hero trocada pelo cliente p/ `comparativo-tvs-samsung-lg-philips-2026-2048x1143.webp`) |
+| 3226 (soundbars) | ✅ correto (imagens renomeadas `...-one-remote.webp` / `...-subwoofer-mdf.webp` / `...-sb180-subwoofer.webp` no ar) |
+| 3139 (S90F) | ⚠️ **VERSÃO ANTIGA no ar** — botão LG C5 ainda no shortlink quebrado `1rZFCkW`; rating "4,9/5·47" antigo. **Recolar o arquivo atual.** |
+| 3183 (Philips) | ✅ correto (nota 8,7/10, fim de linha avisado, opção 7300) |
+| 3033 (Good Vision) | ✅ correto (imagens locais lente dupla + visão noturna) |
+
 ## 8. Pendências transversais (painel WP, fora dos arquivos)
 
 1. **Nome de exibição do perfil WP** → "Cristiano Martins" (hoje "Cristiano").

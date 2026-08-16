@@ -1,6 +1,6 @@
 # ESTADO — 3033 (Good Vision Kit 2 Câmeras Wi-Fi review)
 
-**Status:** ✅ REWRITE CONCLUÍDO e validado (aguardando colagem no WP pelo cliente)
+**Status:** ✅ PUBLICADO NO AR (conferido 16/08/2026)
 
 - URL: https://curadoriaprime.com/good-vision-kit-cameras-wifi-review/
 - Título: Good Vision Kit 2 Câmeras Wi-Fi Vale a Pena em 2026? Review

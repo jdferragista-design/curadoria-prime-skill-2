@@ -1,6 +1,6 @@
 # ESTADO — 3226 (Samsung HW-B400F vs JBL Cinema SB180 vs LG SQC1)
 
-**Status:** ✅ REWRITE CONCLUÍDO e validado (aguardando colagem no WP pelo cliente)
+**Status:** ✅ PUBLICADO NO AR (conferido 16/08/2026)
 
 - URL: https://curadoriaprime.com/samsung-hw-b400f-vs-jbl-cinema-sb180-vs-lg-sqc1/
 - Título: Samsung HW-B400F vs JBL SB180 vs LG SQC1: Qual Soundbar Comprar?

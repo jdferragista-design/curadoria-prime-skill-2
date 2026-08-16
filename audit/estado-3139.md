@@ -1,6 +1,6 @@
 # ESTADO — 3139 (Samsung S90F QD-OLED review)
 
-**Status:** ✅ REWRITE CONCLUÍDO e validado (aguardando colagem no WP pelo cliente)
+**Status:** ⚠️ PUBLICADO COM VERSÃO ANTIGA — recolher o arquivo atual do repo
 
 - URL: https://curadoriaprime.com/samsung-s90f-qd-oled-review/
 - Título: Samsung S90F Vale a Pena em 2026? Review QD-OLED 4K 144Hz
@@ -43,6 +43,16 @@ Zero base64. Zero citação inventada.
 - **Atualizado no artigo (16/08):** os dois modelos estão **sem estoque na Amazon BR** — botões de compra apontam para o **Mercado Livre** (única loja com disponibilidade), com nota explícita de estoque. 4 links ML, todos sponsored. Zero botão Amazon.
 - Samsung Amazon BR: 4,8/5 em ~39 avaliações (dado mantido só como contexto, sem botão).
 - ⚠️ **Cliente deve gerar novo shortlink ML para a LG C5** (MLB53613524) — o atual `1rZFCkW` resolve para lista vazia.
+
+## ⚠️ CONFERIDO NO AR (16/08/2026) — problema detectado
+
+O artigo **publicado** está com uma **versão antiga** (a primeira reescrita), não a final. Sintomas no ar:
+
+- Botão "Comparar com LG C5" ainda aponta para o shortlink **`1rZFCkW` (quebrado — lista vazia)**;
+- Ainda mostra "Avaliação na loja: 4,9/5 · 47" (versão antiga; o correto é "Amazon BR: 4,8/5 · ~39");
+- Sem a nota de "sem estoque" na Amazon e sem os botões ML-only com link direto `/p/MLB53613524`.
+
+**Ação:** recolher o conteúdo de `articles/samsung-s90f-qd-oled-review.html` (versão atual do repo) substituindo o publicado.
 
 ## Pendências FORA do arquivo (painel / cliente)
 

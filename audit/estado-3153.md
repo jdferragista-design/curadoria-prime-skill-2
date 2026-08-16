@@ -1,6 +1,6 @@
 # ESTADO — 3153 (Samsung U8600F vs LG AU801 vs Philips 50PUG7019)
 
-**Status:** ✅ REWRITE CONCLUÍDO e validado (aguardando colagem no WP pelo cliente)
+**Status:** ✅ PUBLICADO NO AR (conferido 16/08/2026)
 
 - URL: https://curadoriaprime.com/samsung-u8600f-vs-lg-au801-vs-philips-50pug7019/
 - Título: Samsung U8600F vs LG AU801 vs Philips 50PUG7019: Qual TV 4K 50″ Comprar?
