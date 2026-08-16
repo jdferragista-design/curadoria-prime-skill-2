@@ -190,7 +190,6 @@
 ---
 
 ## 7b. ⭐ STATUS DOS 5 POSTS REESCRITOS — PUBLICADOS (conferido no ar 16/08/2026)
-
 Todos os 5 posts desta sequência foram colados pelo cliente e conferidos no ar:
 
 | Post | Estado no ar |
@@ -200,6 +199,23 @@ Todos os 5 posts desta sequência foram colados pelo cliente e conferidos no ar:
 | 3139 (S90F) | ⚠️ **VERSÃO ANTIGA no ar** — botão LG C5 ainda no shortlink quebrado `1rZFCkW`; rating "4,9/5·47" antigo. **Recolar o arquivo atual.** |
 | 3183 (Philips) | ✅ correto (nota 8,7/10, fim de linha avisado, opção 7300) |
 | 3033 (Good Vision) | ✅ correto (imagens locais lente dupla + visão noturna) |
+
+### 7c. ⭐ Ganchos de estoque para PAUTA FUTURA (adicionados 16/08/2026)
+
+Aviso "estoque baixo ou zerado" + motivo (sucessora chegando) + gancho "em breve:
+review dedicado" adicionados em:
+
+- **3139** (S90F): LG C5 com estoque baixo/zerado → gancho para **review LG C6 (2026)**.
+- **3183** (Philips 7019): 7019 baixo/zerado → gancho para **review Philips 50PUG7300**.
+- **3153** (comparativo TVs): idem, no bloco da 7300.
+
+**PAUTA FUTURA (novos posts a criar quando tiver links/estoque):**
+1. **LG C6 55″ (OLED55C6PSA)** — sucessora da C5; α11 Gen3, VRR 165Hz, webOS 26.
+   Amazon ASIN `B0H4HKXMFH` (sem oferta destacada ainda) · ML ainda sem listagem.
+2. **Philips 50PUG7300** — sucessora da 7019; Google TV + Dolby Atmos.
+   Shortlinks já com o cliente: Amazon `B09uCSSBI` + ML `27D4FgZ`.
+
+Quando esses posts saírem: trocar o texto "em breve…" pelos links internos reais.
 
 ## 8. Pendências transversais (painel WP, fora dos arquivos)
 

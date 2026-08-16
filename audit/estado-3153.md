@@ -48,6 +48,12 @@ Balanço: div 43/43 · ul 7/7 · p 68/68 · h2 11/11 · h4 4/4 · li 27/27. Zero
 - Avaliações Amazon (fev/2026, mantidas do publicado com data): Samsung 4,7/5 (~194) · LG 4,9/5 (~815) · Philips 4,8/5 (~9 mil).
 - Relatos ML coletados via API (MLB61517857 e MLB43158430) usados só como síntese editorial.
 
+## Aviso de estoque + gancho 50PUG7300 (adicionado 16/08/2026)
+
+Na opção "50PUG7300", o texto agora aponta estoque baixo/zerado da 7019 como
+prova de que a sucessora está tomando o lugar + gancho "Em breve: review
+dedicado da 50PUG7300". Trocar pelo link real quando o post sair.
+
 ## Pendências FORA do arquivo (painel / cliente)
 
 1. **Colar no WP** substituindo o conteúdo atual (Editor de Código).

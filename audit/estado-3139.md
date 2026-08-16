@@ -54,6 +54,13 @@ O artigo **publicado** está com uma **versão antiga** (a primeira reescrita), 
 
 **Ação:** recolher o conteúdo de `articles/samsung-s90f-qd-oled-review.html` (versão atual do repo) substituindo o publicado.
 
+## Aviso de estoque + gancho C6 (adicionado 16/08/2026)
+
+Adicionado aviso "estoque baixo ou zerado" nos dois CTAs (topo e rodapé),
+apontando o provável motivo: a chegada da sucessora **LG C6 (2026)**. O aviso
+termina com o gancho "Em breve: review dedicado da LG C6 aqui na Curadoria
+Prime" — quando o post da C6 for publicado, trocar o texto pelo link real.
+
 ## Pendências FORA do arquivo (painel / cliente)
 
 1. **Colar no WP** substituindo o conteúdo atual (Editor de Código).

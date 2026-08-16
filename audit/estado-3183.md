@@ -45,6 +45,13 @@ Balanço: div 30/30 · ul 3/3 · p 55/55 · h2 12/12 · li 12/12 · a 26/26. Zer
 
 - Avaliações Amazon (fev/2026, do publicado): Philips ~9 mil (4,8/5) · LG 815 (4,6/5) · Samsung 194 (4,7/5).
 
+## Aviso de estoque + gancho 50PUG7300 (adicionado 16/08/2026)
+
+Adicionado aviso "estoque baixo ou zerado" no CTA (motivo: sucessora
+50PUG7300 chegando) + linha "Em breve: review dedicado da Philips 50PUG7300"
+no bloco da sucessora. Quando o post da 7300 for publicado, trocar o texto
+pelo link real.
+
 ## Pendências FORA do arquivo (painel / cliente)
 
 1. **Colar no WP** substituindo o conteúdo atual (Editor de Código).
