@@ -1,7 +1,7 @@
 # 🧠 MEMÓRIA DA SESSÃO — Limpeza de Conformidade Curadoria Prime
 
 > Registro do que foi feito nesta sessão (branch `arena/01a0028f-curadoria-prime-skill-2`).
-> Atualizado em: **14/08/2026**. Serve para retomar o trabalho sem perder contexto.
+> Atualizado em: **16/08/2026**. Serve para retomar o trabalho sem perder contexto.
 
 ---
 
@@ -47,8 +47,18 @@
 | 2 | `samsung-galaxy-fit3-vale-a-pena` | Galaxy Fit3 | `articles/samsung-galaxy-fit3-vale-a-pena-artigo-completo.html` | ✅ validado |
 | 3 | `melhor-fone-bluetooth-ate-500-reais-2026` | Top 5 Fones até R$ 500 | `articles/melhor-fone-bluetooth-ate-500-reais-2026-artigo-completo.html` | ✅ validado |
 | 4 | `presentes-dia-dos-pais-tech-ate-300` | 7 Presentes Tech até R$ 300 | `articles/presentes-tech-ate-300-artigo-completo.html` | ✅ reposicionado + validado |
+| 5 | `samsung-u8600f-vs-lg-au801-vs-philips-50pug7019` | Samsung U8600F vs LG AU801 vs Philips | `articles/samsung-u8600f-vs-lg-au801-vs-philips-50pug7019.html` | ✅ reescrito + validado (16/08) |
 
-**Dossiês em `audit/`:** `estado-3181.md`, `estado-3809.md`, `estado-3336.md`, `estado-4397.md` + análises de layout `analise-3336-layout.md`, `analise-4397-layout.md`.
+**Dossiês em `audit/`:** `estado-3181.md`, `estado-3809.md`, `estado-3336.md`, `estado-4397.md`, `estado-4541.md`, `estado-3153.md` + análises de layout `analise-3336-layout.md`, `analise-4397-layout.md`.
+
+### 3153 (Samsung U8600F vs LG AU801 vs Philips 50PUG7019) — detalhes
+- 9 links sponsored (3 topo + 3 tabela + 3 rodapé); shortlink Amazon da Samsung unificado em `4biQQdq` (o `4rhzNx7` descartado — confirmar com o cliente).
+- Alegações de tempo/teste removidas (boot "15-20s", "Netflix 2-3s", "5× mais rápido", "depois de usar"); seção "Desempenho real" eliminada.
+- Citações inventadas → "Síntese editorial dos relatos" (sem aspas/nome); "compradores verificados" → "avaliações publicadas por compradores".
+- "Pontos de Atenção" ×3 (≥3 itens cada); preços em faixa com data 16/08/2026 (Samsung R$ 2.399 Amazon · LG R$ 2.242 ML · Philips volátil).
+- JSON-LD: TechArticle + ItemList + FAQPage + BreadcrumbList, sem aggregateRating/offers, autor canônico.
+- ⚠️ Philips 50PUG7019 (2024) em fim de linha — preço saltou; gatilho §17.2 nível 1 registrado.
+- Pendências: colar no WP; confirmar shortlink Samsung; conferir specs Philips (HDMI 2.1 / 8 ms); α7 "Gen 8" vs 3181 "Gen 5".
 
 ### 3181 (LG AU801) — detalhes
 - JSON-LD em `wp:html` sem `<br/>`; categoria `tv-e-home-theater`; sem aggregateRating; autor canônico.
@@ -135,7 +145,8 @@
 
 ## 7. Fila restante (do briefing do cliente)
 
-- **Urgência falsa:** ~~3336~~ ✓ · ~~4397~~ ✓ · **4541** (próximo, `presentes-dia-dos-pais-2026-tech-premium` — guia do MESMO evento, avaliar canibalização com o 4397).
+- **Urgência falsa:** ~~3336~~ ✓ · ~~4397~~ ✓ · ~~4541~~ ✓ (reposicionado, ver §11).
+- **Comparativos P0 (sem sponsored):** ~~3153~~ ✓ (16/08) · **3226** (próximo, `samsung-hw-b400f-vs-jbl-cinema-sb180-vs-lg-sqc1`, 9 links sem sponsored) · 3139 · 3183 · 3033 · 2888 · 2884.
 - **Lote de schema (29):** 4414, 4474, 4456, 4254, 4251, 4185, 4159, 4155, 3871, 3858, 3924, 3835, 3548, 3550, 3523, 3320, 3310, 3250, 3169, 3126, 2982, 3002, 2954, 2935, 2921, 2905 (3809 e 3336 já feitos).
 - **Alegações de teste (18 artigos):** piores 3523 (7), 3002 (6), 4541 (4).
 - **3014 e 4537:** reconstruídos pelo cliente, falta colar no WP.
