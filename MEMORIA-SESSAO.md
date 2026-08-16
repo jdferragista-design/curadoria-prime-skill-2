@@ -152,10 +152,73 @@
 
 ---
 
-## 9. Como validar (comando)
+## 10. ⭐ Trabalho do OUTRO CHAT (workspace-1.zip, branch main)
 
-```bash
-cd /home/user/curadoria-prime-skill-2
-python3 tools/checar_conformidade.py articles/<arquivo>.html
-```
-Meta: **0 erros, 0 alertas** ("✅ Aprovado").
+Lido em 16/08/2026. O outro chat trabalhou em paralelo e já avançou em vários itens da MESMA fila. Sobreposições críticas:
+
+### Já FEITO pelo outro chat (não refazer sem conferir)
+
+- **4541** (`presentes-dia-dos-pais-2026-tech-premium`) — pacote **PERENE** pronto:
+  `pais2026-PERENE.zip` → `CORPO-para-colar.html` (70 KB) + `SCHEMA-para-colar.html` +
+  `pais2026-PERENE-v1.html` (página inteira p/ preview). Reposicionou sazonal→perene,
+  removeu urgência ("ainda dá tempo 09/08"), preços→faixas (17 edições), 5× Offer→AggregateOffer,
+  removeu priceValidUntil, autor "Cristiano"→"Cristiano Martins", fuso +03:00→-03:00.
+  **IMPORTANTE:** o outro chat MANTEVE "Dia dos Pais 2026" no título/schema (diferente do
+  que fiz no 4397, onde removemos por completo — alinhar com o cliente).
+- **4537** (`apple-tv-4k`) — corrigido e JÁ PUBLICADO (0 erros: "Testamos a fundo"→"Analisamos",
+  aggregateRating removido). Mas o `wpautop` injetou 21 `<br>`/10 `<p>` no grid do índice →
+  existe `4537-apple-tv-CORRIGIDO-v2.html` (HTML **de linha única**, imune ao wpautop), ainda NÃO colado.
+- **3181** — schema manual reconstruído (`schema-manual/3181-COLAR-NO-WP.html`): removeu `<br>` + aggregateRating.
+  (Eu já reescrevi o 3181 inteiro com JSON-LD válido — resultado convergente.)
+- **3014** (`purificador-agua-electrolux-pe12g`) — JSON-LD quebrado (FAQPage não fechava) reconstruído
+  (`schema-manual/3014-COLAR-NO-WP.html` + `3014-schema-corrigido.json`). Cliente disse "reconstruído, falta colar".
+- **3523** (`qcy-t13-anc`) — construiu **plugin WordPress "curadoria-conformidade"** com fluxo
+  "Sugerir" (23 trechos: 7 alegações de teste + 13 preco_sem_data + 3). Abordagem DIFERENTE da minha
+  (reescrever via plugin, sem abrir editor). Ver `FLUXO-3523-sem-copiar-nada.md`.
+- **Lote de schema (29–32 artigos)** — `corrigir_artigos-v3-SCHEMA.py` com `corrigir_schema`/
+  `_limpar_rating`/`_blocos_jsonld` (remove aggregateRating/reviewCount/ratingCount + padroniza
+  `AUTOR_CANONICO="Cristiano Martins"`). NÃO está no repo atual (o repo tem a v2, sem schema).
+
+### Achados importantes do outro chat (valem para TODOS os posts)
+
+1. **Fuso horário errado no site:** WordPress emite `+03:00` (Moscou); corrigir em
+   **Configurações → Geral → Fuso horário → São Paulo**. Afeta os 48 artigos (schema + meta tags).
+2. **Autor fragmentado no schema (5 variantes):** `Cristiano` (48×), `Cristian` (17×),
+   `Cristiano Martins` (10×), `Curadoria Prime` (6×), `Equipe Curadoria Prime` (4×) → padronizar
+   `Cristiano Martins`. Obs: o outro chat usou `sameAs:[x.com/martinscs08, x.com/CuradoriaPrime]`; eu usei só `x.com/CuradoriaPrime` — alinhar.
+3. **`wpautop` injeta `<br>`/`<p>`** quando cola HTML com quebras de linha no **Editor de código** do WP
+   (quebra grids/badges). Solução do outro chat: entregar HTML **numa linha só** (sem newline).
+   ⚠️ Meus arquivos usam `<!-- wp:html -->` (Gutenberg) — colados via Editor de código Gutenberg ficam
+   protegidos; mas se colados via editor clássico, correm o mesmo risco. Conferir após salvar.
+4. **Comentário HTML interno vazado** no 4541 (4.099 chars, tokens `PEND_`, "alucinação", dados pessoais
+   do cliente, estratégia comercial) — apagar; e varrer os outros 48 por comentários internos.
+5. **meli.la = etiqueta de afiliado** (confirma o que já tínhamos): `social/6620250626180940`, produto no `ref=`.
+6. **`priceValidUntil` no passado derruba rich result** — remover sempre.
+7. **`Offer.price` exige valor exato**; para faixa usar `AggregateOffer` (lowPrice/highPrice).
+8. **Link.amazon redireciona via `amzlinks.in` (terceiro)** — alternativa direta: `amazon.com.br/dp/<ASIN>?tag=martins73-20`.
+
+### Preços verificados pelo outro chat (15/08/2026, post 4541)
+
+Apple Pencil Pro R$ 1.286,10 · Galaxy Watch7 R$ 1.399 · Anker 737 ML R$ 628,93 ·
+Anker A1695 R$ 759,05 · Liberty 4 NC R$ 407,55 · JBL Wave Buds 2 R$ 242,25.
+
+### Links de afiliado do 4541 (12, já com rel correto)
+
+| Produto | Amazon | ML |
+|---|---|---|
+| Apple Pencil Pro | ASIN B0D3J71RM7 | — (sem nacional confiável) |
+| Galaxy Watch7 44mm | B0D96V7WRB | meli.la/1LuqqHm |
+| Anker 737 | B0DMDJBCDP (A1695) | meli.la/2uyvRWS |
+| Soundcore Liberty 4 NC | B0BZV8HLX3 | meli.la/2BweosK |
+| JBL Wave Buds 2 | B0DHL63KWK | meli.la/2JLLpU1 |
+
+---
+
+## 11. Impacto na fila da SESSÃO ATUAL
+
+- **4541:** já pronto pelo outro chat (PERENE). Não reescrever do zero — revisar o pacote e aplicar/colar.
+- **4537:** só falta colar o `4537-apple-tv-CORRIGIDO-v2.html` (imune ao wpautop).
+- **3523:** plugin próprio do outro chat; decidir se seguimos com o plugin ou com reescrita manual (meu padrão).
+- **Lote de schema:** trazer o `corrigir_artigos-v3-SCHEMA.py` para o repo (a v2 atual não tem schema).
+- **Fuso horário:** ação única no painel (São Paulo) corrige os 48 de uma vez.
+
