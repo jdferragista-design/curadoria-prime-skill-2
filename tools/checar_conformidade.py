@@ -30,29 +30,17 @@ from html import unescape
 import sys
 from collections import Counter
 
+# Fonte única dos padrões de teste físico e vocabulário genérico.
+# Ver tools/padroes_editoriais.py — importado também por corrigir_artigos.py.
+from padroes_editoriais import (
+    PADROES_TESTE_FISICO,
+    PADROES_ENCHIMENTO,
+    PADROES_PROVA_SOCIAL_INDEVIDA,
+)
+
 # ---------------------------------------------------------------- utilidades
 
 ERRO, ALERTA, OK = "ERRO", "ALERTA", "OK"
-
-# Frases que afirmam teste físico. Não recebemos produtos das fabricantes;
-# afirmar o contrário é engano ao consumidor (CDC art. 37) além de risco de
-# rebaixamento por experiência forjada.
-PADROES_TESTE_FISICO = [
-    r"\btestamos\b", r"\btestei\b", r"\bem nossos testes\b", r"\bno nosso laborat[óo]rio\b",
-    r"\busamos (?:o|a|por) \w+ (?:durante|por)\b", r"\busei (?:o|a|por)\b",
-    r"\bdepois de (?:usar|testar)\b", r"\bap[óo]s (?:semanas|dias|meses) de uso\b",
-    r"\bmedimos\b", r"\bcronometramos\b", r"\bnossa unidade\b", r"\bo aparelho que recebemos\b",
-    r"\bdesempacotamos\b", r"\bunboxing\b", r"\bseguramos\b", r"\bsentimos na m[ãa]o\b",
-]
-
-# Superlativos vazios típicos de conteúdo gerado em escala.
-PADROES_ENCHIMENTO = [
-    r"\bno mundo de hoje\b", r"\bnos dias de hoje\b", r"\bna era digital\b",
-    r"\bneste artigo\b", r"\bvamos explorar\b", r"\bsem d[úu]vida alguma\b",
-    r"\bvale ressaltar que\b", r"\b[ée] importante lembrar que\b",
-    r"\bquando se trata de\b", r"\bem resumo,\b", r"\bem suma,\b",
-    r"\brevolucion[áa]rio\b", r"\bincr[íi]vel experi[êe]ncia\b", r"\bsimplesmente perfeito\b",
-]
 
 DOMINIOS_AFILIADO = ["link.amazon", "meli.la", "amzn.to", "mercadolivre.com", "amazon.com.br"]
 

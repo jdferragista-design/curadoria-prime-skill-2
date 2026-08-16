@@ -84,9 +84,10 @@ DOMINIOS_AFILIADO = [
 
 REL_CORRETO = "sponsored noopener noreferrer nofollow"
 
-# §2.6 — assinatura humana única. O schema trazia 5 variantes (Cristiano,
-# Cristian, Cristiano Martins, Curadoria Prime, Equipe Curadoria Prime).
-AUTOR_CANONICO = "Cristiano Martins"
+# §16 — a assinatura pertence ao humano que conferir e aprovar o conteúdo.
+# O script não decide autoria: sem CP_AUTOR_APROVADOR no ambiente, ele
+# não mexe em author.name. Quem aprova assina, no momento da aprovação.
+AUTOR_CANONICO = os.environ.get("CP_AUTOR_APROVADOR") or None
 
 # Tolerância de crescimento de <br> após gravar. Um bloco de divulgação novo
 # não introduz <br> nenhum; qualquer crescimento real é sintoma de wpautop.
@@ -100,22 +101,15 @@ BLOCO_DIVULGACAO = (
     '🔍 <strong>Transparência:</strong> este artigo contém links de afiliado. '
     'Se você comprar por eles, podemos receber uma comissão <strong>sem custo adicional '
     'para você</strong>. Isso não influencia nossa análise — nossa nota é baseada em '
-    'pesquisa técnica e dados de compradores verificados. '
+    'pesquisa técnica e relatos publicados por compradores. '
     '<a href="' + SITE + '/transparencia-curadoria-prime/">Entenda nossa metodologia</a>.'
     '</div>'
 )
 
-PADROES_TESTE = [
-    r"\btestamos\b", r"\btestei\b", r"\bem nossos testes\b", r"\bnos nossos testes\b",
-    r"\busei (?:o|a|por)\b", r"\busamos (?:o|a|por) \w+ (?:durante|por)\b",
-    r"\bdepois de (?:usar|testar)\b", r"\bnossa unidade\b", r"\bunboxing\b",
-    r"\bsentimos na m[ãa]o\b", r"\bna nossa bancada\b", r"\bmedimos\b",
-]
+from padroes_editoriais import PADROES_TESTE_FISICO
 
-PADROES_TESTE_SCHEMA = PADROES_TESTE + [
-    r"\bteste de \w+", r"\btestado(?:s|a|as)? (?:por n[óo]s|em)\b",
-    r"\bcolocamos [àa] prova\b", r"\bap[óo]s \d+ dias de uso\b",
-]
+PADROES_TESTE = PADROES_TESTE_FISICO
+PADROES_TESTE_SCHEMA = PADROES_TESTE_FISICO
 
 NEGACOES = re.compile(r"\b(n[ãa]o|sem|nunca|jamais)\b[\s\w,]{0,25}$", re.I)
 INDICE = re.compile(r"(índice|sumário|neste (?:review|guia|artigo))", re.I)
@@ -346,7 +340,7 @@ def _limpar_rating(obj, contador):
 
     # author.name inconsistente (Cristiano / Cristian / Equipe…) fragmenta o E-E-A-T
     if obj.get("@type") == "Person" and "name" in obj:
-        if obj["name"] != AUTOR_CANONICO:
+        if AUTOR_CANONICO and obj["name"] != AUTOR_CANONICO:
             obj["name"] = AUTOR_CANONICO
             contador["autor"] += 1
 
@@ -429,7 +423,7 @@ def listar_alegacoes(html):
 
 
 SUGESTOES = {
-    "testamos": "analisamos as especificações e cruzamos com relatos de compradores verificados",
+    "testamos": "analisamos as especificações e cruzamos com relatos publicados por compradores",
     "testei": "analisei os dados técnicos e as avaliações de compradores",
     "em nossos testes": "segundo os dados técnicos do fabricante e relatos de compradores",
     "nos nossos testes": "segundo os dados técnicos e relatos de compradores",
