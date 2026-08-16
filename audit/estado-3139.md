@@ -35,15 +35,18 @@ Zero base64. Zero citação inventada.
 
 ## Dados de mercado coletados (16/08/2026)
 
-| TV | Preço hoje | Identificador |
-|---|---|---|
-| Samsung S90F 55" QD-OLED | R$ 6.478 (Mercado Livre, Fast Shop) | MLB54140106 |
-| LG OLED C5 55" | R$ 5.851 a R$ 6.595 (Zoom/Buscapé/Magalu) | ASIN B0F5X3WY5N |
+| TV | Preço hoje | Amazon | Mercado Livre |
+|---|---|---|---|
+| Samsung S90F 55" QD-OLED | R$ 6.478 (ML, Fast Shop) | ASIN **B0FNT5H95K** (`amazon.com.br/dp/B0FNT5H95K`) | **MLB54140106** (`…/p/MLB54140106`) |
+| LG OLED C5 55" | R$ 5.851 a R$ 6.595 | ASIN **B0F5X3WY5N** (`amazon.com.br/dp/B0F5X3WY5N`) | **MLB53613524** (`…/p/MLB53613524`) |
+
+- Samsung Amazon BR: 4,8/5 em ~38 avaliações (16/08/2026) — atualizado no artigo (o "4,9/5 · 47" do publicado estava defasado/não batia).
+- **Artigo atualizado** com 4 botões (Amazon + ML para cada TV), todos com rel="sponsored". Links diretos canônicos usados como fallback até o cliente gerar os shortlinks.
 
 ## Pendências FORA do arquivo (painel / cliente)
 
 1. **Colar no WP** substituindo o conteúdo atual (Editor de Código).
-2. ⚠️ **Shortlink LG C5 (`mercadolivre.com/sec/1rZFCkW`) resolve para uma LISTA VAZIA** do perfil de afiliado hoje (16/08) — o clique cai numa página "Este perfil ainda está vazio". **Conferir/regenerar o link da LG C5** e me passar o novo, se houver.
-3. Shortlink Samsung S90F (`2fDo1zK`) OK → MLB54140106.
-4. **Contagem "47 avaliações / 4,9/5"** é do publicado (jan/2026) — re-verificar se quiser manter o número atual na Amazon/ML.
+2. ⚠️ **Shortlink LG C5 (`mercadolivre.com/sec/1rZFCkW`) resolve para uma LISTA VAZIA** — o artigo agora usa o link direto `/p/MLB53613524` como fallback. **O cliente deve gerar novo shortlink** (mercado livre afiliados) e me passar para trocar.
+3. Shortlink Samsung S90F (`2fDo1zK`) OK → MLB54140106. Amazon: precisa de shortlink (`amzn.to`/`link.amazon`) ou confirmar a tag do programa Amazon (memória cita `martins73-20`, não confirmada no repo).
+4. ~~Contagem "47 avaliações / 4,9/5"~~ ✅ resolvida: Amazon BR hoje = 4,8/5 em ~38 avaliações.
 5. Título SEO: manter "144Hz" e conferir "QD-OLED" no H1 (mesmo padrão dos outros posts).
