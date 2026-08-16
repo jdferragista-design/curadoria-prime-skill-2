@@ -216,9 +216,19 @@ Anker A1695 R$ 759,05 · Liberty 4 NC R$ 407,55 · JBL Wave Buds 2 R$ 242,25.
 
 ## 11. Impacto na fila da SESSÃO ATUAL
 
-- **4541:** já pronto pelo outro chat (PERENE). Não reescrever do zero — revisar o pacote e aplicar/colar.
-- **4537:** só falta colar o `4537-apple-tv-CORRIGIDO-v2.html` (imune ao wpautop).
-- **3523:** plugin próprio do outro chat; decidir se seguimos com o plugin ou com reescrita manual (meu padrão).
+- **4541:** ✅ REFAZIDO na filosofia do 4397 (sem "Dia dos Pais 2026", sem teste físico,
+  contras §2.7, faixas de 6 meses). Arquivo: `articles/presentes-dia-dos-pais-2026-tech-premium-artigo-completo.html`.
+  Aprovado no checker. O pacote PERENE do outro chat serviu de base de conteúdo, mas foi
+  reescrito em Gutenberg limpo (o dele tinha markup de tema + lazy-load).
+- **4537:** ✅ CONFERIDO — já publicado com "Analisamos a fundo" + sem aggregateRating.
+  Pendências menores: `author.url` aponta `/author/cristian/` (slug antigo) + "compra verificada" no corpo.
+- **3523:** decisão = REWRITE MANUAL (meu padrão), não o plugin. Pesquisa aprofundada antes.
 - **Lote de schema:** trazer o `corrigir_artigos-v3-SCHEMA.py` para o repo (a v2 atual não tem schema).
-- **Fuso horário:** ação única no painel (São Paulo) corrige os 48 de uma vez.
+- **Fuso horário:** OK — usuário confirmou que já corrigiu.
+
+### Faixas de preço 6 meses (pesquisadas 16/08, para 4541 e reuso)
+
+Apple Pencil Pro R$ 1.100–1.500 · Watch7 44mm BT R$ 1.050–1.590 · Anker 737 (A1289) R$ 600–800 ·
+Liberty 4 NC R$ 370–450 · JBL Wave Buds 2 R$ 220–290.
+(Ver `audit/pesquisa-4541.md` para fontes/specs validadas.)
 
