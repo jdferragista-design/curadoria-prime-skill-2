@@ -19,6 +19,7 @@
 - **Preço com data + aviso**: anúncio vinculado (R$ 350) aparece com "anúncio pausado / última unidade" em 16/08/2026 — o artigo orienta a conferir disponibilidade.
 - **JSON-LD limpo** em `wp:html` SEM `<br />`: TechArticle + Product (reviewRating 7,8/10) + FAQPage + BreadcrumbList (`casa-inteligente-e-seguranca`); autor "Cristiano Martins"; sem aggregateRating/offers.
 - **Bloco de autor canônico** + "Fontes consultadas" + "Veja também" (3052, 2884 — slugs reais).
+- **Imagens**: hero local + 2 imagens fornecidas pelo cliente (lente dupla giratória `D_Q_NP_2X_690824...` e visão noturna colorida `D_NQ_NP_2X_669910...`), ambas já em URL local do WP (`/uploads/2026/01/`).
 
 ## Validação (checar_conformidade.py)
 
@@ -44,4 +45,4 @@ Balanço: div 25/25 · ul 2/2 · p 67/67 · h2 15/15 · li 11/11 · a 16/16. Zer
 
 1. **Colar no WP** substituindo o conteúdo atual (Editor de Código).
 2. ⚠️ **Anúncio vinculado "pausado"**: o shortlink `2w2H2mP` cai num anúncio pausado/última unidade (16/08/2026). O leitor pode chegar numa página sem estoque. **Conferir/regenerar o link de afiliado** (ou trocar por outro vendedor do mesmo kit).
-3. **Imagens hotlink** (2): `http2.mlstatic.com/D_NQ_NP_2X_801864...` e `...626257...` são CDN externo do ML — baixar e subir na biblioteca de mídia (mesmo padrão do 3226). A imagem `D_Q_NP_2X_712844...` já é local (uploads).
+3. ~~Imagens hotlink~~ ✅ RESOLVIDO: o cliente forneceu 2 imagens locais (lente dupla giratória + visão noturna colorida), já aplicadas no artigo. Nenhum hotlink externo restante.
