@@ -18,6 +18,7 @@
 - **Link "Veja também" corrigido**: o publicado apontava para o slug quebrado `samsung-u8600f-vs-lg-au801-vs-philips-50pug7019-qual-tv-4k-50-comprar/` → corrigido para o slug real `samsung-u8600f-vs-lg-au801-vs-philips-50pug7019/`.
 - **JSON-LD limpo** em `wp:html` SEM `<br />`: TechArticle + ItemList (3 soundbars) + FAQPage (4 perguntas) + BreadcrumbList (`tv-e-home-theater`); autor "Cristiano Martins"; sem aggregateRating/offers.
 - **Bloco de autor canônico** + "Fontes consultadas" + "Veja também" (3153, 3310, 3320 — slugs reais).
+- **Imagens do publicado restauradas** (7 no total): hero, infográfico (`unnamed-2.webp`), One Remote (Samsung), subwoofer (JBL), subwoofer MDF (LG), gráfico de frequência (`85558bf5…webp`) + foto do autor.
 
 ## Validação (checar_conformidade.py)
 
@@ -48,3 +49,4 @@ Zero base64.
 3. **Specs LG SQC1 a conferir** (herdadas do publicado): "Bluetooth 4.0" e "sem HDMI ARC".
 4. ⚠️ **LG SQC1 (2024) com estoque reduzido**: preço saltou de ~R$ 1.190 (fev) para R$ 1.651 (ago). A tese original "melhor watt por real" está enfraquecida — o artigo foi ajustado para "confira a oferta atual", mas vale reavaliar (§17.2 nível 1). A sucessora natural é a **LG S40T** (~R$ 894 no ML, ago/2026), caso o cliente queira trocar depois — mesmo tratamento dado à Philips no 3153.
 5. **Frequência de graves Samsung/LG**: a ficha não informa; manter "não informado" (não inventar).
+6. ⚠️ **Imagens com hotlink externo** (3): a Samsung (One Remote) e a LG (subwoofer) vêm de `http2.mlstatic.com` e a JBL (subwoofer) de `m.media-amazon.com`. Funcionam hoje, mas são CDNs de terceiros e podem quebrar/bloquear — o ideal é baixar e subir na biblioteca de mídia do WP (mesmo padrão das imagens `unnamed-2.webp` e `85558bf5…webp`, que já são locais).
