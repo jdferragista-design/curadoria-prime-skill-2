@@ -21,16 +21,17 @@
 - **JSON-LD limpo** em `wp:html` SEM `<br />`: TechArticle + ItemList (3 TVs) + FAQPage (4 perguntas) + BreadcrumbList (`tv-e-home-theater`); autor "Cristiano Martins"; **sem aggregateRating, sem offers, sem aspa reta** ("50 polegadas" nas strings).
 - **Bloco de autor canônico** (foto + bio + X) com "Por Cristiano Martins".
 - **"Fontes consultadas"** + "Veja também" (3226, 3181, 3183 — slugs reais).
+- **Philips 50PUG7300 (sucessora 2025) adicionada como OPÇÃO** na seção da Philips — com botões próprios (Amazon `B09uCSSBI` + Mercado Livre `27D4FgZ`, fornecidos pelo cliente), "Pontos de Atenção" próprio e inclusão no ItemList do JSON-LD (4 itens). A 50PUG7019 permanece como está.
 
 ## Validação (checar_conformidade.py)
 
 ```
 ✅ Aprovado. — 0 erros, 0 alertas.
-rel-sponsored 9/9 · divulgação antes dos links · autoria · metodologia ·
+rel-sponsored 11/11 · divulgação antes dos links · autoria · metodologia ·
 honestidade (não testamos fisicamente) · fontes · data · teste-fisico 0 ·
-profundidade 2.663 palavras · valor-agregado completo · imparcialidade 3 contras ·
+profundidade 2.828 palavras · valor-agregado completo · imparcialidade 3 contras ·
 schema válido (parse OK, sem aggregateRating).
-Balanço: div 41/41 · ul 6/6 · p 65/65 · h2 11/11 · h4 3/3 · li 24/24. Zero base64.
+Balanço: div 43/43 · ul 7/7 · p 68/68 · h2 11/11 · h4 4/4 · li 27/27. Zero base64.
 ```
 
 ## Dados de mercado coletados (16/08/2026)
@@ -40,6 +41,9 @@ Balanço: div 41/41 · ul 6/6 · p 65/65 · h2 11/11 · h4 3/3 · li 24/24. Zero
 | Samsung U8600F 50" | Amazon | R$ 2.399 à vista (Pix/NuPay); 12x R$ 206,32; outros vendedores a partir de R$ 2.440 | ASIN B0F5X4LL89 |
 | LG AU801 50" | Mercado Livre | R$ 2.242 no Pix (de R$ 2.361) | MLB61517857 |
 | Philips 50PUG7019 50" | Mercado Livre | volátil: R$ 1.894 (fev/2026) → anúncio em destaque R$ 3.390 (ago/2026) | MLB43158430 |
+| Philips 50PUG7300 50" (opção, 2025) | Amazon / ML | R$ 2.199 (Amazon) · R$ 1.935 Pix (ML) | B0FPBPX7WF / MLB57723340 |
+
+- Shortlinks Philips 50PUG7300 (cliente): Amazon `https://link.amazon/B09uCSSBI` · ML `https://meli.la/27D4FgZ`.
 
 - Avaliações Amazon (fev/2026, mantidas do publicado com data): Samsung 4,7/5 (~194) · LG 4,9/5 (~815) · Philips 4,8/5 (~9 mil).
 - Relatos ML coletados via API (MLB61517857 e MLB43158430) usados só como síntese editorial.
@@ -50,7 +54,7 @@ Balanço: div 41/41 · ul 6/6 · p 65/65 · h2 11/11 · h4 3/3 · li 24/24. Zero
 2. Rank Math > título SEO: manter "50″" ou trocar por "50 polegadas" (mesma pendência do 3181).
 3. **Confirmar o shortlink Amazon da Samsung** (unificado em `4biQQdq`; o `4rhzNx7` foi descartado — se o `4rhzNx7` for o correto, trocar nas 3 ocorrências).
 4. **Specs Philips a conferir** (herdadas do publicado): "3x HDMI 2.1" e "tempo de resposta 8 ms".
-5. ⚠️ **Aviso editorial (Philips):** o modelo 50PUG7019 (2024) parece estar em fim de linha — preço saltou de R$ 1.894 (fev) para anúncios > R$ 3.000 (ago). A tese original ("Philips é a mais barata") não é mais garantida; o artigo foi ajustado para "confira a oferta atual", mas vale reavaliar a recomendação (gatilho §17.2 nível 1: variação > 20%).
+5. ✅ **Aviso editorial (Philips) RESOLVIDO:** a 50PUG7300 (sucessora, 2025) entrou como opção com venda ativa e preço estável — resolve o "fim de linha" da 50PUG7019 sem mexer no slug/título do artigo.
 
 ## Inconsistência cross-artigo (registrar, não bloquear)
 

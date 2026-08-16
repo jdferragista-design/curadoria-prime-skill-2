@@ -56,8 +56,8 @@
 - Alegações de tempo/teste removidas (boot "15-20s", "Netflix 2-3s", "5× mais rápido", "depois de usar"); seção "Desempenho real" eliminada.
 - Citações inventadas → "Síntese editorial dos relatos" (sem aspas/nome); "compradores verificados" → "avaliações publicadas por compradores".
 - "Pontos de Atenção" ×3 (≥3 itens cada); preços em faixa com data 16/08/2026 (Samsung R$ 2.399 Amazon · LG R$ 2.242 ML · Philips volátil).
-- JSON-LD: TechArticle + ItemList + FAQPage + BreadcrumbList, sem aggregateRating/offers, autor canônico.
-- ⚠️ Philips 50PUG7019 (2024) em fim de linha — preço saltou; gatilho §17.2 nível 1 registrado.
+- JSON-LD: TechArticle + ItemList (4 itens) + FAQPage + BreadcrumbList, sem aggregateRating/offers, autor canônico.
+- Philips 50PUG7300 (sucessora 2025) entra como OPÇÃO na seção da Philips (11 links sponsored no total): Amazon `link.amazon/B09uCSSBI` + ML `meli.la/27D4FgZ` (cliente).
 - Pendências: colar no WP; confirmar shortlink Samsung; conferir specs Philips (HDMI 2.1 / 8 ms); α7 "Gen 8" vs 3181 "Gen 5".
 
 ### 3181 (LG AU801) — detalhes
