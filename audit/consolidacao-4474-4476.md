@@ -1,6 +1,6 @@
 # Consolidação 4474 ↔ 4476 — tablets volta às aulas
 
-**Status:** 🟡 60% pronto — a canônica já foi corrigida e publicada; falta o retarget do `-2` + 301.
+**Status:** ✅ FECHADO (16/08/2026)
 
 ---
 

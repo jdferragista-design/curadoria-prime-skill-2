@@ -232,3 +232,12 @@ Apple Pencil Pro R$ 1.100–1.500 · Watch7 44mm BT R$ 1.050–1.590 · Anker 73
 Liberty 4 NC R$ 370–450 · JBL Wave Buds 2 R$ 220–290.
 (Ver `audit/pesquisa-4541.md` para fontes/specs validadas.)
 
+
+---
+
+## 12. Consolidação 4474/4476 — ✅ FECHADO (16/08)
+
+- Canônica `tablets-para-volta-as-aulas-2026` (4476): corrigida, no ar.
+- Canibal `-2` (4474): retarget → post novo `alternativas-galaxy-tab-s10-fe-ipad-estudar` (id 4884).
+- 301 ativo (`-2/` → alternativas). Recíproco colado. Link quebrado corrigido.
+- Skill criada: `skills/curadoria-reviews/` + `tools/reviews_ml.py`.
