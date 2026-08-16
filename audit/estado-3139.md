@@ -35,18 +35,20 @@ Zero base64. Zero citação inventada.
 
 ## Dados de mercado coletados (16/08/2026)
 
-| TV | Preço hoje | Amazon | Mercado Livre |
+| TV | Amazon BR | Mercado Livre | Estoque |
 |---|---|---|---|
-| Samsung S90F 55" QD-OLED | R$ 6.478 (ML, Fast Shop) | ASIN **B0FNT5H95K** (`amazon.com.br/dp/B0FNT5H95K`) | **MLB54140106** (`…/p/MLB54140106`) |
-| LG OLED C5 55" | R$ 5.851 a R$ 6.595 | ASIN **B0F5X3WY5N** (`amazon.com.br/dp/B0F5X3WY5N`) | **MLB53613524** (`…/p/MLB53613524`) |
+| Samsung S90F 55" QD-OLED | ASIN B0FNT5H95K — **sem oferta em destaque** (só terceiros: Fast Shop R$ 5.939 / Samsung R$ 7.289) | **MLB54140106** (Fast Shop, R$ 6.478) — shortlink `2fDo1zK` OK | ✅ ML · ⚠️ Amazon (terceiros) |
+| LG OLED C5 55" | ASIN B0F5X3WY5N — **"Não disponível" (esgotado)** | **MLB53613524** (R$ 6.525) — shortlink antigo `1rZFCkW` quebrado | ✅ ML · ❌ Amazon |
 
-- Samsung Amazon BR: 4,8/5 em ~38 avaliações (16/08/2026) — atualizado no artigo (o "4,9/5 · 47" do publicado estava defasado/não batia).
-- **Artigo atualizado** com 4 botões (Amazon + ML para cada TV), todos com rel="sponsored". Links diretos canônicos usados como fallback até o cliente gerar os shortlinks.
+- **Atualizado no artigo (16/08):** os dois modelos estão **sem estoque na Amazon BR** — botões de compra apontam para o **Mercado Livre** (única loja com disponibilidade), com nota explícita de estoque. 4 links ML, todos sponsored. Zero botão Amazon.
+- Samsung Amazon BR: 4,8/5 em ~39 avaliações (dado mantido só como contexto, sem botão).
+- ⚠️ **Cliente deve gerar novo shortlink ML para a LG C5** (MLB53613524) — o atual `1rZFCkW` resolve para lista vazia.
 
 ## Pendências FORA do arquivo (painel / cliente)
 
 1. **Colar no WP** substituindo o conteúdo atual (Editor de Código).
-2. ⚠️ **Shortlink LG C5 (`mercadolivre.com/sec/1rZFCkW`) resolve para uma LISTA VAZIA** — o artigo agora usa o link direto `/p/MLB53613524` como fallback. **O cliente deve gerar novo shortlink** (mercado livre afiliados) e me passar para trocar.
-3. Shortlink Samsung S90F (`2fDo1zK`) OK → MLB54140106. Amazon: precisa de shortlink (`amzn.to`/`link.amazon`) ou confirmar a tag do programa Amazon (memória cita `martins73-20`, não confirmada no repo).
-4. ~~Contagem "47 avaliações / 4,9/5"~~ ✅ resolvida: Amazon BR hoje = 4,8/5 em ~38 avaliações.
-5. Título SEO: manter "144Hz" e conferir "QD-OLED" no H1 (mesmo padrão dos outros posts).
+2. ⚠️ **Amazon BR SEM estoque nos dois modelos (16/08/2026)** — resolvido no artigo: botões apontam para o Mercado Livre. Se a Amazon voltar a ter estoque, ASINs registrados: S90F `B0FNT5H95K` · C5 `B0F5X3WY5N`.
+3. ⚠️ **Cliente deve gerar novo shortlink ML para a LG C5** (MLB53613524) — o `1rZFCkW` está quebrado (lista vazia). O artigo usa o link canônico como fallback.
+4. Shortlink Samsung S90F (`2fDo1zK`) OK → MLB54140106.
+5. ~~Contagem "47 avaliações / 4,9/5"~~ ✅ resolvida: Amazon BR hoje = 4,8/5 em ~39 avaliações.
+6. Título SEO: manter "144Hz" e conferir "QD-OLED" no H1.
