@@ -1,5 +1,8 @@
 # 🧠 MEMÓRIA DA SESSÃO — Limpeza de Conformidade Curadoria Prime
 
+> ⭐ **RETOMADA EM CHAT NOVO:** leia `audit/retomada-2026-08-16.md` — contém o
+> registro completo da sessão E o prompt pronto para colar num novo chat.
+>
 > Registro do que foi feito nesta sessão (branch `arena/01a0028f-curadoria-prime-skill-2`).
 > Atualizado em: **16/08/2026**. Serve para retomar o trabalho sem perder contexto.
 
