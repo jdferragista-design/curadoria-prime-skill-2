@@ -49,3 +49,28 @@ comparativa, conclusão, FAQ, JSON-LD e rodapé. KaBuM saiu (preço não re-veri
 ## Pendências
 - 🔴 Shortlink ML do W820NB **branco** (`MLB19052272`): se o cliente enviar, repor o 2º botão.
 - 🟡 KaBuM: se voltar a ser citado, re-verificar o preço.
+
+---
+
+## Atualização 17/08/2026 (fim da sessão) — card do Edifier com as 3 opções
+
+O card era um bloco único, com **um só botão** (Amazon) e o texto sobre a cor cinza **duplicado**
+(a mesma informação aparecia duas vezes no mesmo parágrafo, resultado das edições sucessivas).
+
+Reescrito como **3 sub-cards**, reaproveitando o que já havia sido verificado no review 3527:
+
+| Opção | Preço (17/08) | Botões |
+|---|---|---|
+| ⭐ **W820NB branco** (recomendado) | R$ 437,57 | Amazon `link.amazon/B06vz0YO0` |
+| 🆕 **W820NB Plus V25** | R$ 499 | Amazon `link.amazon/B04teGQck` + ML `meli.la/1EapXtQ` |
+| 💰 **W800BT Pro** | R$ 284,05 Pix (ML) / R$ 299 (Amazon) | Amazon `link.amazon/B06BFey5m` + ML `meli.la/2gDAGge` |
+
+Alerta da cor cinza (R$ 708,39, fora de linha) promovido para **caixa própria no topo do card**,
+sem repetição. Mantidas as ressalvas herdadas do review: tom real off-white/bege no branco e as
+**21 opiniões** da Plus V25, com o relato de ANC inferior ao original.
+
+Ganho para o leitor: o guia deixa de oferecer só um produto potencialmente fora do orçamento
+(R$ 437,57) e passa a cobrir a faixa de **R$ 284 a R$ 499** dentro da mesma marca e categoria.
+
+**Validação:** checker 14/14, 0 erros · 4.685 palavras · **15 links de afiliado, 100% com `rel`
+completo** · JSON-LD válido, 0 offers/aggregateRating · tags balanceadas · 0 resíduo de `1pXMdaD`.
