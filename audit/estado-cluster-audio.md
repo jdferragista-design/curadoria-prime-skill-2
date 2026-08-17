@@ -929,3 +929,63 @@ o texto continua fazendo sentido, e por isso o erro passa despercebido.
 Todo `src` deve sair da resposta da API de mídia, com o nome de arquivo exato
 (incluindo sufixos como `-scaled` e `-e1774284488680`). Caminho deduzido pelo slug
 do produto **quebra silenciosamente**.
+
+---
+
+## §21 — Export da biblioteca (556 anexos): validação automatizada
+
+O cliente subiu `imagens/curadoriaprime.WordPress.2026-08-17.xml` — o export
+completo da biblioteca de mídia, com **556 anexos**. Isso permitiu sair da
+verificação por amostragem (API, 50 por busca) para a **validação exaustiva**.
+
+### Resultado do cluster
+
+| Post | Imagens | No corpo | src válidos |
+|---|---|---|---|
+| 3548 Redmi | 8 | 6 | ✅ 8/8 |
+| 3550 JBL | 8 | 6 | ✅ 8/8 |
+| 3523 QCY | 5 | 3 | ✅ 5/5 |
+| 3527 Edifier | 7 | 5 | ✅ 7/7 |
+| 3545 Buds Core | 8 | 6 | ✅ 8/8 |
+| 3336 Guia | 6 | 5 | ✅ 6/6 |
+
+**Zero src quebrados no cluster.** Além disso, o export revelou imagens que a
+busca por slug na API não encontrava, por terem nome genérico:
+
+- `cn-11134207-7r98o-lu1ls5z271bn4b.jpeg` → título "QCY T13 ANC" (produto)
+- `b0350ffe-d9f1-4bf1-a645-185b02d58087.png` → título "SCREENSHOT APP QCY"
+
+Ambas foram aproveitadas — o QCY passou de 1 para 3 imagens no corpo. Mais 3
+recuperadas: encaixe na orelha (Redmi), corrida/academia (JBL) e compatibilidade
+Android/iPhone (Buds Core). **Total desta rodada: +5 imagens** sobre as 19 de §20.
+
+### §21.1 — `tools/checar_imagens.py` (novo)
+
+O checker de conformidade **não testava imagens** — foi por isso que três reviews
+passaram 14/14 com zero fotos no corpo. O novo validador roda contra o export e testa:
+
+1. `src-existe` — o arquivo existe na biblioteca (556 anexos);
+2. `corpo` — há imagem no corpo, não só a foto do autor (o erro de §20);
+3. `alt` — alt descritivo, sem emoji;
+4. `lazy` — `loading="lazy"` nas imagens do corpo;
+5. `dimensoes` — `width`/`height` declarados, contra layout shift;
+6. `orfas` — imagens do produto sem uso.
+
+Uso: `python3 tools/checar_imagens.py articles/<arquivo>.html`
+
+### §21.2 — Falso-positivo: plugins de conversão WebP
+
+Plugins como EWWW e ShortPixel servem `foo.jpg` como **`foo.jpg.webp`**. O anexo
+registrado na biblioteca é o original. O validador trata isso: se o `src` termina
+em `.webp` e o nome sem esse sufixo existe na biblioteca, é válido. Sem essa regra,
+10 dos 13 alertas iniciais eram falso-positivo.
+
+### §21.3 — 🔴 Achado fora do cluster: 2 imagens realmente quebradas
+
+O varredor completo (17 artigos) encontrou dois `src` sem anexo correspondente:
+
+- `presentes-tech-ate-300-hero.jpg` — em `presentes-tech-ate-300-artigo-completo.html`
+- `redmi-buds-6-play-estojo-aberto.jpg.webp` — no mesmo artigo (o nome correto,
+  usado no review 3548, é `redmi-buds-6-play-estojo-aberto-e1774284488680.jpg`)
+
+Não fazem parte do cluster de áudio; ficam registrados para a fila.

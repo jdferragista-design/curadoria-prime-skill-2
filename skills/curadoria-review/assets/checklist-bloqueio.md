@@ -90,3 +90,4 @@ A IA preenche o checklist na entrega. O editor humano é quem libera.
 - [ ] Cada imagem tem `alt` descritivo (sem emoji) e legenda?
 - [ ] As imagens do corpo têm `loading="lazy"`?
 - [ ] O artigo tem mais do que apenas a foto do autor no corpo?
+- [ ] Rodei `python3 tools/checar_imagens.py articles/<arquivo>.html` (0 erros)?
