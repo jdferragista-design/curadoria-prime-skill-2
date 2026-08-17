@@ -481,3 +481,61 @@ Verificação independente nos dois: JSON-LD parseia (Article + Review + FAQPage
 BreadcrumbList); zero `aggregateRating`/`offers`/`priceValidUntil`/`availability`;
 zero `<br/>` no `<script>`; zero base64; zero `data-src`; balanço de tags fechado;
 zero alegação de teste físico no corpo.
+
+---
+
+## §11 — Post 3523 · QCY T13 ANC (entregue em 17/08/2026)
+
+**Arquivo:** `articles/qcy-t13-anc-review-2026-vale-a-pena.html`
+**Slug:** `qcy-t13-anc-review-2026-vale-a-pena` · **Nota:** 8,5/10 · **5.398 palavras**
+**Checker:** 14/14 ✅ — `Total: 0 erro(s)` · 6 links de afiliado, todos com `rel` completo · ~8 fontes.
+
+### Situação encontrada
+O post **já havia sido reescrito em 15/08/2026**: as 7 alegações de teste físico da auditoria
+original ("testamos", "unboxing", "usamos o fone por") já não estavam no ar, e o artigo já tinha
+box de metodologia honesto, bloco "O que isto não é", transparência de afiliados e ressalvas de
+não-medição em quase todas as seções. **O CSV `audit/auditoria-48-artigos.csv` está desatualizado
+para este item** (como já estava para 3527 e 3545).
+
+### O que restava e foi corrigido nesta rodada
+
+| # | Problema no publicado | Correção |
+|---|---|---|
+| 1 | H2 e âncora `#unboxing` | → "O que vem na caixa" / `#caixa` |
+| 2 | **4 depoimentos entre aspas** com selo "compra verificada" e datas individuais (mai/2026, fev/2024, set/2024, mai/2024) | → bloco "🗣️ Síntese editorial dos relatos", sem aspas, sem selo, sem data individual (regra 4.2) |
+| 3 | "avaliações verificadas" / "compradores verificados" (6×) | → "avaliações publicadas por compradores" |
+| 4 | JSON-LD com `AggregateOffer`: `lowPrice 169,00`, `highPrice 186,10`, `priceValidUntil "2026-12-31"` (data futura inventada) e 3× `availability: InStock` | **bloco de offers removido inteiro** — padrão do lote |
+| 5 | FAQ do schema divergente da visível: tinha "Qual a diferença do T13 ANC para o T13 ANC 2?" (inexistente na página) e faltava "O ANC é eficiente no transporte público?" | as **5 perguntas agora são idênticas** nos dois |
+| 6 | Preços de 15/08 (R$ 169–186) | recapturados em 17/08: **Amazon `B0BWRBKMCK` R$ 186,10** · **ML loja oficial QCY R$ 199** (26% OFF de R$ 269,90). Faixa "R$ 186–199" propagada para hero, corpo, 3 tabelas, régua de nota, specs, card de compra e schema |
+| 7 | Edifier citado como "38dB, R$ 399" | → R$ 437,57 na cor **branca**, alinhado ao 3527 corrigido |
+| 8 | Buds Core citado como "R$ 229–380" | → **R$ 219,31 (Pix, Amazon) / R$ 243,68 (ML)**, alinhado ao 3545 |
+| 9 | Bloco "🆕 Novidade" dizia só "construção mais robusta" | → **T13 ANC 2 tem conexão multiponto** (justamente a falta do original), R$ 219,90 na loja oficial ML (de R$ 274, 19% OFF), 4,8/5 em ~1.289 opiniões |
+| 10 | Links internos em slugs com 301 (`/edifier-w820nb-review/`, `/jbl-wave-buds-2-review/`) | → slugs canônicos |
+| 11 | `rel="sponsored nofollow noopener"` (sem `noreferrer`) | → `rel="sponsored noopener noreferrer nofollow"` em 100% |
+| 12 | "Contras" | → **"Pontos de Atenção"** (h4 + `<ul>`, 6 itens) |
+
+### Mantido (já estava correto)
+Box de metodologia ("não tivemos o produto em mãos"), a frase condicional do selo "Testado por
+nós" (**não é alegação de teste** — correção do cliente de 17/08), a ressalva "o que depende de ter
+o produto no ouvido nós não verificamos", bloco de autor canônico, "Fontes consultadas",
+"não indica para quem" e a **régua de nota v2.0 aberta** (6 critérios com pesos) — diferencial
+do post; só os valores de preço foram atualizados dentro dela.
+
+### Nota recalculada após a alta de preço do ML
+O critério Custo-benefício (peso 30%) fora calculado com R$ 169–186; com R$ 186–199 o rival mais
+próximo (Buds Core) começa em R$ 219, então o 9,5 se sustenta.
+`2,850 + 2,250 + 1,600 + 0,850 + 0,800 + 0,325 = 8,675` → **8,5/10 mantido**.
+
+### Verificação independente (cabeçalho cortado)
+JSON-LD parseia; `@graph` = Article + Review + FAQPage + BreadcrumbList; **0** ocorrências de
+`aggregateRating`, `offers`, `priceValidUntil`, `availability`, `AggregateOffer`; `author.url` =
+`/sobre-a-curadoria-prime/`; **0** `<br` dentro do script; 0 base64; 0 `data-src`; tags balanceadas
+(div 47/47, p 86/86, a 41/41, li 51/51, td 133/133); 6 afiliados, 0 sem `rel` completo.
+"testamos" e "medimos" aparecem 1× cada — ambos **em negação** ("Não testamos esta unidade",
+"Não medimos a autonomia"), portanto válidos.
+
+### Pendências de painel
+1. `mercadolivre.com/sec/223qhqp` confirmado em 17/08: resolve para a **loja oficial QCY**, R$ 199.
+2. Conferir a data de publicação no schema (`2026-03-16`) contra o painel.
+
+**Status do lote áudio:** 3527 ✅ · 3545 ✅ · **3523 ✅** — trio concluído.
