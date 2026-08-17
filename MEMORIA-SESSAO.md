@@ -3,8 +3,9 @@
 > ⭐ **RETOMADA EM CHAT NOVO:** leia `audit/retomada-2026-08-16.md` — contém o
 > registro completo da sessão E o prompt pronto para colar num novo chat.
 >
-> Registro do que foi feito nesta sessão (branch `arena/01a0028f-curadoria-prime-skill-2`).
-> Atualizado em: **16/08/2026**. Serve para retomar o trabalho sem perder contexto.
+> Registro do que foi feito nesta sessão (branch `arena/01a0028f-curadoria-prime-skill-2`;
+> continuação em `arena/01a00f98-curadoria-prime-skill-2`).
+> Atualizado em: **17/08/2026**. Serve para retomar o trabalho sem perder contexto.
 
 ---
 
@@ -184,7 +185,7 @@
 ## 7. Fila restante (do briefing do cliente)
 
 - **Urgência falsa:** ~~3336~~ ✓ · ~~4397~~ ✓ · ~~4541~~ ✓ (reposicionado, ver §11).
-- **Comparativos P0 (sem sponsored):** ~~3153~~ ✓ · ~~3226~~ ✓ · ~~3139~~ ✓ · ~~3183~~ ✓ · ~~3033~~ ✓ (16/08) · **2888** (próximo, `kit-teclado-mouse-ultra-slim`, 2 aleg. "testamos/unboxing" + 0/6 sponsored) · 2884.
+- **Comparativos P0 (sem sponsored):** ~~3153~~ ✓ · ~~3226~~ ✓ · ~~3139~~ ✓ (recolado e conferido 17/08) · ~~3183~~ ✓ · ~~3033~~ ✓ (16/08) · **2888 — diagnóstico feito (17/08), ver `audit/estado-2888.md`; reescrita aguarda 2 pendências de link do cliente** · 2884.
 - **Lote de schema (29):** 4414, 4474, 4456, 4254, 4251, 4185, 4159, 4155, 3871, 3858, 3924, 3835, 3548, 3550, 3523, 3320, 3310, 3250, 3169, 3126, 2982, 3002, 2954, 2935, 2921, 2905 (3809 e 3336 já feitos).
 - **Alegações de teste (18 artigos):** piores 3523 (7), 3002 (6), 4541 (4).
 - **3014 e 4537:** reconstruídos pelo cliente, falta colar no WP.
@@ -199,7 +200,7 @@ Todos os 5 posts desta sequência foram colados pelo cliente e conferidos no ar:
 |---|---|
 | 3153 (TVs) | ✅ correto (botões OK; hero trocada pelo cliente p/ `comparativo-tvs-samsung-lg-philips-2026-2048x1143.webp`) |
 | 3226 (soundbars) | ✅ correto (imagens renomeadas `...-one-remote.webp` / `...-subwoofer-mdf.webp` / `...-sb180-subwoofer.webp` no ar) |
-| 3139 (S90F) | ⚠️ **VERSÃO ANTIGA no ar** — botão LG C5 ainda no shortlink quebrado `1rZFCkW`; rating "4,9/5·47" antigo. **Recolar o arquivo atual.** |
+| 3139 (S90F) | ✅ **RESOLVIDO (17/08/2026)** — cliente recolou; conferido no ar: link C5 canônico `/p/MLB53613524`, "4,8/5 · ~38 (16/08)", aviso de estoque + gancho C6, autor canônico, JSON-LD limpo |
 | 3183 (Philips) | ✅ correto (nota 8,7/10, fim de linha avisado, opção 7300) |
 | 3033 (Good Vision) | ✅ correto (imagens locais lente dupla + visão noturna) |
 
@@ -318,3 +319,49 @@ Liberty 4 NC R$ 370–450 · JBL Wave Buds 2 R$ 220–290.
 - Canibal `-2` (4474): retarget → post novo `alternativas-galaxy-tab-s10-fe-ipad-estudar` (id 4884).
 - 301 ativo (`-2/` → alternativas). Recíproco colado. Link quebrado corrigido.
 - Skill criada: `skills/curadoria-reviews/` + `tools/reviews_ml.py`.
+
+
+---
+
+## 13. Sessão 17/08/2026 — retomada
+
+### 13.1. 3139 (Samsung S90F) — ✅ FECHADO
+
+Primeira tarefa da fila era "recolher o 3139". **Já estava resolvido:** o cliente
+recolou em 16/08 às 21:03 (`modified` da REST API). Conferido no ar item a item
+contra os sintomas registrados — todos corrigidos. Dossiê `audit/estado-3139.md`
+atualizado para ✅ FECHADO. Revalidação local: **✅ Aprovado, 0 erros / 0 alertas**,
+4/4 links sponsored, zero base64.
+
+Pendências que **continuam com o cliente** (não bloqueiam o post):
+gerar shortlink ML novo para a LG C5 (`1rZFCkW` quebrado — hoje o artigo usa o
+link canônico como fallback) e monitorar o retorno de estoque na Amazon
+(ASINs S90F `B0FNT5H95K` · C5 `B0F5X3WY5N`).
+
+### 13.2. 2888 (Kit Teclado e Mouse Ultra Slim) — 🔎 DIAGNÓSTICO
+
+Dossiê completo em **`audit/estado-2888.md`**. O CSV subestimava o risco: são
+**14 alegações de teste físico**, não 2 (o artigo inteiro é narrado como unboxing).
+Achados principais:
+
+- 0/6 links com `rel="sponsored"`;
+- **link Amazon do produto principal aponta para o ASIN ERRADO** (`B0dKNIkQE` →
+  `B0B59YC5N4`, um kit **preto** diferente do Ultra Slim branco do review);
+- 2 dos 6 botões são **buscas genéricas do ML** (`?q=logitech+mk235` / `+mk270`),
+  sem tracking e sem checkout;
+- JSON-LD com **`<br />` em cada linha** (colado em bloco de parágrafo → Google
+  descarta), `offers.price` fixo R$ 69,90, `availability: InStock` inventado,
+  `offers.url` apontando para slug inexistente `/kit-teclado-mouse-slim-review/`,
+  autor como `Organization`, sem Article e sem BreadcrumbList;
+- 5 aspas de "usuários" sem plataforma/data; "dados de compradores verificados";
+- **sem bloco de autor**, **sem "Fontes consultadas"**, **sem box "Tipo de análise"**;
+- auto-link (aponta para si mesmo) + link **404** para `/review-logitech-mk270/`;
+- instrução interna vazada ao leitor (dica de instalar o plugin "Table of Contents Plus");
+- Anatel nº 210032214394 e sensor "Pro Elite" **não verificáveis** → `[VERIFICAÇÃO HUMANA NECESSÁRIA]`.
+
+**Capturas 17/08/2026:** Ultra Slim ML **MLB-4168372465** R$ 63,99 (cupom) /
+R$ 64,99 · MK235 Amazon **B07643MPGS** · MK270 Amazon **B074WL3VZF** R$ 152,93.
+
+**Bloqueios para a reescrita** (4 pendências do cliente, ver §4 do dossiê):
+shortlink Amazon correto do produto principal, shortlinks ML de MK235/MK270,
+confirmação da Anatel e definição da categoria WP do post.
