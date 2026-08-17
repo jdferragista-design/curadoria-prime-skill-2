@@ -74,3 +74,32 @@ Ganho para o leitor: o guia deixa de oferecer só um produto potencialmente fora
 
 **Validação:** checker 14/14, 0 erros · 4.685 palavras · **15 links de afiliado, 100% com `rel`
 completo** · JSON-LD válido, 0 offers/aggregateRating · tags balanceadas · 0 resíduo de `1pXMdaD`.
+
+---
+
+## Conferência no ar após o recolar (17/08/2026)
+
+Cliente recolou o guia no WordPress. Verificado em `curadoriaprime.com/melhor-fone-bluetooth-ate-500-reais-2026/`:
+
+✅ **Card das 3 opções do Edifier publicado** (branco R$ 437,57 · Plus V25 R$ 499 · W800BT Pro R$ 284,05)
+✅ **Botão `meli.la/1pXMdaD` eliminado** — não há mais link morto no ar
+✅ Preços novos no ar: Buds Core R$ 268,20 · QCY R$ 199 · Redmi R$ 78,99 · JBL R$ 234,48
+✅ Ressalvas herdadas do 3527 presentes (off-white/bege, 21 opiniões da Plus V25)
+
+### 🔴 Duas inconsistências que sobraram — corrigidas agora
+1. **Tabela comparativa**: linha do Edifier ainda marcava **R$ 355,49**, que era o preço do **KaBuM**
+   em 14/08 — loja que saiu das citações por não ter sido re-verificada hoje. O card logo acima
+   dizia R$ 437,57: o mesmo produto com dois preços na mesma página. → **R$ 437,57**.
+2. **Conclusão**: a frase de variação citava "Buds Core … para R$ 269,90", "JBL … para R$ 255" —
+   valores de 14/08 já substituídos no resto do texto. Pior: afirmava que "os preços voltaram a
+   subir" quando **o JBL caiu** de R$ 255 para R$ 234,48. → reescrita com os números de 17/08 e a
+   direção correta de cada variação.
+
+Ambas eram resquícios da atualização por substituição pontual: os trechos narrativos com preços
+embutidos escaparam das buscas por padrão de card.
+
+**Aprendizado:** ao atualizar preços, varrer também **tabela comparativa** e **texto de conclusão**,
+não só os cards de compra. Conferir a coerência entre as três áreas antes de fechar.
+
+**Validação final:** checker 14/14, 0 erros · tabela com os 5 preços idênticos aos dos cards ·
+15 links de afiliado, 100% com `rel` completo.
