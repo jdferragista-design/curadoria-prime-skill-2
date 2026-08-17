@@ -1,6 +1,6 @@
 # ESTADO — CLUSTER ÁUDIO (3523 · 3545 · 3527)
 
-**Status:** 🔧 EM EXECUÇÃO (17/08/2026) — 3527 ✅ ENTREGUE · 3545 ⏸️ aguarda confirmação · 3523 ⏳ na fila
+**Status:** 🔧 EM EXECUÇÃO (17/08/2026) — 3527 ✅ ENTREGUE · 3545 ✅ ENTREGUE · 3523 ⏳ próximo
 **Modo de trabalho:** 3 por vez (mudança de cadência pedida pelo cliente em 17/08)
 
 | # | Slug | Produto principal | Risco CSV | Alegações | Links sem sponsored |
@@ -277,3 +277,86 @@ zero `<br/>` dentro do `<script>`; zero base64; zero `data-src`; balanço de tag
   (`amazon.com.br/dp/B0G534R9BZ` e `mercadolivre.com.br/p/MLB63419175`) como fallback,
   já com `rel` correto. Trocar pelos shortlinks quando gerá-los.
 - Mesma coisa para o W800BT Pro (`B0DF5NF475` / `MLB41983700`).
+
+
+---
+
+## 8. ✅ 3545 (Samsung Galaxy Buds Core) — ENTREGUE em 17/08/2026
+
+**Arquivo:** `articles/samsung-galaxy-buds-core-vale-a-pena.html`
+**Decisão do cliente (17/08):** *"se a afirmação não for de reviews de terceiros, não"* —
+ou seja, **não houve teste próprio**. Toda narrativa em 1ª pessoa foi removida; o que era
+atribuível a terceiros foi mantido com a fonte nomeada.
+
+### Alegações de teste REMOVIDAS (as 14 do diagnóstico)
+
+| Trecho publicado | Tratamento |
+|---|---|
+| "testamos o Galaxy Buds Core durante **duas semanas em três cenários reais**" + lista Galaxy S25 / Xiaomi 14T / iPhone 15 | **removido**; substituído por "As seções a seguir separam, recurso por recurso, o que é universal e o que é exclusivo — com base na documentação oficial da Samsung e nos relatos publicados nas lojas" |
+| "**Testamos** em quatro cenários reais de chamada durante duas semanas" + tabela de 4 cenários com falas de participantes entre aspas | **tabela removida** → "Síntese editorial dos relatos" descrevendo os padrões (silêncio, ambiente movimentado, vento) sem aspas e sem nota em estrelas |
+| "Durante os **testes de conforto** … sessões de até 3 horas contínuas" | **removido** → síntese dos relatos sobre encaixe, incluindo o contraponto de orelhas menores |
+| "Em treinos na academia … algo que **não aconteceu com o QCY T13 ANC no mesmo teste**" | **removido** — era comparativo físico de 2 unidades |
+| "**Nos testes** com português–inglês e português–espanhol, a latência ficou abaixo de 2 segundos" | → "A Samsung indica suporte a português brasileiro como idioma de origem e destino" |
+| "**Nos testes**, o Auto Switch funcionou … menos de 3 segundos" | → "Nos relatos publicados por compradores que usam aparelhos Galaxy, é apontado como um dos recursos que mais economizam tempo" |
+| "🔋 **Autonomia real medida** (volume 60%)" | → "**Autonomia declarada pelo fabricante**" + nota "Não realizamos medição própria de bateria" |
+| "os dados complementam mas não substituem os **testes práticos realizados pela nossa equipe editorial**" | → "São relatos de terceiros publicados nas lojas — não substituem teste próprio, que não foi realizado para este review" |
+| rodapé "Produto analisado: … **(unidade adquirida pelo autor)**" | **removido** |
+
+**Verificação:** `duas semanas`, `Galaxy S25`, `Xiaomi 14T`, `iPhone 15`, `testes de conforto`,
+`no mesmo teste`, `Nos testes`, `unidade adquirida`, `equipe editorial`, `Autonomia real`,
+`medida`, `medir` → **0 ocorrências no corpo**. O único "testamos" é a negação
+"não testamos esta unidade fisicamente".
+
+### Demais correções
+
+- **7+ citações entre aspas** sem fonte → "Síntese editorial dos relatos", sem aspas.
+  Restam 3 pares de aspas no corpo, todos legítimos: o selo "Testado por nós", o selo
+  "Escolha da Amazon" e o acabamento "black piano".
+- "dados de compradores verificados" e "Todas as citações são de compras verificadas" →
+  "avaliações publicadas por compradores" (**0 ocorrências** dos termos proibidos).
+- **Box "Tipo de análise" adicionado** (não existia).
+- **Bloco de autor canônico adicionado** (não existia).
+- **"Fontes consultadas" adicionada** (não existia): Samsung oficial, documentação do
+  Galaxy AI, páginas de produto das duas lojas com data.
+- **Seção "Para quem é (e para quem NÃO é)" criada** — o artigo não tinha o "para quem NÃO é".
+- "Limitações" → **"Pontos de Atenção"** (h4 + ul, 8 itens; incluído o da asa de tamanho único).
+- **Nota dupla 9,0/7,8 → nota única 8,5/10**, com a diferença por perfil explicada no texto.
+  ⚠️ **Confirmar com o cliente.**
+- Preços em faixa com data: **R$ 219,31 Pix (Amazon) · R$ 243,68 · R$ 279,37 Pix (ML preto)**.
+  O publicado dizia "R$ 229–270" e "Última atualização: Março de 2026".
+- **Cards de compra refeitos** — o publicado já tinha `<br />` injetado pelo wpautop dentro
+  dos `<div>` de botão.
+- Links internos → **slugs canônicos** (eram `/qcy-t13-anc-review/` e `/edifier-w820nb-review/`).
+- **Card do Edifier convertido em aviso de fim de linha**, apontando para o 3527 corrigido —
+  os dois posts do lote agora contam a mesma história sobre o W820NB.
+- Removido o link genérico `mercadolivre.com.br` da abertura (era marcado como sponsored
+  sem ser link de produto).
+- **JSON-LD criado do zero** (o publicado não tinha nenhum): Article + Review (8,5/10 com
+  `worstRating`, **sem offers**) + FAQPage + BreadcrumbList, em `wp:html` sem `<br/>`.
+
+### Validação
+
+```
+python3 tools/checar_conformidade.py articles/samsung-galaxy-buds-core-vale-a-pena.html
+✅ Aprovado. — 0 erros, 0 alertas.
+rel-sponsored 7/7 · divulgação antes dos links · autoria · metodologia · honestidade ·
+fontes (~21 itens) · data · teste-fisico 0 · profundidade 4.848 palavras ·
+valor-agregado completo · imparcialidade 8 contras · enchimento OK · schema válido.
+```
+
+Verificação independente: JSON-LD parseia (Article + Review + FAQPage + BreadcrumbList);
+zero `aggregateRating`/`offers`/`priceValidUntil`/`availability`; zero `<br/>` no `<script>`;
+zero base64; zero `data-src`; balanço de tags fechado (div 58/58 · p 68/68 · li 53/53 ·
+a 38/38); nenhum slug com 301.
+
+> Nota sobre os 2 alertas iniciais: a primeira rodada acusou `[enchimento] 'ecossistema' 16×`
+> e `[valor-agregado] faltam prós e contras / para quem NÃO é`. Resolvidos variando a
+> redação ("linha Galaxy", "aparelhos Galaxy", "integração Samsung") e criando a seção
+> "para quem NÃO é" — que de fato faltava no publicado.
+
+### Pendência do cliente para este post
+
+- **Confirmar a nota única 8,5/10** (substitui "9,0/10 Samsung · 7,8/10 outros").
+- Conferir o título SEO/Rank Math: verificar se não promete teste próprio.
+- O `<style>` inline do topo do post publicado permanece no painel — não foi duplicado
+  neste arquivo.
