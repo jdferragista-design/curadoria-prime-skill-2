@@ -360,3 +360,66 @@ a 38/38); nenhum slug com 301.
 - Conferir o título SEO/Rank Math: verificar se não promete teste próprio.
 - O `<style>` inline do topo do post publicado permanece no painel — não foi duplicado
   neste arquivo.
+
+
+---
+
+## 9. 🔄 REVISÃO do 3527 (17/08, após feedback do cliente) — card de compra MANTIDO
+
+**Instrução do cliente:** *"O card do Edifier mantém, só que com o branco, como fizemos
+no Top 5 Melhores Fones até R$ 500 — e aviso para a nova versão."*
+
+### O que a verificação mostrou
+
+O diagnóstico da §1 estava **incompleto**: eu havia checado apenas o ASIN `B09MDC77QX`,
+que é a **cor cinza**. Conferindo o link que o Top 5 já usava (`link.amazon/B06vz0YO0`),
+ele resolve para outro ASIN — **`B09HR1B9RW`, a cor branca**:
+
+| Cor | ASIN | Situação em 17/08/2026 |
+|---|---|---|
+| **Branco** | `B09HR1B9RW` | ✅ **R$ 437,57**, em estoque, vendido e entregue pela Amazon, 4,7/5 em ~1.483 avaliações |
+| Cinza | `B09MDC77QX` | ⛔ "Não disponível" na Amazon · R$ 708,39 no ML ("último disponível") |
+| Plus V25 (nova versão) | `B0G534R9BZ` | R$ 499 nas duas lojas |
+
+Ou seja: **o produto não saiu do mercado — saiu a cor cinza.** A conclusão anterior de
+"suspender o bloco de compra" era baseada em amostra incompleta.
+
+### Mudanças aplicadas
+
+- **Bloco de compra restaurado**, apontando só para a **cor branca** via
+  `link.amazon/B06vz0YO0` — exatamente o link já validado no guia Top 5.
+- **Aviso de cor em 4 pontos** (hero, box do topo, bloco de compra e specs): a branca é a
+  recomendada; a cinza saiu de linha e o estoque restante é vendido ~60% acima da faixa.
+- **Aviso da nova versão** W820NB Plus V25 (R$ 499, Bluetooth 6.1) como card de opção,
+  com o gancho "Em breve: review dedicado" — padrão da Philips 7019 → 7300.
+- Faixa histórica corrigida de "R$ 355–423" para **R$ 355–437**.
+- Nota geral **8,8/10 mantida**; o card "Disponibilidade" subiu de 3,0 para **6,0/10**
+  ("só na cor branca").
+- Verificação: **0 ocorrências** de "fim de linha" e "suspenso" no corpo do 3527.
+
+### Espelhamento no 3545
+
+O card do Edifier no Galaxy Buds Core voltou a ser **card de compra** (branco, R$ 437,57,
+com botão da Amazon e `rel` correto), mantendo o aviso sobre a cor cinza. Os dois posts
+seguem contando a mesma história.
+
+### ⚠️ Nova pendência do cliente
+
+**Shortlink ML do W820NB branco.** O shortlink usado no Top 5 (`meli.la/1pXMdaD`) resolve
+para **lista vazia** do perfil de afiliado — mesmo sintoma do LG C5 no post 3139. Por isso
+os dois arquivos deste lote trazem **apenas o botão da Amazon** para o W820NB. Regenerar o
+link do ML e adicionar o segundo botão.
+
+> Isso também afeta o **guia Top 5 (3336)**, que hoje tem um botão "🛍️ Mercado Livre"
+> apontando para esse shortlink quebrado, e ainda exibe "R$ 422,90 (Amazon) / R$ 355,49
+> (KaBuM) · 14/08". Recomendo entrar na fila para recaptura.
+
+### Revalidação
+
+```
+python3 tools/checar_conformidade.py articles/edifier-w820nb-review-2026-vale-a-pena.html
+                                     articles/samsung-galaxy-buds-core-vale-a-pena.html
+✅ Aprovado (os dois) — 0 erros, 0 alertas em 2 arquivos.
+```
+JSON-LD parseia nos dois; zero `aggregateRating`/`offers`/`priceValidUntil`/`availability`;
+`rel` correto em 100% dos links; balanço de tags fechado.
