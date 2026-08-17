@@ -103,3 +103,45 @@ não só os cards de compra. Conferir a coerência entre as três áreas antes d
 
 **Validação final:** checker 14/14, 0 erros · tabela com os 5 preços idênticos aos dos cards ·
 15 links de afiliado, 100% com `rel` completo.
+
+---
+
+## Seção 8 nova: faixa de preço dos últimos 6 meses (17/08/2026)
+
+Pesquisa de histórico mar–ago/2026 em Amazon, ML, Magazine Luiza, KaBuM, Shopee, Buscapé e Zoom,
+cruzada com o acompanhamento próprio da Curadoria Prime. Inserida **antes** da tabela comparativa;
+seções seguintes renumeradas (8→9, 9→10, 10→11, 11→12).
+
+| Fone | Piso já visto | Faixa típica | Hoje (17/08) | Leitura |
+|---|---|---|---|---|
+| Galaxy Buds Core | **R$ 184** (20/07, ML cupom VIPMELI) | R$ 220–270 | R$ 219–268 | dentro do normal |
+| QCY T13 ANC | **R$ 136** (Magalu) | R$ 170–199 | R$ 186–199 | no teto da faixa |
+| Redmi Buds 6 Play | **R$ 78** (KaBuM) | R$ 79–120 | **R$ 78,99** | 🟢 no piso histórico |
+| JBL Wave Buds 2 | **R$ 222** (Amazon) | R$ 235–290 | **R$ 234,48** | perto do piso |
+| Edifier W820NB | **R$ 351** (Amazon) | R$ 370–437 | **R$ 437,57** | 🔴 no teto e subindo |
+
+### Fontes datadas do levantamento
+- **Buds Core** (lanç. 25/09/2025 a R$ 349): R$ 198,20 em 09/03 (Amazon Prime, cupom HRPRIME) ·
+  R$ 207 em 09/06 (Shopee) · **R$ 184,14 em 20/07** (ML, cupom VIPMELI, Dia dos Pais) ·
+  R$ 187 em 27/07 (Amazon, cupom SEMANANOVA). Menor histórico citado pela Oficina da Net: R$ 198,89.
+- **QCY T13 ANC**: R$ 135,96 (Magalu, via Buscapé) · R$ 178,90–179,99 Pix (Magalu) ·
+  R$ 179,93–181,44 (ML terceiros). Loja oficial QCY Brasil: R$ 155 (T13 comum) / R$ 299,90 (ANC).
+- **Redmi Buds 6 Play**: R$ 77,89 (KaBuM) · R$ 104,90 em 27/03 (Amazon) · R$ 113,99 em 01/12 (Magalu).
+- **JBL Wave Buds 2**: R$ 222,15 (Amazon, TechTudo 03/2026) · R$ 235 (Amazon) · R$ 284,97 em 29/05 ·
+  até **R$ 426,87** no Magalu — dispersão enorme entre lojas para o mesmo produto.
+- **Edifier W820NB**: R$ 351,17 (Amazon preto, média 40 dias R$ 370,57 no Buscapé) ·
+  R$ 356,87 (branco) · **R$ 379,04 em 27/05** (Amazon, de R$ 449) · R$ 422,90 em 14/08 · R$ 437,57 hoje.
+
+### Leituras editoriais publicadas
+1. **Redmi está no piso histórico** — melhor momento de compra da lista.
+2. **Edifier é o único que encareceu**: R$ 351–379 (mai–jun) → R$ 437,57. Causa é o **fim de linha**,
+   não demanda. Caixa laranja avisa que o preço de R$ 380 provavelmente não volta.
+3. **JBL tem dispersão de quase R$ 200** entre lojas (R$ 222 a R$ 427) para o mesmo produto.
+4. Os melhores descontos do período vieram de **cupom de marketplace** (Dia do Consumidor em março,
+   Dia dos Pais em julho), não de desconto de vitrine.
+
+Coluna "piso já visto" declarada como valor **efetivamente anunciado** no período, muitas vezes com
+cupom/Pix e por tempo limitado — não como preço disponível hoje. Sem `priceValidUntil` no schema.
+
+**Validação:** checker 14/14, 0 erros · 5.134 palavras (era 4.685) · 15 afiliados, 100% com `rel` ·
+JSON-LD válido, 0 offers/aggregateRating · tags balanceadas.
