@@ -666,3 +666,35 @@ apoiada em dump de avaliações; sem dump, declarar explicitamente que a lista �
 **Validação:** os 3 arquivos com checker 14/14 · 0 erros · JSON-LD Article+Review+FAQPage+
 BreadcrumbList · 0 offers/aggregateRating · 0 afiliado sem `rel` completo · tags balanceadas.
 3527 = 5.154 palavras · 3545 = 5.106 · 3523 = 6.263.
+
+---
+
+## §14 — Segunda passada nos dumps do Edifier (17/08/2026)
+
+Cliente reapontou os 4 dumps (`f2ce32d`, sem alteração — md5 conferido). Na §13 eu havia extraído
+**só as críticas 1-3★**; esta passada minerou os temas restantes, inclusive dentro de avaliações 5★.
+Rendeu 4 achados que não estavam no artigo.
+
+### Novos blocos publicados no 3527
+1. **Botões que afundam com o tempo** — dono de ~2 anos: *"os botões, com o tempo, afundam, mesmo
+   utilizando normalmente; parece que é um defeito crônico"*. Defeito de longo prazo, invisível em
+   avaliação de primeira semana.
+2. **Espuma das almofadas descasca** — *"os forros começaram a descascar com 8 meses de uso diário"*
+   + alerta de quem transpira: *"a espuma vai descascar e reduzir a qualidade do cancelamento"*.
+   Almofadas são substituíveis (sem preço citado — não inventar).
+3. **A cor "branca" é off-white com espuma bege — 10 menções.** *"Comprei na cor branca e para minha
+   surpresa chegou um bege"*, *"um branco velho (off-white) com as espumas mais escuras"*. **Crítico
+   para este artigo**: o card de compra vende exatamente essa cor. Aviso replicado no card.
+4. **Sem entrada P2 e não dobra** — comparação com o W800BT Plus. Se a bateria acaba, não há cabo.
+
+### Bateria: ancorada em relatos (a tabela era só ficha oficial)
+6h/dia → carrega 1×/semana · 2h/dia → *"dura quase um mês"* · *"não sei se dura 49 horas, mas deve
+estar bem perto"*. Incluída também a leitura crítica: *"autonomia igual à dos concorrentes"*.
+
+### Buds Core — reminerado, nada novo a corrigir
+69 menções a bateria, 22 a microfone, 296 a ANC, 21 a outras marcas. Tudo convergente com o texto
+atual. O relato do **Redmi 12 com volume baixo** já constava corretamente na seção 3. Confirmações:
+6-8h de reprodução por relato, microfone bom em ambiente controlado, iPhone funciona sem app.
+
+**Validação:** 3 arquivos, checker 14/14, 0 erros · JSON-LD válido, 0 offers/aggregateRating ·
+0 afiliado sem `rel` · tags balanceadas · 3527 = 5.570 palavras (era 5.154), 3545 = 5.106, 3523 = 6.263.
