@@ -873,3 +873,59 @@ apenas 3 das 100 avaliações. Em vez de omitir a seção ou generalizar, o arti
 "3 das 100 avaliações lidas, o que é pouco para afirmar um padrão" e complementa com o dado
 de hardware (2 microfones × 6 do concorrente). Amostra pequena não impede publicar — impede
 afirmar frequência.
+
+---
+
+## §20 — 🔴 IMAGENS SUPRIMIDAS NAS REESCRITAS (auditoria de 17/08)
+
+O cliente notou que o Redmi ficou só com a imagem do hero. A auditoria confirmou:
+**as reescritas do cluster descartaram as imagens do corpo dos artigos.** As fotos
+continuavam na biblioteca de mídia do WordPress — apenas sumiram do HTML entregue.
+
+### Situação encontrada
+
+| Post | Imagens no corpo (antes) | Na biblioteca | Restauradas |
+|---|---|---|---|
+| 3548 Redmi | **0** (só foto do autor) | 7 (enviadas 23/03) | **+6** |
+| 3550 JBL | **0** (só foto do autor) | 10 (enviadas 20/03) | **+6** |
+| 3523 QCY | **0** (só foto do autor) | 4 | **+2** |
+| 3527 Edifier | 1 | 10 (enviadas 18–19/03) | **+5** |
+| 3545 Buds Core | 6 ✅ | 8 | — (íntegro) |
+| 3336 Guia | 5 ✅ | — | — (íntegro) |
+
+O 3545 foi o único review que preservou as imagens — por isso serviu de **padrão de
+marcação** para as demais (`<div style="text-align:center">` + `<img>` com `alt`
+descritivo + legenda em `<p>` cinza 12px).
+
+### Causa
+
+As reescritas partiram do texto e da estrutura de seções, não do HTML publicado.
+Como as imagens vivem em blocos `<!-- wp:html -->` isolados entre os headings, elas
+simplesmente não foram transportadas. **O checker não detecta isso** — não há teste
+de imagem em `tools/checar_conformidade.py`.
+
+### §20.1 — Regra: inventariar imagens ANTES de reescrever
+
+Antes de qualquer reescrita, rodar contra o publicado:
+
+```
+https://curadoriaprime.com/wp-json/wp/v2/media?search=<produto>&per_page=50&_fields=id,slug,source_url,date
+```
+
+e listar os `<img src>` do HTML atual. Toda imagem existente precisa de destino na
+nova estrutura ou de justificativa para sair. **Imagem some sem ninguém perceber** —
+o texto continua fazendo sentido, e por isso o erro passa despercebido.
+
+### §20.2 — Padrão de imagem no corpo
+
+- Uma imagem por seção pesada, inserida **antes** do `<h2>` correspondente;
+- `alt` descritivo e sem emoji (acessibilidade e SEO de imagem);
+- legenda curta em `<p>` 12px `#7c7c9a` conectando a foto ao argumento da seção;
+- `loading="lazy"` e `decoding="async"` em tudo que não seja o hero;
+- `border-radius: 14px` e `max-width: 100%` para responsividade.
+
+### §20.3 — Nunca inventar caminho de imagem
+
+Todo `src` deve sair da resposta da API de mídia, com o nome de arquivo exato
+(incluindo sufixos como `-scaled` e `-e1774284488680`). Caminho deduzido pelo slug
+do produto **quebra silenciosamente**.

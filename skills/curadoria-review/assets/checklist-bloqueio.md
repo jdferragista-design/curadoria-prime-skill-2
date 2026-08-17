@@ -81,3 +81,12 @@ A IA preenche o checklist na entrega. O editor humano é quem libera.
 - [ ] Existe a caixa "O que essa nota não mede"?
 - [ ] `ratingValue` do JSON-LD é igual à nota visível no texto?
 - [ ] Nenhuma grade de características se apresenta como "NOTA GERAL" sem rótulo?
+
+## §20 — Imagens (bloqueadores)
+
+- [ ] Inventariei as imagens do post publicado **antes** de reescrever?
+- [ ] Toda imagem que existia no corpo tem destino na nova versão (ou justificativa)?
+- [ ] Todo `src` veio da API de mídia, com o nome de arquivo exato?
+- [ ] Cada imagem tem `alt` descritivo (sem emoji) e legenda?
+- [ ] As imagens do corpo têm `loading="lazy"`?
+- [ ] O artigo tem mais do que apenas a foto do autor no corpo?
