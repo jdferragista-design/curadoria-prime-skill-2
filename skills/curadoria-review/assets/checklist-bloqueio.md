@@ -61,3 +61,12 @@ A IA preenche o checklist na entrega. O editor humano é quem libera.
 - [ ] Nenhum `[VERIFICAÇÃO HUMANA NECESSÁRIA]` restou no HTML final
 - [ ] Links afiliados têm `rel="sponsored nofollow"`
 - [ ] Imagem de IA, se houver, tem a legenda oficial
+
+## Faixa de preço histórica (§18)
+
+- [ ] O artigo traz a **faixa dos últimos 6 meses** do produto principal?
+- [ ] Cada produto tem **piso já visto**, **faixa típica**, **preço de hoje com data** e **leitura**?
+- [ ] O "piso já visto" está declarado como valor anunciado no período, **não** como preço de hoje?
+- [ ] Toda loja citada foi **re-verificada na data da revisão**? (se não, remover a loja)
+- [ ] A faixa histórica ficou **fora** do JSON-LD (sem `offers`, sem `priceValidUntil`)?
+- [ ] As datas e lojas de cada valor estão anotadas no dossiê em `audit/`?

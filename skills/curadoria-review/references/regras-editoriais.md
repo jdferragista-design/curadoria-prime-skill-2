@@ -900,6 +900,51 @@ Acrescentar ao checklist da §15, na subseção "Atualização e SEO":
 
 ---
 
+## 18. Faixa de preço histórica (OBRIGATÓRIA em review e guia de compra)
+
+**Um preço isolado não informa nada.** R$ 437 é caro ou barato? Só dá para responder sabendo por
+quanto o produto já foi vendido. Todo review de produto e todo guia de compra devem trazer a
+**faixa dos últimos 6 meses**, com estas quatro informações por produto:
+
+| Campo | O que é | Cuidado |
+|---|---|---|
+| **Piso já visto** | menor valor efetivamente anunciado no período | quase sempre com cupom/Pix e por tempo limitado — **declarar isso** |
+| **Faixa típica** | onde o preço passa a maior parte do tempo | é a régua real de "preço normal" |
+| **Preço de hoje** | captura própria, com data | sempre com a data ao lado |
+| **Leitura** | uma frase dizendo o que o preço de hoje significa | é o que agrega valor ao leitor |
+
+### 18.1. Fontes aceitas
+Amazon, Mercado Livre, Magazine Luiza, KaBuM, Shopee, Casas Bahia + comparadores **Buscapé** e
+**Zoom** (que publicam média de 40 dias e histórico) + histórico próprio já registrado nos dossiês
+de `audit/`. Cada valor precisa de **data e loja** anotadas no dossiê, mesmo que o artigo publique
+só a faixa.
+
+### 18.2. Como escrever a leitura
+Frases que o leitor usa para decidir:
+- *"no piso histórico — melhor momento de compra"*
+- *"no teto da faixa típica; abaixo de R$ X é boa compra"*
+- *"no teto e subindo — efeito de fim de linha, o preço antigo não deve voltar"*
+- *"dispersão de R$ X entre lojas para o mesmo produto — compare antes"*
+
+### 18.3. Proibições
+- ❌ **Nunca** publicar "piso já visto" como se fosse preço disponível hoje.
+- ❌ **Nunca** colocar faixa histórica em `offers`/`priceValidUntil` no JSON-LD (regra 2.5 e §10).
+- ❌ **Nunca** citar preço de loja que não foi re-verificada na data da revisão — remover a loja.
+- ❌ Não inventar "média de mercado": ou há captura datada, ou o campo não é publicado.
+
+### 18.4. Por que isso é regra
+Sem a faixa, três erros reais aconteceram nesta base: (a) um produto **subiu 60%** por fim de linha
+e o texto seguia recomendando como "melhor preço"; (b) um fone estava **no piso histórico** e o
+artigo não dizia, perdendo o melhor argumento de compra; (c) um mesmo modelo tinha **dispersão de
+quase R$ 200** entre lojas, e o leitor não era avisado.
+
+### 18.5. Onde colocar
+- **Guia de compra:** seção própria antes da tabela comparativa.
+- **Review individual:** bloco dentro de "Onde comprar", com a faixa do produto e a dos concorrentes
+  diretos citados.
+
+---
+
 ## Notas de implementação
 
 **O que muda no código:**

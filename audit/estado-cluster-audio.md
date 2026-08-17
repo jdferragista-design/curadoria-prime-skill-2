@@ -784,3 +784,54 @@ verificada. Nenhum número de "R$ 499 no branco" permanece em qualquer arquivo.
 Antes de publicar preço obtido por `web_search`, **cruzar com o que o dossiê já registrou por
 captura própria**. Divergência = a captura própria prevalece, ou refazer a verificação. Resultado
 de catálogo do ML não é oferta ativa.
+
+---
+
+## §17 — Faixa de preço histórica aplicada aos 3 reviews + virou REGRA (17/08/2026)
+
+Cliente: *"repete para os 3 artigos já no ar, e torna este procedimento regra."*
+
+### Regra gravada na skill
+- `skills/curadoria-review/references/regras-editoriais.md` → **§18. Faixa de preço histórica
+  (OBRIGATÓRIA em review e guia de compra)**, com 5 subitens: fontes aceitas, como escrever a
+  leitura, proibições, justificativa e onde colocar.
+- `skills/curadoria-review/assets/checklist-bloqueio.md` → 6 novos itens de verificação.
+
+**Os 4 campos obrigatórios por produto:** piso já visto · faixa típica · preço de hoje com data ·
+**leitura** (frase que diz o que o preço de hoje significa).
+
+**Proibições registradas:** nunca publicar o piso como preço de hoje; nunca levar faixa histórica
+para `offers`/`priceValidUntil`; nunca citar loja não re-verificada na data; não inventar "média
+de mercado" sem captura datada.
+
+### Blocos publicados nos 3 reviews
+Cada review recebeu a faixa do **próprio produto + concorrentes diretos citados no texto**, dentro
+de "Onde comprar":
+
+**3523 QCY** — T13 ANC R$ 136 / R$ 170–199 / R$ 186–199 · Buds Core · Redmi.
+Leitura: no teto da faixa; abaixo de R$ 170 é boa compra; não vale adiar por R$ 20–30.
+
+**3527 Edifier** — branco R$ 351 / R$ 370–437 / **R$ 437,57 (no teto e subindo)** · cinza R$ 708,39
+(~60% acima) · W800BT Pro · Buds Core. Caixa laranja: **único do cluster que encareceu**, de
+R$ 379,04 (27/05, Amazon, de R$ 449) para R$ 437,57 — causa é fim de linha, não demanda.
+
+**3545 Buds Core** — R$ 184 / R$ 220–270 / R$ 219–268 · QCY · Buds FE.
+Leitura: quedas abaixo de R$ 200 vêm de **cupom em data comercial** (R$ 184,14 em 20/07 com VIPMELI;
+R$ 198,20 em 09/03 com HRPRIME), não de desconto permanente — esperar campanha economiza até R$ 80.
+
+### Validação dos 4 arquivos
+| Arquivo | Faixa | offers | aggRating | rel incompleto | tags | palavras |
+|---|---|---|---|---|---|---|
+| 3523 QCY | ✅ | 0 | 0 | 0 | OK | 6.523 |
+| 3527 Edifier | ✅ | 0 | 0 | 0 | OK | 5.941 |
+| 3545 Buds Core | ✅ | 0 | 0 | 0 | OK | 5.354 |
+| 3336 guia | ✅ | 0 | 0 | 0 | OK | 5.134 |
+
+Checker 14/14 em todos, 0 erros.
+
+### ⚠️ Todos os 4 precisam ser recolados no WordPress
+O que está no ar ainda **não** tem a faixa histórica. Pendências acumuladas por arquivo:
+- **3336**: seção 8 nova + tabela (R$ 437,57) + frase da conclusão + faixa.
+- **3527**: bloco "Por que só a Amazon" corrigido + 3 shortlinks do painel + faixa.
+- **3523**: contradição das ponteiras + faixa.
+- **3545**: faixa.
