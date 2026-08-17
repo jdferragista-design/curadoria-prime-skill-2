@@ -421,3 +421,75 @@ o guia-mãe 3336. Dossiê: **`audit/estado-cluster-audio.md`**.
 
 Completar o cluster áudio: **3548** (Redmi Buds 6 Play) + **3550** (JBL Wave Buds 2)
 + **2888** (Kit Teclado, diagnóstico já pronto e bloqueado por links).
+
+---
+
+## 15. Sessão 17/08/2026 (tarde) — cluster áudio fechado e auditado contra dados reais
+
+### 15.1 Entregas
+| Post | Arquivo | Palavras | Checker |
+|---|---|---|---|
+| 3527 Edifier W820NB | `articles/edifier-w820nb-review-2026-vale-a-pena.html` | 5.570 | 14/14 ✅ |
+| 3545 Galaxy Buds Core | `articles/samsung-galaxy-buds-core-vale-a-pena.html` | 5.106 | 14/14 ✅ |
+| 3523 QCY T13 ANC | `articles/qcy-t13-anc-review-2026-vale-a-pena.html` | 6.263 | 14/14 ✅ |
+
+Commits: `0c05723` → `cbe942d` (12 no total). Dossiê: `audit/estado-cluster-audio.md` §7–§14.
+CSV `audit/auditoria-48-artigos.csv` atualizado: 3523, 3527 e 3545 marcados CORRIGIDO-17/08/2026.
+
+### 15.2 🔴 LIÇÃO CENTRAL DA SESSÃO — seções de "problemas" eram inferência
+Nos **três** artigos a seção "Problemas relatados por compradores" tinha sido escrita por dedução
+plausível, com rótulos de falsa precisão ("Frequência: alta/moderada"). O texto era verossímil e
+**não disparava o checker**. Só o cruzamento com dumps reais de avaliações expôs:
+
+| Artigo | Afirmação publicada | Ocorrências reais |
+|---|---|---|
+| 3523 | queda de conexão em shopping/academia | **0** |
+| 3523 | app não reconhece no 1º pareamento | **0** |
+| 3523 | latência no modo jogo em iPhone | **0** |
+| 3523 | ponteira M grande demais | **0** |
+| 3523 | chiado com vento = queixa mais comum | **0** — os 2 relatos de vento são ELOGIOS |
+| 3527 | demora para reconectar no Android | **0** |
+| 3527 | instabilidade do app no iOS | **0** |
+| 3527 | almofadas de veludo "R$ 40 a R$ 60" | **preço inventado** |
+| 3545 | conexão instável em notebook Windows | **0** — única menção a Windows é elogio |
+| 3545 | ANC percebido como fraco (2-3★) | **0** — ANC aparece como positivo |
+
+**REGRA NOVA (vale para toda a fila):** seção de problemas só se houver dump de avaliações.
+Sem dump, declarar explicitamente que a lista é dedutiva. Nunca rotular frequência sem contagem.
+
+**REGRA 2:** não basta ler as notas 1-3★. Os defeitos de longo prazo (botões que afundam aos 2
+anos, espuma que descasca aos 8 meses) só aparecem **dentro de avaliações 5★**. Minerar por tema,
+não por nota.
+
+### 15.3 Números corrigidos (haviam sido obtidos por busca, não por captura)
+| Produto | publicado | **real (dump)** |
+|---|---|---|
+| Buds Core Amazon | 4,7/5 · ~164 | **4,8/5 · 2.883** (88% 5★) — erro de 18× |
+| Buds Core ML | 4,9/5 · ~11.283 | 4,9/5 · **7.116** |
+| QCY Amazon | 4,6/5 · ~751 | **4,6/5 · 750** (81% 5★) |
+| QCY ML | 4,8/5 · ~6.546 | **4,8/5 · 6.630** (+10 mil vendidos) |
+| Edifier Amazon | — | **4,7/5 · 1.483** (82% 5★) |
+| Plus V25 ML | — | **4,9/5 · apenas 21 opiniões** |
+
+### 15.4 Achados que mudaram cards de compra
+- **Plus V25**: só 21 opiniões, e **um comprador que tinha o W820NB original considerou o ANC da
+  Plus V25 INFERIOR** (vazamento pela espuma). O card a recomendava como upgrade natural →
+  ressalva publicada: a única melhoria documentada é o Bluetooth 6.1.
+- **Cor do W820NB branco**: 10 menções de que o tom real é **off-white com almofadas bege**. É a
+  cor que o card vende → aviso no card e na seção de problemas.
+
+### 15.5 Infraestrutura: anexos de chat NÃO chegam
+O sandbox reinicia a cada turno (`uptime` = 1 min) e só persiste o que está **dentro do repositório**.
+Anexos vão para `/home/user/uploads/`, fora dele → somem antes de qualquer leitura. Duas tentativas
+falharam. **Solução adotada: cliente commita os dumps direto no GitHub** (`28ad6ee`, `f2ce32d`) e eu
+dou `git fetch`. Dumps agora versionados em `articles/*.txt` — disponíveis em qualquer sessão futura.
+
+### 15.6 Dumps de avaliações disponíveis no repo
+`QCY-T13-ANC.amazom.txt` · `Fone-Qcy-T13-AncML.txt` · `W820NB-Edifier-amazon.txt` ·
+`W820NB-Plus-V25-ML.txt` · `Samsung-Galaxy-Buds-Core-amazon.txt` · `Samsung-Galaxy-Buds-ML.txt` ·
+`Wave-Buds-2.txt` · `soundcore-Liberty-4.txt` · `Anker.txt` · `Samsung-Galaxy-Watch7.txt`
+
+⚠️ Viés recorrente: capturas do ML e da Amazon do Buds Core trazem quase só 4-5★. Declarar nos artigos.
+
+### 15.7 Próximo: 3336 (guia-mãe Top 5)
+Botão ML do Edifier `meli.la/1pXMdaD` → lista vazia (quebrado, no ar). Preços de 14/08 desatualizados.

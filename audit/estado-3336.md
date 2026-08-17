@@ -1,50 +1,51 @@
 # ESTADO — 3336 (Top 5 Fones Bluetooth até R$ 500 · `melhor-fone-bluetooth-ate-500-reais-2026`)
 
-**Status:** ✅ CORRIGIDO E VALIDADO (aguardando 4 links de afiliado para completar)
+**Status:** ✅ REVISADO EM 17/08/2026 — botão quebrado removido, 100% dos preços re-verificados.
 
 - URL: https://curadoriaprime.com/melhor-fone-bluetooth-ate-500-reais-2026/
-- Título: Top 5 Fones de Ouvido Bluetooth até R$ 500: O Guia Definitivo para 2026
 - Entregável: `articles/melhor-fone-bluetooth-ate-500-reais-2026-artigo-completo.html`
-- Data da reescrita: 14/08/2026
+- Checker: **14/14, 0 erros** · 3.812 palavras · 11 links de afiliado, todos com `rel` completo.
 
-## O que foi corrigido
+## 🔴 Correção crítica: botão morto no ar
 
-- Urgência vencida removida: "chega antes do Dia dos Pais 🎁" (Dia dos Pais 09/08) e a narrativa "quase todos caíram de preço" (na verdade subiram desde 01/08).
-- Preços re-verificados em 14/08/2026: Buds Core R$ 269,90 (Amazon) · QCY R$ 199 (ML Pix) · Redmi R$ 78,05 azul / R$ 93,10 preto (ML) · JBL R$ 255 (Amazon) · Edifier R$ 355,49 (KaBuM) / R$ 422,90 (Amazon branco).
-- Edifier W820NB MANTIDO (não trocado): link Amazon BRANCO novo (fornecido pelo editor); KaBuM citado como alternativa.
-- JSON-LD: @graph (Article + ItemList + FAQPage + BreadcrumbList) SEM aggregateRating/reviewCount, SEM priceValidUntil, SEM availability. Autor canônico "Cristiano Martins" (url /sobre-a-curadoria-prime/, sameAs só x.com/CuradoriaPrime).
-- "compra verificada"/"compradores verificados"/"milhares de avaliações" removidos; depoimentos com aspas (não verificáveis) removidos.
-- Cada produto com bloco "Pontos de Atenção" (heading exato + `<ul>` ≥3).
-- Linguagem "medido/uso real" → "relatado/segundo testes publicados".
-- Fontes: seção renomeada para "Fontes consultadas" (§3.4) + links diretos.
+`meli.la/1pXMdaD` (botão Mercado Livre do Edifier) → resolve para o **perfil social vazio** do
+afiliado (*"Este perfil ainda está vazio"*). O leitor clicava e não chegava a produto nenhum.
+**Botão removido**; o card do Edifier agora tem só o botão da Amazon, alinhado à decisão do
+cliente no review 3527 (branco só na Amazon).
 
-## Validação (checar_conformidade.py)
+> ⚠️ Corrige a nota antiga deste dossiê, que dizia que os `meli.la` resolvendo pelo perfil social
+> eram "comportamento normal, NÃO são links quebrados". **Estava errado**: quando o perfil está
+> vazio, o link é inútil para o leitor e não credita a venda.
 
-- ✅ APROVADO: 0 erros, 0 alertas. JSON-LD parse OK; div 63×63; ul 10×10; sponsored 100% (4 links); zero base64.
+## Teste dos 5 shortlinks ML (17/08/2026, via fetch_page)
 
-## Links de afiliado — COMPLETOS (extraídos do artigo ao vivo)
-
-| Produto | Amazon | Mercado Livre |
+| Produto | Shortlink | Resultado |
 |---|---|---|
-| Galaxy Buds Core | `amzn.to/4x9UVbh` | `meli.la/1etJ5dy` |
-| QCY T13 ANC | `amzn.to/4pTnAPy` | `meli.la/1UjXuhQ` |
-| Redmi Buds 6 Play | `amzn.to/4pTYqjQ` | `meli.la/1J2VMuY` |
-| JBL Wave Buds 2 | `amzn.to/455lC55` | `meli.la/1qK8Kvf` |
-| Edifier W820NB | `link.amazon/B06vz0YO0` (branco, novo) | `meli.la/1pXMdaD` |
+| Galaxy Buds Core | `meli.la/1etJ5dy` | ✅ MLB57492226 — **R$ 268,20 Pix** (32% off de R$ 399), "último disponível", Mega Mamute |
+| QCY T13 ANC | `meli.la/1UjXuhQ` | ✅ MLB34102640 — **R$ 199** (26% off), loja oficial QCY, 12× R$ 19,70 |
+| Redmi Buds 6 Play | `meli.la/1J2VMuY` | ✅ MLB55462947 — **R$ 78,99** azul celeste |
+| JBL Wave Buds 2 | `meli.la/1qK8Kvf` | ✅ MLB44895127 — **R$ 234,48** azul (36% off de R$ 369), loja oficial JBL, 6× R$ 39,08 |
+| Edifier W820NB | `meli.la/1pXMdaD` | ❌ **PERFIL VAZIO — removido do artigo** |
 
-> 📌 Os shortlinks `meli.la` resolvem pelo perfil social do afiliado do editor
-> (`social/6620250626180940`) — comportamento normal, NÃO são links quebrados.
+Todos os vivos carregam `matt_word` + `matt_tool_id=78701982` (creditam a comissão).
 
-Preços aplicados (14/08/2026): Buds Core R$ 269,90 (Amazon) · QCY R$ 199 (ML Pix) ·
-Redmi R$ 78,05 (ML azul) · JBL R$ 255 (Amazon) · Edifier R$ 422,90 (Amazon branco) /
-R$ 355,49 (KaBuM). Onde não há preço de hoje verificado na 2ª loja, o botão fica
-sem valor ("confirme na loja").
+## Preços atualizados de 14/08 → 17/08
 
-## Confirmar na biblioteca de mídia
+| Produto | antes (14/08) | **agora (17/08)** |
+|---|---|---|
+| Galaxy Buds Core | R$ 269,90 (Amazon) | **R$ 268,20 Pix** (ML) |
+| QCY T13 ANC | R$ 199 Pix | **R$ 199** (ML oficial) · R$ 186,10 Amazon |
+| Redmi Buds 6 Play | R$ 78,05 | **R$ 78,99** (azul) · preto R$ 98 |
+| JBL Wave Buds 2 | R$ 255 (Amazon) | **R$ 234,48** (ML oficial JBL) — caiu R$ 20 |
+| Edifier W820NB | R$ 422,90 Amazon / R$ 355,49 KaBuM | **R$ 437,57** (Amazon, branco) |
 
-- Imagem hero `prod-galaxy-buds-core-top5.webp` (900×800) — confirmar se é a montagem do Top 5.
-- Imagem QCY `S9626b386b1cd435f976e7761f23ed987n.avif` (nome de ML).
+Faixa do hero: "R$ 78–423" → **"R$ 79–438"**. Atualizados: veredito de 15s, cards, tabela
+comparativa, conclusão, FAQ, JSON-LD e rodapé. KaBuM saiu (preço não re-verificado hoje).
 
-## Painel (fora do arquivo)
+## Alinhamento com o review 3527
+- Card do Edifier passou a avisar que a **cor cinza saiu de linha** (estoque residual a R$ 708,39).
+- Registrado que o tom real do branco é **off-white com almofadas bege** (10 menções nos dumps).
 
-- Rank Math título SEO + nome de exibição WP → "Cristiano Martins".
+## Pendências
+- 🔴 Shortlink ML do W820NB **branco** (`MLB19052272`): se o cliente enviar, repor o 2º botão.
+- 🟡 KaBuM: se voltar a ser citado, re-verificar o preço.
