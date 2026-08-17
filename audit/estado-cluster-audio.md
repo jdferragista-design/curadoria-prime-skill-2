@@ -539,3 +539,62 @@ JSON-LD parseia; `@graph` = Article + Review + FAQPage + BreadcrumbList; **0** o
 2. Conferir a data de publicação no schema (`2026-03-16`) contra o painel.
 
 **Status do lote áudio:** 3527 ✅ · 3545 ✅ · **3523 ✅** — trio concluído.
+
+---
+
+## §12 — 3523 revisado com as avaliações REAIS (17/08/2026)
+
+Cliente subiu os dumps direto no GitHub (commit `28ad6ee`), após duas falhas do anexo pelo chat:
+`articles/QCY-T13-ANC.amazom.txt` (937 linhas) e `articles/Fone-Qcy-T13-AncML.txt` (1.589 linhas).
+
+### Números reais (substituem os obtidos por busca)
+| | antes (busca) | **real (dump)** |
+|---|---|---|
+| Amazon | 4,6/5 · ~751 | **4,6/5 · 750** · 5★ 81% / 4★ 12% / 3★ 3% / 2★ 1% / 1★ 3% |
+| Mercado Livre | 4,8/5 · ~6.546 | **4,8/5 · 6.630** · +10 mil vendidos · R$ 199 (26% OFF de R$ 269,90) |
+
+Amostra lida: **89 avaliações com texto na Amazon + 78 no ML = 167.**
+
+### 🔴 Achado grave: os 4 "Problemas relatados" eram INVENÇÃO ANALÍTICA
+Busca por regex nos 167 comentários — **zero ocorrência** para os quatro:
+
+| Problema afirmado no artigo | Ocorrências reais |
+|---|---|
+| Queda de conexão em ambiente congestionado (shopping/academia) | **0** |
+| App não reconhece no 1º pareamento | **0** |
+| Latência no modo jogo em iPhone | **0** |
+| Ponteira M grande demais para canais menores | **0** |
+
+Eram inferências plausíveis, escritas com aparência de dado ("Frequência: alta", "Frequência:
+moderada"). **Seção inteira reescrita** com os padrões que existem de fato.
+
+### O que os dados mostram (nova seção 10, por frequência real)
+1. **Falha em um dos lados** — queixa negativa nº 1 na Amazon. Mesmo sintoma repetido: lado
+   esquerdo baixa o volume sozinho até parar. De poucos dias a ~1 ano de uso. 1★+2★ = 4% de 750.
+2. **Encaixe** — tema mais citado depois de som/ANC/bateria, com **sinal dividido**: "encaixa muito
+   bem" vs. "sensação de não ser seguro, mas não cai". Produto vem com **4 tamanhos de ponteiras**.
+3. **Um aparelho por vez** — multiponto confirmado ausente por comprador.
+4. **Som fraco para minoria** — nas notas 2-3, "praticamente tem que aumentar todo o volume".
+5. **Entrega/nota fiscal** — queixa de vendedor terceiro, não do produto (até 2 meses, sem DANFE).
+
+### 🔴 Contradição corrigida: o chiado com vento
+O artigo afirmava ser "a queixa que mais se repete nas avaliações negativas de uso ao ar livre".
+**Zero relatos.** Os dois que citam vento são **positivos** ("cancela muito bem a vibração do vento").
+Alerta mantido como característica da arquitetura feedforward, mas com a ressalva explícita de que
+os relatos não o confirmaram.
+
+### Relato âncora do ANC (substitui estimativa)
+Comprador com 3 meses de uso: reduz ~**90% do ruído de um ventilador** e ~**80% do som de academia**,
+com o alerta "se espera ficar isolado do mundo, talvez não seja a opção adequada". ANC é o tema
+**mais citado** nas duas lojas, predominantemente como elogio.
+
+### ⚠️ Viés de amostra registrado no artigo
+A captura do ML trouxe **só 4★ e 5★** (78 blocos, distribuição 73×5★ / 5×4★). As críticas vêm
+sobretudo da Amazon. Ressalva publicada na seção de Fontes.
+
+### Regra 4.2 preservada
+Nenhum depoimento virou bloco com selo/nome/data. Os trechos citados entram como **evidência
+qualitativa dentro de síntese**, entre aspas curtas e sem identificação do autor.
+
+**Validação:** checker 14/14, 0 erros · 6.263 palavras · JSON-LD 4 tipos, 0 offers/aggregateRating ·
+41/41 tags `<a>` · 0 afiliado sem `rel` completo · 0 "compra verificada".
