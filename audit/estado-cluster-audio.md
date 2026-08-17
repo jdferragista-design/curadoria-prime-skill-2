@@ -423,3 +423,61 @@ python3 tools/checar_conformidade.py articles/edifier-w820nb-review-2026-vale-a-
 ```
 JSON-LD parseia nos dois; zero `aggregateRating`/`offers`/`priceValidUntil`/`availability`;
 `rel` correto em 100% dos links; balanço de tags fechado.
+
+
+---
+
+## 10. 🔒 Decisão final sobre os links do Edifier (17/08/2026)
+
+**Instrução do cliente:** *"Deixar como está — branco só na Amazon, que é onde ele está a
+R$ 437,57 e em estoque, com aviso do preço."*
+
+### Como ficou o bloco de compra do 3527
+
+| Card | Amazon | Mercado Livre |
+|---|---|---|
+| **W820NB branco** (recomendado, R$ 437,57) | ✅ `link.amazon/B06vz0YO0` → ASIN `B09HR1B9RW` | ❌ **sem botão** (decisão do cliente) |
+| **W820NB Plus V25** (nova versão, R$ 499) | `amazon.com.br/dp/B0G534R9BZ` (cinza escuro) | ✅ `meli.la/1EapXtQ` → `MLB63185537`, loja oficial Edifier, **marfim**, 9× R$ 55,44 |
+| **W800BT Pro** (alternativa, R$ 284–299) | `B0DF5NF475` | `MLB41983700` |
+| **Galaxy Buds Core** (alternativa TWS) | `amzn.to/4cDNSkc` | `mercadolivre.com/sec/1pdm5eK` |
+
+### Aviso de preço da cor cinza — agora com link de comprovação
+
+O link `MLB19052273` fornecido pelo cliente **não virou botão de compra** (é a cor esgotada,
+a R$ 708,39). Ele foi usado como **prova documental do preço**, em 2 lugares:
+
+1. No aviso acima do bloco de compra, com o valor **R$ 708,39 clicável** — o leitor confere
+   sozinho por que não recomendamos essa cor;
+2. Na seção **"Fontes consultadas"**, que passou a discriminar as três capturas:
+   - Amazon — W820NB **branco** (`B09HR1B9RW`): R$ 437,57, em estoque, 4,7/5 em ~1.483 avaliações;
+   - Amazon — W820NB **cinza** (`B09MDC77QX`): "Não disponível, sem previsão";
+   - Mercado Livre — W820NB **cinza** (`MLB19052273`): R$ 708,39, "último disponível".
+
+Todos com `rel="sponsored noopener noreferrer nofollow"` e data de consulta.
+
+### Shortlinks descartados (registro para não repetir o teste)
+
+| Shortlink | Resultado em 17/08/2026 |
+|---|---|
+| `meli.la/1pXMdaD` (usado no guia Top 5) | ⛔ **lista vazia** do perfil de afiliado — mesmo sintoma do LG C5 no post 3139 |
+| `meli.la/1d8YAMm` | ⛔ **"Id does not exist"** |
+| `MLB19052273` | é a cor **cinza**, R$ 708,39 — não serve para o card do branco |
+| `meli.la/1EapXtQ` | ✅ válido, **mas é a Plus V25 marfim** — aplicado no card correto |
+
+> O MLB do W820NB **branco** é o **`MLB19052272`**. Se o cliente gerar o shortlink de
+> afiliado para ele, basta adicionar o segundo botão no card do branco.
+
+### Revalidação final do lote
+
+```
+python3 tools/checar_conformidade.py articles/edifier-w820nb-review-2026-vale-a-pena.html
+                                     articles/samsung-galaxy-buds-core-vale-a-pena.html
+✅ Aprovado (os dois) — 0 erros, 0 alertas em 2 arquivos.
+Edifier: 11/11 links sponsored · fontes ~12 itens
+Buds Core: 8/8 links sponsored · fontes ~21 itens
+```
+
+Verificação independente nos dois: JSON-LD parseia (Article + Review + FAQPage +
+BreadcrumbList); zero `aggregateRating`/`offers`/`priceValidUntil`/`availability`;
+zero `<br/>` no `<script>`; zero base64; zero `data-src`; balanço de tags fechado;
+zero alegação de teste físico no corpo.
