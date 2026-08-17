@@ -60,3 +60,48 @@ como dedutiva.
 ## Validação
 JSON-LD válido (4 tipos) · 0 offers/aggregateRating/priceValidUntil · 8 afiliados, 100% com `rel`
 completo · tags balanceadas · 0 base64 · 0 "compra verificada" · 0 menção a Dia dos Pais.
+
+---
+
+## Corroboração por fontes externas (17/08/2026)
+
+Cliente perguntou se dava para buscar os dados em outros sites, como o da própria marca. **Deu — e
+encontrou erros que nenhuma leitura de avaliação pegaria.**
+
+### 🔴 Três erros de ficha técnica corrigidos
+| Item | O artigo dizia | **Ficha oficial (KaBuM + Casas Bahia)** |
+|---|---|---|
+| Codec | "SBC **e AAC**" | **SBC apenas** — sem AAC, aptX ou LDAC |
+| Cabo de carregamento | não mencionado | **NÃO acompanha** — "deve ser adquirido separadamente" |
+| Identificação | ausente | modelo **M2420E1** · Anatel **077062409185** |
+
+O cabo é o mais sensível: o leitor compra achando que vem na caixa. Virou caixa de alerta própria.
+Acrescentados também impedância (16 Ω) e capacidades reais (57 mAh por fone / 600 mAh no estojo).
+
+### 🔴 Limitação real que não estava documentada
+**Volume máximo baixo** — é a queixa que mais se repete entre os compradores europeus, aparecendo
+até em avaliações 5 estrelas: *"uma desvantagem é que o volume máximo para música é um pouco baixo"*.
+O PcComponentes lista "volume máximo" entre os pontos de melhoria citados pelos usuários.
+
+Refinada também a queixa do microfone: é adequado para **chamadas**, mas ruim para **gravar áudios**
+— distinção que os relatos fazem e o artigo não fazia.
+
+### Fontes usadas e declaradas no texto
+- **KaBuM / Casas Bahia** — ficha do fabricante, mais completa que a página oficial da Xiaomi.
+- **PcComponentes (PT/ES)** — +300 opiniões nas cores preta e azul, média 4,6/5. **Declarado no
+  artigo que são compradores europeus.**
+- **Versus** — notas por critério: bateria 9,7 · conforto 9,4 · construção 9,3 · design 9,0 · **som 8,6**.
+  Confirma o padrão: bateria é o destaque, som é o critério mais mediano.
+
+### O aviso da seção mudou
+Era: *"as limitações abaixo são deduzidas da ficha técnica"*. Agora declara o cruzamento de **três
+fontes independentes** e explica que continua **sem rótulo de frequência**, porque frequência exige
+contagem das avaliações brasileiras.
+
+### Regra gravada — §18.6 em `regras-editoriais.md`
+"Sem dump de avaliações? Use fontes alternativas (mas nomeie cada uma)", com tabela de
+confiabilidade por tipo de fonte e 4 regras de uso (publicar só o que converge ou nomear a fonte;
+dizer de onde veio; nunca virar rótulo de frequência; nunca passar relato estrangeiro como brasileiro).
+
+**Validação:** checker 14/14, 0 erros · 4.794 palavras (era 4.261) · 0 `offers`/`aggregateRating` ·
+8 afiliados 100% com `rel` · tags balanceadas · zero ocorrência de "SBC e AAC".

@@ -938,6 +938,29 @@ e o texto seguia recomendando como "melhor preço"; (b) um fone estava **no piso
 artigo não dizia, perdendo o melhor argumento de compra; (c) um mesmo modelo tinha **dispersão de
 quase R$ 200** entre lojas, e o leitor não era avisado.
 
+### 18.6. Sem dump de avaliações? Use fontes alternativas (mas nomeie cada uma)
+
+Quando não houver captura das avaliações das lojas brasileiras, **não invente frequência**. Busque
+corroboração em fontes independentes e diga de onde veio cada informação:
+
+| Fonte | O que ela dá | Confiabilidade |
+|---|---|---|
+| **Ficha técnica do fabricante** reproduzida no varejo (KaBuM, Casas Bahia, Magalu) | specs objetivas: codec, mAh, Anatel, conteúdo da caixa | 🟢 alta — costuma ser mais completa que o site oficial |
+| **Varejistas estrangeiros** com opiniões (PcComponentes, etc.) | volume grande de relatos do mesmo produto | 🟡 média — mesma unidade, público diferente. **Declarar que é de outro país** |
+| **Comparadores** (Versus, Buscapé, Zoom) | notas por critério e histórico de preço | 🟡 média — amostra pequena, mas útil para ordenar pontos fortes e fracos |
+| **Reviews de canais especializados** | teste com metodologia declarada | 🟢 alta — **nomear o canal** |
+
+**Regras ao usar essas fontes:**
+- ✅ Publicar apenas o que **duas ou mais fontes convergem**, ou nomear a fonte única no texto.
+- ✅ Dizer no artigo **de onde veio** ("compradores europeus no PcComponentes", "notas do Versus").
+- ❌ **Nunca** converter isso em rótulo de frequência ("frequência: alta") — frequência exige contagem.
+- ❌ Nunca apresentar opinião de comprador estrangeiro como se fosse do mercado brasileiro.
+
+**Ganho comprovado:** no 3548, essa checagem encontrou **três erros de ficha** que nenhuma leitura de
+avaliação pegaria — codec (o artigo dizia "SBC e AAC"; a ficha oficial lista **só SBC**), o **cabo
+que não acompanha o produto** e o modelo/Anatel ausentes. Também revelou uma limitação real não
+documentada: **volume máximo baixo**, a queixa mais repetida entre os compradores europeus.
+
 ### 18.5. Onde colocar
 - **Guia de compra:** seção própria antes da tabela comparativa.
 - **Review individual:** bloco dentro de "Onde comprar", com a faixa do produto e a dos concorrentes
