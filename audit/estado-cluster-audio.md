@@ -742,3 +742,34 @@ aparece no ar — pedir o link direto no chat.
 
 **Validação:** 3 arquivos, checker 14/14, 0 erros, JSON-LD válido, 0 offers/aggregateRating,
 0 afiliado sem `rel` completo, tags balanceadas.
+
+---
+
+## §16 — DECISÃO FECHADA: W820NB branco só na Amazon (17/08/2026)
+
+Cliente: *"ficou só da Amazon, do Mercado Livre está muito caro."* **Pendência encerrada** — não
+há mais link do branco a buscar.
+
+### Verificação que sustenta a decisão
+`MLB19052272` (W820NB branco, o anúncio de referência do ML):
+- **R$ 499** à vista / 12× R$ 48,17 · 4,8/5 em 439 opiniões · +100 vendidos
+- Ofertas de terceiros a partir de **R$ 389,99** (MAC-OFFERS, 75 vendas) — sem envio da Amazon
+- **Amazon: R$ 437,57**, vendido e entregue pela própria loja
+
+Diferença de **R$ 61,43** contra o anúncio de referência. O caminho barato do ML depende de
+vendedor pequeno, sem a garantia de entrega da Amazon — não é equivalente.
+
+### Publicado nos dois artigos
+Bloco explicando **por que só há um botão**, com os números da comparação. Não é omissão: o leitor
+vê que o ML foi conferido e por que foi descartado. Fecha o padrão da sessão — nenhum link entra
+ou sai sem justificativa verificável no texto.
+
+### Situação final dos links do Edifier
+| Item | Amazon | Mercado Livre |
+|---|---|---|
+| W820NB **branco** | `link.amazon/B06vz0YO0` ✅ R$ 437,57 | ❌ **descartado por preço** (R$ 499) |
+| W820NB cinza | fora de linha | só como prova do preço (R$ 708,39, `MLB19052273`) |
+| Plus V25 | `link.amazon/B04teGQck` | `meli.la/1EapXtQ` ✅ |
+| W800BT Pro | `link.amazon/B06BFey5m` | `meli.la/2gDAGge` ✅ |
+
+**Todas as pendências de link do cluster áudio estão fechadas.**
