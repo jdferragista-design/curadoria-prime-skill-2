@@ -747,29 +747,40 @@ aparece no ar — pedir o link direto no chat.
 
 ## §16 — DECISÃO FECHADA: W820NB branco só na Amazon (17/08/2026)
 
-Cliente: *"ficou só da Amazon, do Mercado Livre está muito caro."* **Pendência encerrada** — não
-há mais link do branco a buscar.
+Cliente: *"ficou só da Amazon, do Mercado Livre está muito caro."* **Pendência encerrada.**
 
-### Verificação que sustenta a decisão
-`MLB19052272` (W820NB branco, o anúncio de referência do ML):
-- **R$ 499** à vista / 12× R$ 48,17 · 4,8/5 em 439 opiniões · +100 vendidos
-- Ofertas de terceiros a partir de **R$ 389,99** (MAC-OFFERS, 75 vendas) — sem envio da Amazon
-- **Amazon: R$ 437,57**, vendido e entregue pela própria loja
+### 🔴 ERRO MEU, corrigido na sequência
+Ao justificar a decisão, busquei o `MLB19052272` (branco) e publiquei que o ML pedia **R$ 499**
+pelo branco, com ofertas de terceiros a partir de R$ 389,99. **Cliente corrigiu:** *"o ML tinha o
+W820NB cinza ~700, o branco não."* Ele está certo — e o dossiê já registrava isso desde a §4:
 
-Diferença de **R$ 61,43** contra o anúncio de referência. O caminho barato do ML depende de
-vendedor pequeno, sem a garantia de entrega da Amazon — não é equivalente.
+| MLB | cor | preço verificado 17/08 |
+|---|---|---|
+| `MLB19052273` | **cinza** | **R$ 708,39**, "último disponível" — fora de linha |
+| `MLB19052272` | branco | página de catálogo, **sem oferta ativa confirmada** |
 
-### Publicado nos dois artigos
-Bloco explicando **por que só há um botão**, com os números da comparação. Não é omissão: o leitor
-vê que o ML foi conferido e por que foi descartado. Fecha o padrão da sessão — nenhum link entra
-ou sai sem justificativa verificável no texto.
+O que eu fiz de errado: tratei o resultado de `web_search` no catálogo do branco como se fosse uma
+**oferta ativa verificada**. Números de página de catálogo do ML (R$ 499 / R$ 389,99 de terceiros)
+não são captura confirmada — e contradiziam a verificação própria já registrada nas §4 e §10.
+**A fonte interna existente valia mais que a busca nova, e eu não cruzei.**
+
+### Texto corrigido nos dois artigos
+O bloco "Por que só a Amazon?" agora diz o que de fato se apurou: no ML a oferta encontrada era a
+**cor cinza**, fora de linha, a **R$ 708,39** (~60% acima da faixa histórica de R$ 355–437). Não é
+o mesmo produto do card — o card é do **branco**, e para ele a Amazon a R$ 437,57 é a origem
+verificada. Nenhum número de "R$ 499 no branco" permanece em qualquer arquivo.
 
 ### Situação final dos links do Edifier
 | Item | Amazon | Mercado Livre |
 |---|---|---|
-| W820NB **branco** | `link.amazon/B06vz0YO0` ✅ R$ 437,57 | ❌ **descartado por preço** (R$ 499) |
-| W820NB cinza | fora de linha | só como prova do preço (R$ 708,39, `MLB19052273`) |
+| W820NB **branco** | `link.amazon/B06vz0YO0` ✅ R$ 437,57 | ❌ sem oferta verificada |
+| W820NB cinza | fora de linha (`B09MDC77QX`) | só como prova de preço (R$ 708,39, `MLB19052273`) |
 | Plus V25 | `link.amazon/B04teGQck` | `meli.la/1EapXtQ` ✅ |
 | W800BT Pro | `link.amazon/B06BFey5m` | `meli.la/2gDAGge` ✅ |
 
 **Todas as pendências de link do cluster áudio estão fechadas.**
+
+### ⚠️ REGRA (vale para toda a fila)
+Antes de publicar preço obtido por `web_search`, **cruzar com o que o dossiê já registrou por
+captura própria**. Divergência = a captura própria prevalece, ou refazer a verificação. Resultado
+de catálogo do ML não é oferta ativa.
