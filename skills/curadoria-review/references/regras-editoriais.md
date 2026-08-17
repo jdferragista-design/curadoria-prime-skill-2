@@ -987,3 +987,59 @@ credencial de API.
 **Ordem sugerida:** só ligar a §17 depois de terminar a limpeza dos artigos que já
 estão no ar. Uma fila de revisão construída sobre 36 alegações falsas mede a coisa
 errada — primeiro zerar o passivo, depois instalar o cronômetro.
+
+---
+
+## §19 — Nota editorial: régua pública, conta aberta
+
+A régua oficial é a **v2.0 (agosto de 2026)**, publicada em
+**https://curadoriaprime.com/como-avaliamos/** — ⚠️ este é o slug correto.
+`/como-avaliamos-e-pontuamos-produtos/` **retorna 404** e não deve ser usado.
+
+### §19.1 — Os 6 critérios e pesos (v2.0)
+
+| Critério | Peso | Fonte da evidência |
+|---|---|---|
+| Custo-benefício | 30% | Preço apurado na data + ficha dos concorrentes |
+| Satisfação verificada | 25% | Amazon e ML, sempre com nº de avaliações e data |
+| Ficha técnica | 20% | Site oficial, manuais, fichas |
+| Recursos e usabilidade | 10% | Ficha e manual + relatos de operação |
+| Consenso técnico | 10% | Canais técnicos, citados nominalmente |
+| Confiança e suporte | 5% | Política do fabricante + relatos de pós-venda |
+
+Critério que não se aplica é marcado **N/A** e seu peso é **redistribuído
+proporcionalmente** entre os demais, mantendo a soma em 100%.
+
+### §19.2 — Arredondamento: SEMPRE múltiplo de 0,5 🔴
+
+A página pública declara: *"Usamos no máximo uma casa decimal, sempre múltiplo de 0,5.
+Não publicamos notas como 8,7: seria falsa precisão"*.
+
+**Publicar 8,2 / 8,4 / 8,8 viola a política declarada do próprio site.** É contradição
+verificável por qualquer leitor que abra a página de metodologia. Antes de publicar
+qualquer nota, checar: `round(nota*2)/2 == nota`.
+
+Escala de selos: 9,0–10 🏆 Melhor da categoria · 8,0–8,9 ⭐ Recomendado ·
+7,0–7,9 👍 Bom com ressalvas · 6,0–6,9 ⚖️ Existem alternativas melhores ·
+<6,0 ⚠️ Não recomendado.
+
+### §19.3 — Todo review com nota precisa de 4 elementos
+
+1. **Badge** com a nota no hero;
+2. Seção **"🧮 Como chegamos ao X"** com link para `/como-avaliamos/`;
+3. **Tabela dos 6 critérios** com nota, contribuição e justificativa por linha;
+4. Caixa **"O que essa nota não mede"**.
+
+Nota sem conta aberta é opinião com aparência de medida — exatamente o que a
+página pública promete não fazer.
+
+### §19.4 — Não pontuar o que exige o produto em mãos
+
+A régua lista explicitamente o que **nunca** entra na nota: conforto após horas,
+encaixe, qualidade sonora ou de imagem subjetiva, aquecimento, durabilidade real,
+desempenho de microfone/câmera em campo, ruído de operação.
+
+Grade de "notas por característica" (ex.: ANC 9,5 · Som 9,0) **não é a régua** e não
+pode aparecer sem rótulo — o leitor confunde com pontuação oficial. Se mantida, deve
+vir precedida de aviso declarando que é leitura de ficha técnica e **não entra no
+cálculo**, e nenhum card dela pode se chamar "NOTA GERAL".

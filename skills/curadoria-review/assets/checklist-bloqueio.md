@@ -70,3 +70,14 @@ A IA preenche o checklist na entrega. O editor humano é quem libera.
 - [ ] Toda loja citada foi **re-verificada na data da revisão**? (se não, remover a loja)
 - [ ] A faixa histórica ficou **fora** do JSON-LD (sem `offers`, sem `priceValidUntil`)?
 - [ ] As datas e lojas de cada valor estão anotadas no dossiê em `audit/`?
+
+## §19 — Nota editorial (bloqueadores)
+
+- [ ] A nota é **múltiplo de 0,5**? (8,2 / 8,4 / 8,8 = ❌ viola a política pública)
+- [ ] Existe badge de nota no hero?
+- [ ] Existe a seção "🧮 Como chegamos ao X" com a tabela dos 6 critérios e pesos?
+- [ ] O link aponta para `/como-avaliamos/` (e **não** para `/como-avaliamos-e-pontuamos-produtos/`, que dá 404)?
+- [ ] A soma das contribuições confere com o total exibido?
+- [ ] Existe a caixa "O que essa nota não mede"?
+- [ ] `ratingValue` do JSON-LD é igual à nota visível no texto?
+- [ ] Nenhuma grade de características se apresenta como "NOTA GERAL" sem rótulo?
