@@ -1,6 +1,6 @@
 # ESTADO — CLUSTER ÁUDIO (3523 · 3545 · 3527)
 
-**Status:** 🔎 DIAGNÓSTICO CONCLUÍDO (17/08/2026) — lote de 3 artigos que compartilham produtos
+**Status:** 🔧 EM EXECUÇÃO (17/08/2026) — 3527 ✅ ENTREGUE · 3545 ⏸️ aguarda confirmação · 3523 ⏳ na fila
 **Modo de trabalho:** 3 por vez (mudança de cadência pedida pelo cliente em 17/08)
 
 | # | Slug | Produto principal | Risco CSV | Alegações | Links sem sponsored |
@@ -228,3 +228,52 @@ FAQ visível; recapturar preço; trocar `availability`/`priceValidUntil`.
 4. 🟡 **Notas duplas** (3545: 9,0/7,8 · 2888: 7,5/6,0) — unificar em nota única?
 5. 🟡 **Redmi Buds 6 Play (3548) e JBL Wave Buds 2 (3550)** completam este cluster e
    têm os mesmos vícios. Entram no próximo lote de 3?
+
+
+---
+
+## 7. ✅ 3527 (Edifier W820NB) — ENTREGUE em 17/08/2026
+
+**Arquivo:** `articles/edifier-w820nb-review-2026-vale-a-pena.html`
+**Decisão do cliente:** caminho **(a)** — mesmo padrão da Philips 50PUG7019 → 50PUG7300.
+
+### O que foi feito
+
+| # | Correção |
+|---|---|
+| 1 | **Bloco de compra SUSPENSO** (§17.1, estado VERMELHO). Aviso de fim de linha no topo, com os números da verificação: Amazon "Não disponível", ML R$ 708,39 "último disponível", faixa histórica R$ 355–423 e o cálculo do desvio (~78%). |
+| 2 | **Sucessora W820NB Plus V25 como OPÇÃO** (R$ 499 nas duas lojas) + gancho "Em breve: review dedicado" — igual ao 3183. |
+| 3 | Seção "O que comprar hoje" com 3 cards: Plus V25 (sucessora), W800BT Pro (over-ear mais barato, R$ 284–299) e Galaxy Buds Core (TWS, R$ 219–244). |
+| 4 | Todos os "~R$ 399" fixos removidos do corpo → faixa histórica com data. |
+| 5 | "Unboxing" → **"O que vem na caixa"**. |
+| 6 | "compradores verificados" / "avaliações verificadas" → "avaliações publicadas por compradores" (0 no corpo). |
+| 7 | "Pontos negativos" → **"Pontos de Atenção"** (h4 + ul, 8 itens, com o fim de linha em primeiro). |
+| 8 | 6 links de afiliado + 2 de fonte com `rel="sponsored noopener noreferrer nofollow"`; fontes editoriais com `noopener noreferrer`. |
+| 9 | Links internos nos **slugs canônicos** (eram 4 slugs curtos com 301). |
+| 10 | Nota **8,8/10 mantida, mas explicitamente atribuída ao produto no preço histórico** + novo card "Disponibilidade 3,0/10" no painel do veredito. |
+| 11 | **JSON-LD reconstruído** (parse → mutação → redump), em `wp:html` sem `<br/>`. Corrigidos: `author.url` (era `/author/cristian/`), `@id` e `mainEntityOfPage` (apontavam para `/edifier-w820nb-review-2026/`, slug inexistente), `logo.url` (caminho sem ano, 404). Removidos `offers`, `price`, `availability` e `priceValidUntil`. |
+| 12 | FAQ do schema **alinhada com a FAQ visível** (5 perguntas iguais nos dois), incluindo a nova "Ainda dá para comprar?". |
+| 13 | "Fontes consultadas" ampliada com as páginas de produto das duas lojas + data de consulta. |
+
+### Validação
+
+```
+python3 tools/checar_conformidade.py articles/edifier-w820nb-review-2026-vale-a-pena.html
+✅ Aprovado. — 0 erros, 0 alertas.
+rel-sponsored 8/8 · divulgação antes dos links · autoria · metodologia ·
+honestidade · fontes (~11 itens) · data · teste-fisico 0 ·
+profundidade 4.331 palavras · valor-agregado completo · imparcialidade 7 contras ·
+enchimento OK · keyword-stuffing OK · schema válido.
+```
+
+Verificação independente: JSON-LD parseia (Article + Review + FAQPage + BreadcrumbList);
+zero `aggregateRating`/`ratingCount`/`reviewCount`/`offers`/`priceValidUntil`/`availability`;
+zero `<br/>` dentro do `<script>`; zero base64; zero `data-src`; balanço de tags fechado
+(div 56/56 · p 96/96 · li 50/50 · a 46/46 · table 5/5 · script 1/1); nenhum slug com 301.
+
+### Pendência do cliente para este post
+
+- **Shortlinks de afiliado da W820NB Plus V25** — o arquivo usa as URLs canônicas
+  (`amazon.com.br/dp/B0G534R9BZ` e `mercadolivre.com.br/p/MLB63419175`) como fallback,
+  já com `rel` correto. Trocar pelos shortlinks quando gerá-los.
+- Mesma coisa para o W800BT Pro (`B0DF5NF475` / `MLB41983700`).
