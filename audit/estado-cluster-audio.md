@@ -835,3 +835,41 @@ O que está no ar ainda **não** tem a faixa histórica. Pendências acumuladas 
 - **3527**: bloco "Por que só a Amazon" corrigido + 3 shortlinks do painel + faixa.
 - **3523**: contradição das ponteiras + faixa.
 - **3545**: faixa.
+
+---
+
+## §19 — 3550 (JBL Wave Buds 2): cluster de áudio CONCLUÍDO
+
+Último dos 6 posts do cluster. Detalhes em `audit/estado-3550.md`.
+
+**Placar final do cluster** — todos checker 14/14, 0 erros:
+
+| Post | Produto | Palavras | Nota |
+|---|---|---|---|
+| 3523 | QCY T13 ANC | 6.523 | 8,5 |
+| 3527 | Edifier W820NB | 5.941 | 8,8 |
+| 3545 | Galaxy Buds Core | 5.354 | 8,5 |
+| 3336 | Guia Top 5 até R$ 500 | 5.134 | — |
+| 3548 | Redmi Buds 6 Play | 4.794 | 8,2 |
+| **3550** | **JBL Wave Buds 2** | **3.633** | **8,4** |
+
+**Violação mais grave encontrada no 3550:** era o **único post do cluster sem declaração de
+não-teste físico**, e ainda usava "unboxing" descrevendo impressões de uso. Reforça a regra:
+a ausência da declaração é mais perigosa quando o texto tem vocabulário de mão-na-massa,
+porque o leitor conclui teste próprio sem que o artigo precise afirmá-lo.
+
+**§19.1 — Dispersão de preço como conteúdo editorial.** O Wave Buds 2 aparecia em 17/08 a
+R$ 222 na Amazon e R$ 426,87 no Magalu — quase o dobro, mesmo produto, mesma data. Quando a
+dispersão entre varejistas passa de ~50%, ela vira **informação útil ao leitor** e deve ganhar
+caixa de alerta com o teto a evitar, não só o link da loja mais barata.
+
+**§19.2 — Relato de manutenção vale mais que relato de defeito.** O achado mais valioso do dump
+não foi uma queixa, foi uma **solução**: limpar a saída de som com cotonete recuperou um fone
+dado como morto (16 votos de útil). Ao minerar dumps, procurar ativamente relatos de
+**"resolvi assim"** — eles têm utilidade prática maior que a enésima confirmação de que o som é bom.
+
+**§19.3 — Tema com amostra pequena: publicar com o número à vista.** Chamadas apareceram em
+apenas 3 das 100 avaliações. Em vez de omitir a seção ou generalizar, o artigo abre declarando
+"3 das 100 avaliações lidas, o que é pouco para afirmar um padrão" e complementa com o dado
+de hardware (2 microfones × 6 do concorrente). Amostra pequena não impede publicar — impede
+afirmar frequência.
