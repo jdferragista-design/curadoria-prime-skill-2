@@ -698,3 +698,47 @@ atual. O relato do **Redmi 12 com volume baixo** já constava corretamente na se
 
 **Validação:** 3 arquivos, checker 14/14, 0 erros · JSON-LD válido, 0 offers/aggregateRating ·
 0 afiliado sem `rel` · tags balanceadas · 3527 = 5.570 palavras (era 5.154), 3545 = 5.106, 3523 = 6.263.
+
+---
+
+## §15 — Conferência dos 3 posts NO AR (17/08/2026)
+
+Cliente pediu verificação das URLs publicadas. Resultado: **os três estão no ar com as correções
+desta sessão aplicadas.**
+
+### ✅ Confirmado no ar
+- **3523 QCY**: hero "R$ 186–199", metodologia citando "167 avaliações lidas uma a uma",
+  bloco de compradores com 6.630 (ML) e 750 · 81% 5★ (Amazon), síntese editorial sem selo,
+  e a queixa de falha em um dos lados publicada.
+- **3527 Edifier**: seção de problemas reescrita (calor, microfone como ponto mais criticado,
+  chiado com vento, app sem EQ), o bloco "O que os dados NÃO confirmaram", a ressalva das
+  21 opiniões da Plus V25 e o card só com Amazon a R$ 437,57.
+- **3545 Buds Core**: números corrigidos (4,8/5 em 2.883 · 88% 5★ · ML 7.116), seção de problemas
+  com os 3 padrões reais e o bloco do que os dados não confirmaram.
+
+### 🔴 Divergência encontrada e corrigida no 3523
+Contradição interna: "O que vem na caixa" listava **3 pares de ponteiras** (ficha oficial) enquanto
+a síntese dos relatos falava em **4 tamanhos** (dois compradores mencionam 4 nas duas lojas).
+Corrigido para explicitar a divergência entre ficha e relatos, em vez de escolher um número.
+
+### 🔄 Shortlinks que o CLIENTE aplicou no painel (não estavam no repo) — sincronizados
+| Onde | Antes (repo) | **Agora (igual ao ar)** |
+|---|---|---|
+| W800BT Pro Amazon | `amazon.com.br/dp/B0DF5NF475` | **`link.amazon/B06BFey5m`** |
+| W800BT Pro ML | `mercadolivre.com.br/p/MLB41983700` | **`meli.la/2gDAGge`** |
+| Plus V25 Amazon | `amazon.com.br/dp/B0G534R9BZ` | **`link.amazon/B04teGQck`** |
+
+Fecha a pendência 🔴 "shortlink do W800BT Pro". O preço do W800BT Pro no repo já batia com o ar
+(R$ 284,05 Pix ML / R$ 299 Amazon).
+
+### ⚠️ Observação sobre o QCY no ar
+`fetch_page` na home do 3523 retornou **HTTP 500** na primeira tentativa e funcionou na segunda —
+instabilidade momentânea do servidor, não erro de conteúdo. Vale reconferir se voltar a ocorrer.
+
+### Pendência que continua
+🔴 Shortlink ML do **W820NB branco (MLB19052272)**: o card do 3527 e o do guia 3336 seguem com
+**um único botão** (Amazon). O cliente informou ter adicionado, mas não chegou ao repositório nem
+aparece no ar — pedir o link direto no chat.
+
+**Validação:** 3 arquivos, checker 14/14, 0 erros, JSON-LD válido, 0 offers/aggregateRating,
+0 afiliado sem `rel` completo, tags balanceadas.
