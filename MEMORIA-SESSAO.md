@@ -365,3 +365,59 @@ R$ 64,99 · MK235 Amazon **B07643MPGS** · MK270 Amazon **B074WL3VZF** R$ 152,93
 **Bloqueios para a reescrita** (4 pendências do cliente, ver §4 do dossiê):
 shortlink Amazon correto do produto principal, shortlinks ML de MK235/MK270,
 confirmação da Anatel e definição da categoria WP do post.
+
+
+---
+
+## 14. Mudança de cadência (17/08/2026): 3 artigos por vez
+
+Cliente pediu para trabalhar **3 por vez, escolhendo artigos que compartilhem
+produtos**. Critério adotado: agrupar por **cluster de produto**, para que uma
+captura de preço e uma decisão editorial sirvam aos 3 — e para não gerar
+divergência entre posts que se citam.
+
+**Lote escolhido — CLUSTER ÁUDIO:** 3523 (QCY T13 ANC) · 3545 (Galaxy Buds Core) ·
+3527 (Edifier W820NB). Os três se citam mutuamente como alternativa e apontam para
+o guia-mãe 3336. Dossiê: **`audit/estado-cluster-audio.md`**.
+
+### Achados que mudam o plano
+
+1. 🔴 **Edifier W820NB fora de linha/ruptura.** Publicado a "R$ 399"; hoje (17/08) a
+   Amazon marca **"Não disponível"** e o ML pede **R$ 708,39** ("último disponível").
+   Sucessor **W820NB Plus V25** a R$ 499 nas duas lojas. Isso contamina **3 posts**
+   (3527, 3545 e 3523 citam o preço antigo) + o guia 3336. Gatilho nível 1 da §17.2.
+2. 🔴 **3545 narra teste físico que não houve**: "testamos durante duas semanas em
+   três cenários reais" (Galaxy S25 / Xiaomi 14T / iPhone 15), tabela de 4 cenários de
+   chamada com aspas de participantes, "testes de conforto de até 3 horas", comparação
+   direta com o QCY "no mesmo teste" e "unidade adquirida pelo autor". É o pior caso
+   de veracidade encontrado até agora na fila.
+3. 🟢 **3523 já teve as 7 alegações corrigidas** (reescrita de 15/08) — o CSV está
+   desatualizado. Restam citações com aspas, `priceValidUntil` e FAQ do schema
+   divergente da FAQ visível.
+4. 🟡 **Slugs curtos** (`/qcy-t13-anc-review/`, `/edifier-w820nb-review/`, etc.) usados
+   nos links internos dos 3 — resolvem por 301, mas devem apontar para o canônico.
+5. 🟡 **3545 com `<br/>` já injetado dentro dos cards de compra** — wpautop corrompeu
+   o HTML publicado (problema da §10.3).
+
+### Capturas 17/08/2026 (servem aos 3 posts + ao guia 3336)
+
+| Produto | Amazon | ML |
+|---|---|---|
+| QCY T13 ANC | `B0BWRBKMCK` R$ 186,10 | `MLB34102640` **R$ 199** (era R$ 169 → +18%) |
+| Galaxy Buds Core | `B0FP8KDP36` **R$ 219,31 Pix** / R$ 243,68 | `MLB57492226` R$ 243,68 (branco) · R$ 279,37 (preto) |
+| Edifier W820NB | `B09MDC77QX` ⛔ **esgotado** | `MLB19052273` **R$ 708,39** (último) |
+| W820NB Plus V25 (sucessor) | `B0G534R9BZ` R$ 499 | `MLB63419175` R$ 499 |
+
+### Bloqueios antes de reescrever
+
+1. Destino do 3527 (Edifier): suspender bloco de compra + apontar Plus V25
+   (recomendado), trocar o produto principal, ou manter sem CTA.
+2. Shortlinks do W820NB Plus V25.
+3. **Confirmar que não houve teste físico no 3545** — se houve, preciso das 8
+   evidências da §2.2; senão, removo toda a narrativa.
+4. Notas duplas (3545 e 2888) → unificar?
+
+### Fila seguinte sugerida
+
+Completar o cluster áudio: **3548** (Redmi Buds 6 Play) + **3550** (JBL Wave Buds 2)
++ **2888** (Kit Teclado, diagnóstico já pronto e bloqueado por links).
