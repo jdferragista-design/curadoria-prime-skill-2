@@ -598,3 +598,71 @@ qualitativa dentro de síntese**, entre aspas curtas e sem identificação do au
 
 **Validação:** checker 14/14, 0 erros · 6.263 palavras · JSON-LD 4 tipos, 0 offers/aggregateRating ·
 41/41 tags `<a>` · 0 afiliado sem `rel` completo · 0 "compra verificada".
+
+---
+
+## §13 — Auditoria de 3527 e 3545 contra as avaliações REAIS (17/08/2026)
+
+Dumps recebidos via GitHub (`f2ce32d`): `W820NB-Edifier-amazon.txt` (1.259 l.),
+`W820NB-Plus-V25-ML.txt` (326 l.), `Samsung-Galaxy-Buds-Core-amazon.txt` (1.122 l.),
+`Samsung-Galaxy-Buds-ML.txt` (5.243 l.). Aplicado o mesmo método que expôs o erro no 3523.
+
+### 🔴 3545 — números publicados estavam ERRADOS
+| | publicado | **real** |
+|---|---|---|
+| Amazon | 4,7/5 · ~164 avaliações | **4,8/5 · 2.883** (88% 5★, 7% 4★, 3% 3★, 2% 1★) |
+| ML | 4,9/5 · ~11.283 | **4,9/5 · 7.116** |
+| 5★ no veredito | "84%" | **88%** |
+Corrigido em 4 pontos (hero, metodologia, seção 7, veredito).
+
+### 🔴 Afirmações sem lastro — REMOVIDAS
+
+**3527 (99 avaliações lidas, 4,7/5 em 1.483 · 82% 5★):**
+| Afirmava | Ocorrências |
+|---|---|
+| "Demora para reconectar no Android — Frequência: moderada" | **0** |
+| "Instabilidade do app no iOS — bateria, reinstalação" | **0** |
+| "Troca de almofadas por veludo, R$ 40 a R$ 60" | **0** (preço inventado) |
+
+**3545 (314 avaliações lidas — 100 Amazon + 214 ML):**
+| Afirmava | Ocorrências |
+|---|---|
+| "Conexão instável em notebooks Windows — drivers desatualizados" | **0** — a única menção a Windows é **elogio** ("conecta rapidamente no note com Windows e com iPhone 13") |
+| "ANC percebido como fraco — Frequência: alta nas 2-3★" | **0** — ANC aparece consistentemente como ponto positivo |
+
+### ✅ O que os dados CONFIRMARAM (seções reescritas por frequência real)
+
+**3527:** (1) **calor na orelha** — "as almofadas esquentam a orelha, e a orelha sua no verão";
+alerta para academia: "a espuma vai descascar e reduzir a qualidade do cancelamento". Contraponto
+sobre pressão: "vi várias reviews falando que aperta, não aperta não… é EXTREMAMENTE macio".
+(2) **microfone é o ponto mais criticado** — "o mic dele é ruim… não é limpo, não é claro";
+"precisa falar bem alto para ele liberar o mic"; cliques em carro porque o mic de ANC fica no topo
+da concha. **Novo na seção — não estava no artigo.** (3) **chiado com vento forte** — "melhor
+desligar a supressão". (4) **app limitado, sem equalizador**, incompatível com PS4.
+
+**3545:** (1) **desconforto após 1-2h e em orelhas menores** — ressalva nº 1, aparece até em 5★:
+"a barbatana por mais de 1 hora começou a machucar"; "tenho orelha pequena e ele dói… minha mãe
+usa e não sente dor" → a anatomia decide. (2) **estojo inferior ao do Buds FE** — "aparentam ter
+fragilidade maior". (3) **Galaxy AI exige Samsung + One UI 6.1**.
+
+### 🔴 Achado que alterou o CARD DE COMPRA do 3527
+`W820NB-Plus-V25-ML.txt`: nota 4,9/5 mas com **apenas 21 opiniões**. Entre elas, um comprador que
+tinha o W820NB original considerou a **Plus V25 INFERIOR no ANC**, com vazamento de som pela espuma.
+O card recomendava a Plus V25 como upgrade natural. **Ressalva publicada no card**: base pequena,
+não há confirmação de que supere o original em ANC — a mudança documentada é só o Bluetooth 6.1.
+Se o ANC é prioridade e o branco está a R$ 437,57, não há motivo comprovado para pagar mais.
+
+### ⚠️ Viés de amostra (declarado nos artigos)
+3545: as capturas trouxeram quase só 4★ e 5★ (Amazon 99×5★+1×4★; ML 207×5★+7×4★) — a seção reflete
+ressalvas **dentro de avaliações positivas**, não o conteúdo das notas baixas. Mesmo padrão do ML
+no 3523. O dump do Edifier foi o único com críticas reais acessíveis (5×3★, 1×2★).
+
+### Padrão sistêmico identificado
+Nos **três** artigos as seções "Problemas relatados" tinham sido escritas por inferência plausível,
+com rótulos de falsa precisão ("Frequência: alta/moderada"). O texto era verossímil e por isso não
+disparava o checker — só o cruzamento com o dump expõe. **Regra nova: seção de problemas só se
+apoiada em dump de avaliações; sem dump, declarar explicitamente que a lista é dedutiva.**
+
+**Validação:** os 3 arquivos com checker 14/14 · 0 erros · JSON-LD Article+Review+FAQPage+
+BreadcrumbList · 0 offers/aggregateRating · 0 afiliado sem `rel` completo · tags balanceadas.
+3527 = 5.154 palavras · 3545 = 5.106 · 3523 = 6.263.
