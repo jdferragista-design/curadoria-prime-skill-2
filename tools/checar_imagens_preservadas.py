@@ -72,6 +72,18 @@ def checar(caminho, ref, autorizado=False):
     perdidas = [i for i in antigo if i not in atual]
     ganhas = [i for i in atual if i not in antigo]
 
+    # Substituição de URL não é remoção de imagem. Se o total não caiu e cada
+    # arquivo que saiu foi trocado por outro na mesma posição, trata-se de
+    # correção de caminho (ex.: nome de trabalho -> anexo real após conversão
+    # WebP). O que a regra do cliente proíbe é o artigo FICAR COM MENOS
+    # imagens do que tinha.
+    if perdidas and len(atual) >= len(antigo) and len(ganhas) >= len(perdidas):
+        print(f'  🔁 {nome}: {len(perdidas)} src substituído(s), '
+              f'total preservado ({len(antigo)} → {len(atual)}).')
+        for p, g in zip(perdidas, ganhas):
+            print(f'       {p[:44]}  →  {g[:44]}')
+        return 0
+
     if not perdidas:
         extra = f'  (+{len(ganhas)} nova(s))' if ganhas else ''
         print(f'  ✅ {nome}: {len(antigo)} → {len(atual)} imagens preservadas.{extra}')

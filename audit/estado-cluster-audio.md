@@ -989,3 +989,53 @@ O varredor completo (17 artigos) encontrou dois `src` sem anexo correspondente:
   usado no review 3548, é `redmi-buds-6-play-estojo-aberto-e1774284488680.jpg`)
 
 Não fazem parte do cluster de áudio; ficam registrados para a fila.
+
+---
+
+## §25 — Export estático ≠ biblioteca ao vivo (falso-positivo de 17/08)
+
+Reportei como "imagem quebrada" o `presentes-tech-ate-300-hero.jpg`. O cliente
+respondeu que as imagens estavam certas — **e estava correto quanto ao site.**
+
+**O que realmente aconteceu.** O cliente converteu a imagem para WebP em 15/08 e,
+no processo, ela mudou de nome. O post no ar usa dois anexos reais e funcionais:
+
+| Uso | Anexo real | ID |
+|---|---|---|
+| Imagem destacada | `presentes-tech-ate-300-destaque.webp` | 4822 |
+| Hero do corpo | `download.jpeg` (servido como `download.jpeg.webp`) | 4818 |
+
+O nome `presentes-tech-ate-300-hero.jpg` era **arquivo de trabalho local**
+(está em `imagens/4397/`) e nunca existiu no servidor com esse nome — as três
+variantes testadas retornaram 404 em HTML.
+
+**Conclusão dupla:** o site estava certo; o **arquivo local** é que apontava para
+um nome morto. Corrigido para os anexos reais. O post publicado não foi tocado.
+
+### §25.1 — Regra: o export é uma fotografia, a API é a autoridade
+
+`imagens/curadoriaprime.WordPress.*.xml` retrata a biblioteca **na data da
+exportação**. Qualquer conversão, renomeação ou upload posterior torna o export
+desatualizado — e um `src` válido passa a parecer inexistente.
+
+**Antes de declarar imagem quebrada ou "corrigir" um src, confirmar em duas fontes:**
+1. `https://curadoriaprime.com/wp-json/wp/v2/media?search=<termo>` (biblioteca atual);
+2. a página publicada, vendo qual URL ela realmente carrega.
+
+`tools/checar_imagens.py` agora reporta src ausente como **aviso de verificação
+pendente**, não como erro definitivo.
+
+### §25.2 — Diagnosticar 404 de imagem sem baixar o binário
+
+`fetch_page` em URL de imagem retorna **HTTP 500** mesmo quando o arquivo existe
+(o parser não lida com binário). Isso **não** é prova de quebra. O sinal confiável
+é o oposto: quando a URL devolve **HTML com "Página não encontrada"**, aí sim o
+arquivo não existe. Foi assim que os 404 do `hero` foram confirmados.
+
+### §25.3 — Artigos locais podem estar defasados do publicado
+
+`articles/presentes-tech-ate-300-artigo-completo.html` é anterior à edição de
+15/08 e não corresponde ao post 4397 no ar (slug `presentes-dia-dos-pais-tech-ate-300`).
+Antes de reeditar qualquer artigo fora do cluster, comparar com o publicado via
+`fetch_page` — vale a regra já registrada de que o publicado pode estar à frente
+do repositório.

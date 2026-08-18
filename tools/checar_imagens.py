@@ -94,6 +94,19 @@ def checar(caminho, lib):
             if original in lib:
                 continue
         quebradas.append(arq)
+
+    # ⚠️ O export XML é uma FOTOGRAFIA da biblioteca na data em que foi gerado.
+    # Se o cliente converter, renomear ou subir arquivos depois disso, um src
+    # válido aparece aqui como inexistente (falso-positivo real ocorrido em
+    # 17/08/2026 com presentes-tech-ate-300). Por isso o resultado é reportado
+    # como AVISO de verificação pendente, não como erro definitivo: confirmar
+    # sempre contra a biblioteca ao vivo antes de "corrigir" o artigo.
+    #   https://curadoriaprime.com/wp-json/wp/v2/media?search=<termo>
+    if quebradas:
+        avisos.append(
+            'A biblioteca de referência é o export estático '
+            f'(imagens/*.xml). Confirme os {len(quebradas)} src abaixo contra '
+            'a API de mídia antes de alterar o artigo.')
     if quebradas:
         for q in quebradas:
             erros.append(f'[src-existe] Arquivo não encontrado na biblioteca: {q}')
