@@ -37,8 +37,7 @@ disponíveis caso um dia a Curadoria publique um review do T13 comum.
 
 ## O que foi inserido no artigo
 
-Uma imagem, na **seção 5 — Design, ergonomia e conforto**, que era uma das
-seções sem cobertura visual:
+**Seção 5 — Design, ergonomia e conforto** (estava sem imagem):
 
 ```
 https://curadoriaprime.com/wp-content/uploads/2026/08/qcy-t13-anc-branco-estojo-aberto.webp
@@ -49,6 +48,26 @@ https://curadoriaprime.com/wp-content/uploads/2026/08/qcy-t13-anc-branco-estojo-
 - legenda: Haste curta e ponteira de silicone: o formato que fecha o canal e
   sustenta o isolamento passivo
 - `width="800" height="800"`, `loading="lazy"`, `decoding="async"`
+
+**Seção 10 — App QCY, modo jogo e EQ** (imagem 4965, enviada em 18/08):
+
+```
+https://curadoriaprime.com/wp-content/uploads/2026/08/QCY-T13-ANC-app-equalizador-tela-smartphone.webp
+```
+
+- `alt`: QCY T13 ANC preto ao lado de um smartphone rodando um jogo, com o
+  estojo de carregamento aberto
+- legenda: Modo jogo: a QCY declara cerca de 68 ms de latência, ativado pelo app
+- `width="1024" height="1024"`, `loading="lazy"`, `decoding="async"`
+
+### Remanejamento que isso exigiu
+
+A imagem antiga `b0350ffe-…png` já ilustrava o app e ficava **imediatamente
+antes** do H2 da seção 10. Com a nova logo depois do mesmo H2, as duas
+apareceriam coladas, só separadas pelo título. Movi a antiga para a
+**seção 7 (ANC de 28dB)**, que estava sem imagem, e ajustei a legenda para o
+tema da seção: "Os modos de cancelamento são alternados pelo app: ANC,
+Transparência e desligado". Nenhuma imagem foi removida — total foi de 6 para 7.
 
 ## Correção extra aplicada
 
@@ -65,17 +84,27 @@ contra as dimensões reais da API de mídia:
 | `pessoa-usando-o-qcy-t13-anc-…jpeg` | 758×505 | 2048×2048 |
 | `b0350ffe-…png` | 758×505 | 1024×1024 |
 
-## Seções que continuam sem imagem
+## Cobertura visual final (7 imagens)
 
-- **7. ANC de 28dB** — não há screenshot dos 3 modos de cancelamento
-- **10. App QCY** — a busca por "app equalizador" devolve fotos de produto,
-  não telas. O caminho é screenshot do próprio app.
-- **uso real** — a foto de transporte público já cobre parcialmente (seção 6)
+| Posição | Imagem |
+|---|---|
+| hero | `qcy-t13-anc-destaque.webp` |
+| 4. O que vem na caixa | `cn-11134207-…jpeg` |
+| 5. Design | `qcy-t13-anc-branco-estojo-aberto.webp` ← nova |
+| 6. Qualidade de som | `pessoa-usando-…transporte-publico.jpeg` |
+| 7. ANC de 28dB | `b0350ffe-…png` ← remanejada |
+| 10. App QCY | `QCY-T13-ANC-app-equalizador-…webp` ← nova |
+| caixa do autor | `cristiano-curadoria-prime.jpg` |
+
+As seções 8, 9 e 11–14 seguem sem imagem — são seções de análise (chamadas,
+bateria, prós/contras, comparativo, problemas, veredito), onde o modelo Apple
+TV 4K também não usa foto. Não é lacuna.
 
 ## Nota sobre o checker
 
-`python3 tools/checar_imagens.py` vai acusar
-`[src-existe] Arquivo não encontrado na biblioteca` para a imagem nova.
+`python3 tools/checar_imagens.py` acusa
+`[src-existe] Arquivo não encontrado na biblioteca` para as **duas** imagens novas.
 É **falso-positivo conhecido**: o export `imagens/curadoriaprime.WordPress.2026-08-17.xml`
-tem anexos só até 16/08 e as imagens subiram em 18/08. Confirmado ao vivo
-pela API (`/wp-json/wp/v2/media/4960`). O erro some no próximo export.
+tem anexos só até 16/08 e as imagens subiram em 18/08 (IDs 4960 às 10:49 e
+4965 às 11:58). Confirmado ao vivo pela API `/wp-json/wp/v2/media/<id>`.
+O erro some sozinho no próximo export do WordPress.
