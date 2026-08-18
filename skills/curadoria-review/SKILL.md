@@ -27,6 +27,8 @@ Fonte canônica (ler antes de escrever ou auditar):
 - [references/voz-e-regras.md](references/voz-e-regras.md) — tom, SEO, schema, saúde, auto
 - [assets/template-review.md](assets/template-review.md) — casca Apple TV 4K
 - [assets/template-guia.md](assets/template-guia.md)
+- [references/verificacao-antes-de-concluir.md](references/verificacao-antes-de-concluir.md) — **Lei de Ferro:** nenhuma afirmação de conclusão sem evidência fresca;
+  perguntar antes de executar quando o pedido é ambíguo
 - [assets/checklist-bloqueio.md](assets/checklist-bloqueio.md)
 - [assets/fila-atualizacao.md](assets/fila-atualizacao.md) — fila P0–P3 do site
 - Skill irmã **obrigatória** antes de qualquer card de compra:

@@ -108,3 +108,18 @@ Regra permanente do cliente: **nunca remover imagens ao atualizar um artigo.**
 - [ ] A caixa distingue arredondamento de recálculo de mérito?
 - [ ] Rodei `python3 tools/checar_estado.py` com 0 divergências?
 - [ ] Os campos numéricos do arquivo de estado foram extraídos por script, não digitados?
+
+## §26 — Lei de Ferro (verificação antes de concluir)
+
+Antes de QUALQUER afirmação de conclusão, rodar o comando nesta mesma resposta:
+
+- [ ] `python3 tools/checar_conformidade.py articles/<arquivo>.html` — 0 erros
+- [ ] `python3 tools/checar_imagens.py articles/<arquivo>.html` — 0 erros
+- [ ] `python3 tools/checar_imagens_preservadas.py articles/<arquivo>.html` — 0 perdas
+- [ ] `python3 tools/checar_estado.py` — 0 divergências
+- [ ] `git log --oneline -1` confirma o commit; push sem rejeição
+- [ ] Editei o **artigo** em `articles/`, não só o modelo em `skills/`?
+- [ ] Afirmei "está no ar"? Então conferi com `fetch_page` do post publicado?
+- [ ] Afirmei "imagem existe"? Então consultei a **API de mídia ao vivo**, não o export?
+
+Detalhes e casos reais: `references/verificacao-antes-de-concluir.md`
