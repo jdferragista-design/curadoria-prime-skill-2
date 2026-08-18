@@ -1,6 +1,12 @@
 # ESTADO — 3548 (Redmi Buds 6 Play · `redmi-buds-6-play-review-2026-vale-a-pena`)
 
 **Status:** ✅ REESCRITO em 18/08/2026 · checker 14/14, 0 erros · 4984 palavras · nota 8,0/10 · 9 imagens (7 no corpo)
+
+> ✅ **APROVADO PELO CLIENTE em 18/08/2026.** Artigo fechado no padrão do
+> modelo canônico (casca Apple TV 4K) com as 4 alterações do cliente:
+> índice em 2 colunas · resposta rápida com 4 cards · cards de venda sem
+> imagem · notas do veredito em grade 3×3. Hero abaixo da introdução.
+> Pendente apenas a recolagem no WordPress.
 **Arquivo:** `articles/redmi-buds-6-play-review-2026-vale-a-pena.html`
 
 ## 🔴 Achados críticos no publicado
