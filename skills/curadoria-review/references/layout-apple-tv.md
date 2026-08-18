@@ -128,3 +128,38 @@ grid-template-columns: repeat(3, 1fr);
 ```
 
 Mantém o alinhamento previsível em vez de reflow por largura.
+
+---
+
+## Modelos canônicos — são DOIS (18/08/2026)
+
+O cliente aprovou o segundo arquivo de `assets/modelos/` como modelo oficial.
+Usar conforme o tipo de conteúdo:
+
+| Modelo | Arquivo | Quando usar |
+|---|---|---|
+| **Review de produto** | `modelo-layout-apple-tv-4k.html` | review individual: um produto, veredito com nota |
+| **Guia / lista** | `modelo-power-bank-aviao.html` | guia temático, comparativo de vários produtos, conteúdo de regra ou processo |
+
+O modelo de guia tem estrutura própria: resposta rápida → contexto/regra →
+tabela de referência → riscos → dicas práticas → **um H2 por produto** →
+comparativo → para quem é → FAQ → veredito.
+
+## Posicionamento de imagens (regra dos dois modelos)
+
+Levantamento dos dois arquivos canônicos:
+
+| Posição | Padrão |
+|---|---|
+| **Hero** | 1 imagem larga (`max-width: 1000px`, `fetchpriority="high"`, sombra) **antes** do bloco "Tipo de análise", com legenda centralizada de 12px |
+| **Seções** | imagem **dentro** da seção, logo após `<!-- /wp:heading -->` do H2 — nunca solta entre seções |
+| **Par de imagens** | quando há duas na mesma seção, vão lado a lado em `grid` com `minmax(280px, 1fr)` e `max-width: 320px` cada |
+| **Imagem única de seção** | `max-width: 640px`, centralizada, com legenda 12px `#7c7c9a` |
+| **Cards de compra** | **nenhuma imagem** (alteração do cliente) |
+| **Guias** | a imagem do produto vai na **introdução do item**, após o H2/H3 daquele produto |
+| **Autor** | foto no rodapé, fora da contagem de imagens do corpo |
+
+**Erro corrigido no 3548:** as imagens estavam soltas **antes** dos H2, o que as
+desconectava do texto que ilustravam, e **faltava o hero**. O leitor via a foto
+do driver antes do título "Qualidade de som", como se pertencesse à seção
+anterior.
