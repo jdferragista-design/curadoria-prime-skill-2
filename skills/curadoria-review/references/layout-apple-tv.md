@@ -151,7 +151,7 @@ Levantamento dos dois arquivos canônicos:
 
 | Posição | Padrão |
 |---|---|
-| **Hero** | 1 imagem larga (`max-width: 1000px`, `fetchpriority="high"`, sombra) **antes** do bloco "Tipo de análise", com legenda centralizada de 12px |
+| **Hero** | 1 imagem larga (`max-width: 1000px`, `fetchpriority="high"`, sombra) **DEPOIS do bloco de introdução** (card de nota/selos) e **antes da Metodologia**, com legenda centralizada de 12px. ⚠️ Não vai no topo absoluto: a introdução vem primeiro. Confirmado no modelo Apple TV e no 3548 publicado. |
 | **Seções** | imagem **dentro** da seção, logo após `<!-- /wp:heading -->` do H2 — nunca solta entre seções |
 | **Par de imagens** | quando há duas na mesma seção, vão lado a lado em `grid` com `minmax(280px, 1fr)` e `max-width: 320px` cada |
 | **Imagem única de seção** | `max-width: 640px`, centralizada, com legenda 12px `#7c7c9a` |
