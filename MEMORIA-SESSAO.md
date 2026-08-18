@@ -494,6 +494,20 @@ dou `git fetch`. Dumps agora versionados em `articles/*.txt` — disponíveis em
 ### 15.7 Próximo: 3336 (guia-mãe Top 5)
 Botão ML do Edifier `meli.la/1pXMdaD` → lista vazia (quebrado, no ar). Preços de 14/08 desatualizados.
 
+## 🔴 CADÊNCIA — UM ARTIGO POR VEZ (17/08/2026)
+
+> "Vamos voltar para um por vez, muitos de uma vez eu me confundo."
+
+**Substitui a instrução anterior de trabalhar 3 artigos por vez.**
+
+Regras da cadência:
+- Trabalhar **um único artigo** do começo ao fim antes de abrir o próximo.
+- Entregar, esperar o retorno do cliente, só então seguir.
+- Não misturar produtos ou posts diferentes na mesma resposta.
+- Não abrir frente nova enquanto o artigo atual não estiver fechado.
+- Vale também para as correções: uma pendência por vez, não lotes.
+
+
 ## 🔴 REGRA PERMANENTE — PRESERVAÇÃO DE IMAGENS (17/08/2026)
 
 > "Mantenha sempre as imagens ao atualizar os artigos. Nunca remova as imagens de
