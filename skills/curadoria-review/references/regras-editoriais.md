@@ -1105,3 +1105,34 @@ consultar o export (`imagens/*.xml`) e aproveitar as órfãs do mesmo produto �
 foi assim que o QCY saiu de 1 para 3 imagens no corpo. Atenção: o WordPress
 guarda imagens com **nome genérico** (`b0350ffe-d9f1...png`), então a busca deve
 considerar também o **título** do anexo, não só o nome do arquivo.
+
+---
+
+## §23 — Revisão de nota já publicada (achado C5 da auditoria)
+
+A página `/como-avaliamos/` promete ao leitor: *"Toda análise mostra a data da última
+atualização. **Se a nota mudou, o motivo fica declarado no texto**."*
+
+Alterar nota de artigo no ar **sem essa declaração descumpre política pública** — e é
+verificável por qualquer leitor que compare com uma versão em cache.
+
+**Obrigatório** ao mudar a nota de um post publicado: caixa âmbar logo após o heading
+"Como chegamos ao X", com (1) data, (2) valor antigo → novo, (3) motivo em linguagem
+direta, (4) link para a régua.
+
+Distinguir sempre os dois casos:
+- **Arredondamento** (ex.: JBL 8,4 → 8,5): declarar que o produto e a análise não mudaram.
+- **Recálculo de mérito** (ex.: Edifier 8,8 → 8,5): nomear os critérios que caíram e por quê.
+
+## §24 — Arquivo de estado é gerado, não digitado (achado C1)
+
+`audit/estado-<ID>.md` é a fonte de verdade da skill. Quando um campo numérico é digitado
+à mão, ele **descola do artigo na primeira correção seguinte** e passa a contaminar toda
+decisão tomada a partir dele.
+
+Ocorrências reais: `estado-3548` dizia 4.261 palavras/nota 8,2 (real: 5.239/8,0);
+`estado-3550` dizia 3.633/8,4 (real: 4.646/8,5); `estado-3336` dizia 3.812 palavras
+(real: 5.134) e 11 afiliados (real: 15).
+
+**Regra:** nota, contagem de palavras, número de imagens e de afiliados são **extraídos
+do arquivo por script**. Validar com `python3 tools/checar_estado.py` antes de commitar.

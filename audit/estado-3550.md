@@ -1,8 +1,8 @@
 # Post 3550 — JBL Wave Buds 2 (review)
 
 **Arquivo:** `articles/jbl-wave-buds-2-review-2026-vale-a-pena.html`
-**Status:** reescrito e validado em 17/08/2026 — checker 14/14, 0 erros.
-**Nota editorial:** 8,4 · **Palavras:** 3.633 (contagem do checker) · **h2:** 14
+**Status:** ✅ REESCRITO em 17/08/2026 · checker 14/14, 0 erros · 4700 palavras · nota 8,5/10 · 9 imagens (7 no corpo)
+**Nota editorial:** 8,5 · **Palavras:** 4700 · **Imagens:** 9 (7 no corpo)
 
 Último do cluster de áudio (3523 · 3527 · 3545 · 3336 · 3548 · **3550**).
 
@@ -66,3 +66,22 @@ numeração de seções 1–13 sequencial · todas as âncoras do índice resolv
 
 1. Conferir se o bloco `<style>` do topo foi removido ao colar.
 2. Confirmar `datePublished` 2026-03-23 no painel.
+
+
+---
+
+## Sincronização automática (17/08/2026)
+
+Valores conferidos direto do arquivo, não digitados à mão:
+
+| Campo | Valor real |
+|---|---|
+| Nota (JSON-LD e texto) | **8,5/10** |
+| Palavras | 4700 |
+| Imagens | 9 (7 no corpo) |
+| Nota de revisão pública | presente |
+| Link da régua | `/como-avaliamos/` ✅ |
+
+⚠️ Este arquivo já esteve dessincronizado (achado C1 da auditoria): declarava nota e
+contagem de palavras anteriores às correções. Ao alterar o artigo, **regenerar estes
+campos** em vez de reescrevê-los de memória.

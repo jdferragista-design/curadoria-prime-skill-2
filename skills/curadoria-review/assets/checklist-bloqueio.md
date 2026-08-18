@@ -101,3 +101,10 @@ Regra permanente do cliente: **nunca remover imagens ao atualizar um artigo.**
 - [ ] Rodei `python3 tools/checar_imagens_preservadas.py articles/<arquivo>.html` com 0 perdas?
 - [ ] Se alguma imagem saiu, tenho autorização explícita do cliente registrada?
 - [ ] Aproveitei imagens órfãs do produto que já estão na biblioteca?
+
+## §23–§24 — Nota revisada e estado sincronizado
+
+- [ ] Mudei nota de post publicado? Então há caixa "Nota revisada em <data> — de X para Y" com motivo?
+- [ ] A caixa distingue arredondamento de recálculo de mérito?
+- [ ] Rodei `python3 tools/checar_estado.py` com 0 divergências?
+- [ ] Os campos numéricos do arquivo de estado foram extraídos por script, não digitados?

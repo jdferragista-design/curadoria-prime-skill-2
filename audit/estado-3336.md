@@ -4,7 +4,7 @@
 
 - URL: https://curadoriaprime.com/melhor-fone-bluetooth-ate-500-reais-2026/
 - Entregável: `articles/melhor-fone-bluetooth-ate-500-reais-2026-artigo-completo.html`
-- Checker: **14/14, 0 erros** · 3.812 palavras · 11 links de afiliado, todos com `rel` completo.
+- Checker: **14/14, 0 erros** · 5134 palavras · 6 imagens · 15 links de afiliado, todos com `rel` completo.
 
 ## 🔴 Correção crítica: botão morto no ar
 
@@ -145,3 +145,12 @@ cupom/Pix e por tempo limitado — não como preço disponível hoje. Sem `price
 
 **Validação:** checker 14/14, 0 erros · 5.134 palavras (era 4.685) · 15 afiliados, 100% com `rel` ·
 JSON-LD válido, 0 offers/aggregateRating · tags balanceadas.
+
+
+---
+
+## Sincronização automática (17/08/2026)
+
+Conferido direto do arquivo: **5134 palavras · 6 imagens · 15 afiliados**.
+O valor anterior (3.812 palavras) era anterior à seção 8 de faixa histórica —
+achado C1 da auditoria. Validar com `python3 tools/checar_estado.py`.
