@@ -80,3 +80,51 @@ perfil, cards de produto, comparativo, alertas, FAQ, fontes). Ver
   se puder parecer foto de teste.
 - Links afiliados: `rel="sponsored nofollow"`.
 - Conferir Yoast/Rank Math/schema plugin: remover AggregateRating externo.
+
+---
+
+## Alterações do cliente ao layout canônico (18/08/2026)
+
+Ajustes aprovados sobre a casca Apple TV 4K. Valem para **todo review novo
+ou atualizado** e já estão aplicados em
+`assets/modelos/modelo-layout-apple-tv-4k.html`.
+
+### 1. Índice do conteúdo — 2 colunas fixas
+
+Era `repeat(auto-fit, minmax(220px, 1fr))`, que virava 3 colunas em telas
+largas e desalinhava a numeração. Agora:
+
+```
+grid-template-columns: repeat(2, 1fr); gap: 8px 18px;
+```
+
+### 2. Resposta rápida — 4 blocos (era 3)
+
+Ao trio "✅ vale / 🤔 depende / ⏳ pode esperar" soma-se um quarto card:
+
+```
+❌ Não vale a pena se você…   (fundo #fef2f2, borda #ef4444, título #991b1b)
+```
+
+Deve trazer o perfil para quem o produto **não** serve, o motivo objetivo e a
+alternativa concreta, com modelo e faixa de preço da mesma data. É o card que
+protege o leitor de uma compra errada — e o que mais gera confiança.
+
+### 3. Onde comprar — cards de venda SEM imagem
+
+Os cards de preço trazem apenas selo, loja, valor, condição e botão. **Nenhuma
+foto do produto dentro do card**: a imagem repetida empurra o preço para baixo
+da dobra e atrasa a decisão.
+
+**Em guias**, a imagem do produto vai na **introdução do item** (antes ou logo
+após o H3 daquele produto), nunca dentro do bloco de compra.
+
+### 4. Veredito — notas em blocos de 3
+
+A grade de notas parciais passa a ser fixa em três por linha:
+
+```
+grid-template-columns: repeat(3, 1fr);
+```
+
+Mantém o alinhamento previsível em vez de reflow por largura.

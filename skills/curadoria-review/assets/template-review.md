@@ -35,7 +35,9 @@ Mercado Livre — [anúncio]: [x,x]/5 em [N] opiniões (consulta em [data]).
 > “[transcrição fiel e curta, só se conferida]”
 > — [plataforma], [mês/ano]. Sem “verificado” se o selo não estiver na captura.
 
-## 📑 Índice
+## 📑 Índice do conteúdo
+
+Grade de **2 colunas fixas** (alteração do cliente, 18/08/2026).
 
 1️⃣ [Resposta rápida](#resposta-rapida)
 2️⃣ [Onde comprar](#onde-comprar)
@@ -55,6 +57,8 @@ Mercado Livre — [anúncio]: [x,x]/5 em [N] opiniões (consulta em [data]).
 
 ## ⚡ Resposta rápida
 
+Quatro cards (alteração do cliente em 18/08/2026 — eram três):
+
 ✅ **Adequado se…**
 [perfil + 2 motivos com dado]
 
@@ -64,7 +68,14 @@ Mercado Livre — [anúncio]: [x,x]/5 em [N] opiniões (consulta em [data]).
 ⏳ **Pode esperar se…**
 [rumo/geração — **rumor** se for rumor]
 
+❌ **Não vale a pena se…**
+[perfil para quem o produto não serve + motivo objetivo + alternativa
+concreta com modelo e faixa de preço da mesma data]
+
 ## 🛒 Onde comprar (preços de [data])
+
+Cards **sem imagem do produto** (alteração do cliente, 18/08/2026): selo, loja,
+preço, condição e botão. Em guias, a imagem vai na introdução do item.
 
 💰 **Menor preço** — [loja] — R$ [ ] no Pix
 [alerta internacional / geração / estoque]
@@ -137,7 +148,7 @@ Regra prática de preço: adequado perto de R$ [X]; a análise deixa de recomend
 
 [Parágrafo alinhado à resposta rápida.]
 
-Notas parciais (só com critério):
+Notas parciais (só com critério) — grade de **3 por linha**:
 
 | Eixo | Nota | Por quê |
 | --- | --- | --- |
