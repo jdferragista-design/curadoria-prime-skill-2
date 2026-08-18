@@ -1,6 +1,6 @@
 # ESTADO — 3548 (Redmi Buds 6 Play · `redmi-buds-6-play-review-2026-vale-a-pena`)
 
-**Status:** ✅ REESCRITO em 17/08/2026 · checker 14/14, 0 erros · 5333 palavras · nota 8,0/10 · 8 imagens (6 no corpo)
+**Status:** ✅ REESCRITO em 18/08/2026 · checker 14/14, 0 erros · 4984 palavras · nota 8,0/10 · 9 imagens (7 no corpo)
 **Arquivo:** `articles/redmi-buds-6-play-review-2026-vale-a-pena.html`
 
 ## 🔴 Achados críticos no publicado
@@ -116,8 +116,8 @@ Valores conferidos direto do arquivo, não digitados à mão:
 | Campo | Valor real |
 |---|---|
 | Nota (JSON-LD e texto) | **8,0/10** |
-| Palavras | 5333 |
-| Imagens | 8 (6 no corpo) |
+| Palavras | 4984 |
+| Imagens | 9 (7 no corpo) |
 | Nota de revisão pública | presente |
 | Link da régua | `/como-avaliamos/` ✅ |
 
