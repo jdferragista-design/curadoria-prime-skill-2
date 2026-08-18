@@ -1,0 +1,20 @@
+#!/bin/sh
+# Trava de preservação de imagens (regra permanente do cliente, 17/08/2026):
+# "Nunca remova as imagens de artigos que forem atualizados."
+#
+# Instalar:  git config core.hooksPath .githooks
+# Pular (remoção intencional e justificada):  git commit --no-verify
+
+ARTIGOS=$(git diff --cached --name-only --diff-filter=M | grep '^articles/.*\.html$')
+[ -z "$ARTIGOS" ] && exit 0
+
+echo "🔒 Verificando preservação de imagens nos artigos modificados..."
+# shellcheck disable=SC2086
+python3 tools/checar_imagens_preservadas.py $ARTIGOS || {
+  echo ""
+  echo "⛔ COMMIT BLOQUEADO: um artigo perdeu imagens."
+  echo "   Regra do cliente: é obrigatório preservar as imagens ao atualizar."
+  echo "   Se a remoção for intencional, use: git commit --no-verify"
+  exit 1
+}
+exit 0

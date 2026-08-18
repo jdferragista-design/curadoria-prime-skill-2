@@ -1043,3 +1043,65 @@ Grade de "notas por característica" (ex.: ANC 9,5 · Som 9,0) **não é a régu
 pode aparecer sem rótulo — o leitor confunde com pontuação oficial. Se mantida, deve
 vir precedida de aviso declarando que é leitura de ficha técnica e **não entra no
 cálculo**, e nenhum card dela pode se chamar "NOTA GERAL".
+
+---
+
+## §22 — 🔴 PRESERVAÇÃO DE IMAGENS (regra permanente do cliente)
+
+> **"Mantenha sempre as imagens ao atualizar os artigos. Nunca remova as imagens
+> de artigos que forem atualizados. É obrigatório preservar as imagens originais
+> durante a atualização dos artigos."**
+> — instrução do cliente, 17/08/2026
+
+Esta regra **não admite exceção por conveniência**. Reescrever texto nunca é
+motivo para descartar imagem.
+
+### §22.1 — O erro que originou a regra
+
+As reescritas do cluster de áudio suprimiram silenciosamente as imagens do corpo
+de 4 artigos (§20). Redmi, JBL e QCY ficaram com **zero fotos no corpo** — só a
+do autor no rodapé. As imagens nunca saíram da biblioteca do WordPress: apenas
+não foram transportadas para o HTML novo, porque a reescrita partiu do texto e
+da estrutura de seções, e os blocos `<!-- wp:html -->` com `<img>` ficaram pelo
+caminho.
+
+**O erro é invisível na revisão de texto.** O artigo continua fazendo sentido
+sem as fotos — por isso passou despercebido até o cliente apontar.
+
+### §22.2 — Procedimento obrigatório ao atualizar qualquer artigo
+
+1. **Antes de editar**, inventariar as imagens da versão atual:
+   `grep -o '<img[^>]*src="[^"]*"' articles/<arquivo>.html`
+2. **Reescrever preservando** todos os blocos de imagem. Se uma seção mudar de
+   nome ou de lugar, a imagem vai junto — reancorar, nunca descartar.
+3. **Depois de editar**, rodar a trava:
+   `python3 tools/checar_imagens_preservadas.py articles/<arquivo>.html`
+4. O commit só acontece com **0 imagens perdidas**.
+
+### §22.3 — Ferramentas de garantia
+
+| Ferramenta | O que faz |
+|---|---|
+| `tools/checar_imagens_preservadas.py` | Compara com a versão no git e **falha** se alguma imagem sumiu |
+| `.githooks/pre-commit` | Bloqueia o commit automaticamente (ativar: `git config core.hooksPath .githooks`) |
+| `tools/checar_imagens.py` | Valida `src` contra a biblioteca (556 anexos), `alt`, `lazy`, dimensões |
+
+A trava roda em todo artigo **modificado** que já existia. Arquivo novo não tem
+com o que comparar e passa livre — nesse caso vale o `checar_imagens.py`, que
+exige pelo menos uma imagem no corpo além da foto do autor.
+
+### §22.4 — Remoção intencional
+
+Se uma imagem precisar sair (produto errado, foto de má qualidade, direitos),
+isso é **decisão editorial que exige autorização do cliente**. Nunca acontece
+como efeito colateral de uma reescrita. O caminho é `--autorizado` no script e
+`git commit --no-verify`, sempre com a justificativa registrada na mensagem de
+commit e no arquivo de estado do post.
+
+### §22.5 — Aproveitar o que já existe
+
+A biblioteca costuma ter **mais imagens do que o artigo usa**. Ao atualizar, vale
+consultar o export (`imagens/*.xml`) e aproveitar as órfãs do mesmo produto —
+foi assim que o QCY saiu de 1 para 3 imagens no corpo. Atenção: o WordPress
+guarda imagens com **nome genérico** (`b0350ffe-d9f1...png`), então a busca deve
+considerar também o **título** do anexo, não só o nome do arquivo.

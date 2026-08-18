@@ -493,3 +493,21 @@ dou `git fetch`. Dumps agora versionados em `articles/*.txt` — disponíveis em
 
 ### 15.7 Próximo: 3336 (guia-mãe Top 5)
 Botão ML do Edifier `meli.la/1pXMdaD` → lista vazia (quebrado, no ar). Preços de 14/08 desatualizados.
+
+## 🔴 REGRA PERMANENTE — PRESERVAÇÃO DE IMAGENS (17/08/2026)
+
+> "Mantenha sempre as imagens ao atualizar os artigos. Nunca remova as imagens de
+> artigos que forem atualizados. É obrigatório preservar as imagens originais
+> durante a atualização dos artigos."
+
+Vale para **todo** artigo, em **toda** atualização. Antes de commitar qualquer
+edição em `articles/*.html`:
+
+```
+python3 tools/checar_imagens_preservadas.py articles/<arquivo>.html
+```
+
+O hook `.githooks/pre-commit` bloqueia o commit automaticamente.
+Ativar em sandbox novo: `git config core.hooksPath .githooks`
+
+Detalhes e procedimento: §22 de `skills/curadoria-review/references/regras-editoriais.md`

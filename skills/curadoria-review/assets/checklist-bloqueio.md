@@ -91,3 +91,13 @@ A IA preenche o checklist na entrega. O editor humano é quem libera.
 - [ ] As imagens do corpo têm `loading="lazy"`?
 - [ ] O artigo tem mais do que apenas a foto do autor no corpo?
 - [ ] Rodei `python3 tools/checar_imagens.py articles/<arquivo>.html` (0 erros)?
+
+## §22 — Preservação de imagens (BLOQUEADOR ABSOLUTO)
+
+Regra permanente do cliente: **nunca remover imagens ao atualizar um artigo.**
+
+- [ ] Inventariei as imagens ANTES de começar a editar?
+- [ ] Toda imagem da versão anterior continua presente na nova?
+- [ ] Rodei `python3 tools/checar_imagens_preservadas.py articles/<arquivo>.html` com 0 perdas?
+- [ ] Se alguma imagem saiu, tenho autorização explícita do cliente registrada?
+- [ ] Aproveitei imagens órfãs do produto que já estão na biblioteca?
