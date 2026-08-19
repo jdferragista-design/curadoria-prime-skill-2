@@ -1214,27 +1214,3 @@ Não recomendo eu inventar esses três HTMLs sem ver os arquivos que já existem
 
 Com essas alterações, a arquitetura fica finalmente consistente:
 
-text
-
-SKILL.md
-    ↓ comportamento/gates
-
-references/
-    ↓ política/metodologia/layout
-
-assets/template-review.md
-assets/template-vs.md
-assets/template-lista.md
-    ↓ HTML canônico
-
-assets/modelos/
-    ↓ golden references
-
-curadoria-mercado
-    ↓ dados comerciais
-
-curadoria-imagens
-    ↓ assets visuais
-
-HUMANO
-    ↓ WP + aprovação
