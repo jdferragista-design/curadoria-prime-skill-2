@@ -152,7 +152,7 @@ Curadoria, não requisito do Google.
 
 | URL | Nota |
 | --- | --- |
-| `/roku-vs-fire-tv-stick-4k/` | comparativo |
+| `/roku-vs-fire-tv-stick-4k/` | VS |
 | `/samsung-s90f-qd-oled-review/` | |
 | `/samsung-u8600f-review/` | |
 | `/samsung-u8100f-smart-tv-4k-review/` | |
@@ -170,7 +170,7 @@ Curadoria, não requisito do Google.
 | `/kit-teclado-mouse-ultra-slim/` | risco de afiliado fino |
 | `/camera-lampada-360-yoosee-lp8177-review-2026/` | privacidade / segurança |
 | `/good-vision-kit-cameras-wifi-review/` | |
-| `/melhores-cameras-de-seguranca-wi-fi-2026/` | guia |
+| `/melhores-cameras-de-seguranca-wi-fi-2026/` | LISTA/GUIA |
 
 ## Páginas institucionais (não são review, mas entram no Who/How)
 
