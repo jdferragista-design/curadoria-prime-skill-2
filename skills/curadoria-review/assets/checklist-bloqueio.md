@@ -3,10 +3,7 @@
 Versão: 2.0
 Data: 19/08/2026
 
-Este checklist é executado pela IA antes da entrega e confirmado pelo
-editor humano antes da publicação.
-
-Fonte canônica de política:
+Fonte editorial:
 
 `../references/regras-editoriais.md`
 
@@ -14,308 +11,318 @@ Workflow:
 
 `../SKILL.md`
 
-A falha em um item CRÍTICO impede considerar a página pronta para revisão
-final.
+Este checklist é preenchido pela IA antes da entrega.
 
-Nunca invente conteúdo para fazer o checklist passar.
+A liberação para publicação pertence ao editor humano.
+
+REGRA PRINCIPAL:
+
+Nunca invente conteúdo para fazer um checklist passar.
+
+Se um item não puder ser satisfeito por falta de evidência, registre a
+pendência.
 
 ---
 
 # 1. TRANSPARÊNCIA — CRÍTICO
 
 - [ ] O tipo de análise está identificado?
-- [ ] Se não houve teste físico, o disclosure oficial está presente?
-- [ ] Toda linguagem de experiência própria é verdadeira/documentada?
-- [ ] Teste de terceiro está atribuído ao terceiro?
+- [ ] Ausência de teste físico está declarada quando aplicável?
+- [ ] Toda linguagem de teste próprio está documentada?
+- [ ] Testes externos estão atribuídos?
 - [ ] O aviso de afiliado está visível?
-- [ ] A IA não atribuiu autoria humana automaticamente?
+- [ ] A IA não escolheu autor humano?
 
 ---
 
 # 2. PROVENIÊNCIA — CRÍTICO
 
-- [ ] Todo fato variável relevante possui fonte desta execução?
-- [ ] Nenhum dado veio apenas de exemplo/template?
-- [ ] Nenhum preço de demonstração virou preço real?
-- [ ] Nenhum comprador de exemplo virou citação?
-- [ ] Nenhuma nota de exemplo foi reutilizada?
+- [ ] Todo fato variável relevante possui fonte da execução atual?
+- [ ] Nenhum fato veio somente de exemplo/template?
+- [ ] Nenhum preço de demonstração virou dado real?
+- [ ] Nenhuma avaliação de exemplo entrou no artigo?
+- [ ] Nenhum nome de comprador foi inventado?
 - [ ] Nenhuma URL foi inferida?
 
 ---
 
-# 3. URL GATE — CRÍTICO
+# 3. URLs — CRÍTICO
 
 - [ ] Não existe `...` em URL?
-- [ ] Não existe `[URL]`, `[LINK]`, `{URL}`?
-- [ ] Não existe domínio placeholder/fictício?
-- [ ] Cada SOURCE_URL aponta para a fonte realmente utilizada?
-- [ ] Cada AFFILIATE_URL foi validada?
-- [ ] SOURCE_URL e AFFILIATE_URL não foram confundidas?
+- [ ] Não existe `[URL]`?
+- [ ] Não existe `[LINK]`?
+- [ ] Não existe `{URL}`?
+- [ ] Não existe domínio placeholder?
+- [ ] SOURCE_URL é realmente fonte?
+- [ ] AFFILIATE_URL foi validada?
 
 ---
 
 # 4. MERCADO — CRÍTICO QUANDO HOUVER COMÉRCIO
 
 - [ ] Existe RELATÓRIO DE MERCADO desta execução?
-- [ ] Produto/SKU do checkout é o correto?
-- [ ] Variante está identificada?
-- [ ] Nacional/importado está identificado?
-- [ ] Novo/usado está identificado?
+- [ ] SKU/variante do checkout corresponde ao artigo?
+- [ ] Nacional/importado foi identificado?
+- [ ] Novo/usado foi identificado?
 - [ ] Catálogo não foi confundido com anúncio?
-- [ ] Vendedor relevante foi verificado?
+- [ ] Vendedor foi validado quando relevante?
 - [ ] Preço possui data?
 - [ ] Condição comercial está clara?
-- [ ] Não há R$ atual sem evidência de mercado?
-- [ ] CTA aponta para produto correto?
-- [ ] Preço/estoque recebem aviso de variação?
+- [ ] Estoque não foi inventado?
+- [ ] CTA aponta ao produto correto?
+- [ ] Não há preço atual sem evidência?
 
-Se o MARKET_GATE falhar:
+Falha do MARKET_GATE:
 
 - remover preço atual;
-- remover afirmação de estoque;
-- não calcular Custo-benefício como confirmado;
-- não inventar CTA.
+- remover estoque;
+- omitir CTA inválido;
+- Custo-benefício fica pendente quando aplicável.
 
 ---
 
-# 5. LINKS AFILIADOS
+# 5. AFILIADOS
 
-- [ ] Todo link afiliado usa:
-      `rel="sponsored nofollow noopener noreferrer"`?
-- [ ] Link oficial não afiliado não está marcado como patrocinado?
+- [ ] Links afiliados usam `rel="sponsored nofollow noopener noreferrer"`?
+- [ ] Link oficial não afiliado não foi marcado como sponsored?
+- [ ] Aviso de afiliado está visível?
 - [ ] Não há urgência falsa?
-- [ ] Comissão não determinou o vencedor?
-- [ ] Alternativa sem comissão não foi ocultada quando melhor?
+- [ ] Comissão não determinou recomendação?
+- [ ] Alternativa melhor sem comissão não foi escondida?
 
 ---
 
-# 6. FATOS E FONTES — CRÍTICO
+# 6. FATOS
 
-- [ ] Modelo foi conferido?
-- [ ] SKU foi conferido quando relevante?
-- [ ] Variante foi conferida?
-- [ ] Especificações centrais foram conferidas?
-- [ ] Certificações/homologações foram confirmadas?
-- [ ] Garantia foi confirmada quando mencionada?
-- [ ] Datas estão corretas?
+- [ ] Modelo conferido?
+- [ ] SKU conferido quando relevante?
+- [ ] Variante conferida?
+- [ ] Especificações centrais conferidas?
+- [ ] Garantia confirmada quando citada?
+- [ ] Certificações/homologações confirmadas?
+- [ ] Datas corretas?
 - [ ] Claims quantitativos possuem fonte?
-- [ ] Divergências importantes foram explicadas?
-- [ ] Fontes Consultadas possui URLs diretas?
-- [ ] Não há número inventado?
+- [ ] Divergências foram explicadas?
+- [ ] Nenhum número foi inventado?
 
 ---
 
-# 7. MARKETPLACE / PROVA SOCIAL — CRÍTICO
+# 7. FONTES
+
+- [ ] Existe bloco Fontes consultadas?
+- [ ] Fontes centrais têm URL direta?
+- [ ] Fontes oficiais estão identificadas?
+- [ ] Testes independentes estão identificados?
+- [ ] Varejo está identificado?
+- [ ] Datas existem para dados temporais?
+- [ ] Toda fonte usada em Consenso técnico aparece?
+
+---
+
+# 8. MARKETPLACE
 
 - [ ] Amazon e Mercado Livre permanecem separados?
-- [ ] Não existe soma de counts entre plataformas?
-- [ ] Rating de cada plataforma está atribuído?
-- [ ] Count possui data?
-- [ ] Variante/listing está identificada quando relevante?
-- [ ] Foi registrado se a plataforma agrupa variantes?
+- [ ] Counts não foram somados?
+- [ ] Ratings estão atribuídos?
+- [ ] Data da consulta está explícita?
+- [ ] Listing/variante foi registrado?
+- [ ] Agrupamento de variantes foi considerado?
 - [ ] "Compra verificada" só aparece com evidência?
-- [ ] Citação é literalmente verificável?
-- [ ] Paráfrase está sem aspas?
-- [ ] Relato de logística não foi usado como qualidade do produto?
-- [ ] Relato de vendedor não foi usado como qualidade do produto?
-- [ ] O artigo não afirma ter lido milhares de textos sem ter feito isso?
 
 ---
 
-# 8. PROVA SOCIAL 2 × 2
+# 9. RELATOS
 
-- [ ] Existem até 2 relatos Amazon verificáveis?
-- [ ] Existem até 2 relatos ML verificáveis?
-- [ ] Se faltou evidência, o número de cards foi reduzido?
-- [ ] Nenhum card foi inventado para completar a grade?
-- [ ] O visual do componente foi preservado?
+- [ ] Citações são transcrições verificáveis?
+- [ ] Paráfrases estão sem aspas?
+- [ ] Relatos foram classificados?
+- [ ] LOGÍSTICA não virou qualidade do produto?
+- [ ] VENDEDOR não virou qualidade do produto?
+- [ ] Não foi inventada frase "representativa"?
+- [ ] Não se afirma ter lido milhares sem método real?
 
 ---
 
-# 9. QUALIDADE EDITORIAL
+# 10. PROVA SOCIAL
 
-- [ ] A página responde rapidamente à intenção?
-- [ ] Existe interpretação além da ficha?
-- [ ] Está claro para quem é?
-- [ ] Está claro para quem não é?
-- [ ] Limitações materiais identificadas pela pesquisa estão visíveis?
-- [ ] Prós e contras são verificáveis?
+- [ ] Até 2 Amazon quando disponíveis?
+- [ ] Até 2 Mercado Livre quando disponíveis?
+- [ ] Quantidade foi reduzida quando faltou evidência?
+- [ ] Nenhum card foi criado apenas para completar 2×2?
+- [ ] Visual canônico foi preservado?
+
+---
+
+# 11. QUALIDADE
+
+- [ ] A intenção é respondida rapidamente?
+- [ ] Existe análise além da ficha?
+- [ ] Está claro para quem serve?
+- [ ] Está claro para quem não serve?
+- [ ] Limitações relevantes aparecem?
+- [ ] Prós/Contras são verificáveis?
 - [ ] Não foi inventado contra para atingir quota?
-- [ ] Não há introdução genérica?
-- [ ] Não há repetição artificial?
-- [ ] Não há superlativo sem sustentação?
-- [ ] Concorrente relevante não foi omitido apenas por não gerar comissão?
+- [ ] Não há introdução artificial?
+- [ ] Não há repetição desnecessária?
+- [ ] Não há superlativo sem base?
 
 ---
 
-# 10. CONSENSO TÉCNICO
+# 12. CONSENSO TÉCNICO
 
-Quando Consenso técnico receber nota:
+Quando pontuado:
 
-- [ ] Há pluralidade suficiente de fontes independentes?
-- [ ] As fontes técnicas são identificáveis?
-- [ ] Elas aparecem em Fontes Consultadas?
-- [ ] O texto não diz "consenso" baseado numa única fonte?
-- [ ] Divergências entre testes foram consideradas?
-
-Falha:
-
-Consenso técnico = PENDENTE.
-
-Não N/A.
+- [ ] Existem múltiplas fontes adequadas?
+- [ ] São independentes?
+- [ ] Estão identificadas?
+- [ ] Aparecem em Fontes?
+- [ ] Divergências foram consideradas?
+- [ ] "Consenso" não veio de uma única fonte?
 
 ---
 
-# 11. RÉGUA v2.0 — CRÍTICO QUANDO HOUVER NOTA
+# 13. RÉGUA v2.0
 
-- [ ] A página usa exatamente os 6 critérios?
+Quando houver nota:
+
 - [ ] Custo-benefício = 30%?
 - [ ] Satisfação verificada = 25%?
 - [ ] Ficha técnica = 20%?
 - [ ] Recursos e usabilidade = 10%?
 - [ ] Consenso técnico = 10%?
 - [ ] Confiança e suporte = 5%?
-- [ ] Cada nota está em incremento de 0,5?
-- [ ] Não existem notas 8,7 / 9,2 etc.?
-- [ ] Cada critério possui justificativa?
-- [ ] N/A só foi usado quando realmente inaplicável?
+- [ ] Notas usam incremento 0,5?
+- [ ] Não há 8,7 / 9,2 etc.?
+- [ ] Cada critério tem justificativa?
+- [ ] N/A é realmente inaplicável?
 - [ ] N/A foi redistribuído proporcionalmente?
-- [ ] Falta de informação não virou N/A?
-- [ ] A conta foi refeita?
-- [ ] O arredondamento segue a metodologia?
-- [ ] O selo corresponde à nota?
-- [ ] Prós/contras/veredito são coerentes com a nota?
-- [ ] Link `/como-avaliamos/` está presente?
+- [ ] Falta de evidência não virou N/A?
+- [ ] Conta foi recalculada?
+- [ ] Selo corresponde?
+- [ ] Veredito corresponde?
+- [ ] `/como-avaliamos/` está linkado?
 
 ---
 
-# 12. MATH GATE
+# 14. MATH GATE
 
-- [ ] Diferenças de preço foram recalculadas?
+- [ ] Diferenças de preço estão corretas?
 - [ ] Percentuais estão corretos?
-- [ ] "metade do preço" é matematicamente verdadeiro?
-- [ ] Não existe percentual subjetivo como "entrega 80%" sem método?
-- [ ] Pesos da Régua somam corretamente?
+- [ ] "Metade" é matematicamente verdadeiro?
+- [ ] Não há percentuais subjetivos sem método?
+- [ ] Pesos fecham corretamente?
 
 ---
 
-# 13. SCHEMA
+# 15. SCHEMA
 
-- [ ] Schema só foi criado se solicitado?
-- [ ] Schema representa conteúdo visível?
-- [ ] Não existe AggregateRating de Amazon/ML apresentado como próprio?
-- [ ] Não existe ratingCount/reviewCount externo misturado com nota editorial?
-- [ ] ReviewRating, se utilizado, corresponde à nota visível?
+- [ ] Só foi gerado se solicitado?
+- [ ] Reflete conteúdo visível?
+- [ ] Não usa AggregateRating externo como próprio?
+- [ ] Não mistura count externo e nota editorial?
+- [ ] ReviewRating corresponde ao visível?
 - [ ] Autor não foi inventado?
-- [ ] `priceValidUntil` não foi inventado?
-- [ ] Data de consulta não foi usada como priceValidUntil?
+- [ ] priceValidUntil não foi inventado?
 
 ---
 
-# 14. SEO
+# 16. SEO
 
-- [ ] Consulta e intenção estão claras?
-- [ ] Não existe página concorrente para a mesma intenção?
-- [ ] H1 corresponde ao conteúdo?
-- [ ] Título não promete teste inexistente?
-- [ ] Meta não contém preço não confirmado?
-- [ ] Não há keyword stuffing?
-- [ ] Não há "LSI" artificial?
-- [ ] Alt text descreve a imagem?
-- [ ] Ano não foi alterado só para freshness?
-
----
-
-# 15. LAYOUT — CRÍTICO
-
-- [ ] Template correto foi usado?
-- [ ] HTML/Gutenberg foi entregue, não Markdown?
-- [ ] Hero usa o componente Apple TV LOCKED?
-- [ ] Inline styles LOCKED foram preservados?
-- [ ] Agent não criou `.cp-*` alternativo?
-- [ ] Não existe stylesheet novo dentro do artigo?
-- [ ] Resposta Rápida é componente próprio?
-- [ ] Tabela comparativa usa padrão Lenovo/Acer?
-- [ ] Prós/Contras usa grid verde/vermelho canônico?
-- [ ] FAQ usa cards canônicos, não `<details>`?
-- [ ] Fontes usa box âmbar canônico?
-- [ ] Ordem do template foi preservada?
-- [ ] Nenhum componente foi "modernizado" pelo Agent?
+- [ ] Consulta/intenção estão claras?
+- [ ] Não existe URL concorrente para a mesma intenção?
+- [ ] H1 é honesto?
+- [ ] Título não promete teste falso?
+- [ ] Meta não contém dado não confirmado?
+- [ ] Não há stuffing?
+- [ ] Não há LSI artificial?
+- [ ] Alt é factual?
+- [ ] Ano não foi trocado artificialmente?
 
 ---
 
-# 16. IMAGENS — CRÍTICO
+# 17. LAYOUT — CRÍTICO
 
-- [ ] THUMB-01 foi especificada?
-- [ ] THUMB-01 NÃO aparece no HTML?
-- [ ] HERO-01 foi especificada?
-- [ ] Existe apenas uma imagem principal inicial?
-- [ ] Imagem pendente usa `<!-- CP-IMAGE:ID -->`?
+- [ ] Template correto?
+- [ ] HTML/Gutenberg, não Markdown?
+- [ ] Hero canônico?
+- [ ] Inline CSS LOCKED preservado?
+- [ ] Sem `.cp-*` alternativo?
+- [ ] Sem stylesheet inventado?
+- [ ] Resposta rápida é componente próprio?
+- [ ] Tabela usa padrão canônico?
+- [ ] Prós/contras verde/vermelho?
+- [ ] FAQ em cards?
+- [ ] Fontes em box âmbar?
+- [ ] Ordem preservada?
+- [ ] Nenhum componente foi redesenhado?
+
+---
+
+# 18. IMAGENS
+
+- [ ] THUMB-01 especificada?
+- [ ] THUMB-01 fora do HTML?
+- [ ] HERO-01 especificada?
+- [ ] Uma única imagem principal inicial?
+- [ ] Pendências usam `<!-- CP-IMAGE:ID -->`?
 - [ ] Não existe `[IMAGEM AQUI]`?
-- [ ] Nenhuma URL de wp-content foi inventada?
-- [ ] ALT é factual?
-- [ ] Não há keyword stuffing no ALT?
-- [ ] Imagem gerada não sugere teste próprio?
-- [ ] Disclosure de IA foi indicado quando necessário?
-- [ ] RELATÓRIO DE IMAGENS foi entregue?
+- [ ] Nenhum wp-content foi inventado?
+- [ ] Alt é factual?
+- [ ] IA foi declarada quando necessário?
+- [ ] RELATÓRIO DE IMAGENS entregue?
 
 ---
 
-# 17. AUTORIA
+# 19. AUTORIA
 
 - [ ] A IA não escolheu autor?
-- [ ] Byline só aparece com AUTHOR_APPROVED?
+- [ ] Byline somente com AUTHOR_APPROVED?
 - [ ] Bio não foi inventada?
-- [ ] Credenciais são factuais?
-- [ ] A experiência do autor é relevante ao contexto em que aparece?
+- [ ] Credencial é factual?
+- [ ] Bio canônica não foi reescrita?
 
 ---
 
-# 18. ATUALIZAÇÃO
-
-Em atualização:
+# 20. ATUALIZAÇÃO
 
 - [ ] URL preservada?
 - [ ] Slug preservado?
 - [ ] Canonical preservado?
-- [ ] dateModified só mudou com alteração substancial?
+- [ ] dateModified só mudou adequadamente?
 - [ ] Linguagem falsa de teste foi removida?
-- [ ] Schema antigo foi revisado?
-- [ ] Mercado foi recapturado?
-- [ ] Nota antiga foi identificada pela versão da Régua?
-- [ ] Migração v1 → v2 foi recalculada, não apenas arredondada?
-- [ ] Histórico foi atualizado somente quando relevante?
+- [ ] Schema antigo revisado?
+- [ ] Mercado recapturado?
+- [ ] Régua antiga identificada?
+- [ ] v1 → v2 foi recalculada?
+- [ ] Histórico só aparece quando relevante?
 
 ---
 
-# 19. MARCADORES INTERNOS
+# 21. PLACEHOLDERS
 
-Antes de publicação, não pode restar:
+Antes do ar, não pode restar:
 
 - [ ] `[VERIFICAÇÃO HUMANA NECESSÁRIA]`
 - [ ] `[URL]`
 - [ ] `[LINK]`
 - [ ] `[IMAGEM AQUI]`
-- [ ] `...` em URL
-- [ ] placeholders `{{...}}`
-- [ ] instruções internas do Agent
+- [ ] `{{SLOT}}`
+- [ ] URL com `...`
 
-CP-IMAGE pode existir somente na versão aguardando upload.
+CP-IMAGE é permitido somente enquanto aguarda upload.
 
 Depois de APLICAR_IMAGENS:
 
-nenhum CP-IMAGE obrigatório pode permanecer.
+nenhum CP-IMAGE obrigatório permanece.
 
 ---
 
-# 20. RESULTADO
+# 22. RESULTADO
 
-Se tudo estiver adequado:
+Saída automática permitida:
 
 `STATUS: PRONTO PARA REVISÃO HUMANA`
 
-Nunca escrever:
+A IA nunca declara:
 
 `PRONTO PARA PUBLICAÇÃO`
-
-porque a decisão final pertence ao editor.
