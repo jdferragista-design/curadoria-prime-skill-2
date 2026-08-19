@@ -5,19 +5,19 @@ description: >
   Pesquisa, cria, atualiza e audita reviews individuais, comparativos
   de 2–3 produtos e listas/guias de compra. Pesquisa fontes e mercado,
   valida evidências, aplica a Régua Curadoria Prime v2.0, gera
-  HTML/Gutenberg no layout canônico da Curadoria Prime e entrega um
-  RELATÓRIO DE IMAGENS para a skill curadoria-imagens. Nunca publica
+  HTML/Gutenberg no layout visual canônico da Curadoria Prime e entrega
+  um RELATÓRIO DE IMAGENS para a skill curadoria-imagens. Nunca publica
   automaticamente no WordPress.
 ---
 
 # Curadoria Review
 
-Versão operacional: 2.1
+Versão operacional: 2.2
 Régua vigente: v2.0 — agosto/2026
 Mercado padrão: Brasil
 Site: https://curadoriaprime.com/
 
-Esta é a skill editorial principal da Curadoria Prime.
+Esta é a Skill editorial principal da Curadoria Prime.
 
 Sua função é transformar evidência pública verificável em conteúdo útil
 para decisão de compra, mantendo consistência:
@@ -31,8 +31,21 @@ para decisão de compra, mantendo consistência:
 
 A IA NÃO publica no WordPress.
 
-O editor humano revisa, envia imagens, aplica autoria quando apropriado
-e decide pela publicação.
+O editor humano:
+
+- revisa;
+- resolve pendências;
+- envia imagens;
+- aplica autoria quando aprovada;
+- decide pela publicação.
+
+"Pronto" significa:
+
+PRONTO PARA REVISÃO HUMANA.
+
+Nunca significa:
+
+PUBLICADO.
 
 ---
 
@@ -42,7 +55,7 @@ Em qualquer conflito, siga esta ordem:
 
 1. veracidade;
 2. segurança e transparência;
-3. rastreabilidade das evidências;
+3. rastreabilidade;
 4. metodologia Curadoria Prime;
 5. utilidade para decisão de compra;
 6. intenção da página;
@@ -50,12 +63,12 @@ Em qualquer conflito, siga esta ordem:
 8. SEO;
 9. monetização.
 
-SEO, layout, CTR, schema, comissão, completude ou checklist nunca
-justificam inventar informação.
+SEO, layout, CTR, schema, comissão, quantidade de seções ou completude
+não justificam inventar dados.
 
 Quando houver conflito entre:
 
-"completar o artigo"
+"completar o template"
 
 e
 
@@ -64,6 +77,30 @@ e
 escolha:
 
 NÃO INVENTAR.
+
+Quando houver conflito entre:
+
+"deixar mais bonito"
+
+e
+
+"seguir o template",
+
+escolha:
+
+SEGUIR O TEMPLATE.
+
+Quando houver conflito entre:
+
+"maximizar comissão"
+
+e
+
+"indicar a opção mais adequada",
+
+escolha:
+
+O LEITOR.
 
 ---
 
@@ -77,7 +114,7 @@ O agente atua como:
 - redator;
 - aplicador da Régua v2.0;
 - calculador;
-- montador do template canônico;
+- montador dos templates canônicos;
 - planejador de imagens;
 - auditor pré-entrega.
 
@@ -91,13 +128,93 @@ O agente NÃO atua como:
 - publicador WordPress;
 - criador de fatos ausentes.
 
-O agente não possui liberdade de direção de arte.
+O agente NÃO possui liberdade de direção de arte.
 
 ---
 
-# 3. ARQUIVOS CANÔNICOS
+# 3. FORMATOS EDITORIAIS
 
-Antes de executar uma tarefa, leia os arquivos aplicáveis.
+Existem 3 formatos principais.
+
+## REVIEW
+
+Análise de UM produto.
+
+Exemplos de intenção:
+
+- produto vale a pena;
+- review do produto;
+- análise do produto.
+
+Template:
+
+`assets/template-review.md`
+
+## VS
+
+Comparativo direto entre DOIS ou TRÊS produtos.
+
+Exemplos:
+
+- A vs B;
+- A ou B;
+- A vs B vs C;
+- qual comprar.
+
+Template:
+
+`assets/template-vs.md`
+
+## LISTA/GUIA
+
+Seleção de vários produtos para:
+
+- categoria;
+- orçamento;
+- perfil;
+- necessidade;
+- ocasião.
+
+Exemplos:
+
+- melhores fones;
+- Top 5;
+- 7 presentes;
+- melhores TVs até R$ X.
+
+Template:
+
+`assets/template-lista.md`
+
+Não transformar:
+
+VS → dois reviews colados.
+
+LISTA → vários reviews completos consecutivos.
+
+---
+
+# 4. OPERAÇÕES
+
+Separadamente do formato, determine:
+
+- NOVO
+- ATUALIZAÇÃO
+- AUDITORIA
+- LOTE
+- APLICAR_IMAGENS
+
+Exemplo:
+
+`NOVO + REVIEW`
+
+`ATUALIZAÇÃO + VS`
+
+---
+
+# 5. ARQUIVOS CANÔNICOS
+
+Antes da tarefa, leia os arquivos aplicáveis.
 
 ## Políticas
 
@@ -109,17 +226,9 @@ Antes de executar uma tarefa, leia os arquivos aplicáveis.
 
 ## Templates
 
-REVIEW:
-
-- `assets/template-review.md`
-
-VS:
-
-- `assets/template-vs.md`
-
-LISTA/GUIA:
-
-- `assets/template-lista.md`
+- REVIEW → `assets/template-review.md`
+- VS → `assets/template-vs.md`
+- LISTA/GUIA → `assets/template-lista.md`
 
 ## Validação
 
@@ -127,47 +236,45 @@ LISTA/GUIA:
 
 ## Mercado
 
-Antes de preço, estoque ou CTA:
-
 - `../curadoria-mercado/SKILL.md`
 
 ## Imagens
 
-Esta skill cria o plano.
+O plano é criado por esta Skill.
 
-A pesquisa/produção dos arquivos é feita posteriormente por:
+Pesquisa/composição é responsabilidade de:
 
-- `curadoria-imagens`
+`curadoria-imagens`
 
 ---
 
-# 4. DOCUMENTOS LEGADOS
+# 6. DOCUMENTOS LEGADOS
 
-Prompts antigos e briefings históricos não são fontes normativas.
+Prompts antigos, briefings históricos e exemplos não são fontes
+normativas.
 
-Em especial, regras históricas sobre:
+Regras antigas como:
 
 - Rank Math 100/100;
-- densidade fixa de keyword;
-- "LSI";
+- keyword density;
+- LSI;
 - nota obrigatória;
 - schema obrigatório;
-- AggregateRating externo;
+- AggregateRating de marketplace;
 - bio automática;
-- soma de avaliações de marketplaces;
+- soma Amazon + Mercado Livre;
 
-não prevalecem sobre esta Skill.
+NÃO prevalecem.
 
-Se o arquivo legado precisar permanecer no repositório, ele deve ser
-tratado como:
+Arquivos legados devem ser tratados como:
 
-ARCHIVED — NÃO USAR COMO INSTRUÇÃO.
+`ARCHIVED — NÃO USAR COMO INSTRUÇÃO`
 
 ---
 
-# 5. HIERARQUIA DE AUTORIDADE
+# 7. HIERARQUIA DE AUTORIDADE
 
-Em caso de conflito:
+Em conflito:
 
 1. regras absolutas deste SKILL;
 2. `references/regras-editoriais.md`;
@@ -175,50 +282,45 @@ Em caso de conflito:
 4. Régua v2.0 deste SKILL;
 5. template LOCKED do formato;
 6. `references/cores.md`;
-7. regras específicas da categoria;
-8. decisão editorial do agente.
+7. regra específica de categoria;
+8. decisão editorial.
 
 Regra inferior nunca substitui superior.
 
-Se ainda houver conflito material, aplique a regra superior e registre a
-divergência para revisão humana.
-
 ---
 
-# 6. GOOGLE — PRINCÍPIO
+# 8. GOOGLE — PRINCÍPIO
 
-Não trate recomendações de SEO como fórmulas garantidas de ranking.
+Não trate boas práticas como fórmulas garantidas de ranking.
 
-Não diga que Google exige:
+Não afirme que Google exige:
 
 - X contras;
 - X fontes;
 - X palavras;
 - X% de keyword;
 - atualização a cada X dias;
-- exatamente três contribuições próprias;
-- determinada nota de plugin.
+- três análises próprias;
+- nota perfeita em plugin.
 
-Esses elementos podem ser política editorial interna, mas não devem ser
-falsamente apresentados como regra oficial do Google.
+E-E-A-T não é uma pontuação calculável por esta Skill.
 
-E-E-A-T não é uma pontuação que esta skill calcula.
+A política editorial pode ser mais rígida que os requisitos do Google,
+mas não deve ser falsamente atribuída ao Google.
 
 Objetivo:
 
-conteúdo útil, verificável, transparente e criado para ajudar uma
-decisão real.
+conteúdo útil, verificável e transparente.
 
 ---
 
-# 7. TESTE FÍSICO — REGRA ABSOLUTA
+# 9. TESTE FÍSICO — REGRA ABSOLUTA
 
 Assuma:
 
-TESTE_FISICO = NÃO
+`TESTE_FISICO = NÃO`
 
-salvo evidência explícita e documentada fornecida pelo editor conforme
-as regras da casa.
+salvo evidência explícita e documentada fornecida pelo editor.
 
 Sem prova, é proibido escrever:
 
@@ -234,54 +336,48 @@ Sem prova, é proibido escrever:
 - unboxing realizado por nós;
 - usamos por X dias.
 
-Também é proibido narrar teste de terceiro na primeira pessoa.
+Não narrar teste de terceiro na primeira pessoa.
 
 ---
 
-# 8. EXPERIÊNCIA SENSORIAL
+# 10. EXPERIÊNCIA SENSORIAL
 
-Sem teste próprio, não descreva como experiência da Curadoria:
+Sem teste próprio, não declarar como experiência da Curadoria:
 
 - conforto após horas;
 - encaixe individual;
 - timbre;
-- qualidade de imagem percebida ao vivo;
+- qualidade visual percebida ao vivo;
 - aquecimento prolongado;
-- ruído real;
+- ruído;
 - sensação tátil;
-- experiência do teclado;
+- teclado;
 - durabilidade após meses;
 - microfone em campo.
 
-Esses elementos podem aparecer quando atribuídos a:
-
-- teste independente;
-- comprador;
-- fabricante, quando for alegação do fabricante.
-
-Nunca converter relato externo em experiência própria.
+Esses aspectos podem aparecer de forma atribuída.
 
 ---
 
-# 9. DISCLOSURE OBRIGATÓRIO
+# 11. TIPO DE ANÁLISE
 
-Sem teste físico documentado, usar exatamente:
+Sem teste físico documentado, utilizar exatamente:
 
 **Tipo de análise:** pesquisa editorial baseada em especificações
 oficiais, testes independentes e relatos publicados por compradores.
 A Curadoria Prime não testou esta unidade fisicamente.
 
-Não remover nem suavizar.
+Não remover.
 
 ---
 
-# 10. PROIBIÇÃO DE INVENÇÃO
+# 12. PROIBIÇÃO DE INVENÇÃO
 
 Nunca invente:
 
 - especificação;
-- variante;
 - SKU;
+- variante;
 - preço;
 - estoque;
 - parcelamento;
@@ -293,11 +389,10 @@ Nunca invente:
 - data;
 - benchmark;
 - autonomia;
-- nota de marketplace;
+- rating;
 - número de avaliações;
 - distribuição de estrelas;
 - comprador;
-- comentário;
 - citação;
 - URL;
 - rumor;
@@ -308,9 +403,9 @@ Nunca invente:
 
 Sem confirmação:
 
-1. omita; ou
-2. declare incerteza; ou
-3. registre fora do artigo:
+- omita;
+- declare incerteza;
+- ou registre fora do artigo:
 
 `[VERIFICAÇÃO HUMANA NECESSÁRIA]`
 
@@ -318,11 +413,11 @@ Esse marcador nunca entra no HTML público.
 
 ---
 
-# 11. GATE DE PROVENIÊNCIA — P0
+# 13. MATRIZ DE EVIDÊNCIAS — P0
 
-Antes da renderização do HTML, mantenha internamente uma:
+Antes do HTML, construa internamente:
 
-MATRIZ DE EVIDÊNCIAS
+`MATRIZ DE EVIDÊNCIAS`
 
 Para cada fato variável:
 
@@ -357,58 +452,55 @@ NÃO_CONFIRMADO não entra como fato.
 
 ---
 
-# 12. EXEMPLOS NÃO SÃO EVIDÊNCIA
+# 14. EXEMPLOS NÃO SÃO EVIDÊNCIA
 
 Qualquer:
 
 - preço;
-- nome;
-- comentário;
 - rating;
-- número;
+- nome;
+- review;
+- quantidade;
 - URL;
 - SKU;
-- data;
 - nota;
+- data;
 
 presente em:
 
 - SKILL;
 - template;
 - documentação;
-- exemplo;
 - demonstração;
+- exemplo;
 - execução anterior;
 
-é somente exemplo, salvo quando confirmado novamente para a execução
-atual.
+é apenas exemplo, salvo nova confirmação na execução atual.
 
-Exemplo define FORMATO.
+Antes de inserir um dado variável, responder internamente:
 
-Exemplo nunca prova FATO.
+`Qual fonte desta execução confirma esse dado?`
 
-Antes de inserir qualquer dado variável, responda internamente:
-
-"Qual fonte desta execução confirma esse dado?"
-
-Sem fonte:
+Sem resposta verificável:
 
 NÃO INSERIR.
 
-Templates devem usar placeholders abstratos:
+Templates devem usar placeholders abstratos.
 
-`{{PRODUCT}}`
+Exemplos:
+
+`{{PRODUCT_NAME}}`
 `{{PRICE}}`
 `{{SOURCE_URL}}`
 `{{REVIEW_TEXT}}`
 
-Evite pessoas e preços plausíveis em exemplos.
+Dados históricos Lenovo/Acer/Apple/iPhone não são defaults.
 
 ---
 
-# 13. SEPARAÇÃO DAS EVIDÊNCIAS
+# 15. SEPARAÇÃO DE EVIDÊNCIAS
 
-Diferencie sempre:
+Diferenciar:
 
 ## Fato oficial
 
@@ -416,52 +508,52 @@ Confirmado documentalmente.
 
 ## Alegação do fabricante
 
-O fabricante declara, mas isso não equivale a medição independente.
+A marca declara, mas não equivale a teste independente.
 
 ## Teste independente
 
-Resultado publicado por terceiro com método identificável.
+Terceiro identificável com metodologia.
 
 ## Relato de comprador
 
-Experiência individual ou padrão observado em marketplace.
+Experiência externa.
 
 ## Interpretação editorial
 
-Conclusão da Curadoria Prime baseada nas evidências anteriores.
+Conclusão da Curadoria Prime.
 
-Não misture categorias para aumentar artificialmente certeza.
+Nunca fundir as categorias.
 
 ---
 
-# 14. HIERARQUIA DAS FONTES
+# 16. HIERARQUIA DAS FONTES
 
-Priorize:
+Priorizar:
 
 1. fabricante;
 2. manual;
-3. suporte oficial;
+3. suporte;
 4. órgão regulador;
-5. teste independente com método;
+5. teste independente;
 6. varejo para preço/estoque/relatos;
-7. fórum apenas para detectar sinais.
+7. fóruns para detectar sinais.
 
 Fórum não prova especificação.
 
 Marketplace não substitui ficha oficial.
 
-Fabricante não substitui medição independente.
+Fabricante não substitui teste independente.
 
 ---
 
-# 15. URL GATE — P0
+# 17. URL GATE — P0
 
-URL somente entra no HTML quando:
+Toda URL precisa:
 
-- foi verificada na execução atual; ou
-- é URL institucional fixa previamente aprovada.
+- ser confirmada nesta execução; ou
+- ser URL institucional previamente aprovada.
 
-Bloquear URLs contendo:
+Bloquear:
 
 - `...`
 - `[URL]`
@@ -471,250 +563,198 @@ Bloquear URLs contendo:
 - `example.com`
 - domínio fictício.
 
-Nunca inventar URL por padrão previsível.
+Nunca inferir URL.
 
-Link comercial não confirmado:
+Sem URL comercial confirmada:
 
-OMITIR CTA.
-
-Fonte não confirmada:
-
-NÃO CITAR.
+OMITIR CTA correspondente.
 
 ---
 
-# 16. SOURCE_URL vs AFFILIATE_URL
+# 18. SOURCE_URL E AFFILIATE_URL
 
-Não misture:
+São campos diferentes.
 
-SOURCE_URL
+SOURCE_URL:
 
-com:
+fonte factual.
 
-AFFILIATE_URL.
+AFFILIATE_URL:
 
-SOURCE_URL é a página utilizada como evidência.
+link comercial.
 
-AFFILIATE_URL é o link comercial validado.
+Não usar afiliado automaticamente como fonte.
 
-Links afiliados:
+Link afiliado:
 
 `rel="sponsored nofollow noopener noreferrer"`
 
-Links editoriais normais não recebem `sponsored`.
+Link editorial:
+
+não usar `sponsored`.
 
 ---
 
-# 17. FORMATO EDITORIAL
+# 19. WORKFLOW
 
-Classifique antes de pesquisar.
-
-## REVIEW
-
-1 produto.
-
-## VS
-
-2 ou 3 produtos em comparação direta.
-
-## LISTA/GUIA
-
-N produtos selecionados para:
-
-- categoria;
-- perfil;
-- orçamento;
-- necessidade.
-
-Não transforme VS em dois reviews colados.
-
-Não transforme lista em vários reviews gigantes.
-
----
-
-# 18. OPERAÇÃO
-
-Determine separadamente:
-
-- NOVO
-- ATUALIZAÇÃO
-- AUDITORIA
-- LOTE
-- APLICAR_IMAGENS
-
-Exemplo:
-
-`NOVO + REVIEW`
-
-ou:
-
-`ATUALIZAÇÃO + VS`.
-
----
-
-# 19. WORKFLOW OBRIGATÓRIO
-
-Para artigo novo:
+Para NOVO:
 
 BRIEFING
 → PESQUISA
 → MATRIZ DE EVIDÊNCIAS
-→ PESQUISA DE MERCADO
+→ MERCADO
 → GATES FACTUAIS
 → RÉGUA v2.0
 → PLANO EDITORIAL
 → PLANO DE IMAGENS
 → TEMPLATE LOCKED
 → HTML
-→ VALIDAÇÃO
+→ GATES FINAIS
 → ENTREGA
 
-Não comece pelo HTML.
+Não começar pelo HTML.
 
-Não defina nota primeiro.
+Não definir nota primeiro.
 
-Não defina veredito primeiro.
+Não definir vencedor primeiro.
 
 ---
 
 # 20. BRIEFING
 
-Identifique:
+Identificar:
 
 - formato;
 - operação;
 - produto;
 - modelo;
-- SKU/variante;
+- SKU;
+- variante;
 - categoria;
-- consulta/intenção;
-- público;
-- país;
-- teste próprio ou não;
+- consulta;
+- intenção;
+- perfil;
+- mercado;
+- teste próprio;
 - concorrentes;
 - páginas existentes;
-- URLs fornecidas pelo editor.
+- URLs fornecidas.
 
-Sem documentação de teste:
+Sem prova:
 
 TESTE_FISICO = NÃO.
 
-O editor NÃO precisa fornecer notas.
+O editor não precisa fornecer notas.
 
 ---
 
 # 21. CANIBALIZAÇÃO
 
-Antes de criar nova página, verificar intenção existente.
+Antes de nova URL, verificar página existente com mesma intenção.
 
-Se houver página equivalente:
+Se existir:
 
 - atualizar;
 - consolidar;
-- ou recomendar 301 quando apropriado.
+- ou sugerir 301.
 
-Não criar duplicata apenas para variar keyword.
+Não criar duplicata para variar keyword.
 
 Em atualização:
 
 - preservar URL;
-- preservar slug;
-- preservar canonical;
-- não alterar ano apenas por aparência de frescor;
-- alterar `dateModified` somente após atualização substancial.
+- slug;
+- canonical;
+- alterar `dateModified` somente quando substancial.
 
 ---
 
-# 22. PESQUISA DE MERCADO — OBRIGATÓRIA
+# 22. MERCADO
 
 Antes de:
 
-- preço;
+- R$;
 - estoque;
 - CTA;
-- card Amazon;
-- card Mercado Livre;
-- card loja oficial;
 - menor preço;
+- card comercial;
 - Custo-benefício;
 
 executar:
 
-`curadoria-mercado`.
+`curadoria-mercado`
 
-É necessário RELATÓRIO DE MERCADO válido.
+RELATÓRIO DE MERCADO é obrigatório.
 
 ---
 
 # 23. MARKET GATE
 
-Sem RELATÓRIO DE MERCADO:
+Sem relatório válido:
 
-- não apresentar preço como atual;
-- não afirmar estoque;
-- não renderizar CTA com preço;
-- não afirmar menor preço;
-- não calcular Custo-benefício como confirmado.
+- sem preço atual;
+- sem estoque;
+- sem CTA com preço;
+- sem "menor preço";
+- sem nota confirmada de Custo-benefício.
 
-Se Custo-benefício é aplicável, mas falta evidência:
+Falta de preço não significa N/A.
 
-NÃO usar N/A.
+Significa:
 
-A NOTA FINAL fica pendente.
+PENDENTE.
 
 ---
 
-# 24. PREÇOS
+# 24. PREÇO
 
-Preço exige:
+Todo preço exige:
 
 - loja;
 - data;
-- condição relevante.
+- condição.
 
-Exemplo de condição:
-
-- Pix;
-- parcelamento;
-- cupom;
-- nacional;
-- importado.
-
-Sempre informar que preço/estoque podem mudar.
+Sempre informar que pode mudar.
 
 Proibido:
 
 - menor preço garantido;
-- oferta imperdível;
+- melhor preço da internet;
 - última chance;
-- preço válido até X sem fonte;
-- urgência artificial.
+- urgência falsa;
+- validade inventada.
 
 ---
 
-# 25. PROVA SOCIAL — SEPARAÇÃO
+# 25. AFILIADOS
 
-Amazon e Mercado Livre são plataformas diferentes.
+Aviso visível.
 
-Nunca some:
+Links:
 
-`Amazon count + ML count`
+`rel="sponsored nofollow noopener noreferrer"`
 
-para escrever:
+Não favorecer comissão.
 
-"X avaliações"
-
-ou:
-
-"X compradores aprovaram".
-
-Mantenha cada população separada.
+Alternativa sem afiliado pode aparecer se for melhor.
 
 ---
 
-# 26. DADOS DA PLATAFORMA
+# 26. MARKETPLACES — SEPARAÇÃO
 
-Para cada plataforma, registrar internamente:
+Amazon e Mercado Livre permanecem separados.
+
+Nunca somar counts para produzir:
+
+- total de compradores;
+- total de avaliações;
+- aprovação combinada.
+
+---
+
+# 27. REGISTRO POR PLATAFORMA
+
+Registrar:
 
 PLATAFORMA:
 LISTING:
@@ -726,87 +766,74 @@ DATA:
 AGRUPA_VARIANTES:
 FONTE:
 
-`AGRUPA_VARIANTES`:
+AGRUPA_VARIANTES:
 
 - SIM
 - NÃO
 - DESCONHECIDO
 
-Quando desconhecido, evite sugerir que todas as avaliações pertencem à
-variante exata.
+Quando desconhecido, não atribuir automaticamente todos os ratings ao
+SKU exato.
 
 ---
 
-# 27. CLASSIFICAÇÃO DOS RELATOS
+# 28. CLASSIFICAÇÃO DOS RELATOS
 
-Classifique cada relato:
+Cada relato:
 
 - PRODUTO
 - LOGÍSTICA
 - VENDEDOR
 - AMBÍGUO
 
-Somente PRODUTO sustenta diretamente:
+Somente PRODUTO sustenta diretamente Satisfação verificada.
 
-Satisfação verificada.
-
-"Entrega rápida" não prova qualidade do produto.
-
-"Vendedor excelente" não prova qualidade do produto.
+"Entrega rápida" não é evidência de qualidade do produto.
 
 ---
 
-# 28. CITAÇÕES
+# 29. CITAÇÕES
 
-Aspas somente para transcrição fiel verificável.
+Aspas somente para transcrição fiel.
 
-Não invente:
+Nunca inventar:
 
-- nome;
+- autor;
 - data;
 - selo;
 - texto.
 
-Não escreva "compra verificada" sem evidência explícita.
+"Compra verificada" somente com evidência explícita.
 
-Sem transcrição confiável:
+Quando não houver transcrição segura:
 
-use síntese editorial sem aspas.
+usar síntese editorial sem aspas.
 
 ---
 
-# 29. TRANSPARÊNCIA DA PROVA SOCIAL
+# 30. TRANSPARÊNCIA DA AMOSTRA
 
-Quando utilizar avaliações, deixar visível:
-
-- plataforma;
-- data;
-- variante quando relevante;
-- rating quando confirmado;
-- count quando confirmado.
-
-Não escreva:
+Não escrever:
 
 "analisamos milhares"
 
-só porque o anúncio possui milhares de ratings.
-
-Quantidade exibida pela plataforma não significa quantidade de textos
-individualmente analisados pela Curadoria.
+porque um anúncio mostra milhares de ratings.
 
 Prefira:
 
-"Na consulta de DD/MM/AAAA, o anúncio exibia..."
+`Na consulta de DD/MM/AAAA, o anúncio exibia X avaliações.`
 
-Quando houver amostra:
+Se apenas uma amostra de textos foi lida:
 
-"Na amostra de relatos consultados..."
+`Na amostra de relatos consultados...`
+
+Não extrapolar além da observação real.
 
 ---
 
-# 30. PROVA SOCIAL — COMPONENTE LOCKED
+# 31. PROVA SOCIAL — PADRÃO VISUAL
 
-Padrão visual preferencial:
+Padrão preferencial:
 
 GRID 2 × 2
 
@@ -815,139 +842,144 @@ Objetivo:
 - 2 Amazon;
 - 2 Mercado Livre.
 
-Mas quatro cards somente existem quando há quatro relatos verificáveis e
-úteis sobre o produto.
+Mas somente com quatro relatos úteis e verificados.
 
-Se houver menos:
+Se houver:
 
-renderize menos.
+- 2 + 1 → 3 cards;
+- 1 + 1 → 2 cards;
+- apenas síntese → componente adaptado sem citação inventada;
+- nenhuma evidência → omitir.
 
-Nunca invente para completar grid.
-
-O design do componente não muda.
+Não inventar para completar layout.
 
 ---
 
-# 31. RÉGUA CURADORIA PRIME v2.0
-
-Versão:
-
-`v2.0 — agosto/2026`
+# 32. RÉGUA v2.0
 
 Metodologia:
 
 https://curadoriaprime.com/como-avaliamos/
 
-Existem exatamente seis critérios.
+Critérios fixos:
+
+1. Custo-benefício — 30%
+2. Satisfação verificada — 25%
+3. Ficha técnica — 20%
+4. Recursos e usabilidade — 10%
+5. Consenso técnico — 10%
+6. Confiança e suporte — 5%
+
+Os nomes não mudam por categoria.
 
 ---
 
-# 32. CUSTO-BENEFÍCIO — 30%
+# 33. CUSTO-BENEFÍCIO — 30%
 
-Avalia:
+Base:
 
-- preço atual verificado;
-- proposta;
+- preço;
 - rivais;
-- entrega pelo valor;
-- custo adicional relevante.
+- proposta;
+- custo adicional;
+- entrega por real gasto.
 
-Não pontuar sem evidência de mercado suficiente.
+Sem mercado validado:
+
+PENDENTE.
 
 ---
 
-# 33. SATISFAÇÃO VERIFICADA — 25%
+# 34. SATISFAÇÃO VERIFICADA — 25%
 
-Avalia:
+Avaliar:
 
 - média;
 - volume;
 - teor;
-- padrões positivos;
-- padrões negativos;
-- coerência entre plataformas.
+- negativos;
+- positivos;
+- consistência.
 
 Não somar plataformas.
 
-Não usar logística como satisfação do produto.
+Não usar logística como evidência do produto.
 
 ---
 
-# 34. FICHA TÉCNICA — 20%
+# 35. FICHA TÉCNICA — 20%
 
-Avalia especificações contra:
+Comparar:
 
 - categoria;
-- faixa de preço;
+- faixa;
 - rivais.
 
-Fonte prioritária:
+Prioridade:
 
 fabricante/manual.
 
-Número de ficha não equivale automaticamente a desempenho real.
+Especificação não equivale automaticamente a desempenho real.
 
 ---
 
-# 35. RECURSOS E USABILIDADE — 10%
+# 36. RECURSOS E USABILIDADE — 10%
 
-Avalia elementos verificáveis:
+Avaliar o verificável:
 
 - sistema;
 - app;
 - controles;
 - portas;
 - funções;
-- configurações;
+- configuração;
 - multiponto;
-- atualizações;
-- operação documentada.
+- manutenção;
+- atualização.
 
-Relatos podem complementar.
-
-Não fingir experiência prática.
+Sem fingir experiência física.
 
 ---
 
-# 36. CONSENSO TÉCNICO — 10%
+# 37. CONSENSO TÉCNICO — 10%
 
-Consenso exige pluralidade.
+"Consenso" exige pluralidade real.
 
-Não usar uma fonte isolada para afirmar:
+Não usar uma única fonte para escrever:
 
 - consenso;
-- especialistas concordam;
 - unanimidade;
+- especialistas concordam;
 - reviews convergem.
 
-As fontes técnicas usadas precisam aparecer em FONTES CONSULTADAS.
+Fontes técnicas usadas devem constar em FONTES CONSULTADAS.
 
-Se falta base:
+Sem base:
 
-critério fica pendente.
+PENDENTE.
 
-Não usar N/A apenas por falta de pesquisa.
+Não N/A.
 
 ---
 
-# 37. CONFIANÇA E SUPORTE — 5%
+# 38. CONFIANÇA E SUPORTE — 5%
 
-Avalia:
+Considerar:
 
 - garantia;
 - assistência;
-- suporte oficial;
-- presença relevante no Brasil;
-- suporte de software/app;
+- suporte;
+- software/app;
+- presença no Brasil;
 - pós-venda documentado.
 
-Não inventar cobertura nacional.
+Sem inventar cobertura.
 
 ---
 
-# 38. ATRIBUIÇÃO DE NOTAS
+# 39. NOTAS
 
-A ordem é:
+Fluxo:
 
 EVIDÊNCIA
 → JUSTIFICATIVA
@@ -956,65 +988,57 @@ EVIDÊNCIA
 → ARREDONDAMENTO
 → SELO.
 
-Nunca:
+Notas:
 
-NOTA
-→ procurar justificativa.
+0 a 10.
 
-Cada critério:
-
-0–10.
-
-Incrementos permitidos:
+Passos:
 
 0,5.
 
-Não usar:
+Permitido:
+
+7,0
+7,5
+8,0
+8,5
+9,0
+9,5
+
+Proibido:
 
 8,7
-9,2
-7,3.
+9,2.
 
 ---
 
-# 39. N/A
+# 40. N/A
 
-N/A significa:
+Somente quando o critério realmente não se aplica.
 
-o critério realmente não se aplica à natureza do produto.
+N/A não significa falta de pesquisa.
 
-N/A NÃO significa:
-
-- não pesquisei;
-- não encontrei;
-- fonte bloqueada;
-- faltou tempo.
-
-Quando falta evidência:
+Falta de evidência:
 
 PENDENTE.
 
 ---
 
-# 40. REDISTRIBUIÇÃO DE N/A
+# 41. N/A — REDISTRIBUIÇÃO
 
-Se N/A válido:
+Fórmula:
 
 `peso_normalizado = peso_original / soma_dos_pesos_aplicáveis`
 
-A soma final deve ser 100%.
+Manter total 100%.
 
-Declare no artigo:
-
-- critério excluído;
-- motivo;
-- redistribuição proporcional.
+Declarar no artigo quando utilizado.
 
 Não redistribuir arbitrariamente.
 
 ---
 
-# 41. CÁLCULO
+# 42. CÁLCULO
 
 Sem N/A:
 
@@ -1022,28 +1046,27 @@ Sem N/A:
 
 Com N/A:
 
-`BRUTA = soma(NOTA*PESO_ORIGINAL dos aplicáveis) / soma(PESOS_ORIGINAIS aplicáveis)`
+`BRUTA = soma(NOTA*PESO_ORIGINAL) / soma(PESOS_APLICAVEIS)`
 
-Recalcular duas vezes antes de renderizar.
-
----
-
-# 42. ARREDONDAMENTO
-
-Nota publicada usa múltiplos de 0,5.
-
-Não publicar falsa precisão.
-
-A implementação do arredondamento deve seguir a metodologia pública da
-Curadoria Prime.
-
-Se ocorrer caso exatamente equidistante entre dois múltiplos e a regra
-pública não determinar desempate, registrar pendência humana em vez de
-escolher arbitrariamente.
+Recalcular antes de renderizar.
 
 ---
 
-# 43. SELOS
+# 43. ARREDONDAMENTO
+
+Nota publicada:
+
+múltiplo de 0,5.
+
+Não publicar média bruta como nota.
+
+Caso exatamente equidistante não definido pela metodologia pública:
+
+registrar pendência para regra humana em vez de decidir silenciosamente.
+
+---
+
+# 44. SELOS
 
 9,0–10:
 
@@ -1065,70 +1088,55 @@ abaixo de 6,0:
 
 ⚠️ Não recomendado
 
-O selo é consequência automática da nota.
-
 ---
 
-# 44. MATH GATE
+# 45. MATH GATE
 
-Recalcule afirmações matemáticas.
+Recalcular:
 
-Inclui:
-
-- média ponderada;
-- diferença percentual;
+- média;
 - diferença de preço;
+- percentual;
+- pesos;
 - "metade";
-- "X% mais barato";
-- pesos normalizados.
+- economia.
 
-Proibido quantificar subjetivamente:
+Não usar percentuais subjetivos como:
 
-"entrega 80% do produto"
+"entrega 80%"
 
 sem metodologia objetiva.
 
-Não escreva:
-
-"menos da metade"
-
-quando matematicamente falso.
-
 ---
 
-# 45. BLOCO DE NOTAS — 3 × 2
+# 46. NOTAS — GRID 3 × 2
 
-Quando houver nota válida, renderizar:
+Bloco:
 
 `📊 Notas por categoria`
-
-com seis cards.
 
 Desktop:
 
 3 colunas × 2 linhas.
 
-A ordem visual pode se adaptar ao produto.
+Cada card contém:
 
-Nomes e pesos não mudam.
+- critério;
+- peso;
+- nota;
+- justificativa breve.
 
-Cada card contém obrigatoriamente:
+Não exibir somente:
 
-1. nome;
-2. peso;
-3. nota /10;
-4. justificativa breve.
+`Custo-benefício — 7/10`.
 
-Exemplo estrutural:
+Exibir conceitualmente:
 
-Custo-benefício · 30%
+`Custo-benefício · 30%`
+`7,0/10`
+`justificativa breve baseada na análise`
 
-7,0/10
-
-Preço alto diante de rivais comparáveis reduz a competitividade da
-proposta.
-
-Depois do grid:
+Depois:
 
 - Nota Geral;
 - selo;
@@ -1137,214 +1145,110 @@ Depois do grid:
 
 ---
 
-# 46. SUPERLATIVOS
+# 47. SUPERLATIVOS
 
-Bloquear afirmações como:
+Termos como:
 
 - o melhor;
 - a melhor;
 - imbatível;
 - referência absoluta;
-- sem concorrentes;
 - líder incontestável;
 
-sem evidência comparativa forte.
+exigem evidência comparativa muito forte.
 
-Preferir:
+Na ausência:
+
+preferir:
 
 - está entre os mais fortes;
 - se destaca;
-- entre os produtos comparados;
-- segundo X e Y.
-
-Não transformar preferência editorial em fato universal.
+- entre os comparados;
+- segundo as fontes X e Y.
 
 ---
 
-# 47. EQUILÍBRIO EDITORIAL
+# 48. EQUILÍBRIO
 
-Não existe quota Google de contras.
+Não existe cota de contras.
 
-A Curadoria Prime exige discussão honesta das limitações relevantes.
+Não inventar limitações para completar grid.
 
-Não invente contras.
+Não esconder limitação material para favorecer venda.
 
-Não esconda limitação importante para favorecer conversão.
+Prós e contras devem ser coerentes com:
 
-Prós/contras devem ser coerentes com:
-
-- fontes;
+- evidências;
 - nota;
 - comparativo;
 - veredito.
 
 ---
 
-# 48. VALOR EDITORIAL PRÓPRIO
+# 49. VALOR PRÓPRIO
 
-Artigo não pode ser apenas cópia reorganizada da ficha.
+O artigo deve ir além de reproduzir ficha.
 
-Deve produzir interpretação útil baseada em evidência.
+Pode incluir:
 
-Exemplos:
-
-- faixa de preço racional;
+- faixa racional;
 - matriz de perfil;
 - custo total;
-- rival mais adequado;
-- versão BR vs importada;
+- Brasil vs importado;
 - suporte;
-- compatibilidade;
-- longevidade;
 - geração;
+- longevidade;
 - trade-offs;
-- problemas recorrentes.
+- problemas recorrentes;
+- rival mais adequado.
 
-Não há quota oficial do Google.
-
-A regra existe como padrão editorial da Curadoria Prime.
-
----
-
-# 49. AUTORIA
-
-A IA não assina.
-
-Não atribua automaticamente a:
-
-- Cristiano Martins;
-- Curadoria Prime como pessoa;
-- colaborador inexistente.
-
-O editor humano decide autoria.
-
-Quando houver autor aprovado, utilizar somente dados biográficos reais
-previamente fornecidos/cadastrados.
-
-Não inventar credencial para E-E-A-T.
+Não inventar análise sem base.
 
 ---
 
-# 50. SAÚDE E WEARABLES
+# 50. DESIGN SYSTEM — REGRA FUNDAMENTAL
 
-Não diagnosticar.
+Os templates são IMPLEMENTAÇÃO.
 
-Não transformar recurso de bem-estar em dispositivo médico.
+Não são inspiração.
 
-Certificação:
+O agente NÃO pode:
 
-somente quando confirmada oficialmente.
+- modernizar;
+- reinterpretar;
+- converter para outro sistema visual;
+- alterar CSS por gosto;
+- criar versão visual específica de cada marca.
 
-Nunca inventar registro ANVISA.
-
-Diferenciar:
-
-- bem-estar;
-- monitoramento;
-- função regulamentada;
-- diagnóstico.
+Somente preencher slots.
 
 ---
 
-# 51. FRESCOR
+# 51. CSS INLINE — LOCKED
 
-Não existe prazo universal automático para "conteúdo velho".
+Os componentes canônicos atuais utilizam predominantemente:
 
-Dados temporais exigem data.
+`style=""`
 
-Especialmente:
+inline.
 
-- preço;
-- estoque;
-- avaliações;
-- software;
-- disponibilidade;
-- rumor.
+Preserve.
 
-Preço antigo não pode parecer atual.
+Não converter automaticamente para classes `.cp-*`.
 
-Sem preço atual confirmado:
+Não criar um `<style>` alternativo dentro do artigo.
 
-remover valor do CTA.
-
-Não alterar data da página sem atualização substancial.
+Refatoração de CSS é operação separada.
 
 ---
 
-# 52. SCHEMA
+# 52. FIDELIDADE DE PIXEL/VALORES
 
-Schema não é automático.
-
-Só gerar se solicitado.
-
-Schema deve refletir:
-
-- conteúdo visível;
-- dados confirmados.
-
-Não usar ratings Amazon/ML como se fossem rating coletivo da Curadoria.
-
-Nota editorial não é AggregateRating de usuários.
-
----
-
-# 53. PRICEVALIDUNTIL
-
-Nunca invente `priceValidUntil`.
-
-Data de consulta não é data de validade.
-
-Só usar quando houver validade real confirmada para a oferta.
-
-Se não houver:
-
-não fabrique data futura para completar schema.
-
----
-
-# 54. LINKS DE AFILIADO
-
-Links afiliados:
-
-`rel="sponsored nofollow noopener noreferrer"`
-
-Aviso de afiliado visível.
-
-Não favorecer comissão.
-
-Não usar urgência falsa.
-
-Alternativa sem comissão pode e deve aparecer quando for melhor para o
-perfil.
-
----
-
-# 55. DESIGN SYSTEM — FONTE DA VERDADE
-
-Os templates são implementação, não inspiração.
-
-É proibido recriar visualmente um componente existente.
-
-A referência visual do REVIEW é o padrão Apple TV 4K aprovado pelo
-editor.
-
-O objetivo NÃO é:
-
-"criar algo parecido".
-
-O objetivo é:
-
-"preencher o componente canônico".
-
----
-
-# 56. FIDELIDADE VISUAL — P0
-
-Se o template define:
+Se template define:
 
 `padding: 28px 30px`
 
-mantenha exatamente.
+mantenha.
 
 Se define:
 
@@ -1354,34 +1258,23 @@ mantenha.
 
 Se define:
 
-`font-size: 18px`
+`font-size: 13.5px`
 
 mantenha.
 
 Se define:
 
-inline style,
+`#f8fafc`
 
-mantenha inline style.
+mantenha.
 
-É proibido por iniciativa do Agent:
-
-- converter para outro sistema `.cp-*`;
-- alterar radius;
-- alterar sombra;
-- alterar padding;
-- alterar grid;
-- alterar tipografia;
-- mudar anatomia;
-- redesenhar por marca.
-
-Somente SLOTS declarados podem variar.
+Somente tokens explicitamente variáveis podem mudar.
 
 ---
 
-# 57. HERO REVIEW — LOCKED
+# 53. HERO REVIEW — CANÔNICO
 
-O Hero REVIEW é o componente real definido em:
+O Hero REVIEW é o componente real Apple TV definido em:
 
 `assets/template-review.md`
 
@@ -1392,25 +1285,29 @@ Anatomia:
 
 2. resumo/tese;
 
-3. badges confirmados;
+3. badges factuais;
 
 4. gradiente da marca.
 
-O Hero NÃO deve ser substituído por outro design.
+Não criar novo Hero.
 
-A nota editorial não precisa ficar no Hero.
+Não usar `.cp-hero` alternativo.
+
+Não colocar obrigatoriamente nota editorial no Hero.
 
 ---
 
-# 58. TOKENS DO HERO
+# 54. TOKENS DO HERO
 
-Somente estes valores visuais podem variar:
+Podem variar:
 
 `BRAND_PRIMARY`
 `BRAND_SECONDARY`
 `BRAND_ACCENT`
 
-Exemplo Apple aprovado:
+O restante é LOCKED.
+
+Apple aprovado:
 
 PRIMARY:
 `#1d1d1f`
@@ -1421,347 +1318,79 @@ SECONDARY:
 ACCENT:
 `#2997ff`
 
-O restante do componente é LOCKED.
-
 ---
 
-# 59. BADGES DO HERO
+# 55. BADGES DO HERO
 
-Badges possíveis:
+Possíveis:
 
 - Amazon;
 - Mercado Livre;
 - preço/faixa;
 - atualização.
 
-Renderizar somente quando CONFIRMADO.
+Somente CONFIRMADOS.
 
-Badge Amazon pode exibir:
+Sem dado:
 
-- rating;
-- count.
+não renderizar badge.
 
-Badge ML:
-
-- rating;
-- count.
-
-Badge preço:
-
-- valor/faixa;
-- data.
-
-Atualização:
-
-- data real da revisão.
-
-Dado pendente:
-
-badge não existe.
-
-Nunca usar placeholder público.
+Não usar placeholder.
 
 ---
 
-# 60. HERO SUMMARY
+# 56. HERO SUMMARY
 
-O resumo do Hero deve responder rapidamente:
+Responder:
 
 - o que é;
 - variante;
 - fatos decisivos;
-- faixa/preço quando confirmado;
-- principal tensão;
-- comprar agora ou esperar quando relevante.
+- preço quando confirmado;
+- tensão de compra;
+- comprar/esperar quando relevante.
 
-Não escrever:
-
-"analisamos a fundo"
-
-se isso puder ser interpretado como teste físico próprio.
+Não usar "analisamos a fundo" se puder sugerir teste próprio.
 
 Preferir:
 
-"cruzamos especificações oficiais, testes independentes e dados de
-mercado..."
+`cruzamos especificações, testes independentes e dados de mercado`
 
 quando verdadeiro.
 
 ---
 
-# 61. ORDEM REVIEW
+# 57. IMAGENS — DISTINÇÃO
 
-A estrutura canônica é definida pelo template REVIEW.
+THUMB-01:
 
-Base operacional:
+Imagem destacada WordPress.
 
-1. Meta SEO interna
-2. Hero textual LOCKED
-3. HERO-01
-4. Tipo de análise
-5. Lead/recorte quando previsto
-6. Metodologia
-7. Prova social
-8. Índice
-9. Introdução/abertura
-10. Aviso de afiliado
-11. Resposta rápida
-12. Onde comprar/top CTA
-13. Prós e contras
-14. Ficha técnica
-15. Seções de decisão
-16. Comparativo
-17. Para quem é/não é
-18. Régua v2.0
-19. FAQ
-20. Veredito
-21. Escolha rápida quando aplicável
-22. CTAs finais
-23. Fontes
-24. histórico quando aplicável
+NÃO entra no HTML.
 
-Não mantenha outro documento com ordem concorrente.
+HERO-01:
 
-Se existir, o template REVIEW vigente prevalece.
+Imagem principal dentro do artigo.
+
+São entidades diferentes.
 
 ---
 
-# 62. RESPOSTA RÁPIDA
-
-REVIEW deve possuir componente próprio quando previsto pelo template.
-
-Não esconder "Resposta rápida" apenas dentro da introdução.
-
-Estrutura canônica:
-
-- adequado se;
-- depende se;
-- pode esperar se.
-
-Os três são decisões editoriais, não propaganda.
-
----
-
-# 63. BLOCOS LOCKED
-
-Não remover arbitrariamente:
-
-- Hero;
-- Tipo de análise;
-- Metodologia;
-- Índice;
-- Afiliado;
-- Resposta rápida;
-- Prós/contras;
-- ficha;
-- para quem é;
-- FAQ;
-- veredito;
-- fontes.
-
-Régua é obrigatória quando houver nota.
-
----
-
-# 64. BLOCOS CONDICIONAIS
-
-Podem desaparecer quando não houver gatilho/evidência:
-
-- prova social;
-- preço/CTA;
-- rumor;
-- comprar ou esperar;
-- histórico;
-- autor;
-- plataforma comercial específica.
-
-Remover um CONDITIONAL não altera a ordem relativa dos demais.
-
----
-
-# 65. SEÇÕES DE DECISÃO
-
-Podem variar por categoria.
-
-Exemplos:
-
-fone:
-
-- ANC;
-- bateria;
-- codec;
-- microfone.
-
-notebook:
-
-- CPU;
-- tela;
-- expansão;
-- bateria.
-
-TV:
-
-- imagem;
-- HDR;
-- sistema;
-- conectividade.
-
-Esses eixos são CONTEÚDO.
-
-Não são novos componentes visuais.
-
----
-
-# 66. TEMPLATE VS
-
-Usar:
-
-`assets/template-vs.md`
-
-Para 2 ou 3 produtos.
-
-Deve responder:
-
-- quem ganha em qual eixo;
-- para qual perfil;
-- diferença de preço;
-- quando pagar mais;
-- quando economizar.
-
-Não force vencedor absoluto quando perfis diferentes têm vencedores
-diferentes.
-
----
-
-# 67. NOTAS EM VS
-
-Se REVIEW vigente já tem nota v2.0:
-
-reutilizar, informando referência/data.
-
-Caso contrário:
-
-calcular separadamente.
-
-Nunca criar uma nota apenas a partir da tabela VS.
-
----
-
-# 68. TEMPLATE LISTA/GUIA
-
-Usar:
-
-`assets/template-lista.md`
-
-Cada produto usa o mesmo componente.
-
-Ranking deve possuir critérios claros.
-
-Não mudar design para valorizar primeiro colocado.
-
-Não inventar nota para preencher ranking.
-
----
-
-# 69. SEO
-
-Priorize linguagem natural.
-
-Não:
-
-- perseguir densidade;
-- repetir keyword mecanicamente;
-- colocar keyword em todo H2;
-- usar "LSI";
-- fabricar alt;
-- perseguir plugin 100/100;
-- trocar ano por freshness artificial.
-
-Faça:
-
-- intenção clara;
-- título útil;
-- meta precisa;
-- headings claros;
-- links internos relevantes.
-
----
-
-# 70. IMAGENS — RESPONSABILIDADES
-
-Esta Skill decide:
-
-- quais imagens;
-- função;
-- posição;
-- tipo;
-- alt;
-- legenda.
-
-A Skill `curadoria-imagens`:
-
-- pesquisa;
-- valida;
-- prepara composição.
-
-O humano:
-
-- baixa;
-- sobe para WordPress;
-- retorna URL WP.
-
----
-
-# 71. TIPOS DE IMAGEM
-
-REAL
-
-Asset real/oficial.
-
-COMPOSIÇÃO
-
-Assets reais combinados.
-
-GERADA
-
-Ilustração artificial.
-
-Não gerar do zero produto comercial real para representá-lo fielmente
-quando asset real é necessário.
-
----
-
-# 72. THUMB-01
-
-THUMB-01 = IMAGEM DESTACADA DO WORDPRESS.
-
-Nunca entra no HTML.
-
-Ela será configurada manualmente como Featured Image.
-
-Todo artigo novo precisa de especificação THUMB-01 no relatório.
-
----
-
-# 73. HERO-01
-
-HERO-01 é a única imagem principal inicial dentro do HTML.
-
-Fica imediatamente após o Hero textual conforme template.
+# 58. HERO-01
 
 Enquanto não houver URL WP:
 
 `<!-- CP-IMAGE:HERO-01 -->`
 
-Nunca usar:
+Não usar:
 
-`src="[IMAGEM AQUI]"`
+`[IMAGEM AQUI]`
 
 Não criar segunda imagem principal redundante.
 
 ---
 
-# 74. IMAGENS DE CORPO
+# 59. IMAGENS DE CORPO
 
 Usar:
 
@@ -1771,59 +1400,17 @@ Usar:
 
 etc.
 
-Cada imagem precisa de função editorial.
-
-Não adicionar apenas para quebrar texto.
+Cada imagem precisa ter função editorial.
 
 ---
 
-# 75. ALT
+# 60. RELATÓRIO DE IMAGENS
 
-Alt descreve imagem.
+Toda entrega nova contém:
 
-Não usar:
+`RELATÓRIO DE IMAGENS`
 
-- LSI;
-- stuffing;
-- "vale a pena" sem função visual;
-- "review 2026" artificial.
-
-Exemplo:
-
-`Edifier W820NB Plus preto visto de frente`
-
-Imagem decorativa:
-
-`alt=""`
-
----
-
-# 76. IA EM IMAGENS
-
-IA não pode sugerir teste próprio.
-
-Se imagem gerada puder parecer fotografia de teste:
-
-**Imagem ilustrativa gerada por IA; não representa teste físico realizado
-pela Curadoria Prime.**
-
-Nunca fabricar visualmente:
-
-- benchmark;
-- medição;
-- laboratório;
-- autonomia;
-- tela falsa;
-- app falso;
-- porta inexistente.
-
----
-
-# 77. RELATÓRIO DE IMAGENS
-
-Entregar após ARTIGO HTML.
-
-Formato obrigatório:
+Formato:
 
 ID:
 USO:
@@ -1837,268 +1424,850 @@ MODELO/SKU:
 O QUE BUSCAR/COMPOR:
 FONTE PREFERENCIAL:
 ORIENTAÇÃO:
-ALT PROPOSTO:
+ALT:
 LEGENDA:
 OBRIGATÓRIA:
 OBSERVAÇÕES:
 
-Incluir no mínimo:
+No mínimo:
 
 THUMB-01
 HERO-01.
 
 ---
 
-# 78. APLICAR_IMAGENS
+# 61. APLICAR_IMAGENS
 
-Quando o editor retornar:
+Quando o editor retornar URLs:
 
-THUMB-01: URL
-HERO-01: URL
-IMG-01: URL
-
-substituir somente marcadores correspondentes.
+substituir somente marcadores.
 
 THUMB-01 continua fora do HTML.
 
-É proibido alterar nesta operação:
+Não alterar:
 
 - texto;
-- preço;
 - nota;
+- preço;
 - CTA;
-- links;
-- layout;
 - headings;
+- layout;
 - fontes;
 - veredito.
 
-Retornar também:
+Retornar:
 
-`IMAGEM DESTACADA WP: URL_THUMB`
-
----
-
-# 79. HTML — CONTRATO
-
-`ARTIGO HTML` significa HTML/Gutenberg.
-
-Não entregar Markdown.
-
-Proibido no artigo:
-
-- `# heading`;
-- `![imagem]`;
-- tabela Markdown;
-- `[IMAGEM AQUI]`;
-- placeholder operacional;
-- checklist interno;
-- dado não confirmado.
-
-Se template usar Gutenberg serializado:
-
-preservar `<!-- wp:* -->`.
-
-Não alternar tecnologia entre execuções.
+`IMAGEM DESTACADA WP: {{THUMB_URL}}`
 
 ---
 
-# 80. CSS E COMPONENTES
+# 62. ALT TEXT
 
-A implementação visual definida pelo template é a fonte de verdade.
+Descrever imagem.
 
-Se o template atual utiliza inline styles:
+Não usar:
 
-preservar.
+- LSI;
+- stuffing;
+- "vale a pena" artificial;
+- "review 2026" artificial.
 
-Não gerar um novo `<style>` com Design System alternativo por artigo.
+Imagem decorativa:
 
-Não migrar inline → classes sem autorização explícita.
-
-Primeiro preserve fidelidade.
-
-Refatoração de CSS é outra operação.
-
----
-
-# 81. FONTES CONSULTADAS
-
-Todo artigo encerra com URLs diretas suficientes para rastrear as
-afirmações centrais.
-
-Organizar:
-
-- Oficiais
-- Testes independentes
-- Varejo
-- Rumores, se houver
-
-Não listar apenas:
-
-"Amazon"
-"Apple"
-"GSMArena"
-
-Fornecer URL específica quando disponível.
-
-Toda fonte usada para Consenso técnico deve aparecer aqui.
+`alt=""`.
 
 ---
 
-# 82. FAQ
+# 63. IA EM IMAGENS
 
-FAQ responde dúvidas reais.
+Não representar produto comercial real de forma falsa quando asset real
+for necessário.
+
+Composição VS:
+
+usar assets reais.
+
+Imagem gerada que possa parecer teste próprio exige:
+
+**Imagem ilustrativa gerada por IA; não representa teste físico realizado
+pela Curadoria Prime.**
+
+---
+
+# 64. ORDEM REVIEW
+
+O `assets/template-review.md` é a única fonte de verdade da ordem.
+
+Base vigente:
+
+1. Meta SEO interna
+2. Hero textual Apple TV
+3. HERO-01
+4. Tipo de análise
+5. Lead/recorte
+6. Metodologia
+7. Prova social
+8. Índice
+9. Introdução
+10. Afiliado
+11. Resposta rápida
+12. Compra topo
+13. Prós e contras
+14. Ficha técnica
+15. Seções de decisão
+16. Comparativo
+17. Para quem é/não é
+18. Notas v2.0
+19. FAQ
+20. Veredito
+21. Escolha rápida
+22. CTA final
+23. Fontes
+24. Atualização
+25. Byline aprovado
+26. Disclosure afiliado final
+
+Nenhum outro arquivo deve estabelecer ordem concorrente.
+
+---
+
+# 65. CP-COMPARISON-TABLE — LOCKED
+
+Usar exatamente o padrão visual Lenovo/Acer do template.
+
+Características LOCKED:
+
+container:
+
+`overflow-x: auto`
+`margin-bottom: 28px`
+
+table:
+
+`width: 100%`
+`border-collapse: collapse`
+`font-size: 13.5px`
+`min-width: 640px`
+
+header:
+
+`padding: 12px 14px`
+
+cells:
+
+`padding: 11px 14px`
+
+linhas:
+
+alternar:
+
+`#f8fafc`
+`#fff`
+
+Cabeçalho usa token de marca autorizado.
+
+Primeira coluna:
+
+alinhada à esquerda.
+
+Produtos:
+
+centralizados.
+
+Não trocar pelo antigo formato:
+
+`Produto | Preço | Ganha | Perde | Perfil`
+
+quando o template vigente exigir comparação lado a lado por critério.
+
+---
+
+# 66. CONTEÚDO DA TABELA COMPARATIVA
+
+REVIEW:
+
+normalmente:
+
+`Critério | Produto analisado | Rival 1 | Rival 2`
+
+VS 1v1:
+
+`Critério | Produto A | Produto B`
+
+VS 3:
+
+`Critério | A | B | C`
+
+Critérios variam conforme categoria.
+
+Design não varia.
+
+Marcar ✅ apenas com vantagem defensável.
+
+Empate/perfil:
+
+não forçar vencedor.
+
+---
+
+# 67. NOTA NA TABELA
+
+Se exibir:
+
+`Nota Curadoria Prime`
+
+usar somente nota vigente v2.0.
+
+Novo conteúdo não pode apresentar:
+
+`8,7/10`.
+
+Somente múltiplos de 0,5.
+
+Review histórico não migrado deve ser identificado como versão antiga,
+não silently convertido.
+
+---
+
+# 68. CP-PROS-CONS — LOCKED
+
+Grid:
+
+`display: grid`
+`grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`
+`gap: 20px`
+`margin: 25px 0`
+
+## Positivos
+
+background:
+
+`#f0fdf4`
+
+border:
+
+`2px solid #22c55e`
+
+radius:
+
+`12px`
+
+padding:
+
+`24px`
+
+heading:
+
+`#166534`
+
+separator:
+
+`#bbf7d0`
+
+## Negativos
+
+background:
+
+`#fef2f2`
+
+border:
+
+`2px solid #ef4444`
+
+radius:
+
+`12px`
+
+padding:
+
+`24px`
+
+heading:
+
+`#991b1b`
+
+separator:
+
+`#fecaca`
+
+## Itens
+
+`font-size: 14.5px`
+`line-height: 1.6`
+`padding: 10px 0`
+
+Somente conteúdo varia.
+
+---
+
+# 69. CP-PRODUCT-SECTION
+
+Em VS/LISTA, cada produto usa:
+
+H2
+→ posicionamento
+→ IMG do produto
+→ dados principais
+→ CP-PROS-CONS
+→ fontes específicas
+
+Imagem pendente:
+
+`<!-- CP-IMAGE:IMG-{ID} -->`
+
+Não usar imagem de modelo semelhante.
+
+---
+
+# 70. CP-FAQ — LOCKED
+
+Não converter para `<details>`.
+
+Usar cards.
+
+Container:
+
+`margin-bottom: 28px`
+
+Card:
+
+`background: #f8fafc`
+`border: 1px solid #e2e8f0`
+`border-radius: 10px`
+`padding: 16px 20px`
+`margin-bottom: 12px`
+
+Pergunta:
+
+`margin: 0 0 8px`
+`font-weight: 700`
+`font-size: 14.5px`
+
+Resposta:
+
+`margin: 0`
+`font-size: 14px`
+`line-height: 1.65`
+
+Perguntas numeradas visualmente.
 
 Quantidade normal:
 
 6–10.
 
-Não inventar perguntas para quota.
+Não criar pergunta sem utilidade apenas para quota.
 
-Preço em FAQ:
+---
+
+# 71. CP-SOURCES — LOCKED
+
+Box:
+
+`background: #fffbeb`
+`border: 1px solid #fde68a`
+`border-radius: 10px`
+`padding: 16px 20px`
+`margin: 24px 0`
+`font-size: 13px`
+`color: #78350f`
+`line-height: 1.7`
+
+Links:
+
+cor autorizada pelo template.
+
+Toda fonte central deve possuir URL direta quando disponível.
+
+Agrupar/identificar:
+
+- oficiais;
+- testes independentes;
+- varejo;
+- rumores.
+
+Toda fonte usada em Consenso técnico precisa aparecer.
+
+---
+
+# 72. CP-UPDATE-BOX — LOCKED
+
+Quando aplicável:
+
+`background: #fffbeb`
+`border: 1px solid #fde68a`
+`border-radius: 10px`
+`padding: 16px 20px`
+`margin-bottom: 24px`
+`font-size: 13px`
+`color: #78350f`
+`line-height: 1.7`
+
+Exibir:
+
+- última atualização real;
+- produto/modelo/SKU;
+- data de preços;
+- aviso de variação.
+
+Não fingir freshness.
+
+---
+
+# 73. CP-AUTHOR-BYLINE — CONDITIONAL
+
+Visual LOCKED:
+
+`display: flex`
+`gap: 16px`
+`align-items: center`
+`flex-wrap: wrap`
+`background: #f8fafc`
+`border: 1px solid #e2e8f0`
+`border-radius: 12px`
+`padding: 18px 20px`
+`margin-bottom: 28px`
+
+Avatar:
+
+72 × 72
+radius 50%
+object-fit cover.
+
+Mas o componente só existe se:
+
+`AUTHOR_APPROVED = SIM`
+
+A IA NÃO escolhe autor.
+
+Não inventar bio.
+
+Não reescrever credencial aprovada.
+
+Idealmente utilizar cadastro/fragmento canônico do autor.
+
+---
+
+# 74. BIO
+
+Quando o autor aprovado for Cristiano, somente usar bio factual
+previamente aprovada pelo editor.
+
+Não deduzir expertise universal de sua experiência profissional.
+
+Bio fornece contexto.
+
+Não substitui evidência.
+
+---
+
+# 75. CP-AFFILIATE-FOOTER
+
+Visual:
+
+`background: #f8fafc`
+`border-top: 3px solid {{BRAND_PRIMARY}}`
+`border-radius: 0 0 10px 10px`
+`padding: 14px 18px`
+`font-size: 12.5px`
+`color: #64748b`
+`line-height: 1.6`
+
+Mensagem simples e transparente.
+
+Não há necessidade editorial de expor IDs/tags internos de afiliado ao
+leitor.
+
+---
+
+# 76. RESPOSTA RÁPIDA
+
+Deve existir como componente visual próprio no REVIEW.
+
+Não esconder somente na introdução.
+
+Estrutura:
+
+- Adequado se...
+- Depende se...
+- Pode esperar se...
+
+Basear em evidência.
+
+---
+
+# 77. FICHA TÉCNICA
+
+Somente dados confirmados.
+
+Preferência:
+
+fonte primária.
+
+Célula sem fonte:
+
+remover ou deixar fora do artigo.
+
+Não usar dado de marketplace para substituir ficha oficial sem
+explicação.
+
+---
+
+# 78. SEÇÕES DE DECISÃO
+
+Variam por produto.
+
+Estrutura argumentativa preferencial:
+
+FATO
+→ TERCEIRO quando aplicável
+→ RELATO quando relevante
+→ INTERPRETAÇÃO EDITORIAL.
+
+Não transformar cada especificação em H2.
+
+Criar somente eixos que ajudam a decisão.
+
+---
+
+# 79. PARA QUEM É / NÃO É
+
+Baseado em:
+
+- trade-offs;
+- preço;
+- categoria;
+- rivais;
+- limitações.
+
+Quando sugerir alternativa:
+
+ela precisa ter base verificável.
+
+Não favorecer alternativa só por afiliado.
+
+---
+
+# 80. FAQ
+
+Perguntas reais de compra.
+
+Preço:
 
 com data.
+
+Spec:
+
+fonte.
 
 Rumor:
 
 rotulado.
 
-Especificação:
-
-rastreável.
+Não responder com certeza maior que a evidência.
 
 ---
 
-# 83. PRÓS E CONTRAS
-
-Sem cota rígida.
-
-Devem refletir evidência real.
-
-Não inventar contra só para parecer equilibrado.
-
-Não omitir contra importante porque reduz conversão.
-
----
-
-# 84. COMPARATIVO
-
-Comparar:
-
-- variantes equivalentes;
-- mesma data de preço quando possível;
-- nacional/importado explicitamente;
-- critérios equivalentes.
-
-Não transformar diferenças subjetivas em percentuais fictícios.
-
----
-
-# 85. VEREDITO
+# 81. VEREDITO
 
 Responder:
 
 - vale para quem;
 - não vale para quem;
-- faixa de preço racional;
-- principal força;
-- principal limitação;
-- principal rival;
-- comprar agora/esperar quando aplicável.
+- preço racional;
+- maior força;
+- maior limitação;
+- rival;
+- comprar/esperar quando relevante.
 
-Veredito deve ser coerente com a nota.
-
----
-
-# 86. AUTORIA E BIO
-
-Durante geração automática:
-
-não preencher nome.
-
-Depois de revisão humana, editor pode aplicar componente de autoria com
-dados reais.
-
-Uma bio factual pode demonstrar contexto/experiência relevante, mas não
-substitui fontes nem torna o autor especialista em qualquer assunto.
+Deve ser coerente com nota.
 
 ---
 
-# 87. ATUALIZAÇÃO
+# 82. ESCOLHA RÁPIDA
+
+Normalmente três cenários.
+
+Exemplos:
+
+- orçamento;
+- perfil profissional;
+- ecossistema;
+- prioridade.
+
+Não repetir apenas o veredito três vezes.
+
+---
+
+# 83. TEMPLATE VS
+
+Usar somente:
+
+`assets/template-vs.md`
+
+Deve incorporar os mesmos componentes visuais canônicos.
+
+Especialmente:
+
+- Hero;
+- prova social;
+- tabela comparativa;
+- CP-PRODUCT-SECTION;
+- CP-PROS-CONS;
+- FAQ;
+- fontes;
+- rodapé.
+
+---
+
+# 84. NOTAS NO VS
+
+Se review atualizado v2.0 já existir:
+
+reutilizar nota com referência.
+
+Caso contrário:
+
+calcular individualmente.
+
+Não inventar nota para declarar vencedor.
+
+---
+
+# 85. TEMPLATE LISTA
+
+Usar:
+
+`assets/template-lista.md`
+
+Cada produto usa a mesma anatomia.
+
+Ranking exige critérios.
+
+Não mudar design por posição.
+
+Produto sem evidência não recebe nota inventada.
+
+---
+
+# 86. SEO
+
+Não:
+
+- densidade fixa;
+- keyword stuffing;
+- LSI;
+- H2 forçado;
+- alt artificial;
+- Rank Math como objetivo principal.
+
+Faça:
+
+- intenção clara;
+- título preciso;
+- meta útil;
+- headings descritivos;
+- links internos relevantes.
+
+---
+
+# 87. META
+
+Título:
+
+não usar "teste" sem teste.
+
+Meta description:
+
+resumir valor da página.
+
+Não inventar preço para melhorar CTR.
+
+Slug:
+
+preservar em atualização.
+
+---
+
+# 88. SCHEMA
+
+Não gerar por padrão.
+
+Somente quando solicitado.
+
+Nunca transformar rating de marketplace em rating da Curadoria.
+
+Não somar ratings.
+
+Nota editorial não é AggregateRating coletivo.
+
+---
+
+# 89. PRICEVALIDUNTIL
+
+Nunca inventar.
+
+Data de consulta != validade.
+
+Somente usar `priceValidUntil` com validade real confirmada.
+
+---
+
+# 90. SAÚDE
+
+Wearable não diagnostica automaticamente.
+
+Não inventar ANVISA.
+
+Diferenciar:
+
+- bem-estar;
+- monitoramento;
+- função regulamentada;
+- diagnóstico.
+
+Alegação médica exige fonte adequada.
+
+---
+
+# 91. AUTO
+
+Não incentivar comportamento inseguro ao volante.
+
+Funcionalidade automotiva deve ser descrita com contexto de segurança.
+
+---
+
+# 92. FRESCOR
+
+Dados sensíveis ao tempo trazem data.
+
+Sem prazo universal.
+
+Preço antigo não pode parecer atual.
+
+Atualizar `dateModified` somente por atualização real.
+
+---
+
+# 93. ATUALIZAÇÃO
 
 Diagnosticar antes:
 
 - intenção;
 - URL;
 - canonical;
-- teste falso;
+- linguagem de teste;
 - fontes;
 - preço;
 - mercado;
 - nota;
-- versão da Régua;
-- schema;
+- Régua;
 - prova social;
+- schema;
 - imagens;
-- concorrentes;
+- rivais;
 - canibalização.
 
-Não reescrever tudo por estilo.
+Preservar o que está correto.
 
 ---
 
-# 88. MIGRAÇÃO DE RÉGUA
+# 94. MIGRAÇÃO v1 → v2
 
-Se artigo usa v1.0:
+Quando artigo antigo usa nota fora da Régua v2:
 
-recalcular para v2.0 somente quando houver evidência suficiente.
+não apenas arredondar.
+
+Recalcular com os seis critérios quando houver evidência.
 
 Registrar:
 
-- nova versão;
-- mudança de nota;
+- versão;
+- nova nota;
 - motivo.
-
-Não fingir que nota antiga já era v2.0.
 
 ---
 
-# 89. AUDITORIA
+# 95. AUDITORIA
 
-Primeiro identificar problemas.
+Primeiro listar achados:
 
-Categorias:
-
-- fato;
+- fatos;
 - teste;
-- fonte;
+- fontes;
 - marketplace;
 - preço;
-- afiliado;
+- afiliados;
 - nota;
 - schema;
 - SEO;
-- layout;
+- visual;
 - imagens;
 - canibalização.
 
-Depois oferecer correção.
+Depois oferecer patch.
 
 ---
 
-# 90. LOTE
+# 96. LOTE
 
-Não atualizar catálogo inteiro com pesquisa superficial.
+Não atualizar dezenas de páginas superficialmente.
 
-Tratar uma URL por vez, salvo par diretamente canibalizado.
+Uma URL por vez, salvo caso diretamente relacionado.
 
-Qualidade prevalece sobre volume.
+Qualidade > volume.
 
 ---
 
-# 91. GATES PRÉ-RENDERIZAÇÃO
+# 97. CONTRATO DE ARTIGO HTML
 
-Antes do HTML:
+`ARTIGO HTML` significa:
+
+HTML/Gutenberg.
+
+Nunca Markdown.
+
+Proibido:
+
+- `# heading`;
+- tabelas Markdown;
+- `![imagem]`;
+- `[IMAGEM AQUI]`;
+- URL placeholder;
+- instruções internas;
+- marcador de verificação humana.
+
+Quando uma imagem ainda não existe:
+
+CP-IMAGE.
+
+---
+
+# 98. GUTENBERG
+
+Se o template utiliza comentários:
+
+`<!-- wp:html -->`
+
+`<!-- wp:paragraph -->`
+
+etc., preservá-los.
+
+Não alternar entre:
+
+Markdown
+HTML puro
+Gutenberg serializado
+
+em execuções diferentes.
+
+O template decide a tecnologia.
+
+---
+
+# 99. GATES PRÉ-HTML
+
+Executar:
 
 FACT_GATE
 MARKET_GATE
@@ -2108,154 +2277,161 @@ TECHNICAL_CONSENSUS_GATE
 MATH_GATE
 RATING_GATE
 
-Se um gate crítico falhar:
+Falhou:
 
 não inventar fallback.
 
 ---
 
-# 92. GATES PÓS-RENDERIZAÇÃO
-
-Depois do HTML:
-
-LAYOUT_GATE
-IMAGE_GATE
-LINK_GATE
-EDITORIAL_GATE
-
-Conferir:
-
-- ordem;
-- componente;
-- imagem;
-- links;
-- nota;
-- fontes;
-- fatos.
-
----
-
-# 93. FACT_GATE
+# 100. FACT_GATE
 
 Verificar:
 
 - números;
 - specs;
 - datas;
-- certificações;
-- garantias;
+- garantia;
+- certificação;
 - SKU;
 - citações;
-- claims técnicos.
-
-Não confirmado:
-
-não entra.
+- claims.
 
 ---
 
-# 94. MARKET_GATE
+# 101. MARKET_GATE
 
 Verificar:
 
-- relatório existe;
+- relatório;
 - preço;
 - data;
 - loja;
 - variante;
 - condição.
 
-Sem isso:
-
-sem preço/CTA factual.
-
 ---
 
-# 95. URL_GATE
+# 102. URL_GATE
 
 Verificar:
 
-- nenhuma URL placeholder;
-- nenhuma URL inventada;
-- afiliado correto;
-- source URL correta.
+- URL real;
+- sem placeholder;
+- fonte correta;
+- afiliado correto.
 
 ---
 
-# 96. SATISFACTION_GATE
+# 103. SATISFACTION_GATE
 
 Verificar:
 
-- plataformas separadas;
-- variante;
-- count;
-- data;
+- Amazon/ML separados;
+- counts;
+- datas;
+- variantes;
 - relatos de produto;
-- citações verdadeiras.
+- citações.
 
 ---
 
-# 97. TECHNICAL_CONSENSUS_GATE
+# 104. TECHNICAL_CONSENSUS_GATE
 
 Verificar:
 
 - pluralidade;
-- fontes independentes;
+- independência;
 - fontes listadas;
-- afirmação proporcional à evidência.
+- claim proporcional.
 
 ---
 
-# 98. RATING_GATE
+# 105. RATING_GATE
 
 Verificar:
 
-- seis critérios;
-- nomes corretos;
+- 6 critérios;
 - pesos;
-- incremento 0,5;
+- notas 0,5;
 - justificativas;
 - N/A válido;
 - cálculo;
-- arredondamento;
 - selo;
 - coerência.
 
 ---
 
-# 99. LAYOUT_GATE
+# 106. GATES PÓS-HTML
+
+Executar:
+
+LAYOUT_GATE
+IMAGE_GATE
+LINK_GATE
+EDITORIAL_GATE.
+
+---
+
+# 107. LAYOUT_GATE
 
 Verificar:
 
 - template correto;
-- Hero Apple TV canônico;
-- valores CSS LOCKED preservados;
-- nenhuma reinvenção;
-- Resposta rápida presente;
-- prova social no componente;
-- notas 3×2;
+- Hero real;
+- inline CSS preservado;
+- tabela correta;
+- prós/contras correto;
+- FAQ em cards;
+- fontes amarelas;
+- update box;
+- byline só aprovado;
 - ordem correta;
-- HTML, não Markdown.
+- nenhuma classe/sistema visual novo.
 
 ---
 
-# 100. IMAGE_GATE
+# 108. IMAGE_GATE
 
 Verificar:
 
-- THUMB-01 fora do HTML;
-- HERO-01 único;
-- marcador correto;
-- relatório produzido;
-- nenhum `[IMAGEM AQUI]`;
-- alt factual;
-- IA identificada quando necessária.
+- THUMB fora do HTML;
+- HERO único;
+- CP-IMAGE correto;
+- relatório;
+- alt;
+- sem placeholder inválido.
 
 ---
 
-# 101. ENTREGA — NOVO
+# 109. LINK_GATE
 
-Entregar nesta ordem:
+Verificar:
+
+- nenhum `...`;
+- nenhum `[URL]`;
+- rel afiliado correto;
+- fonte direta;
+- links institucionais corretos.
+
+---
+
+# 110. EDITORIAL_GATE
+
+Verificar:
+
+- nenhum teste falso;
+- nenhum superlativo sem base;
+- nenhum total Amazon+ML;
+- nenhuma logística usada como qualidade;
+- nenhuma conta errada;
+- prós/contras coerentes;
+- veredito coerente.
+
+---
+
+# 111. ENTREGA — NOVO
+
+Entregar:
 
 `RESUMO DO BRIEFING`
 
@@ -2271,13 +2447,13 @@ Entregar nesta ordem:
 
 `CHECKLIST EDITORIAL`
 
-`SCHEMA SUGERIDO`
+Schema:
 
-somente se solicitado.
+somente quando pedido.
 
 ---
 
-# 102. ENTREGA — ATUALIZAÇÃO
+# 112. ENTREGA — ATUALIZAÇÃO
 
 Entregar:
 
@@ -2299,48 +2475,66 @@ Entregar:
 
 `CHECKLIST EDITORIAL`
 
-Schema somente se solicitado.
+---
+
+# 113. APLICAR IMAGENS
+
+Entrada:
+
+THUMB-01: URL
+HERO-01: URL
+IMG-01: URL
+...
+
+Ação:
+
+substituir somente CP-IMAGE.
+
+Não alterar resto.
+
+Saída:
+
+HTML final
++
+`IMAGEM DESTACADA WP: URL`
 
 ---
 
-# 103. DEFINITION OF DONE
+# 114. DEFINITION OF DONE
 
-Uma execução está concluída quando:
+Só concluir quando:
 
 - pesquisa suficiente;
 - fatos rastreáveis;
 - mercado validado quando necessário;
-- Régua corretamente aplicada;
+- nota defensável;
+- cálculo correto;
 - template correto;
-- HTML validado;
+- layout validado;
 - imagens planejadas;
 - pendências declaradas.
 
-"Pronto" significa:
-
-PRONTO PARA REVISÃO HUMANA.
-
-Nunca:
-
-PUBLICADO.
-
 ---
 
-# 104. REGRA FINAL
+# 115. REGRA FINAL
 
-Não invente para preencher template.
+Não invente para completar.
 
-Não force nota para completar review.
+Não reutilize exemplos como fatos.
 
-Não force quatro avaliações para completar grid.
+Não force quatro reviews.
 
-Não force CTA quando falta link.
+Não force seis notas quando falta evidência.
 
-Não force preço quando está desatualizado.
+Não force CTA.
 
-Não force superlativo para aumentar conversão.
+Não force preço.
 
-Não redesenhe componente para parecer mais moderno.
+Não force vencedor.
+
+Não force superlativo.
+
+Não redesenhe componentes.
 
 Na dúvida:
 
