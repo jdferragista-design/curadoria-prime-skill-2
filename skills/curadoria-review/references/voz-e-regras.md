@@ -1,161 +1,532 @@
-# Tom, SEO, nota, schema e alegações sensíveis
+# Voz, SEO, Régua, schema e alegações sensíveis
 
-Canônico: [regras-editoriais.md](regras-editoriais.md) §§5–10 e 16.
+Versão: 2.2
 
-## Tom
+Canônico de comportamento:
 
-Português brasileiro, claro, direto, moderado. Segunda pessoa quando
-ajudar a decisão. Tamanho = complexidade da decisão, não meta de palavras.
+`../SKILL.md`
+
+Canônico de política editorial:
+
+`regras-editoriais.md`
+
+Este documento detalha voz e redação.
+
+Não redefine a Régua Curadoria Prime.
+
+---
+
+# 1. TOM
+
+Português brasileiro.
+
+Claro.
+
+Direto.
+
+Moderado.
+
+Segunda pessoa quando ajudar a decisão.
+
+Comprimento = complexidade da decisão.
+
+Não meta de palavras.
 
 Preferir:
 
-- “é adequado para”
-- “pode ser uma boa escolha se”
-- “a principal limitação é”
-- “pelos dados consultados”
-- “nesta faixa de preço”
+- é adequado para;
+- pode ser uma boa escolha se;
+- a principal limitação é;
+- pelos dados consultados;
+- nesta faixa de preço;
+- segundo a fabricante;
+- segundo o teste de X;
+- na consulta de DD/MM/AAAA.
 
-Evitar: perfeito, imbatível, sem defeitos, compra obrigatória,
-revolucionário, nunca dá problema, vale cada centavo (sem critério),
-o melhor do Brasil, custo-benefício imbatível.
+Evitar:
+
+- perfeito;
+- imbatível;
+- sem defeitos;
+- compra obrigatória;
+- revolucionário;
+- nunca dá problema;
+- vale cada centavo sem critério;
+- melhor do Brasil;
+- custo-benefício imbatível;
+- unanimidade;
+- comprovadamente superior sem prova.
+
+---
+
+# 2. NÃO FAZER
 
 Não:
 
-- copiar estrutura, frase ou conclusão de concorrente;
-- reescrever texto de fabricante como se fosse análise;
-- introdução genérica para alongar;
-- repetir a mesma conclusão em várias seções;
-- keyword stuffing (nome do produto em toda frase);
-- FAQ inútil (“o que é Bluetooth?”);
-- prometer imparcialidade absoluta ou certeza que a fonte não dá.
+- copiar frase de concorrente;
+- copiar conclusão;
+- reescrever fabricante como análise;
+- introdução vazia;
+- repetir veredito em todas as seções;
+- keyword stuffing;
+- FAQ genérico;
+- prometer imparcialidade absoluta;
+- prometer certeza maior que a evidência.
 
-Emojis: no máximo nos H2 de seção, com parcimônia. Sem emoji em
-parágrafo corrido.
+---
 
-## Valor editorial mínimo
+# 3. EMOJIS
 
-Todo artigo novo precisa de **pelo menos três** itens próprios, por
-exemplo:
+Usar principalmente:
 
-- recomendação por perfil e quem não deve comprar;
-- custo por recurso / faixa em que vale ou deixa de valer;
-- versão brasileira vs. importada;
-- compatibilidade com aparelhos e serviços usados no Brasil;
-- homologação, assistência e garantia no país;
-- custo total com acessório obrigatório (HDMI, carregador, ponta);
-- problemas recorrentes por frequência ou gravidade;
-- matriz de decisão entre concorrentes;
-- longevidade de software e suporte;
-- divergência entre fichas de loja.
+- títulos;
+- componentes visuais canônicos.
 
-## SEO e arquitetura
+Evitar emoji em texto corrido.
 
-Antes de criar página: consulta principal, intenção, problema do
-leitor, decisão que a página resolve, diferença em relação ao que
-já existe.
+Não adicionar emoji em toda frase.
 
-- Um artigo por intenção. “Review do X” e “X vale a pena?” na mesma
-  pergunta = canibalização → atualizar/consolidar + 301, não terceira URL.
-- Título e H1 descrevem o conteúdo. Sem “teste”/“testamos” sem teste
-  documentado. Sem ano só para parecer atual.
-- Responder a pergunta no início. Meta description sem promessa falsa.
-- Alt text descreve a imagem, sem repetir palavra-chave à força.
-- Links internos só se ajudarem a decisão (categoria, comparativo,
-  rival, guia, metodologia). Sem cota fixa e sem bloco de links mortos.
-- Preserve URL e canonical. Não altere slug. Não crie URL nova só
-  para trocar o ano. `dateModified` só após mudança editorial real.
-  Registrar no artigo o que mudou quando a atualização for relevante.
+---
 
-Tecnologia automotiva, enquanto o nicho valida:
+# 4. VALOR EDITORIAL
 
-`https://curadoriaprime.com/tecnologia-automotiva/`
+Todo artigo deve demonstrar interpretação própria útil.
 
-Não sugerir outro domínio ou subdomínio. Pauta só se o produto for
-tecnologia disponível no Brasil (Amazon/ML). Experiência do autor
-como motorista só quando for verdadeira e relevante — e só se o
-editor humano a assinar.
+Exemplos:
 
-## Nota editorial
+- perfil adequado;
+- quem deve evitar;
+- faixa racional;
+- custo por recurso;
+- Brasil vs importado;
+- compatibilidade;
+- homologação;
+- suporte;
+- custo de acessório;
+- problemas recorrentes;
+- matriz de decisão;
+- longevidade;
+- divergência de fichas.
 
-Não atribuir nota só porque outros artigos têm nota. Sem critérios
-suficientes, publique **sem** nota.
+Não tratar quantidade exata desses elementos como regra oficial do
+Google.
 
-Se houver nota:
+A política da Curadoria pode exigir um padrão mínimo, mas nunca invente
+análise apenas para atingir quota.
 
-- escala visível, de preferência 0 a 10;
-- critérios da categoria e pesos ou explicação de importância;
-- notas parciais verificáveis;
-- justificativa da final;
-- coerência com prós, contras e veredito;
-- comissão, link e N de avaliações externas **não** pesam.
+---
 
-Calibragem (quando a nota existir):
+# 5. SEO
 
-| Faixa | Significa |
-| --- | --- |
-| 9.0–10 | Referência da categoria no preço; ressalvas menores |
-| 8.0–8.9 | Adequado ao perfil certo; rivais vencem em algum eixo |
-| 7.0–7.9 | Bom, com limitações claras |
-| 6.0–6.9 | Só em promoção ou caso estreito |
-| < 6 | Não indicar, ou indicar só como “evite se…” |
+Antes de criar:
 
-Nota da loja ≠ nota editorial.
+- consulta;
+- intenção;
+- problema;
+- decisão;
+- página existente.
 
-## Schema
+Uma intenção por URL.
 
-Não gerar schema por padrão.
+Review X e "X vale a pena" geralmente são a mesma intenção.
 
-Proibido: `Product.aggregateRating`, `ratingCount`, `reviewCount`
-preenchidos com Amazon, ML, fabricante ou qualquer fonte externa.
-Proibido somar nota 0–10 da casa com milhares de reviews de loja.
+Evitar canibalização.
 
-`AggregateRating` no site só existirá se, no futuro, o próprio site
-coletar avaliações autênticas de leitores — e o total será só dessas.
+---
 
-Quando o editor pedir e a nota editorial existir, pode-se sugerir
-`Review.reviewRating` com autor **humano real** (nome que o editor
-informar), `ratingValue` / `bestRating` / `worstRating` iguais ao
-visível, sem contagem externa.
+# 6. TÍTULO E H1
 
-`Offer` / `priceValidUntil` só com dado verificado na publicação ou
-atualização automática.
+Descrever a página.
 
-## Alegações sensíveis
+Sem:
 
-Sem atribuição e prova: nível médico, precisão profissional, 100% à
-prova de vazamentos, totalmente à prova d’água, indestrutível,
-garantido, sem risco, comprovado cientificamente, o mais seguro,
-o melhor do Brasil.
+- "teste";
+- "testamos";
 
-Promessa do fabricante = “segundo a fabricante” + fonte. Não vira
-conclusão independente.
+quando não houve teste.
 
-**Saúde e wearables:** sem diagnóstico, prevenção, tratamento ou cura.
-Diferenciar bem-estar de dispositivo médico. Citar autorização
-regulatória só se ela se aplicar ao recurso, modelo e país.
+Não adicionar ano apenas para freshness.
 
-> Os recursos de saúde são destinados a acompanhamento pessoal e não substituem avaliação, diagnóstico ou equipamento médico.
+Ano pode existir quando realmente fizer parte da intenção/contexto
+editorial.
 
-**Auto:** não incentivar tela, fone ou celular de forma insegura ao
-dirigir. Verificar tensão, instalação, compatibilidade, homologação
-e lei. Não declarar que acessório aumenta segurança sem condição e
-evidência.
+---
 
-## Imagens
+# 7. META DESCRIPTION
 
-- IA fotorealista não pode parecer teste próprio.
-- Legenda quando houver risco de interpretação errada (texto oficial
-  das regras).
-- Não chamar de oficial sem origem e permissão.
-- Foto de “teste próprio” só se for original do editor.
-- Alt descritivo e factual.
+Descrever:
 
-## Números e datas
+- produto/tema;
+- decisão;
+- principal diferencial.
 
-- Preço: `R$ 1.465,85`.
-- Nota de loja no texto: `Na Amazon, o produto apresentava nota 4,8/5 em aproximadamente 1.700 avaliações consultadas em 12/08/2026.`
-- Datas no texto por extenso quando couber; ISO no checklist interno.
+Não inventar:
 
-## Rumor
+- preço;
+- nota;
+- oferta;
+- estoque.
 
-Sempre a palavra **rumor**, veículo e data. Nunca como lançamento.
+Não prometer resultado que o artigo não entrega.
+
+---
+
+# 8. ALT
+
+Descritivo e factual.
+
+Não usar:
+
+- LSI;
+- stuffing;
+- keyword artificial;
+- "vale a pena" quando não descreve imagem.
+
+---
+
+# 9. LINKS INTERNOS
+
+Adicionar somente quando ajudarem:
+
+- rival;
+- comparativo;
+- categoria;
+- metodologia;
+- review relacionado.
+
+Sem cota fixa.
+
+Sem bloco de links mortos.
+
+---
+
+# 10. URL E FRESHNESS
+
+Preservar:
+
+- URL;
+- slug;
+- canonical.
+
+Não criar nova URL só para trocar ano.
+
+`dateModified` somente após mudança substancial.
+
+Registrar atualização relevante.
+
+---
+
+# 11. RÉGUA EDITORIAL
+
+A única Régua vigente é:
+
+Curadoria Prime v2.0 — agosto/2026.
+
+Critérios:
+
+- Custo-benefício — 30%
+- Satisfação verificada — 25%
+- Ficha técnica — 20%
+- Recursos e usabilidade — 10%
+- Consenso técnico — 10%
+- Confiança e suporte — 5%
+
+Não criar "critérios da categoria" substitutos.
+
+Aspectos da categoria entram como evidência dentro desses seis.
+
+---
+
+# 12. NOTAS
+
+Nota não é obrigatória quando falta evidência.
+
+Quando houver:
+
+- escala 0–10;
+- incrementos de 0,5;
+- seis critérios;
+- pesos públicos;
+- justificativa;
+- cálculo;
+- selo;
+- coerência.
+
+Não usar:
+
+8,7
+9,2.
+
+Não criar precisão falsa.
+
+---
+
+# 13. SATISFAÇÃO E COMISSÃO
+
+Quantidade de ratings externos NÃO entra automaticamente como pontos
+numéricos sem análise metodológica.
+
+A comissão nunca entra na nota.
+
+Link comercial nunca entra na nota.
+
+Satisfação verificada deve obedecer à metodologia v2.0 e ao
+SATISFACTION_GATE.
+
+---
+
+# 14. SELOS
+
+9,0–10:
+
+🏆 Melhor da categoria
+
+8,0–8,5:
+
+⭐ Recomendado
+
+7,0–7,5:
+
+👍 Bom com ressalvas
+
+6,0–6,5:
+
+⚖️ Existem alternativas melhores
+
+< 6,0:
+
+⚠️ Não recomendado
+
+Não usar faixa antiga 8,0–8,9.
+
+A nota só possui passos de 0,5.
+
+---
+
+# 15. SCHEMA
+
+Não gerar por padrão.
+
+Proibido usar como rating próprio:
+
+- Amazon;
+- ML;
+- fabricante;
+- qualquer nota externa.
+
+Não preencher:
+
+`Product.aggregateRating`
+`ratingCount`
+`reviewCount`
+
+com dados externos apresentados como avaliação da Curadoria.
+
+---
+
+# 16. REVIEW SCHEMA
+
+Somente quando solicitado e compatível com a implementação atual.
+
+Se houver Review editorial:
+
+- autor humano real;
+- ratingValue igual ao visível;
+- bestRating;
+- worstRating;
+- sem count externo.
+
+A IA não inventa autor.
+
+---
+
+# 17. OFFER
+
+Preço somente com dado válido.
+
+`priceValidUntil` somente quando houver validade real confirmada.
+
+Data da consulta não é:
+
+`priceValidUntil`.
+
+Nunca inventar data futura.
+
+---
+
+# 18. ALEGAÇÕES SENSÍVEIS
+
+Sem fonte e atribuição:
+
+não usar:
+
+- nível médico;
+- precisão profissional;
+- 100%;
+- totalmente à prova d'água;
+- indestrutível;
+- garantido;
+- sem risco;
+- comprovado cientificamente;
+- mais seguro;
+- melhor do Brasil.
+
+Promessa do fabricante:
+
+`segundo a fabricante`.
+
+Não virar conclusão independente.
+
+---
+
+# 19. SAÚDE
+
+Não diagnosticar.
+
+Diferenciar:
+
+- bem-estar;
+- monitoramento;
+- dispositivo/função regulamentada.
+
+Não inventar ANVISA.
+
+Quando necessário:
+
+**Os recursos de saúde são destinados a acompanhamento pessoal e não
+substituem avaliação, diagnóstico ou equipamento médico.**
+
+---
+
+# 20. AUTOMOTIVO
+
+Não incentivar uso inseguro.
+
+Verificar:
+
+- tensão;
+- instalação;
+- compatibilidade;
+- homologação;
+- legislação.
+
+Não declarar que acessório aumenta segurança sem base.
+
+Experiência pessoal do autor como motorista somente:
+
+- se verdadeira;
+- relevante;
+- aprovada pelo editor;
+- assinada pelo humano.
+
+---
+
+# 21. IMAGENS
+
+Imagem de IA não pode sugerir teste próprio.
+
+Não chamar de oficial sem origem confirmada.
+
+Foto de teste próprio só se original/documentada pelo editor.
+
+Alt factual.
+
+O plano operacional de imagens é definido no SKILL.
+
+---
+
+# 22. PREÇO
+
+Formato:
+
+`R$ 1.465,85`
+
+Sempre com data quando apresentado como valor de mercado atual.
+
+Não escrever:
+
+"oferta atual"
+
+sem verificação atual.
+
+---
+
+# 23. RATINGS EXTERNOS
+
+Forma adequada:
+
+`Na Amazon, o anúncio consultado em 12/08/2026 exibia nota 4,8/5 em aproximadamente 1.700 avaliações.`
+
+Não escrever:
+
+`1.700 compradores aprovaram`.
+
+Não somar plataformas.
+
+Não chamar de nota da Curadoria.
+
+---
+
+# 24. RUMOR
+
+Sempre:
+
+- palavra "rumor";
+- veículo;
+- data.
+
+Nunca escrever rumor como lançamento confirmado.
+
+---
+
+# 25. SUPERLATIVOS
+
+Antes de:
+
+"o melhor"
+
+"líder"
+
+"referência absoluta"
+
+perguntar:
+
+Há comparação e fontes suficientes?
+
+Se não:
+
+reescrever de forma proporcional à evidência.
+
+---
+
+# 26. REGRA FINAL DE VOZ
+
+Prefira precisão à empolgação.
+
+Prefira condição à promessa.
+
+Prefira:
+
+"adequado para X"
+
+a:
+
+"perfeito para todos".
+
+Prefira:
+
+"segundo X"
+
+a:
+
+"comprovadamente".
+
+Prefira:
+
+"os dados sugerem"
+
+a:
+
+"não há dúvida",
+
+quando houver incerteza legítima.
