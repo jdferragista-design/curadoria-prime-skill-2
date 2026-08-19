@@ -116,8 +116,9 @@ Curadoria, não requisito do Google.
 
 | URL | Tipo |
 | --- | --- |
-| `/presentes-dia-dos-pais-2026-tech-premium/` | guia |
-| `/presentes-dia-dos-pais-tech-ate-300/` | guia |
+| `/presentes-dia-dos-pais-2026-tech-premium/` | LISTA/GUIA
+ |
+| `/presentes-dia-dos-pais-tech-ate-300/` | LISTA/GUIA |
 | `/galaxy-watch7-44mm-vale-a-pena/` | review (wearable: disclaimer de saúde) |
 | `/galaxy-s24-fe-em-2026/` | review |
 | `/fire-tv-stick-4k-wifi-6/` | review |
@@ -136,12 +137,12 @@ Curadoria, não requisito do Google.
 | `/samsung-galaxy-buds-core-vale-a-pena/` | |
 | `/redmi-buds-6-play-review-2026-vale-a-pena/` | |
 | `/qcy-t13-anc-review-2026-vale-a-pena/` | |
-| `/melhor-fone-bluetooth-ate-500-reais-2026/` | guia; precisa se sustentar sozinho |
+| `/melhor-fone-bluetooth-ate-500-reais-2026/` | LISTA/GUIA; precisa se sustentar sozinho |
 | `/iphone-16e-review-2026/` | |
 | `/samsung-galaxy-s25-5g-review/` | |
 | `/samsung-galaxy-a16-review/` | |
 | `/xiaomi-redmi-note-14-pro-plus-review-2026/` | |
-| `/samsung-galaxy-tab-s10-fe-5g-vale-a-pena/` | cruzar com os guias de tablet |
+| `/samsung-galaxy-tab-s10-fe-5g-vale-a-pena/` | cruzar com os LISTA/GUIA de tablet |
 | `/samsung-galaxy-book4-review-2026/` | |
 | `/xiaomi-smart-band-9-active-vale-a-pena/` | saúde |
 | `/xiaomi-smart-band-10-vale-a-pena/` | saúde |
