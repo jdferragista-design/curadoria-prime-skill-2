@@ -1,135 +1,828 @@
-# Fontes, disclaimers e o que a IA pode afirmar
+# Metodologia editorial — Curadoria Prime
 
-Canônico: [regras-editoriais.md](regras-editoriais.md) §§2–4 e 8.
-Página pública: [Sobre a Curadoria Prime](https://curadoriaprime.com/sobre-a-curadoria-prime/).
+Versão: 2.0
+Data: 19/08/2026
 
-A pesquisa do site tem 5 etapas. Elas descrevem o **trabalho editorial**.
-Não autorizam linguagem de teste físico.
+Página pública da metodologia de pontuação:
 
-## Hierarquia de fontes
+https://curadoriaprime.com/como-avaliamos/
 
-1. **Primária** — fabricante, manual, documentação técnica, Anatel ou
-   norma oficial. Preferir página `.com/br` e variante brasileira.
-2. **Teste independente identificável** — publicação, laboratório ou
-   canal com método e evidência. Creditar veículo + data. Não copiar
-   parágrafo. Não narrar o teste deles como “nós”.
-3. **Comercial** — Amazon, Mercado Livre, loja oficial: só preço,
-   disponibilidade, variante e relatos de compradores.
-4. **Fórum e rede social** — só para achar problema relatado. Nunca
-   como única prova de fato técnico.
+Página institucional:
 
-Não invente cota artificial de fontes se elas repetem a mesma ficha.
-Qualidade e diversidade > quantidade.
+https://curadoriaprime.com/sobre-a-curadoria-prime/
 
-## Conflito entre fontes
+Política editorial:
 
-1. Não escolher em silêncio o dado mais conveniente.
-2. Conferir região, variante, firmware, unidade e data.
-3. Explicar a divergência no texto.
-4. Priorizar manual e documentação da versão brasileira.
-5. Se o conflito não se resolve, a conclusão fica **incerta**.
+`regras-editoriais.md`
 
-## Sem teste físico (padrão)
+Workflow operacional:
 
-Formulações permitidas:
+`../SKILL.md`
 
-- “analisamos as especificações oficiais”
-- “segundo o teste publicado por [fonte]”
-- “nos testes independentes consultados”
-- “compradores relatam” / “relatos publicados”
-- “a ficha técnica informa”
-- “a partir do cruzamento das fontes”
-- “a análise editorial indica”
+Este arquivo define:
 
-Proibidas sem evidência do §2.2: testamos, usamos por X dias, na nossa
-bancada, em nosso teste, no uso real percebemos, comprovamos, medimos,
-fizemos unboxing, colocamos lado a lado, testado por nós, qualquer
-sensorial de contato.
+- hierarquia das evidências;
+- pesquisa;
+- atribuição;
+- uso de relatos;
+- mercado;
+- Régua v2.0;
+- cálculo das notas.
 
-**Box obrigatório:**
+Ele NÃO define o layout visual.
 
-```markdown
-**Tipo de análise:** pesquisa editorial baseada em especificações oficiais, testes independentes e relatos publicados por compradores. A Curadoria Prime não testou esta unidade fisicamente.
-```
+---
 
-## Teste próprio (só com as 8 evidências)
+# 1. PRINCÍPIO CENTRAL
 
-O editor precisa entregar: responsável; data e duração; origem da
-unidade (comprada, emprestada, cedida); modelo/variante; protocolo e
-condições; medições ou observações; fotos originais; limitações.
+A Curadoria Prime transforma evidência pública verificável em decisão de
+compra.
 
-Se faltar um item, **não** é “Testado por nós”.
+Pesquisa editorial NÃO equivale a teste físico.
 
-```markdown
-**Tipo de análise:** teste próprio realizado por [nome], entre [datas], com uma unidade [modelo/variante]. Consulte abaixo o protocolo, as condições e as limitações.
-```
+Uma conclusão nunca pode sugerir experiência maior do que as evidências
+permitem.
 
-## Avaliações de compradores
+---
 
-Permitido: padrões recorrentes; elogios vs. reclamações; plataforma +
-data; distinguir variante e país; síntese editorial.
+# 2. HIERARQUIA DE FONTES
 
-Proibido:
+## 2.1 Fonte primária
 
-- “compradores verificados” sem selo explícito da plataforma;
-- “milhares foram analisados” sem método e quantidade reais;
-- aspas em paráfrase;
-- frase “representativa” inventada;
-- usar review de loja como prova definitiva de spec, segurança ou desempenho;
-- esconder reclamação recorrente para converter.
+Prioridade:
 
-Síntese padrão:
+- fabricante;
+- manual;
+- documentação técnica;
+- suporte oficial;
+- Anatel;
+- Anvisa quando aplicável;
+- normas/órgãos oficiais.
 
-> **Síntese editorial dos relatos:** compradores elogiam [padrão], enquanto as reclamações mais recorrentes envolvem [padrão].
+Preferir:
 
-Aspas: transcrição fiel, curta, verificável, com plataforma e data.
-Não reproduzir texto longo protegido.
+- variante brasileira;
+- documentação específica do SKU;
+- página oficial `.com/br` quando disponível.
 
-Se o artigo declarar volume grande de avaliações, registrar internamente
-(não precisa ir ao texto público, mas precisa existir na entrega):
-plataformas, data ou intervalo, quantidade aproximada, variante,
-critérios temáticos, limitações/duplicatas/região.
+Fonte primária é preferida para:
 
-## Pesquisa de mercado (obrigatória)
+- especificações;
+- compatibilidade declarada;
+- garantia oficial;
+- conteúdo da embalagem;
+- funções;
+- certificações.
 
-Antes de card ou CTA, rodar a skill
-[curadoria-mercado](../../curadoria-mercado/SKILL.md).
-Varejo não é “colar o menor preço do search”. É classificar o
-checkout: código, vendedor, nacional vs internacional, catálogo vs
-anúncio, e se o SKU ainda faz sentido contra o que o site já indica.
+---
 
-## Preço e disponibilidade
+# 3. ALEGAÇÃO DO FABRICANTE
 
-Todo preço leva loja, data da consulta, condição (Pix, cupom, 12x) e
-o aviso de que preço e estoque podem mudar.
+Uma informação oficial pode ainda ser uma alegação comercial.
 
-Não escrever “menor preço garantido”, “melhor preço da internet” ou
-“oferta válida” sem verificação objetiva e atual. Não inventar
-`priceValidUntil`. `Offer` no schema só com dado atualizado na hora
-da publicação ou atualização automática.
+Exemplo:
 
-## Afiliado
+"até 30 horas de autonomia"
 
-```markdown
-**Transparência:** este artigo contém links de afiliado. Se você comprar por meio deles, a Curadoria Prime pode receber uma comissão, sem custo adicional para você. Isso não altera nossos critérios editoriais.
-```
+deve ser tratada como:
 
-- `rel="sponsored nofollow"` em todo link afiliado.
-- Alternativa sem comissão entra se for melhor para o perfil, e o
-  texto diz que não gera comissão.
-- Comissão não muda nota, ordem de guia nem veredito.
-- Sem CTA em todo parágrafo e sem urgência falsa.
+"A fabricante declara até 30 horas..."
 
-## Fontes consultadas (obrigatório)
+quando não houver medição independente equivalente.
 
-Nomes + URLs diretas. Data de consulta em preço, estoque, nota e
-quantidade de avaliações.
+Fonte oficial não transforma alegação em teste independente.
+
+---
+
+# 4. TESTE INDEPENDENTE
+
+Fonte independente identificável pode sustentar:
+
+- desempenho;
+- autonomia medida;
+- temperatura;
+- áudio;
+- imagem;
+- câmera;
+- microfone;
+- benchmark;
+- comportamento em uso.
+
+Creditar:
+
+- veículo;
+- data;
+- método quando relevante.
+
+Não copiar parágrafo.
+
+Não narrar teste alheio como experiência da Curadoria Prime.
+
+---
+
+# 5. FONTE COMERCIAL
+
+Amazon, Mercado Livre e lojas são utilizadas principalmente para:
+
+- preço;
+- estoque;
+- condição comercial;
+- variante;
+- vendedor;
+- relatos de compradores.
+
+Marketplace não substitui documentação oficial para ficha técnica.
+
+---
+
+# 6. FÓRUNS E REDES SOCIAIS
+
+Podem ajudar a detectar:
+
+- reclamação;
+- defeito;
+- comportamento incomum;
+- problema regional.
+
+Não usar como única prova de fato técnico.
+
+Sinal não é confirmação.
+
+---
+
+# 7. QUALIDADE > QUANTIDADE
+
+Não existe quota universal de fontes.
+
+Evitar cinco páginas que simplesmente reproduzem a mesma ficha.
+
+A quantidade necessária depende da afirmação.
+
+"Consenso técnico" exige pluralidade real.
+
+Uma especificação oficial simples pode exigir apenas sua fonte primária.
+
+---
+
+# 8. CONFLITO ENTRE FONTES
+
+Quando fontes confiáveis divergem:
+
+1. verificar região;
+2. modelo;
+3. SKU;
+4. firmware;
+5. unidade;
+6. data;
+7. metodologia;
+8. unidade de medida.
+
+Não escolher silenciosamente o valor mais conveniente.
+
+Priorizar documentação específica da versão analisada.
+
+Se não resolver:
+
+declarar incerteza.
+
+---
+
+# 9. MATRIZ DE EVIDÊNCIAS
+
+Antes de renderizar o artigo, manter internamente para fatos relevantes:
+
+DADO:
+VALOR:
+TIPO:
+FONTE:
+URL:
+DATA:
+STATUS:
+
+TIPOS:
+
+- OFICIAL
+- FABRICANTE_DECLARA
+- TESTE_INDEPENDENTE
+- MARKETPLACE
+- RELATO
+- INTERPRETAÇÃO_EDITORIAL
+
+STATUS:
+
+- CONFIRMADO
+- NÃO_CONFIRMADO
+- CONFLITANTE
+
+Somente CONFIRMADO pode entrar como fato sem ressalva.
+
+---
+
+# 10. TESTE FÍSICO — PADRÃO
+
+Sem documentação do editor:
+
+TESTE_FISICO = NÃO.
+
+Formulações adequadas:
+
+- analisamos as especificações oficiais;
+- segundo o teste publicado por X;
+- nos testes independentes consultados;
+- compradores relatam;
+- a ficha técnica informa;
+- a análise editorial indica;
+- a partir do cruzamento das fontes.
+
+Proibido sem evidência:
+
+- testamos;
+- usamos;
+- medimos;
+- comprovamos;
+- nossa bancada;
+- nosso teste;
+- unboxing próprio;
+- qualquer experiência sensorial própria.
+
+---
+
+# 11. BOX SEM TESTE
+
+Usar:
+
+**Tipo de análise:** pesquisa editorial baseada em especificações
+oficiais, testes independentes e relatos publicados por compradores.
+A Curadoria Prime não testou esta unidade fisicamente.
+
+---
+
+# 12. TESTE PRÓPRIO
+
+Só reconhecer quando houver documentação suficiente:
+
+- responsável;
+- data/período;
+- origem da unidade;
+- modelo/variante;
+- protocolo;
+- condições;
+- registros;
+- fotos originais;
+- limitações.
+
+Sem documentação:
+
+não usar "Testado por nós".
+
+---
+
+# 13. AVALIAÇÕES DE COMPRADORES
+
+Permitido:
+
+- detectar padrões;
+- separar elogios/reclamações;
+- informar plataforma;
+- informar data;
+- identificar variante;
+- produzir síntese editorial.
+
+Não usar review como prova definitiva de:
+
+- especificação;
+- certificação;
+- segurança;
+- desempenho medido.
+
+---
+
+# 14. MARKETPLACES SÃO SEPARADOS
+
+Não somar:
+
+Amazon
++
+Mercado Livre.
+
+Manter separadamente:
+
+PLATAFORMA:
+LISTING:
+MODELO/SKU:
+VARIANTE:
+RATING:
+COUNT:
+DATA:
+AGRUPA_VARIANTES:
+FONTE:
+
+AGRUPA_VARIANTES:
+
+- SIM
+- NÃO
+- DESCONHECIDO.
+
+---
+
+# 15. CLASSIFICAÇÃO DOS RELATOS
+
+Classificar:
+
+## PRODUTO
+
+Relato realmente sobre o item.
+
+## LOGÍSTICA
+
+Entrega, prazo, embalagem de transporte.
+
+## VENDEDOR
+
+Atendimento, vendedor, loja.
+
+## AMBÍGUO
+
+Não é possível determinar.
+
+Somente PRODUTO sustenta diretamente:
+
+Satisfação verificada.
+
+---
+
+# 16. CITAÇÃO DIRETA
+
+Aspas somente quando:
+
+- transcrição fiel;
+- curta;
+- verificável.
+
+Registrar:
+
+- plataforma;
+- data;
+- variante quando relevante.
+
+Não inventar nome.
+
+Não inventar selo de compra verificada.
+
+---
+
+# 17. SÍNTESE EDITORIAL
+
+Quando não houver citação literal:
+
+**Síntese editorial dos relatos:** compradores elogiam [padrão],
+enquanto as reclamações mais recorrentes envolvem [padrão].
+
+Sem aspas.
+
+Não atribuir frequência maior do que a observada.
+
+---
+
+# 18. GRANDE VOLUME DE RATINGS
+
+Uma plataforma mostrar:
+
+`10.000 avaliações`
+
+não significa que a Curadoria analisou 10.000 textos.
+
+Forma adequada:
+
+`Na consulta de DD/MM/AAAA, o anúncio exibia aproximadamente 10.000 avaliações.`
+
+Se uma amostra textual foi lida:
+
+`Na amostra de relatos consultados...`
+
+Não escrever:
+
+"analisamos 10 mil avaliações"
+
+sem ter realmente feito isso.
+
+---
+
+# 19. REGISTRO DA AMOSTRA
+
+Quando houver síntese relevante de relatos, registrar internamente:
+
+- plataformas;
+- data;
+- variante;
+- count exibido;
+- quantidade efetivamente examinada quando conhecida;
+- critérios temáticos;
+- limitações;
+- agrupamento de variantes;
+- diferenças regionais.
+
+A informação pública deve ser proporcional ao trabalho realmente feito.
+
+---
+
+# 20. PESQUISA DE MERCADO
+
+Antes de:
+
+- card;
+- CTA;
+- preço atual;
+- estoque;
+- "menor preço";
+- Custo-benefício;
+
+rodar:
+
+`curadoria-mercado`.
+
+Não tratar resultado de busca genérico como checkout validado.
+
+Verificar:
+
+- código;
+- SKU;
+- vendedor;
+- nacional/importado;
+- catálogo/anúncio;
+- disponibilidade;
+- condição;
+- rival.
+
+---
+
+# 21. PREÇO
+
+Todo preço exige:
+
+- loja;
+- data;
+- condição relevante.
+
+Exemplos:
+
+- Pix;
+- cupom;
+- 12x;
+- importado;
+- marketplace.
+
+Aviso:
+
+preço e estoque podem mudar.
+
+---
+
+# 22. PREÇO NÃO CONFIRMADO
+
+Sem mercado validado:
+
+não utilizar como preço atual.
+
+Não preencher CTA com placeholder.
+
+Não calcular Custo-benefício como confirmado.
+
+---
+
+# 23. PRICEVALIDUNTIL
+
+Nunca inventar.
+
+Data de consulta não é validade.
+
+Só utilizar quando houver validade real confirmada.
+
+---
+
+# 24. AFILIADOS
+
+Aviso:
+
+**Transparência:** este artigo contém links de afiliado. Se você comprar
+por meio deles, a Curadoria Prime pode receber uma comissão, sem custo
+adicional para você. Isso não altera nossos critérios editoriais.
+
+Links afiliados:
+
+`rel="sponsored nofollow noopener noreferrer"`
+
+Alternativa sem comissão pode aparecer quando for melhor.
+
+Comissão não altera:
+
+- nota;
+- ranking;
+- veredito;
+- vencedor.
+
+---
+
+# 25. RÉGUA CURADORIA PRIME v2.0
+
+Versão vigente:
+
+`v2.0 — agosto/2026`
+
+A nota mede:
+
+a qualidade da proposta do produto para um perfil de comprador a partir
+de evidência documental verificável.
+
+A nota NÃO representa:
+
+teste físico da Curadoria.
+
+---
+
+# 26. CRITÉRIOS
+
+São exatamente seis.
+
+## Custo-benefício — 30%
+
+Evidências principais:
+
+- mercado;
+- preço;
+- rivais;
+- ficha;
+- custo adicional.
+
+## Satisfação verificada — 25%
+
+Evidências:
+
+- ratings;
+- volume;
+- teor;
+- padrões;
+- críticas.
+
+Amazon/ML continuam separadas.
+
+## Ficha técnica — 20%
+
+Evidências:
+
+- fabricante;
+- manual;
+- padrão da categoria;
+- rivais.
+
+## Recursos e usabilidade — 10%
+
+Evidências:
+
+- documentação;
+- app;
+- sistema;
+- controles;
+- portas;
+- funções;
+- relatos de operação.
+
+Não inclui experiência física própria inexistente.
+
+## Consenso técnico — 10%
+
+Evidências:
+
+- fontes independentes;
+- testes;
+- convergência/divergência.
+
+Consenso requer pluralidade.
+
+## Confiança e suporte — 5%
+
+Evidências:
+
+- garantia;
+- assistência;
+- suporte;
+- software;
+- pós-venda documentado.
+
+---
+
+# 27. ORDEM DE ATRIBUIÇÃO
+
+Obrigatória:
+
+EVIDÊNCIA
+→ JUSTIFICATIVA
+→ NOTA.
+
+Nunca:
+
+NOTA
+→ procurar justificativa.
+
+---
+
+# 28. ESCALA
+
+Cada critério:
+
+0–10.
+
+Incremento:
+
+0,5.
+
+Exemplos:
+
+7,0
+7,5
+8,0
+8,5
+9,0
+9,5.
+
+Não usar:
+
+8,7
+9,2.
+
+---
+
+# 29. N/A
+
+N/A só quando critério realmente não se aplica ao produto.
+
+Falta de informação:
+
+PENDENTE.
+
+Não N/A.
+
+---
+
+# 30. REDISTRIBUIÇÃO N/A
+
+Quando legítimo:
+
+`peso_normalizado = peso_original / soma_dos_pesos_aplicáveis`
+
+Exemplo:
+
+Recursos e usabilidade (10%) = N/A.
+
+Soma restante:
+
+90%.
+
+Então:
+
+Custo-benefício:
+30/90 = 33,3%
+
+Satisfação:
+25/90 = 27,8%
+
+Ficha:
+20/90 = 22,2%
+
+Consenso:
+10/90 = 11,1%
+
+Confiança:
+5/90 = 5,6%
+
+A soma normalizada deve resultar em 100%.
+
+O artigo declara o N/A quando houver.
+
+---
+
+# 31. CÁLCULO SEM N/A
+
+`BRUTA = (CUSTO × 0,30) + (SATISFACAO × 0,25) + (FICHA × 0,20) + (RECURSOS × 0,10) + (CONSENSO × 0,10) + (CONFIANCA × 0,05)`
+
+---
+
+# 32. CÁLCULO COM N/A
+
+`BRUTA = soma(NOTA × PESO_ORIGINAL dos critérios aplicáveis) / soma(PESOS_ORIGINAIS aplicáveis)`
+
+Matematicamente equivale à redistribuição proporcional.
+
+---
+
+# 33. ARREDONDAMENTO
+
+Nota publicada:
+
+múltiplo de 0,5 mais próximo.
+
+Não publicar média bruta como nota final.
+
+Não publicar falsa precisão.
+
+Se ocorrer caso exatamente equidistante e a regra pública não definir o
+desempate:
+
+bloquear e pedir definição humana.
+
+---
+
+# 34. SELOS
+
+9,0–10:
+
+🏆 Melhor da categoria
+
+8,0–8,5:
+
+⭐ Recomendado
+
+7,0–7,5:
+
+👍 Bom com ressalvas
+
+6,0–6,5:
+
+⚖️ Existem alternativas melhores
+
+abaixo de 6,0:
+
+⚠️ Não recomendado
+
+---
+
+# 35. BLOCO DE NOTAS
+
+Quando houver nota:
+
+6 cards.
+
+Cada um:
+
+- critério;
+- peso;
+- nota;
+- justificativa.
+
+Depois:
+
+- nota geral;
+- selo;
+- Régua v2.0;
+- link `/como-avaliamos/`.
+
+---
+
+# 36. NOTA PENDENTE
+
+Se qualquer critério aplicável não possuir evidência suficiente:
+
+não inventar nota.
+
+A nota geral pode permanecer pendente.
+
+Isso é melhor que falsa precisão.
+
+---
+
+# 37. FONTES CONSULTADAS
+
+Obrigatório.
 
 Agrupar:
 
-1. Oficiais do fabricante / regulador
-2. Testes independentes e histórico factual
-3. Rumores (a palavra **rumor** + veículo + data)
-4. Varejo (página específica da Amazon, do ML, da loja oficial)
+1. Oficiais/reguladores
+2. Testes independentes
+3. Rumores, quando houver
+4. Varejo
 
-Sem essa seção, o artigo não está pronto para revisão humana.
+URLs diretas.
+
+Datas para:
+
+- preços;
+- estoque;
+- ratings;
+- counts;
+- informações temporais.
+
+Sem Fontes Consultadas:
+
+não considerar a entrega completa para revisão humana.
+
+---
+
+# 38. REGRA FINAL
+
+A metodologia existe para limitar o que a análise pode afirmar.
+
+Ela não existe para transformar evidência incompleta em nota completa.
+
+Quando a evidência acabar:
+
+a certeza também acaba.
