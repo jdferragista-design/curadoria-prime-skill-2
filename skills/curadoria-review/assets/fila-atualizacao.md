@@ -1,18 +1,108 @@
 # Fila de atualização — curadoriaprime.com
 
-Inventário a partir do `post-sitemap.xml` em 12/08/2026.
-Uma URL por vez. Sem fonte do dia, a URL fica em rascunho.
+Versão operacional: 2.0
+Revisado em: 19/08/2026
 
-## Antes de qualquer texto
+Inventário original baseado no sitemap.
 
-1. Confirmar intenção e se outra URL compete.
-2. Preservar slug e canonical.
-3. Diagnosticar: “testamos”, AggregateRating externo, imagem de IA,
-   keyword stuffing, preço sem data.
-4. Recapturar preço Amazon + ML + oficial.
-5. Redigir no layout Apple TV 4K (`template-review.md` ou `template-guia.md`).
-6. Checklist de bloqueio. Editor humano publica.
+Este arquivo é uma FILA.
 
+Não é fonte factual sobre produtos.
+
+Toda URL precisa de pesquisa atual no momento da execução.
+
+Uma URL por vez, salvo pares diretamente canibalizados.
+
+---
+
+# Antes de qualquer edição
+
+1. Classificar:
+   - REVIEW
+   - VS
+   - LISTA/GUIA
+
+2. Confirmar intenção.
+
+3. Verificar se outra URL compete.
+
+4. Preservar:
+   - URL;
+   - slug;
+   - canonical.
+
+5. Diagnosticar:
+   - teste físico falso;
+   - AggregateRating externo;
+   - ratingCount/reviewCount externo;
+   - imagem IA enganosa;
+   - preço antigo;
+   - URL comercial quebrada;
+   - keyword stuffing;
+   - nota em Régua antiga;
+   - layout fora do canônico.
+
+6. Recapturar mercado com:
+   `curadoria-mercado`.
+
+7. Atualizar evidências técnicas necessárias.
+
+8. Aplicar Régua v2.0 quando houver nota.
+
+9. Utilizar template correto:
+   - REVIEW → `template-review.md`
+   - VS → `template-vs.md`
+   - LISTA → `template-lista.md`
+
+10. Produzir RELATÓRIO DE IMAGENS quando imagens precisarem ser
+    substituídas/adicionadas.
+
+11. Rodar `checklist-bloqueio.md`.
+
+12. Editor humano revisa/publica.
+
+Sem evidência atual suficiente:
+
+a URL permanece em rascunho de atualização.
+
+---
+
+# Estados
+
+Cada item pode receber:
+
+`PENDENTE`
+`EM_PESQUISA`
+`AGUARDANDO_MERCADO`
+`AGUARDANDO_IMAGENS`
+`PRONTO_PARA_REVISAO`
+`CONCLUÍDO`
+
+Nunca usar:
+
+`PRONTO_PARA_PUBLICAR`
+
+como status automático.
+
+---
+
+# Prioridade
+
+P0:
+erro factual, canibalização, teste falso, schema enganoso ou risco
+material.
+
+P1:
+página relevante/recentemente exposta que precisa alinhamento.
+
+P2:
+catálogo com qualidade/estrutura antiga.
+
+P3:
+manutenção e catálogo de menor prioridade.
+
+Estados de frescor de 30/90 dias são política operacional interna da
+Curadoria, não requisito do Google.
 ## P0 — canibalização e risco Google (fazer primeiro)
 
 | URL | Ação |
