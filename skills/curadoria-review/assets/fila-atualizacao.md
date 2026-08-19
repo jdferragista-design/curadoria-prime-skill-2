@@ -5,26 +5,25 @@ Revisado em: 19/08/2026
 
 Inventário original baseado no sitemap.
 
-Este arquivo é uma FILA.
+Este arquivo organiza trabalho.
 
-Não é fonte factual sobre produtos.
+NÃO é fonte factual sobre os produtos.
 
-Toda URL precisa de pesquisa atual no momento da execução.
-
-Uma URL por vez, salvo pares diretamente canibalizados.
+Preços, ratings, estoque, concorrentes e especificações precisam ser
+reconfirmados na execução.
 
 ---
 
-# Antes de qualquer edição
+# Workflow de cada URL
 
-1. Classificar:
+1. Classificar formato:
    - REVIEW
    - VS
    - LISTA/GUIA
 
 2. Confirmar intenção.
 
-3. Verificar se outra URL compete.
+3. Procurar URL concorrente.
 
 4. Preservar:
    - URL;
@@ -34,154 +33,180 @@ Uma URL por vez, salvo pares diretamente canibalizados.
 5. Diagnosticar:
    - teste físico falso;
    - AggregateRating externo;
-   - ratingCount/reviewCount externo;
+   - reviewCount/ratingCount externo;
+   - preço velho;
+   - CTA quebrado;
+   - SKU errado;
    - imagem IA enganosa;
-   - preço antigo;
-   - URL comercial quebrada;
    - keyword stuffing;
    - nota em Régua antiga;
-   - layout fora do canônico.
+   - layout fora do padrão.
 
-6. Recapturar mercado com:
-   `curadoria-mercado`.
+6. Rodar `curadoria-mercado`.
 
-7. Atualizar evidências técnicas necessárias.
+7. Atualizar fontes técnicas necessárias.
 
 8. Aplicar Régua v2.0 quando houver nota.
 
-9. Utilizar template correto:
+9. Usar:
    - REVIEW → `template-review.md`
    - VS → `template-vs.md`
-   - LISTA → `template-lista.md`
+   - LISTA/GUIA → `template-lista.md`
 
-10. Produzir RELATÓRIO DE IMAGENS quando imagens precisarem ser
-    substituídas/adicionadas.
+10. Produzir RELATÓRIO DE IMAGENS se necessário.
 
 11. Rodar `checklist-bloqueio.md`.
 
-12. Editor humano revisa/publica.
+12. Editor humano revisa.
 
 Sem evidência atual suficiente:
 
-a URL permanece em rascunho de atualização.
+a URL permanece em atualização.
 
 ---
 
 # Estados
 
-Cada item pode receber:
+- `PENDENTE`
+- `EM_PESQUISA`
+- `AGUARDANDO_MERCADO`
+- `AGUARDANDO_IMAGENS`
+- `PRONTO_PARA_REVISAO`
+- `CONCLUIDO`
 
-`PENDENTE`
-`EM_PESQUISA`
-`AGUARDANDO_MERCADO`
-`AGUARDANDO_IMAGENS`
-`PRONTO_PARA_REVISAO`
-`CONCLUÍDO`
-
-Nunca usar:
+Não utilizar automaticamente:
 
 `PRONTO_PARA_PUBLICAR`
 
-como status automático.
+---
+
+# Prioridades
+
+## P0
+
+- erro factual;
+- teste falso;
+- schema enganoso;
+- canibalização relevante;
+- risco de saúde/segurança;
+- CTA apontando ao produto errado.
+
+## P1
+
+Página relevante ou recente que precisa alinhamento.
+
+## P2
+
+Catálogo com estrutura/metodologia antiga.
+
+## P3
+
+Manutenção e páginas de menor prioridade.
+
+Os estados de frescor são política interna da Curadoria, não regra
+universal do Google.
 
 ---
 
-# Prioridade
-
-P0:
-erro factual, canibalização, teste falso, schema enganoso ou risco
-material.
-
-P1:
-página relevante/recentemente exposta que precisa alinhamento.
-
-P2:
-catálogo com qualidade/estrutura antiga.
-
-P3:
-manutenção e catálogo de menor prioridade.
-
-Estados de frescor de 30/90 dias são política operacional interna da
-Curadoria, não requisito do Google.
-## P0 — canibalização e risco Google (fazer primeiro)
+# P0 — canibalização e risco
 
 | URL | Ação |
 | --- | --- |
-| `/tablets-para-volta-as-aulas-2026/` | **No ar (12/08/2026).** Trio canônico. Depois do slug novo existir, acrescentar uma linha “alternativas”. |
-| `/tablets-para-volta-as-aulas-2026-2/` → `/alternativas-galaxy-tab-s10-fe-ipad-estudar/` | **Retarget, não 301 para a canônica.** HTML em `articles/alternativas-galaxy-tab-s10-fe-ipad-estudar.html`. Criar post no slug novo → recapturar preço → publicar → 301 do `-2`. |
-| `/lg-au801-50-review/` e `/lg-55au801-review-2026/` | Conferir se é o mesmo AU801. Se for, consolidar. |
-| `/apple-tv-4k/` | Padrão de layout; limpar “testamos a fundo” e barra de estrelas como se fossem da casa. |
+| `/tablets-para-volta-as-aulas-2026/` | Auditar intenção, mercado e Régua. |
+| `/tablets-para-volta-as-aulas-2026-2/` | Auditar duplicidade/retarget antes de qualquer decisão de redirect. |
+| `/lg-au801-50-review/` e `/lg-55au801-review-2026/` | Confirmar produto/intenção e consolidar se equivalentes. |
+| `/apple-tv-4k/` | Golden visual; corrigir teste falso, prova social e migrar metodologia quando necessário. |
 
-## P1 — home / recortes recentes
+---
+
+# P1 — home / recortes recentes
 
 | URL | Tipo |
 | --- | --- |
-| `/presentes-dia-dos-pais-2026-tech-premium/` | LISTA/GUIA
- |
+| `/presentes-dia-dos-pais-2026-tech-premium/` | LISTA/GUIA |
 | `/presentes-dia-dos-pais-tech-ate-300/` | LISTA/GUIA |
-| `/galaxy-watch7-44mm-vale-a-pena/` | review (wearable: disclaimer de saúde) |
-| `/galaxy-s24-fe-em-2026/` | review |
-| `/fire-tv-stick-4k-wifi-6/` | review |
-| `/edifier-w820nb-review-2026-vale-a-pena/` | review |
-| `/jbl-wave-buds-2-review-2026-vale-a-pena/` | review |
-| `/lenovo-ideapad-1-i3-1215u-vale-a-pena-em-2026/` | review |
-| `/lenovo-ideapad-slim-3-notebook-2026/` | review |
-| `/redmi-note-15-pro-vale-a-pena/` | review (tom de vitrine) |
-| `/moto-g56-5g-review/` | review |
+| `/galaxy-watch7-44mm-vale-a-pena/` | REVIEW — saúde |
+| `/galaxy-s24-fe-em-2026/` | REVIEW |
+| `/fire-tv-stick-4k-wifi-6/` | REVIEW |
+| `/edifier-w820nb-review-2026-vale-a-pena/` | REVIEW |
+| `/jbl-wave-buds-2-review-2026-vale-a-pena/` | REVIEW |
+| `/lenovo-ideapad-1-i3-1215u-vale-a-pena-em-2026/` | REVIEW |
+| `/lenovo-ideapad-slim-3-notebook-2026/` | REVIEW |
+| `/redmi-note-15-pro-vale-a-pena/` | REVIEW |
+| `/moto-g56-5g-review/` | REVIEW |
 
-## P2 — catálogo que ainda parece landing
+---
 
-| URL | Nota |
+# P2 — catálogo
+
+| URL | Tipo / Atenção |
 | --- | --- |
-| `/soundcore-liberty-4-nc-vale-a-pena/` | “98,5%” só com atribuição da marca |
-| `/samsung-galaxy-buds-core-vale-a-pena/` | |
-| `/redmi-buds-6-play-review-2026-vale-a-pena/` | |
-| `/qcy-t13-anc-review-2026-vale-a-pena/` | |
-| `/melhor-fone-bluetooth-ate-500-reais-2026/` | LISTA/GUIA; precisa se sustentar sozinho |
-| `/iphone-16e-review-2026/` | |
-| `/samsung-galaxy-s25-5g-review/` | |
-| `/samsung-galaxy-a16-review/` | |
-| `/xiaomi-redmi-note-14-pro-plus-review-2026/` | |
-| `/samsung-galaxy-tab-s10-fe-5g-vale-a-pena/` | cruzar com os LISTA/GUIA de tablet |
-| `/samsung-galaxy-book4-review-2026/` | |
-| `/xiaomi-smart-band-9-active-vale-a-pena/` | saúde |
-| `/xiaomi-smart-band-10-vale-a-pena/` | saúde |
-| `/samsung-galaxy-fit3-vale-a-pena/` | saúde |
+| `/soundcore-liberty-4-nc-vale-a-pena/` | REVIEW — alegações quantitativas |
+| `/samsung-galaxy-buds-core-vale-a-pena/` | REVIEW |
+| `/redmi-buds-6-play-review-2026-vale-a-pena/` | REVIEW |
+| `/qcy-t13-anc-review-2026-vale-a-pena/` | REVIEW — migrar Régua quando necessário |
+| `/melhor-fone-bluetooth-ate-500-reais-2026/` | LISTA/GUIA |
+| `/iphone-16e-review-2026/` | REVIEW |
+| `/samsung-galaxy-s25-5g-review/` | REVIEW |
+| `/samsung-galaxy-a16-review/` | REVIEW |
+| `/xiaomi-redmi-note-14-pro-plus-review-2026/` | REVIEW |
+| `/samsung-galaxy-tab-s10-fe-5g-vale-a-pena/` | REVIEW — verificar canibalização |
+| `/samsung-galaxy-book4-review-2026/` | REVIEW |
+| `/xiaomi-smart-band-9-active-vale-a-pena/` | REVIEW — saúde |
+| `/xiaomi-smart-band-10-vale-a-pena/` | REVIEW — saúde |
+| `/samsung-galaxy-fit3-vale-a-pena/` | REVIEW — saúde |
 
-## P3 — TV, som, casa
+---
 
-| URL | Nota |
+# P3 — TV, áudio e casa
+
+| URL | Tipo / Atenção |
 | --- | --- |
 | `/roku-vs-fire-tv-stick-4k/` | VS |
-| `/samsung-s90f-qd-oled-review/` | |
-| `/samsung-u8600f-review/` | |
-| `/samsung-u8100f-smart-tv-4k-review/` | |
-| `/samsung-u8600f-vs-lg-au801-vs-philips-50pug7019/` | |
-| `/lg-au801-50-review/` | ver P0 |
-| `/lg-55au801-review-2026/` | ver P0 |
-| `/philips-50pug7019-review/` | |
-| `/tcl-c6k-review-2026/` | |
-| `/samsung-hw-b400f-review/` | |
-| `/jbl-cinema-sb180-review-vale-a-pena/` | |
-| `/lg-sqc1-review-2026-vale-a-pena/` | |
-| `/samsung-hw-b400f-vs-jbl-cinema-sb180-vs-lg-sqc1/` | |
-| `/purificador-de-agua-electrolux-pe12g-review/` | sem alegação médica |
-| `/garrafa-termica-quick-flip-stanley-710ml/` | |
-| `/kit-teclado-mouse-ultra-slim/` | risco de afiliado fino |
-| `/camera-lampada-360-yoosee-lp8177-review-2026/` | privacidade / segurança |
-| `/good-vision-kit-cameras-wifi-review/` | |
+| `/samsung-s90f-qd-oled-review/` | REVIEW |
+| `/samsung-u8600f-review/` | REVIEW |
+| `/samsung-u8100f-smart-tv-4k-review/` | REVIEW |
+| `/samsung-u8600f-vs-lg-au801-vs-philips-50pug7019/` | VS |
+| `/lg-au801-50-review/` | REVIEW — ver P0 |
+| `/lg-55au801-review-2026/` | REVIEW — ver P0 |
+| `/philips-50pug7019-review/` | REVIEW |
+| `/tcl-c6k-review-2026/` | REVIEW |
+| `/samsung-hw-b400f-review/` | REVIEW |
+| `/jbl-cinema-sb180-review-vale-a-pena/` | REVIEW |
+| `/lg-sqc1-review-2026-vale-a-pena/` | REVIEW |
+| `/samsung-hw-b400f-vs-jbl-cinema-sb180-vs-lg-sqc1/` | VS |
+| `/purificador-de-agua-electrolux-pe12g-review/` | REVIEW — alegações de saúde |
+| `/garrafa-termica-quick-flip-stanley-710ml/` | REVIEW |
+| `/kit-teclado-mouse-ultra-slim/` | REVIEW — risco de afiliado fino |
+| `/camera-lampada-360-yoosee-lp8177-review-2026/` | REVIEW — privacidade/segurança |
+| `/good-vision-kit-cameras-wifi-review/` | REVIEW |
 | `/melhores-cameras-de-seguranca-wi-fi-2026/` | LISTA/GUIA |
 
-## Páginas institucionais (não são review, mas entram no Who/How)
+---
 
-- `/sobre-a-curadoria-prime/` — alinhar o box de tipo de análise ao texto oficial.
+# Páginas institucionais
+
+Auditar separadamente:
+
+- `/sobre-a-curadoria-prime/`
 - `/transparencia-curadoria-prime/`
-- `/bio-do-cristian/` e `/nossa-prova/` — E-E-A-T; não inventar credencial de laboratório.
-- `/sobre-nos-curadoria-prime/` — se duplicar o Sobre, consolidar.
-- Termos, privacidade, cookies, isenção, contatos — só se o texto contradisser as regras.
+- `/bio-do-cristian/`
+- `/nossa-prova/`
+- `/sobre-nos-curadoria-prime/`
+- termos;
+- privacidade;
+- cookies;
+- isenção;
+- contatos.
 
-## Como pedir cada URL à skill
+Institucional não usa template de REVIEW.
 
-> Atualiza `/slug/` no layout Apple TV 4K. Segue as regras editoriais e o Google. Aqui estão as fontes do dia: [colar URLs + preços + notas].
+---
 
-A skill devolve diagnóstico → alterações → artigo → registro → fontes → pendências → checklist. Sem isso, não cole no WordPress.
+# Comando recomendado
+
+`Atualize /slug/ integralmente conforme curadoria-review. Preserve URL e
+canonical. Refaça mercado, evidências, Régua quando aplicável, template
+canônico e relatório de imagens. Não publique.`
+
+A Skill deve entregar conforme o contrato do SKILL.md.
