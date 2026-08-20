@@ -1,5 +1,3 @@
-Markdown
-
 # Template VS — Curadoria Prime v2.0
 
 Status: LOCKED
