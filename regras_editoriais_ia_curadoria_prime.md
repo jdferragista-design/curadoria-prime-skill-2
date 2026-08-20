@@ -1,11 +1,4 @@
 
----
-
-### 2. `regras_editoriais_ia_curadoria_prime.md` (raiz — arquivo ponteiro)
-
-**Ação:** Substituir todo o conteúdo pelo texto abaixo:
-
-```markdown
 # Regras editoriais — Curadoria Prime
 
 A fonte canônica atualizada está em:
