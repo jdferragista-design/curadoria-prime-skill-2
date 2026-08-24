@@ -1,0 +1,13 @@
+# Config local com credenciais (apiKey em texto plano) — nunca versionar
+opencode.json
+
+# Dependências
+node_modules/
+
+# Backups locais
+*.bak
+*.bak-*
+*.bak_*
+
+# Documentos binários de rascunho
+*.odt
