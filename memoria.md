@@ -101,7 +101,7 @@ python3 tools/checar_conformidade.py articles/html_output/*.html
 | Agendar/publicar `guia-volta-as-aulas-tech-2026-7-itens.html` | aguardando decisão do editor |
 | Agendar/publicar `tablet-infantil-dia-das-criancas-2026-3-melhores.html` | após re-verificação de 10/09 |
 | Confirmar colagem dos `-JA-COLADO` em `articles/correcoes/` (rodada 20-23/08) | já confirmado por diff — ver RELATORIO-CORRECOES |
-| ~~Git: working tree com mudanças não commitadas~~ | **CONCLUIDO 24/08** — 5 commits rebased sobre origin/main (`623e478`..`9c448eb`); `.gitignore` raiz criado; `opencode.json` (com apiKey), `*.bak`, `*.odt` e node_modules fora do repo. Editor optou por manter LOCAL; **push ao origin ainda pendente** (à frente 5, atrás 0). |
+| ~~Git: working tree com mudanças não commitadas~~ | **CONCLUIDO 24/08** — commits rebased sobre origin/main; `.gitignore` raiz criado (node_modules, `*.bak`, `*.odt` fora do repo). **Decisão do editor: `opencode.json` (com apiKey) fica versionado** (`5c4075b`). Push ao origin ainda pendente. |
 
 ---
 
