@@ -101,7 +101,7 @@ python3 tools/checar_conformidade.py articles/html_output/*.html
 | Agendar/publicar `guia-volta-as-aulas-tech-2026-7-itens.html` | aguardando decisão do editor |
 | Agendar/publicar `tablet-infantil-dia-das-criancas-2026-3-melhores.html` | após re-verificação de 10/09 |
 | Confirmar colagem dos `-JA-COLADO` em `articles/correcoes/` (rodada 20-23/08) | já confirmado por diff — ver RELATORIO-CORRECOES |
-| ~~Git: working tree com mudanças não commitadas~~ | **CONCLUIDO 24/08** — commits rebased sobre origin/main; `.gitignore` raiz criado (node_modules, `*.bak`, `*.odt` fora do repo). **Decisão do editor: `opencode.json` (com apiKey) fica versionado** (`5c4075b`). Push ao origin ainda pendente. |
+| ~~Git: working tree com mudanças não commitadas~~ | **CONCLUIDO 24/08** — commits rebased sobre origin/main; `.gitignore` raiz criado. **Dados sensíveis FICAM FORA do repo**: `opencode.json` (com apiKey), `*.bak`, `*.odt` e node_modules ignorados. Incidente corrigido: um commit chegou a incluir o `opencode.json` e foi eliminado do histórico por rebase-drop ANTES de qualquer push — nada vazou ao remoto; ficheiro restaurado no disco. Push ao origin ainda pendente. |
 
 ---
 
