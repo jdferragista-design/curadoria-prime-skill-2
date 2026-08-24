@@ -145,6 +145,23 @@ python3 tools/checar_conformidade.py articles/html_output/guia-volta-as-aulas-te
 tags balanceadas (div 101/101 etc.) · JSON-LD parseável · soma das ofertas = R$ 1.563,97
 ```
 
+### Reposicionamento editorial (25/08, pedido do editor)
+
+Editor não quer publicar com tema "volta às aulas" no fim de agosto.
+Escolhido o ângulo **evergreen**: "7 Melhores Techs Custo-Benefício para
+Trabalhar e Estudar (2026)".
+
+- Novo keyword foco: `melhores techs custo-benefício` (14 menções exatas +
+  6 variantes naturais no corpo; casos de uso de estudo/trabalho mantidos).
+- Novo slug/canonical/mainEntityOfPage: `/melhores-techs-custo-beneficio-2026/`.
+- Arquivo renomeado: `articles/html_output/melhores-techs-custo-beneficio-2026.html`.
+- Hero renomeado: `hero-melhores-techs-custo-beneficio-2026.jpg` (antes do upload!).
+- Meta description e JSON-LD (headline/description/name/FAQ question) reescritos.
+- Patches: `tools/patch_guia_e.py` (20 pares + 8 alts), `tools/patch_guia_f.py`
+  (alt do hero + ref da imagem x3). Grep final: ZERO resíduos de volta às aulas.
+- Lição: o fix do `mainEntityOfPage` reportado na sessão anterior não tinha
+  persistido por edições paralelas no mesmo arquivo — sempre serializar.
+
 ### Pendências restantes deste guia (só o editor resolve)
 
 | Item | Detalhe |

@@ -124,7 +124,7 @@ universal do Google.
 | URL | Tipo |
 | --- | --- |
 | `/power-bank-no-aviao-2026/` | GUIA — **CONCLUIDO** · agendado 25/08/2026 08:00 · novo artigo · arquivo em `articles/html_output/power-bank-no-aviao-regras-anac-2026.html` · aprovado no checker (0 erros) |
-| `/guia-volta-as-aulas-tech-2026-7-itens/` | GUIA — **PRONTO_PARA_REVISAO** 24/08 · mercado re-verificado: 14 capturas novas no LEDGER, total do kit R$ 1.563,97 · seção 7 reescrita (links entregam suporte giratório c/ ventoinha, não mais PRINCASE — cenário P0 evitado antes de publicar) · JSON-LD alinhado ao canonical · arquivo em `articles/html_output/guia-volta-as-aulas-tech-2026-7-itens.html` · aprovado no checker (0 erros) · pendência p/ agendar: subir imagens no WP Media |
+| `/melhores-techs-custo-beneficio-2026/` | GUIA — **PRONTO_PARA_REVISAO** 25/08 · REPOSICIONADO de "volta às aulas" (dessazonalizado no fim de agosto) para evergreen "melhores techs custo-benefício para trabalhar e estudar" — novo título/slug/canonical/arquivo (`articles/html_output/melhores-techs-custo-beneficio-2026.html`) · mercado re-verificado: 14 capturas no LEDGER, total R$ 1.563,97 · seção 7 reescrita (suporte giratório c/ ventoinha, não PRINCASE) · aviso Anker A1695 (Amazon) vs A1289 (ML exclusivo) · aprovado no checker (0 erros) · pendência p/ agendar: subir imagens no WP Media |
 | `/presentes-dia-dos-pais-2026-tech-premium/` | LISTA/GUIA |
 | `/presentes-dia-dos-pais-tech-ate-300/` | LISTA/GUIA |
 | `/galaxy-watch7-44mm-vale-a-pena/` | REVIEW — saúde |
