@@ -101,7 +101,7 @@ python3 tools/checar_conformidade.py articles/html_output/*.html
 | Agendar/publicar `guia-volta-as-aulas-tech-2026-7-itens.html` | aguardando decisão do editor |
 | Agendar/publicar `tablet-infantil-dia-das-criancas-2026-3-melhores.html` | após re-verificação de 10/09 |
 | Confirmar colagem dos `-JA-COLADO` em `articles/correcoes/` (rodada 20-23/08) | já confirmado por diff — ver RELATORIO-CORRECOES |
-| Git: working tree com mudanças não commitadas (artigos antigos apagados, skills assets, auditoria, html_output novo) | commit quando o editor pedir |
+| ~~Git: working tree com mudanças não commitadas~~ | **CONCLUIDO 24/08** — 4 commits (2eb1cf9..32470c5); `.gitignore` raiz criado; `opencode.json` (com apiKey) e `*.bak`/`*.odt` fora do repo. Ainda NÃO enviado ao remote (`git push` pendente). |
 
 ---
 
