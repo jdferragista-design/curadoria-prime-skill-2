@@ -116,6 +116,11 @@ python3 tools/checar_conformidade.py articles/html_output/*.html
   Números duvidosos do hub (30.181 vs 6.442 inconsistentes) removidos → "—"
   na tabela e frase qualitativa na seção.
 - LEDGER: +14 capturas (2026-08-24), `validar` sem erros.
+- **Aviso Anker 737 reforçado (pedido do editor)**: Amazon e ML vendem itens
+  DIFERENTES — Amazon só tem A1695 (25K/165W, R$ 748,99); o A1289
+  (24K/140W, R$ 639 cupom) é exclusivo do Mercado Livre. Aviso destacado
+  no card da seção 4, nota curta no card-âncora, reforço no parágrafo e
+  nos "Pontos de atenção" (`tools/patch_guia_d.py`).
 
 ### Correções estruturais que o checker não pega
 
