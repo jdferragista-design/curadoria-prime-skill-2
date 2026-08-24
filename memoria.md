@@ -93,12 +93,68 @@ python3 tools/checar_conformidade.py articles/html_output/*.html
 
 ---
 
+## Sessão 24/08/2026 (noite) — fechamento do guia-volta-as-aulas
+
+### Mercado: recaptura dos 14 links de afiliado (Amazon + ML, 7 produtos)
+
+- Preços mudaram em 12 das 14 URLs. Novo total do kit: **R$ 1.563,97**
+  (era R$ 1.569,03). Range do título: "de R$ 69 a R$ 639".
+- Destaques: M185 Amazon 67,19→68,90 (Pix); K380s Amazon 193,99→197,99
+  (a Amazon hoje lista a variante "K380s"); JBL Amazon 235→232; Anker 737
+  Amazon **636,64→748,99** (+18%, A1695) — menor preço agora é o ML
+  **R$ 639 cupom** (modelo A1289 24K/140W); AX12 ML 179,10→**169,15** Pix;
+  UGREEN ML 89→99; suporte Amazon 170,05→**157,93** Pix.
+- **Achado P0**: os links da seção 7 NÃO entregam mais o "Suporte PRINCASE"
+  — a Amazon hoje vende um suporte genérico giratório 360° com ventoinha
+  (R$ 157,93, vendedor terceiro/FBA; ML R$ 188). Seção reescrita para o
+  produto real (specs: metal, 4–26 cm, gira 360°, ventoinha, até 10 kg);
+  card "Pontos de atenção" trocado para aviso de vendedores terceiros;
+  foto antiga do PRINCASE removida → placeholder uploads/suporte-giratorio-
+  notebook-ventoinha.jpg (editor sobe a correta antes de publicar).
+- Contagens de avaliações não-recapturadas mantidas com rótulo duplo no box
+  ("avaliações coletadas em 05/08 · preços re-verificados em 24/08").
+  Números duvidosos do hub (30.181 vs 6.442 inconsistentes) removidos → "—"
+  na tabela e frase qualitativa na seção.
+- LEDGER: +14 capturas (2026-08-24), `validar` sem erros.
+
+### Correções estruturais que o checker não pega
+
+1. `mainEntityOfPage` apontava `/kit-volta-as-aulas-tech-2026/` → alinhado
+   ao canonical `/guia-volta-as-aulas-tech-2026-7-itens/` (o fix reportado
+   na sessão anterior NÃO havia persistido no arquivo).
+2. `</script></script>` duplicado após o JSON-LD → um único fechamento.
+
+### Como foi editado
+
+Patches auditáveis em `tools/patch_guia_{a,b1,b2,b3,b4,c}.py`: cada par
+old→new exige contagem == 1, abortando sem gravar se divergir. 93+7
+substituições aplicadas. Lição: NÃO disparar múltiplas edições editor no
+MESMO arquivo em paralelo — uma sobrescreveu a outra (header Rank Math
+precisou ser reaplicado).
+
+### Validação final
+
+```
+python3 tools/checar_conformidade.py articles/html_output/guia-volta-as-aulas-tech-2026-7-itens.html
+→ ✅ Aprovado · 0 erro(s) · 2.480 palavras
+tags balanceadas (div 101/101 etc.) · JSON-LD parseável · soma das ofertas = R$ 1.563,97
+```
+
+### Pendências restantes deste guia (só o editor resolve)
+
+| Item | Detalhe |
+| --- | --- |
+| Upload de imagens no WP Media | hero + 7 fotos (foto do suporte é a do modelo giratório c/ ventoinha) |
+| Definir data/agendamento | datePublished segue placeholder 19/08 até agendar |
+
+---
+
 ## Pendências abertas
 
 | Item | Prazo/condição |
 | --- | --- |
 | Re-verificar preços/estoque do tablet-infantil antes de publicar | 10/09/2026 (nota em comentário HTML no arquivo) |
-| Agendar/publicar `guia-volta-as-aulas-tech-2026-7-itens.html` | aguardando decisão do editor |
+| ~~Agendar/publicar `guia-volta-as-aulas-tech-2026-7-itens.html`~~ | **24/08**: conteúdo 100% fechado (mercado re-verificado, checker 0 erros) — estado PRONTO_PARA_REVISAO; faltam só imagens no WP Media + decisão de agendamento |
 | Agendar/publicar `tablet-infantil-dia-das-criancas-2026-3-melhores.html` | após re-verificação de 10/09 |
 | Confirmar colagem dos `-JA-COLADO` em `articles/correcoes/` (rodada 20-23/08) | já confirmado por diff — ver RELATORIO-CORRECOES |
 | ~~Git: working tree com mudanças não commitadas~~ | **CONCLUIDO 24/08** — commits rebased sobre origin/main; `.gitignore` raiz criado. **Dados sensíveis FICAM FORA do repo**: `opencode.json` (com apiKey), `*.bak`, `*.odt` e node_modules ignorados. Incidente corrigido: um commit chegou a incluir o `opencode.json` e foi eliminado do histórico por rebase-drop ANTES de qualquer push — nada vazou ao remoto; ficheiro restaurado no disco. Push ao origin ainda pendente. |
