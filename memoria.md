@@ -162,6 +162,31 @@ Trabalhar e Estudar (2026)".
 - Lição: o fix do `mainEntityOfPage` reportado na sessão anterior não tinha
   persistido por edições paralelas no mesmo arquivo — sempre serializar.
 
+### Alinhamento ao padrão golden (25/08, apontado pelo editor)
+
+Editor marcou 5 seções fora do padrão. Comparação feita com os modelos
+golden (`modelo-lista-golden.html` e `modelo-review-golden.html`):
+
+1. **⚡ Escolha Rápida** → agora 3 blocos FIXOS lado a lado
+   (`repeat(3, 1fr)` + fallback 1 coluna <782px), cards com borda superior
+   colorida por cenário.
+2. **📊 Como chegamos às notas** → substituído pelo box amarelo 🧮 do
+   review-golden ("Como chegamos à nota 8,5", texto corrido com os pesos +
+   link como-avaliamos).
+3. **📊 Notas por critério** → substituído pelo bloco de avaliação golden:
+   cabeçalho com badge escuro "8.5/10 ⭐ Recomendado" + grid 3×2 de critérios
+   (label uppercase, nota 36px colorida — âmbar p/ 7,0–7,5, verde p/ ≥8,0)
+   com `<style>` responsivo (782px→2col, 480px→1col). Nota Geral antiga
+   incorporada ao badge.
+4. **❓ Perguntas Frequentes** → 6 Q&A convertidos para os cards roxos do
+   lista-golden (#5a4fcf) com sombra.
+5. **📑 Índice do conteúdo** → REMOVIDO: nenhum modelo golden tem índice.
+
+Patches: `tools/patch_guia_g_blocks_{a,b}.py` (templates) +
+`tools/patch_guia_g.py` (lógica por âncoras; FAQ via regex com assert de 6).
+Validação: checker 0 erros, tags balanceadas, JSON-LD íntegro, zero resíduos
+das versões antigas.
+
 ### Pendências restantes deste guia (só o editor resolve)
 
 | Item | Detalhe |
