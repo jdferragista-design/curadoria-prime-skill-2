@@ -227,3 +227,67 @@ das versões antigas.
   para produção.
 - Datas visíveis = datas de verificação real; instruções de fluxo vão em
   comentário HTML.
+
+---
+
+## Sessão 25/08/2026 — fechamento visual e de fontes do `melhores-techs-custo-beneficio-2026`
+
+Arquivo: `articles/html_output/melhores-techs-custo-beneficio-2026.html`
+
+### 1. 🏆 Veredito Final — visual realinhado ao golden
+- O bloco destoava: fundo azul `#dbeafe` + borda `#1a1f5c` e grid de **4 métricas
+  inventadas** (9,0 Custo-benefício · 8,8 Qualidade · 8,5 Cobertura · 8,5 Prova
+  social) que não pertencem à Régua v2.0 e contradiziam o bloco de avaliação
+  canônico já presente no artigo.
+- Substituído pelo componente canônico `💡 Veredito:` (fundo `#f0fdf4` + borda
+  esquerda `#22c55e`), texto do veredito mantido, nota **8,5/10 (Régua v2.0)**
+  agora coerente com o badge do bloco de avaliação.
+
+### 2. 🔄 Alternativas e upgrades — 3 blocos lado a lado
+- Grid `auto-fit minmax(280px)` → **`repeat(3, 1fr)` fixo** (padrão Escolha
+  Rápida) + fallback `@media <782px → 1 coluna`. ID wrapper `#alternativas-blocks`.
+
+### 3. 📚 Fontes consultadas — reconstruída (editor apontou escassez)
+- Antes: só 5 homepages institucionais + frase sem links → falso positivo do
+  checker (conta `<li><a>`, reportava "~0 itens").
+- Agora: lista `<ul><li>` com **~6 itens**, fichas oficiais reais fornecidas
+  pelo editor + preços com `rel="sponsored"`:
+  - Anker 737 A1289 (`anker.com/products/a1289`) — confirmado ao vivo 24.000mAh/140W
+  - TP‑Link Archer AX12 BR (`tp-link.com/br/.../archer-ax12/`) — confirmada BR
+  - JBL Wave Buds 2 (`jbl.com.br/WAVE-BUDS-2.html`) — URL do editor (fetch 403)
+  - Logitech Pebble Keys 2 (`logitech.com/pt-br/shop/p/pebble-keys-2`) + homepage
+  - UGREEN BR Hub 5‑in‑1 (`ugreenofficial.com.br/.../ugreen-ultra-slim-5-in-1-usb-c-hub`) — confirmado ao vivo (HDMI 4K30, 2× USB‑A, Ethernet)
+  - Xiaomi Mi BR Power Bank 10.000mAh 22,5W (`mibrasil.com.br/...p5652`)
+  - Amazon/ML com data 24/08
+- Nota: JBL, Logitech e Mi/Brasil **bloquearam o fetch** — usadas as URLs do
+  editor como fonte editorial; confirmação visual final fica com o editor.
+
+### 4. Correção de VERACIDADE no card de upgrade (§7 / regra final)
+- O card dizia `Xiaomi 10.000mAh (R$ 149) e economize ~R$ 490`. **R$ 149 sem
+  origem no LEDGER** (só há Xiaomi *Pad* lá). Preço inventado → removido.
+- Rescrito: "troque o Anker 737 por um Xiaomi 10.000mAh 22,5W — economiza
+  (valor varia; veja o preço do dia na loja oficial Xiaomi Brasil)" + link real
+  da loja oficial na seção de fontes.
+
+### Validação
+```
+python3 tools/checar_conformidade.py articles/html_output/melhores-techs-custo-beneficio-2026.html
+→ ✅ Aprovado · 0 erros · 2.740 palavras · fontes ~6 itens · 18 afiliados com rel="sponsored"
+div 110/110 · ul 9/9 · nenhum resíduo de "R$ 149"/"economize 490"
+```
+
+### Pendências deste guia (só o editor)
+| Item | Detalhe |
+| --- | --- |
+| Subir imagens no WP Media | hero `hero-melhores-techs-custo-beneficio-2026.jpg` + 7 fotos |
+| Definir agendamento | datePublished 19/08 está como placeholder até agendar |
+| Confirmar visual JBL/Logitech/Mi | fetch bloqueado por bot; conferir páginas antes do ar |
+| Preço do Xiaomi 10.000mAh | quando capturar, voltar o R$ com data no card e adicionar ao LEDGER |
+
+### Lições desta sessão
+- O `checar_conformidade.py` não mede QUALIDADE de fontes — só presença
+  (`<li><a>`). Revisão humana segue necessária para rastreabilidade (§14).
+- Link de afiliado na seção de fontes PRECISA de `rel="sponsored"`, senão o
+  gate bloqueia (pegou na primeira passada).
+- Preço "de upgrade/alternativa" sem origem em captura (LEDGER) = dado não
+  rastreável → omitir, não inventar.
