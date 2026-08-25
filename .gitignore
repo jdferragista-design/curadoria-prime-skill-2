@@ -3,6 +3,7 @@ opencode.json
 
 # Dependências
 node_modules/
+__pycache__/
 
 # Backups locais
 *.bak
