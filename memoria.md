@@ -180,7 +180,13 @@ golden (`modelo-lista-golden.html` e `modelo-review-golden.html`):
    incorporada ao badge.
 4. **❓ Perguntas Frequentes** → 6 Q&A convertidos para os cards roxos do
    lista-golden (#5a4fcf) com sombra.
-5. **📑 Índice do conteúdo** → REMOVIDO: nenhum modelo golden tem índice.
+5. **📑 Índice do conteúdo** → inicialmente removido por engano (nenhum
+   golden tem índice). Editor corrigiu: era para MUDAR PARA O PADRÃO.
+   Restaurado em `tools/patch_guia_h.py` com a linguagem visual dos goldens
+   (card branco #e2e2f0, título uppercase, setas ▸ roxas #5a4fcf, links
+   cinza, 2 colunas c/ fallback mobile). Bônus: as âncoras antigas
+   `#resposta-rapida` e `#tabela` eram QUEBRADAS (nunca existiram como id);
+   novo índice tem 12 itens, todos verificados contra os ids reais.
 
 Patches: `tools/patch_guia_g_blocks_{a,b}.py` (templates) +
 `tools/patch_guia_g.py` (lógica por âncoras; FAQ via regex com assert de 6).
