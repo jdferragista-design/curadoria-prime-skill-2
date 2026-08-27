@@ -124,7 +124,8 @@ universal do Google.
 | URL | Tipo |
 | --- | --- |
 | `/power-bank-no-aviao-2026/` | GUIA — **CONCLUIDO** · agendado 25/08/2026 08:00 · novo artigo · arquivo em `articles/html_output/power-bank-no-aviao-regras-anac-2026.html` · aprovado no checker (0 erros) |
-| `/melhores-techs-custo-beneficio-2026/` | GUIA — **PRONTO_PARA_REVISAO** 25/08 · REPOSICIONADO de "volta às aulas" (dessazonalizado no fim de agosto) para evergreen "melhores techs custo-benefício para trabalhar e estudar" — novo título/slug/canonical/arquivo (`articles/html_output/melhores-techs-custo-beneficio-2026.html`) · mercado re-verificado: 14 capturas no LEDGER, total R$ 1.563,97 · seção 7 reescrita (suporte giratório c/ ventoinha, não PRINCASE) · aviso Anker A1695 (Amazon) vs A1289 (ML exclusivo) · aprovado no checker (0 erros) · pendência p/ agendar: subir imagens no WP Media |
+| `/melhores-techs-custo-beneficio-2026/` | GUIA — **AGENDADO** 27/08/2026 08:00 · REPOSICIONADO de "volta às aulas" para evergreen "melhores techs custo-benefício para trabalhar e estudar" · mercado re-verificado: 14 capturas no LEDGER, total R$ 1.563,97 · fontes reconstruídas c/ fichas oficiais + preço Xiaomi inventado removido · visual alinhado ao golden (veredito 💡, alternativas 3 col.) · aprovado no checker (0 erros) · conferir imagens no WP Media antes de publicar |
+| `/tablet-infantil-dia-das-criancas-2026-3-melhores/` | LISTA — **AGENDADO** 29/08/2026 08:00 · novo artigo sazonal · arquivo em `articles/html_output/tablet-infantil-dia-das-criancas-2026-3-melhores.html` · preços/avaliações reais dos 3 SKUs (capturas 25/08 no LEDGER: Kid Pad R$ 856,75 ML/R$ 884,44 Amz · A9 R$ 1.114 ML sem estoque Amz · Vision R$ 409,52 Amz/R$ 571,12 ML) · notas unificadas 7,0/8,5/8,5 · padronização visual golden completa (índice 2 col., avaliações 6 cards 1/plataforma, grids lado a lado, bloco avaliação+🧮, botões cores oficiais ML/Amazon) · aprovado no checker (0 erros) · pendências p/ publicar: subir imagens no WP Media (`/2026/09/*.webp`) + URLs dos anúncios ML no LEDGER + re-verificar preços em 10/09/2026 |
 | `/presentes-dia-dos-pais-2026-tech-premium/` | LISTA/GUIA |
 | `/presentes-dia-dos-pais-tech-ate-300/` | LISTA/GUIA |
 | `/galaxy-watch7-44mm-vale-a-pena/` | REVIEW — saúde |
@@ -212,3 +213,28 @@ canonical. Refaça mercado, evidências, Régua quando aplicável, template
 canônico e relatório de imagens. Não publique.`
 
 A Skill deve entregar conforme o contrato do SKILL.md.
+
+---
+
+# Rodada 27/08/2026 — P0 estabilizado (18 artigos com 0 erros)
+
+Correção em lote dos artigos de maior risco (alegações de teste físico, schema
+`aggregateRating`/`reviewCount`, JSON-LD inválido). Todos com **0 erros** no
+`checar_conformidade.py`. Arquivos em `articles/html_output/`.
+
+Estado: **PRONTO_PARA_REVISAO** (pendente: aplicação no WP + data de captura).
+
+| URL | Antes | Depois |
+|---|---|---|
+| `/samsung-hw-b400f-review/` | teste-físico + aggregateRating + sem honestidade | ✅ 0 erros (teste reescrito + Tipo de análise) |
+| `/samsung-galaxy-book4-review-2026/` | teste-físico + aggregateRating | ✅ 0 erros (citação reescrita + honestidade) |
+| 14 artigos com aggregateRating | aggregateRating/reviewCount no schema | ✅ 0 erros (removidos §2.4) |
+| `/presentes-dia-dos-pais-tech-ate-300/` | JSON-LD inválido (66 `<br/>`) | ✅ 0 erros (schema válido) |
+| `/apple-tv-4k/` | JSON-LD inválido (61 `<br/>`) | ✅ 0 erros (schema válido) |
+| `/purificador-de-agua-electrolux-pe12g-review/` | JSON-LD structure quebrada | ✅ 0 erros |
+
+Pendências editoriais (não bloqueiam): data de verificação em 14 artigos,
+posição da divulgação em 11, ressalva de ausência de teste em 7, bloco de
+contras em 9, densidade de keyword em 6. Detalhes: `articles/correcoes/RELATORIO-CORRECOES-P0-2026-08-27.md`.
+
+Ver relatório completo das correções P0.
