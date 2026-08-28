@@ -291,3 +291,229 @@ div 110/110 · ul 9/9 · nenhum resíduo de "R$ 149"/"economize 490"
   gate bloqueia (pegou na primeira passada).
 - Preço "de upgrade/alternativa" sem origem em captura (LEDGER) = dado não
   rastreável → omitir, não inventar.
+
+---
+
+## Sessão 25/08/2026 (tarde) — tablet-infantil: capturas reais do editor aplicadas
+
+Arquivo: `articles/html_output/tablet-infantil-dia-das-criancas-2026-3-melhores.html`
+Patch auditável: `tools/patch_tablet_infantil_mercado.py` (40 substituições, count==1).
+
+### Contexto
+Avaliação prévia apontou: HTML quebrado no índice (bloco de avaliação "engolido"
+pelo href do item 🔟), 3 famílias de notas conflitantes (9,0/8,5/8,5 vs 8.9/8.7/8.3
+vs Nota Geral 7,5), preço do Positivo 383 vs 499, e LEDGER vazio para os 3 SKUs.
+
+### Capturas reais do editor (25/08/2026)
+1. **Multi Kid Pad NB425 (Multilaser)** — ML: ⭐ 4,4/5 · **129 opiniões** · R$ **856,75** Pix
+   (de R$ 1.229, 30% OFF) · R$ 866,75 outros meios. Amazon: ⭐ **2,9/5** · **24 globais**
+   (10 BR) · R$ **884,44** (de R$ 949,99, 6% off) · URL `link.amazon/B0alnCFJU`.
+   Relatos: elogios a resistência/tela; críticas fortes a travamento, superaquecimento
+   e **bateria que para de carregar** (múltiplos relatos <1 ano).
+2. **Galaxy Tab A9 64GB/4GB prata** — ML: ⭐ **4,9/5** · **1.345 opiniões** · Loja oficial
+   Samsung · MAIS VENDIDO (11º em Tablets Samsung) · R$ **1.114** Pix / R$ 1.124 outros.
+   **Amazon sem estoque do Tab A9** (anúncio atual = A9+ 11", outro aparelho).
+
+### O que foi alterado no HTML
+- **Notas unificadas**: Multi 9,0→**7,0/10** (dados contradizem 9,0); A9 e Vision → 8,5/10
+  em todo o artigo (tabela, H2, veredito, cards, JSON-LD ratingValues).
+- **Ranking reordenado**: Tab A9 vira a recomendação "mais confiável"; Multi passa a
+  "melhor custo-benefício em tela grande, com ressalva de durabilidade".
+- **Preços**: Multi R$ 856,75 (Pix) / 884,44 (Amazon); Tab A9 R$ 1.114 (Pix) — aplicados
+  em hero, badges, tabela, resposta rápida, veredito, cards e FAQ (HTML + JSON-LD).
+- **Prova social** reescrita com dados reais (ML 4,4/5·129 e Amazon 2,9/5·24 do Multi;
+  ML 4,9/5·1.345 do A9). Removido "4,8/5 · ~1.200" e "4,5/5 · 4.663" (não batiam).
+- **CTA do Tab A9**: botão Amazon REMOVIDO (aponta p/ A9+ 11" errado e sem estoque);
+  aviso âmbar + botão único ML.
+- **CTA do Multi**: href Amazon atualizado para `B0alnCFJU` (URL da captura do editor).
+- **HTML quebrado corrigido**: item 🔟 do índice agora `#veredito`; bloco "Como chegamos
+  às notas" + "Notas por critério" virou bloco `wp:html` próprio (antes engolido pelo href).
+- **mainEntityOfPage** alinhado ao canonical `/tablet-infantil-dia-das-criancas-2026-3-melhores/`.
+- **Fontes** reestruturada em `<ul><li>` (4 itens) com datas de verificação/re-verificação.
+
+### LEDGER
++4 capturas (2026-08-25): `multi-kid-pad-nb425/ml` e `/amazon`, `galaxy-tab-a9/ml`,
+`positivo-vision-tab-7-minions/ml`. `ledger.py validar` → 0 erros, alertas esperados
+(3 linhas novas sem URL de ML — captura do editor não trouxe URL de anúncio; 1 "desconto
+de fachada" no Tab A9).
+
+### Parte 2 — Positivo Vision Tab 7 (captura real do editor)
+Patch: `tools/patch_tablet_infantil_positivo.py` (15 substituições).
+Dados reais: ML ⭐ **4,7/5 · ~1.196 opiniões** · MAIS VENDIDO (9º Tablets Positivo) ·
+R$ **571,12 Pix** (de R$ 629) / R$ 581,12 outros / 10x R$ 58,11 · inclui **capa + mochila**.
+Relatos: custo-benefício/design/resistência elogiados; bateria curta (~2–3h), esquenta,
+câmera fraca, Android Go limita apps.
+- Preço corrigido em hero/badge/tabela/resposta rápida/card/veredito/fontes
+  (**resolveu o conflito R$ 383 vs R$ 499 — ambos errados**); faixa do badge → "De R$ 571 a R$ 1.124".
+- Hero "**+18 mil avaliações**" removido (real: ~2.700 somadas nas lojas).
+- Frase truncada da seção Vision completada ("A capa protetora" sem continuação) +
+  capa/mochila inclusas + ressalvas reais.
+- Card de avaliação do Vision reescrito (era "Amazon 4,6/5 · ~640", não confirmado).
+
+### Parte 3 — Amazon do Vision Tab 7 (captura real do editor)
+Patch: `tools/patch_tablet_infantil_amazon_vision.py` (12 substituições).
+Dados reais: Amazon **R$ 409,52 Pix/NuPay** (de R$ 626,92) / R$ 455,04 em 9x R$ 50,56 ·
+⭐ **4,1/5 · 38 globais** (19 BR) · loja oficial Positivo · kit inclui **só capa** (sem mochila).
+URL da captura: `link.amazon/B0cJleAj2` — botão Amazon do card atualizado para ela.
+- Vision vira o mais barato do comparativo: **R$ 409,52 (Amazon, só capa) vs R$ 571,12
+  (ML, capa + mochila)** — kit varia por loja, explicitado em hero/resposta rápida/
+  tabela/card/seção/fontes/veredito.
+- Card de avaliação do Vision agora mostra ML 4,7/5·1.196 E Amazon 4,1/5·38.
+- Badge faixa → "De R$ 409 a R$ 1.124". "Escolha da Amazon" NÃO usado como selo
+  (regra da skill mercado).
+
+### Parte 4 — reorganização estrutural e visual para o padrão canônico
+Script: `tools/reorganiza_tablet_infantil.py` (fatiamento por linhas com asserts de limites).
+**Ordem anterior estava fora do padrão**: byline no topo, box "Tipo de análise" duplicado
+(antes do hero E após a byline), bloco Régua logo após o índice (antes da intro e dos
+produtos), transparência depois da intro, sem "Última atualização".
+**Nova ordem (= melhores-techs aprovado)**:
+1. Transparência → 2. Hero (escurecido #9B2226→#5C1013; era vermelho claro #FF6B6B)
+→ 3. Hero image → 4. Prova social → 5. Índice golden (setas ▸ roxas, card branco,
+2 colunas; eram emojis numerados) → 6. Intro → 7. Tipo de análise (1× só) →
+8. Metodologia → 9. Resposta rápida → 10. Tabela → 11-13. Produtos →
+14. Controle parental → 15. Idade → 16. Para quem NÃO → 17. Quando comprar →
+18. FAQ em cards roxos (eram boxes cinza) → 19. **Régua movida p/ pos-FAQ**
+(posição canônica) → 20. Veredito + **box 💡 verde** com o resumo → 21. Onde comprar →
+22. Fontes → 23. 📌 Última atualização (novo) → 24. Byline movida p/ o fim →
+25. Aviso de afiliado → JSON-LD.
+Extras: adicionado `<!-- /wp:html -->` faltante do bloco Régua (perdido no FIX B
+da sessão anterior); box "Tipo de análise" duplicado do topo removido.
+Validação: div 88/88 · ul 8/8 · li 36/36 · p 44/44 · checker 0 erros · 2.897 palavras.
+
+### Validação final (25/08, pós-reorganização)
+```
+checker: ✅ Aprovado · 0 erros · 2.733 palavras · 7 afiliados rel=sponsored
+balanço: div 87/87 · ul 7/7 · li 26/26 (o +1 de '<li' é o <link> do head)
+resíduos: zero de 9,0/10 · 8.9/8.7/8.3 · 4,8/5 · ~1.200 · R$ 898/759/1.299 (mantido R$ 899
+apenas como histórico do Prime Day)
+```
+
+### Pendências que seguem para o editor (BLOQUEIAM o fechamento)
+| Item | Detalhe |
+| --- | --- |
+| ~~Recapturar Positivo Vision Tab 7~~ | **RESOLVIDO 25/08** — R$ 571,12 Pix · 4,7/5 · 1.196 opiniões; conflito 383 vs 499 eliminado |
+| **URLs de ML dos 3 SKUs** | capturas do editor não trouxeram URL de anúncio ML (LEDGER alerta "sem URL" nas linhas novas) |
+| **Upload de imagens no WP Media** | hero `tablet-infantil-dia-criancas-2026-hero-970x600.webp`, thumb `...-1376x768.webp`, 3 produtos `-420.webp` |
+| **Agendamento** | datePublished/dateModified = 12/09/2026 (placeholder) |
+| **Re-verificar em 10/09/2026** | véspera da Semana da Criança (nota em comentário HTML) |
+
+### Lições desta sessão
+- HTML quebrado (bloco engolido por atributo `href`) NÃO é pego pelo checker — validar
+  balanço de div + ler o topo sempre.
+- O `editor` grava `\n` literal em strings Python ao inserir com quebra no JSON; para
+  `replace` com strings multilinha do HTML, usar âncoras que incluam contexto único
+  (ex.: prefixo `</div></div>`) para evitar colisão count=2.
+- Notas por produto podem coexistir com "Nota Geral" do guia (Régua v2.0) — mas números
+  por produto devem ser ÚNICOS em todo o artigo (tabela/H2/veredito/cards/JSON-LD).
+- Amazon "sem estoque" + link apontando para outro modelo = CTA removido + aviso âmbar
+  (nunca deixar botão de produto errado no ar).
+
+## Sessão 25/08/2026 — Parte 5: padronização visual completa do tablet-infantil
+
+Pedido do editor: 7 pontos fora do padrão. Corrigido via `tools/patch_tablet_infantil_visual.py`:
+1. **Índice** → padrão golden (`id="indice-conteudo"`, 2 colunas fixas em grid com 2 `<ul>`,
+   setas ▸ roxas, media query; título sem dois-pontos). Antes: `columns: 2` CSS.
+2. **O que dizem as avaliações** → agora **6 cards (1 por plataforma × 3 produtos)** com
+   citações literais das capturas de 25/08 (ML azul `#3485DB`, Amazon laranja `#FF9900`):
+   Kid Pad ML 4,4/5·129 + Amazon 2,9/5·24 (Priscila A., jun/2025); A9 ML 4,9/5·1.345 +
+   Amazon **sem estoque** (card informativo, sem avaliação inventada); Vision ML 4,7/5·1.196
+   + Amazon 4,1/5·38 (José Antonio V., ago/2026). Nomes semi-anonimizados + data + plataforma.
+3. **Resposta rápida** → 3 blocos lado a lado FIXOS `repeat(3,1fr)` (cards brancos,
+   borda superior colorida verde/azul/âmbar) — padrão Escolha Rápida do melhores-techs.
+4. **Qual tablet para cada idade?** → mesmo padrão `repeat(3,1fr)` lado a lado.
+5. **Régua** ('Como chegamos às notas' + 'Notas por critério') → substituídos pelo bloco
+   de avaliação golden (`id="avaliacao-tablets-infantil"`): cabeçalho com 3 badges escuros
+   (7.0 Multi / 8.5 Galaxy / 8.5 Vision) + grid 3×2 de critérios com números grandes +
+   caixa 🧮 explicando a metodologia. **Eliminada a "Nota Geral 7,5" órfã** (4ª família de
+   notas conflitantes que ainda restava).
+6. **Botões Onde Comprar**: ML vermelho do tema (#9B2226) e azul Samsung (#1428A0)
+   → **padrão oficial ML** (`linear-gradient(135deg,#2d3277,#1a1f5c)`, texto `#ffe600`);
+   botões Amazon já laranja oficial (#ff9900→#ff8500) ganharam sombra padrão.
+   Cores de referência: `alternativas-galaxy-tab-s10-fe-ipad-estudar-JA-COLADO.html`.
+
+Validação: checker 0 erros (3.112 palavras); div 104/104, ul 8/8, li 30/30, p 38/38;
+zero resíduos ('Nota Geral', 'columns: 2', gradientes antigos).
+
+Lição: ao reconstruir blocos aninhados (outer > p + grid > cards), conferir se o fecho
+tem um `</div>` para CADA nível aberto — o patch saiu com 1 div a menos e só o balanço pegou.
+
+## Sessão 25/08/2026 — Parte 6: agendamento confirmado no WP
+
+Editor agendou os dois guias no WordPress:
+- `melhores-techs-custo-beneficio-2026` → **AGENDADO 27/08/2026 08:00**
+- `tablet-infantil-dia-das-criancas-2026-3-melhores` → **AGENDADO 29/08/2026 08:00**
+
+`fila-atualizacao.md` atualizada (techs PRONTO_PARA_REVISAO → AGENDADO; tablet-infantil
+incluído na P1). Pendências que continuam abertas até a data de publicação:
+1. Imagens: conferir upload no WP Media — tablet usa caminhos `/2026/09/*.webp`
+   (hero 970x600, thumb, 3 produtos 420) — URL do HTML precisa bater com o arquivo real.
+2. LEDGER: faltam URLs dos anúncios ML dos 3 SKUs do tablet (capturas não trouxeram links).
+3. Re-verificação de preços do tablet em **10/09/2026** (véspera da Semana da Criança).
+4. Commit do trabalho desta sessão ainda pendente de aprovação do editor.
+
+## Sessão 25/08/2026 — Parte 7: correção editorial do Tab A9
+
+Editor apontou: **o Galaxy Tab A9 não é um tablet infantil**. Corrigido via
+`tools/patch_tablet_a9_convencional.py` + `_b.py` (+ 1 ajuste direto no hero):
+o artigo agora deixa explícito em TODOS os pontos que o Tab A9 é um
+**tablet convencional de entrada usado em modo Samsung Kids + capa avulsa**
+(não modelo infantil de fábrica): hero, índice, intro, resposta rápida, H2 da seção,
+tabela (coluna "Galaxy A9 (modo Kids)*" + legenda nova dos asteriscos TFT/capa),
+card de idade 9–12, bullet "para quem NÃO vale", 2 FAQs, veredito, card de compra,
+JSON-LD (itemListElement + acceptedAnswer). Resíduos zerados; checker 0 erros;
+tags balanceadas; JSON-LD válido.
+
+Lição de processo: script de patch em 2 partes NÃO pode re-ler o arquivo do disco
+no meio (`s = open(F).read()`) — descarta as edições em memória da parte anterior.
+E validações em paralelo podem medir o arquivo antes de o patch terminar:
+validar sempre DEPOIS, em comando separado.
+
+## Sessão 25/08/2026 — Parte 8: auditoria ao vivo das imagens (curl HTTP status)
+
+Editor informou que todas as imagens estão no WP. Verificação ao vivo (curl):
+- **tablet-infantil**: 4 imagens `/2026/08/` → 200 OK (hero, Kid, A9, Vision) ✓
+- **tablet-infantil**: thumb `2026/09/tablet-...-thumb-1376x768.webp` → **404**
+  (nem em /2026/08/ com variantes de nome) — pendente: subir OU colar URL real.
+- **melhores-techs**: avatar do autor tinha TYPO — `cristian-curadoria-prime.jpg`
+  → corrigido para `cristiano-curadoria-prime.jpg` (**200 OK** confirmado ao vivo).
+- **melhores-techs**: ainda 404 (não encontradas variantes): 
+  `hero-melhores-techs-custo-beneficio-2026.jpg` e
+  `suporte-giratorio-notebook-ventoinha.jpg` — pendente: subir OU colar URLs reais.
+
+Lição: "está no WP" precisa ser conferido por HTTP status do link exato do HTML —
+nomes parecidos (cristian/cristiano) e pasta do mês do upload derrubam imagem no ar.
+
+## Sessão 27/08/2026 — Parte 9: correção P0 (18 artigos) + aplicação no WordPress
+
+- **Diagnóstico** (`audit/auditoria-48-artigos.csv`): 18 artigos de maior risco —
+  16 com `aggregateRating`/`reviewCount`/`ratingCount` no JSON-LD (§2.4),
+  2 com JSON-LD quebrado por wpautop (`<br />` dentro do `<script>`),
+  1 com estrutura @graph corrompida (purificador), 2 com alegação de teste
+  físico (§3) e 7 sem declaração de ausência de teste.
+- **Correção local**: `tools/corrigir_p0_artigos.py` + `tools/adicionar_honestidade.py`
+  → 18/18 com 0 erros no `checar_conformidade.py`. Commit `18bd18b`.
+  Declaração canônica: "A Curadoria Prime **não testou esta unidade**
+  fisicamente" (o checker casa com "não testou" — não usar "este aparelho").
+- **Aplicação no WP** (`tools/aplicar_wp_p0.py`): pipeline-check (render público
+  → pipeline → igualdade byte a byte com os locais), raw autenticado com
+  backup (`articles/wp_raw_backups/`), espelho processado e validado
+  (`articles/wp_raw_mirror/`), PUT por post com verificação + auditoria do
+  render. **18/18 gravados e conferidos** (blocos de 3 posts, sleep 2s).
+- **Lição 1 — raw ≠ render**: o WP guarda o raw com aspas retas e texturiza
+  no render (`&#8220;`/`&#8221;`); literais de correção precisam das duas
+  variantes. Dentro de `<script>` não há texturização (raw == render).
+- **Lição 2 — wpautop engole comentários HTML no render** (`<!-- x -->` some):
+  diff byte a byte contra o render gera falsa divergência; o gate de gravação
+  são as checagens objetivas sobre o raw (`--validar`).
+- **Lição 3 — pipeline-check antes de gravar**: aplicar o pipeline ao render
+  público e exigir igualdade com os arquivos corrigidos provou cobertura 100%
+  e pegou 5 divergências que o checker de 16 pontos não detectava (duplicata
+  de declaração no hw-b400f, vírgula órfã do soundcore, aspas do band-10).
+- **Pendências editoriais** (não bloqueiam): data de verificação (14),
+  posição da divulgação de afiliado (11), bloco de contras (9), densidade de
+  keyword (6), revisão visual das citações reescritas (ids 3310 e 4185).
+
+
+
+

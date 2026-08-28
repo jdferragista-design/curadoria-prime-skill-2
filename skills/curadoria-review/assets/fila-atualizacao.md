@@ -238,3 +238,26 @@ posição da divulgação em 11, ressalva de ausência de teste em 7, bloco de
 contras em 9, densidade de keyword em 6. Detalhes: `articles/correcoes/RELATORIO-CORRECOES-P0-2026-08-27.md`.
 
 Ver relatório completo das correções P0.
+
+---
+
+# Rodada 27/08/2026 (b) — Aplicação no WordPress concluída (18/18 gravados)
+
+Os 18 artigos P0 da rodada (a) foram aplicados DIRETAMENTE no WordPress via
+`tools/aplicar_wp_p0.py` (PUT no `content.raw` autenticado, com backup
+prévio, verificação pós-gravação e auditoria do render público). O gate
+`--pipeline-check` provou antes que o pipeline reproduz byte a byte os
+arquivos corrigidos a partir do render.
+
+Estado: **APLICADO_NO_WP** (aguarda conferência visual do editor + data de
+captura de preços).
+
+Pendências editoriais remanescentes (não bloqueiam): data de verificação
+(14), posição da divulgação de afiliado (11), bloco de contras (9),
+densidade de keyword (6), revisão visual das citações reescritas
+(hw-b400f id 3310 e galaxy-book4 id 4185).
+
+Backups dos raws originais: `articles/wp_raw_backups/`.
+Espelho do raw corrigido: `articles/wp_raw_mirror/articles/html_output/`.
+Detalhes: `articles/correcoes/RELATORIO-CORRECOES-P0-2026-08-27.md` (seção
+"Aplicação no WordPress").

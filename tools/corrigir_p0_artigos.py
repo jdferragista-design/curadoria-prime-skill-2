@@ -106,6 +106,20 @@ def remove_aggregate_rating(content):
     return content, total
 
 
+# ── Tipo B½: vírgulas penduradas antes de } ou ] dentro do JSON-LD ──
+def limpar_virgulas_jsonld(content):
+    """Remove vírgulas que ficaram penduradas antes de } / ] nos blocos JSON-LD
+    (ex.: quando aggregateRating era a última propriedade do objeto e foi removida).
+    JSON válido nunca contém ",}" nem ",]", portanto é no-op em JSON saudável."""
+    def repl(m):
+        bloco = m.group(2)
+        limpo = re.sub(r',(?=\s*[\}\]])', '', bloco)
+        if limpo != bloco:
+            print("  🔧 Vírgula(s) pendurada(s) removida(s) do JSON-LD")
+        return m.group(1) + limpo + m.group(3)
+    return RE_JSONLD_BLOCK.sub(repl, content)
+
+
 # ── Tipo B: corrigir wpautop <br /> em JSON-LD ──
 RE_JSONLD_BLOCK = re.compile(
     r'(<script type="application/ld\+json">)(.*?)(</script>)',
@@ -129,6 +143,31 @@ def fix_wpautop_jsonld(content):
     return RE_JSONLD_BLOCK.sub(replacer, content)
 
 
+# ── Tipo E: descrição JSON-LD com aspas não escapadas ──
+# A aspas de 1,72" fechava a string do JSON e quebrava o parse.
+LITERAIS_JSONLD = {
+    "xiaomi-smart-band-10-vale-a-pena.html": [(
+        '"description": "Xiaomi Smart Band 10 vale a pena em 2026? Review '
+        'completo: tela AMOLED 1,72", bateria de 21 dias, 150 modos '
+        'esportivos, monitoramento avançado de saúde. +400 avaliações '
+        'analisadas."',
+        '"description": "Xiaomi Smart Band 10 vale a pena em 2026? Review '
+        'completo: tela AMOLED 1,72 polegadas, bateria de 21 dias, 150 modos '
+        'esportivos e monitoramento avançado de saúde. Análise de +400 '
+        'avaliações."',
+    )],
+}
+
+
+def fix_literals_jsonld(content, fname):
+    """Aplica substituições literais de trechos JSON-LD corrompidos."""
+    total = 0
+    for velho, novo in LITERAIS_JSONLD.get(fname, []):
+        content, n = trocar(content, velho, novo, "jsonld-literal")
+        total += n
+    return content, total
+
+
 # ── Tipo D: reescrever alegações de teste físico (§3) ──
 FIXO_3310_ANTES = '💡 <strong>O Grande Trunfo (Voice Enhance):</strong> Em nossos testes, o modo Voice Enhance aplicou um filtro DSP que elevou as frequências entre 1kHz e 3kHz. O resultado? Diálogos em novelas, jornais e séries como <em>The Crown</em> ficam cristalinos, sem que você precise ficar ajustando o volume a cada cena. Neste quesito específico, ela supera a JBL SB180 e a LG SQC1.'
 
@@ -144,11 +183,12 @@ def fix_teste_fisico(content, fname):
     if fname == "samsung-hw-b400f-review.html":
         content, n = trocar(content, FIXO_3310_ANTES, FIXO_3310_DEPOIS, "teste-fisico-3310")
         total += n
-        if "não testamos" not in content.lower() and "não fizemos teste" not in content.lower():
+        if "não testou" not in content.lower():
             decl = '<p><strong>Tipo de análise:</strong> pesquisa editorial baseada em especificações oficiais, testes independentes publicados e relatos de compradores. A Curadoria Prime não testou esta unidade fisicamente.</p>\n'
-            ancora = 'Entenda nossa metodologia completa →</a>\n</div>'
-            if ancora in content:
-                content = content.replace(ancora, 'Entenda nossa metodologia completa →</a>\n</div>\n\n' + decl, 1)
+            ancora_re = re.compile(r'(Entenda nossa metodologia[^<]*→</a>\s*</div>)')
+            m = ancora_re.search(content)
+            if m:
+                content = content[:m.end(1)] + '\n\n' + decl + content[m.end(1):]
                 print(f"  ✅ Declaração de ausência de teste adicionada (3310)")
             else:
                 print(f"  ⚠️  Âncora da metodologia (3310) não encontrada — insira manualmente")
@@ -156,6 +196,24 @@ def fix_teste_fisico(content, fname):
         content, n = trocar(content, FIXO_4185_ANTES, FIXO_4185_DEPOIS, "teste-fisico-4185")
         total += n
         print(f"  ✅ Citação buyer review reescrita como relato terceirizado (4185)")
+        # Variante para o raw do WP (aspas retas — o render do WP texturiza
+        # para &#8220;/&#8221;, então o raw nunca contém as entidades).
+        content, n = trocar(content, '"Usei a quase 1 mês. É',
+                            '"Relato publicado de comprador: quase 1 mês de uso. É',
+                            "teste-fisico-4185-raw")
+        total += n
+        if "não testou" not in content.lower():
+            decl_b4 = ('<br><br><strong>Tipo de análise:</strong> pesquisa '
+                       'editorial baseada em especificações oficiais da Samsung, '
+                       'testes independentes publicados e relatos de compradores. '
+                       'A Curadoria Prime não testou esta unidade fisicamente.')
+            ancora_b4 = re.compile(r'(Entenda nossa metodologia completa de testes →</a>)')
+            if ancora_b4.search(content):
+                content = ancora_b4.sub(lambda m: m.group(1) + decl_b4,
+                                        content, count=1)
+                print(f"  ✅ Declaração de ausência de teste adicionada (book4)")
+            else:
+                print(f"  ⚠️  Âncora da metodologia (book4) não encontrada")
     return content, total
 
 
@@ -175,6 +233,21 @@ def fix_purificador_structure(content):
     
     # Verifica se tem BreadcrumbList dentro de mainEntity
     if '"BreadcrumbList"' not in block:
+        return content
+    
+    # ── Padrão observado no raw/render WP (2026-08-27) ──
+    # mainEntity nunca fechado: ..."<text>" } } , { "BreadcrumbList" ...
+    # Correção: fechar ] } , antes do BreadcrumbList.
+    pat_bc = re.compile(r'\}\s*\}\s*,\s*(\{\s*"@type":\s*"BreadcrumbList")', re.S)
+    m_bc = pat_bc.search(block)
+    if m_bc:
+        substituicao = '}\n}\n    ]\n  },\n  ' + m_bc.group(1)
+        block_novo = block[:m_bc.start()] + substituicao + block[m_bc.end():]
+        content = content.replace(
+            script_match.group(0),
+            script_match.group(0).replace(block, block_novo, 1), 1)
+        print("  🔧 Estrutura JSON-LD do purificador: mainEntity fechado "
+              "antes do BreadcrumbList")
         return content
     
     # O problema: após o fechamento da última Question },
@@ -246,6 +319,11 @@ def main():
         # A. Remove aggregateRating
         content, n = remove_aggregate_rating(content)
         total_fixes["aggregateRating"] += n
+        content = limpar_virgulas_jsonld(content)
+        
+        # E. Literais JSON-LD (aspas não escapadas etc.)
+        content, n = fix_literals_jsonld(content, fname)
+        total_fixes["estrutura"] += n
         
         # C. Fix estrutura (apenas purificador)
         if fname == "purificador-de-agua-electrolux-pe12g-review.html":
