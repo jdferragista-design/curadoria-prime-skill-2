@@ -5,6 +5,49 @@ retomar exatamente daqui sem re-diagnóstico.
 
 ---
 
+## Sessão 29/08/2026 — browser-harness instalado + guia melhores-smartphones-custo-beneficio-2026 criado
+
+### Estado encontrado ao retomar
+
+- Pauta de 15 dias aprovada; primeiro item: `/melhores-smartphones-custo-beneficio-2026/` (02/09).
+- Pedido do dono: instalar o **browser-harness** para melhorar criação/atualização de artigos.
+- Todos os dados de preço/rating foram coletados ANTES com curl/WebSearch; nesta sessão o fluxo passou a usar browser-harness.
+
+### O que foi feito
+
+**1. Browser-harness instalado e conectado (configurado em 29/08/2026)**
+- `uv 0.12.7` instalado em `~/.local/bin`; `browser-harness 0.1.10` via `uv tool install --python 3.12`.
+- Skill registrada em `~/.claude/skills/browser-harness/SKILL.md` (o dono rodou o comando — o classificador do Claude exige confirmação explícita do usuário para instalar pacote externo e escrever nessa pasta).
+- Conexão ao Chrome local via CDP: `chrome://inspect/#remote-debugging` → marcar "Allow remote debugging".
+- Gravações locais **desabilitadas** (default). Comando único `.ll: `browser-harness` com heredoc Python (`print(page_info())`).
+- Uso: para scraping dinâmico/preço autenticado, preferir browser-harness; para HTML estático, `curl` com UA de navegador continua.
+
+**2. Artigo `melhores-smartphones-custo-beneficio-2026` (AGENDADO 02/09/2026 08:00)**
+- Re-angle aprovado pelo dono: guia "melhores celulares custo-benefício 2026" por faixas de preço (até R$ 1.000 / R$ 1.000–1.600 / acima de R$ 2.000), maximizando link interno para os 5 reviews já publicados.
+- Arquivo: `articles/html_output/melhores-smartphones-custo-beneficio-2026.html` · 2.668 palavras · nota guia **8,2/10** (Régua v2.0) · produto-âncora **Redmi Note 15 Pro 5G**.
+- **Dados reais capturados via browser-harness na Amazon em 29/08/2026**:
+  - Galaxy A16 5G → R$ 892 · 4,8★ · 1.085 avaliações
+  - Galaxy S24 FE → R$ 1.414 · 4,6★ · 180 avaliações
+  - Moto G56 5G → R$ 1.599 · 4,8★ · 1.584 avaliações
+  - Redmi Note 14 Pro+ → R$ 2.049 · 4,5★ · 134 avaliações
+  - Redmi Note 15 Pro → R$ 2.055 · 4,8★ · 308 avaliações
+- Links de afiliado reais extraídos dos reviews publicados (link.amazon/B0bJP0Zmr G56/A16, B02dV4jSd N15P, B0cenYgnK N14P+, meli.la/*).
+- **Imagens**: todas reais do WP Media — hero nova `hero-melhores-smartphones-custo-beneficio-2026-scaled.webp` + fotos dos 5 produtos vindas dos reviews (frente-atras G56, D_NQ_NP ML A16, redmi-note-15-pro-5g-preto-frente-verso, Redmi-Note-14-Pro-Plus-5g-1800x984, galaxy-s24-review-2026.png).
+- Prompts de geração de imagem (hero 970×546 + destaque 1200×600): `articles/html_output/PROMPTS-IMAGENS-melhores-smartphones-custo-beneficio-2026.md`.
+- Checker: **0 erros** (JSON-LD TechArticle+ItemList+FAQPage, 12 links sponsored, honestidade, fontes URL reais).
+- Único alerta não-bloqueante: "galaxy" 3,7% (keyword-stuffing; aceitável pois é marca Samsung em 3 produtos).
+- Fila: registrado como **AGENDADO 02/09/2026 08:00** em `fila-atualizacao.md`. Pendência: re-verificar preços no dia.
+
+### Lições aprendidas
+
+- **ASINs podem estar trocados na busca da Amazon**: o primeiro resultado de "redmi note 15 pro" retornou outro produto (R$ 4.949, 1★). SEMPRE abrir a página de produto (confirmar título) antes de gravar preço/ASIN.
+- **Seletores da Amazon variam**: `#productTitle`/`.a-price-whole` só existem na página de produto; na listagem usar `[data-component-type="s-search-result"]`. Algumas buscas retornam revendedor caro — cruzar com o review publicado (que já tem o ASIN/link de afiliado correto).
+- **Mercado Livre via browser-harness**: `.poly-card` e `.ui-search-layout__item` não retornaram; preços do ML em buscas vieram muito altos (revendedor). Para o ML, confiar nos links de afiliado do review publicado + WebSearch.
+- **Instalar ferramenta externa exige confirmação do usuário**: o classificador do Claude bloqueia `uv tool install` e escrita em `~/.claude/skills/` até o usuário confirmar explicitamente (run manual via `!`, ou regra de permissão). Não contornar o bloqueio.
+- **Imagens dos produtos devem vir do WP Media dos reviews publicados**, nunca placeholder inventado — o dono pediu explicitamente.
+
+---
+
 ## Sessão 24/08/2026 — retomada e fechamento dos 3 guias novos
 
 ### Estado encontrado ao retomar
@@ -517,3 +560,67 @@ nomes parecidos (cristian/cristiano) e pasta do mês do upload derrubam imagem n
 
 
 
+
+## Sessão 30/08/2026 — Implementação do Cluster "Dia das Crianças 2026" e Guia de Agentes
+
+### Objetivo
+Produzir o conteúdo do cluster "Dia das Crianças 2026", iniciando pelo hub/pillar guide, garantindo conformidade total com o padrão visual Golden.
+
+### O que foi feito
+
+**1. Guia  (Clonagem do Padrão Golden)**
+- Realizado rewrite estrutural profundo para espelhamento técnico do `modelo-lista-golden.html`.
+- **Implementações Visuais:**
+    - Hero block com gradientes específicos.
+    - Metodologia com acentos em `#5a4fcf`.
+    - Seção "Matemática da Curadoria" com pesos percentuais de avaliação.
+    - **Sequência Modular de Produtos:** Imagem $\rightarrow$ Badges de Rank $\rightarrow$ Texto $\rightarrow$ Tabela Técnica (degradê roxo) $\rightarrow$ Prós (setas ▸) $\rightarrow$ Pontos de Atenção (borda vermelha grossa) $\rightarrow$ Veredito $\rightarrow$ Box de Compra centralizado.
+    - Conclusão com Tabela de Resumo e box "⚡ Escolha rápida" (Grid `repeat(3, 1fr)` com fallback mobile).
+    - Bloco de links do Cluster de Apoio e Rodapé Editorial.
+    - Bloco do Autor com dimensões de foto `72x72`.
+- **Técnico & SEO:**
+    - Implementação de JSON-LD `@graph` complexo (Article, ItemList, FAQ, Breadcrumb).
+    - Correção de links de afiliado para `rel="sponsored noopener noreferrer"`.
+
+**2. Criação do arquivo `agent.md`**
+- Estabelecimento de diretrizes mandatórias para agentes de IA.
+- **Regras principais:**
+    - Fidelidade absoluta ao modelo canônico (proibido improvisar layouts).
+    - Padronização de cores (`#5a4fcf`, `#fde68a`) e componentes visuais.
+    - Compliance editorial: mínimo de 1500 palavras, proibição de citações fictícias e obrigatoriedade de fontes reais.
+    - Fluxo de validação: Comparação visual $\rightarrow$ `checar_conformidade.py` $\rightarrow$ Balanço de tags.
+
+### Próximos Passos
+- Iniciar a produção dos artigos "spoke" (apoio), começando por: "Tech Kids 2026: Melhores Tablets e Gadgets Educativos para Crianças".
+
+## Sessão 30/08/2026 — Implementação do Cluster "Dia das Crianças 2026" e Guia de Agentes
+
+### Objetivo
+Produzir o conteúdo do cluster "Dia das Crianças 2026", iniciando pelo hub/pillar guide, garantindo conformidade total com o padrão visual Golden.
+
+### O que foi feito
+
+**1. Guia `guia-presentes-dia-das-criancas-2026.html` (Clonagem do Padrão Golden)**
+- Realizado rewrite estrutural profundo para espelhamento técnico do `modelo-lista-golden.html`.
+- **Implementações Visuais:**
+    - Hero block com gradientes específicos.
+    - Metodologia com acentos em `#5a4fcf`.
+    - Seção "Matemática da Curadoria" com pesos percentuais de avaliação.
+    - **Sequência Modular de Produtos:** Imagem $\rightarrow$ Badges de Rank $\rightarrow$ Texto $\rightarrow$ Tabela Técnica (degradê roxo) $\rightarrow$ Prós (setas ▸) $\rightarrow$ Pontos de Atenção (borda vermelha grossa) $\rightarrow$ Veredito $\rightarrow$ Box de Compra centralizado.
+    - Conclusão com Tabela de Resumo e box "⚡ Escolha rápida" (Grid `repeat(3, 1fr)` com fallback mobile).
+    - Bloco de links do Cluster de Apoio e Rodapé Editorial.
+    - Bloco do Autor com dimensões de foto `72x72`.
+- **Técnico & SEO:**
+    - Implementação de JSON-LD `@graph` complexo (Article, ItemList, FAQ, Breadcrumb).
+    - Correção de links de afiliado para `rel="sponsored noopener noreferrer"`.
+
+**2. Criação do arquivo `agent.md`**
+- Estabelecimento de diretrizes mandatórias para agentes de IA.
+- **Regras principais:**
+    - Fidelidade absoluta ao modelo canônico (proibido improvisar layouts).
+    - Padronização de cores (`#5a4fcf`, `#fde68a`) e componentes visuais.
+    - Compliance editorial: mínimo de 1500 palavras, proibição de citações fictícias e obrigatoriedade de fontes reais.
+    - Fluxo de validação: Comparação visual $\rightarrow$ `checar_conformidade.py` $\rightarrow$ Balanço de tags.
+
+### Próximos Passos
+- Iniciar a produção dos artigos "spoke" (apoio), começando por: "Tech Kids 2026: Melhores Tablets e Gadgets Educativos para Crianças".
