@@ -485,6 +485,11 @@ def montar_vs(p, com_schema=False):
         bloco_transparencia(),
     ]
     for par in p.get("introducao", []): partes.append(_wp_paragraph(par))
+    # Secoes de analise (profundidade editorial)
+    for sec in p.get("secoes_analise", []):
+        partes.append(_wp_heading(sec.get("titulo", "")))
+        for par in sec.get("paragrafos", []):
+            partes.append(_wp_paragraph(par))
     if p.get("resposta_rapida_custo") or p.get("resposta_rapida_desempenho"):
         partes.append(_wp_heading("Resposta rapida: qual escolher?"))
         partes.append(_wp_html(f'<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px;">'

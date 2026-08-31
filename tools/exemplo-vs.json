@@ -21,6 +21,32 @@
     "Se você quer um notebook com tela touch ou conversível — nenhum dos dois oferece",
     "Se você usa macOS ou prefere o ecossistema Apple — a integração Samsung não se aplica"
   ],
+  "secoes_analise": [
+    {
+      "titulo": "Desempenho e processador: 13ª vs 12ª geração",
+      "paragrafos": [
+        "O Samsung Galaxy Book4 traz o <strong>Intel Core i5-1335U</strong>, processador de 13ª geração com arquitetura Raptor Lake, 10 núcleos (2 de performance + 8 de eficiência) e boost de até 4,6 GHz. O Lenovo IdeaPad Slim 3 usa o <strong>i5-1235U</strong> de 12ª geração (Alder Lake), mesma configuração de 10 núcleos mas com boost máximo de 4,4 GHz.",
+        "Na prática, a diferença de desempenho entre os dois é pequena em tarefas do dia a dia: navegação com dezenas de abas, pacote Office, planilhas pesadas e consumo de mídia em 4K rodam sem engasgos nos dois. A vantagem do 13ª geração aparece em cargas sustentadas — exportar um vídeo de 10 minutos ou compilar código — onde o Galaxy Book4 termina a tarefa cerca de 8 a 12% mais rápido.",
+        "O que realmente separa os dois em termos de capacidade é o <strong>armazenamento</strong>: o IdeaPad Slim 3 vem com SSD de 512GB enquanto o Galaxy Book4 entrega 256GB. Para quem acumula fotos, arquivos de trabalho e jogos, o dobro de espaço pode valer mais na prática do que os poucos pontos percentuais de desempenho a mais."
+      ]
+    },
+    {
+      "titulo": "Tela e construção: Full HD com diferenças sutis",
+      "paragrafos": [
+        "Os dois notebooks têm painel Full HD de 15,6 polegadas com resolução 1920x1080. A diferença está no <strong>brilho e na tecnologia</strong>: o Galaxy Book4 atinge cerca de 300 nits com cobertura de cores mais ampla, o que ajuda em ambientes com luz natural ou perto de janelas. O IdeaPad Slim 3 usa painel IPS com ângulos de visão bons, mas brilho máximo em torno de 250 nits.",
+        "Na construção, o Galaxy Book4 é mais fino (cerca de 15,4mm) e mais leve (1,8 kg), com acabamento em alumínio escovado nas cores dourado e grafite. O IdeaPad Slim 3 é um pouco mais encorpado e usa plástico na maior parte do chassi — mais simples, porém mais resistente a riscos e a um preço menor.",
+        "Para quem digita muito, o IdeaPad tem a vantagem do <strong>teclado numérico dedicado</strong> no lado direito, útil para planilhas e cálculos. O Galaxy Book4 não traz o bloco numérico, mas tem teclas maiores e mais bem espaçadas. A webcam dos dois é modesta (720p), suficiente para chamadas de vídeo com boa iluminação."
+      ]
+    },
+    {
+      "titulo": "Ecossistema e conectividade",
+      "paragrafos": [
+        "O grande trunfo do Galaxy Book4 é a integração com o <strong>ecossistema Samsung</strong>: o recurso de continuidade permite compartilhar a tela do celular Galaxy, arrastar arquivos entre dispositivos e usar o notebook como segundo monitor. Para quem já tem um Galaxy S24 ou superior, essa experiência coesa é difícil de replicar com o Lenovo.",
+        "Em portas, o IdeaPad Slim 3 sai na frente: oferece 2 portas USB-A 3.0, 1 USB-C, HDMI 1.4, leitor de cartão SD e entrada P2 para fone. O Galaxy Book4 traz 1 USB-C com Power Delivery, 2 USB-A (porém 2.0, mais lentos) e HDMI. Se você conecta muitos periféricos — pen drive, HD externo, impressora — o Lenovo acomoda tudo sem adaptador.",
+        "A bateria também muda o cálculo: o Galaxy Book4 tem célula de 54 Wh com autonomia declarada de até 10 horas de uso leve, enquanto o IdeaPad Slim 3 usa 47 Wh e fica em torno de 7 a 8 horas. Para quem passa o dia fora de casa sem tomada por perto, o Samsung é a escolha mais segura."
+      ]
+    }
+  ],
   "produto_a": {
     "nome": "Samsung Galaxy Book4",
     "nota": 8.5,
