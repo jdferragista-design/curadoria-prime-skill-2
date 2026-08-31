@@ -29,15 +29,15 @@ editorial. Itens sem data ficam na fila (P0/P1/P2/P3).
 
 ## 🕓 Próximos (em planejamento — cluster aberto)
 
-O cluster **Dia das Crianças 2026** ainda tem o **hub** `/guia-presentes-dia-das-criancas-2026/`
-em PRONTO_PARA_REVISAO (arquivo em `articles/html_output/`) e os **spokes** de apoio.
-Data sugerida: após o Switch (02–06/09) para não canibalizar o próprio cluster.
+O cluster **Dia das Crianças 2026** tem como **hub** o `/melhores-jogos-nintendo-switch-2026/`
+(AGENDADO 04/09). O guia-presentes original (`/guia-presentes-dia-das-criancas-2026/`) foi
+**CANCELADO** — o cluster foi reposicionado para "games/jogos" e o guia geral de presentes
+não será publicado.
 
 | Proposta | Slug | Tipo | Cluster | Estado |
 | --- | --- | --- | --- | --- |
-| Hub do cluster | `/guia-presentes-dia-das-criancas-2026/` | GUIA (hub) | Dia das Crianças | ⏳ PRONTO_PARA_REVISAO (sem data) |
+| HUB do cluster | `/melhores-jogos-nintendo-switch-2026/` | GUIA/GAMES | Dia das Crianças | 🟡 agendado 04/09 |
 | Spoke | Tech Kids 2026: tablets/gadgets educativos | LISTA/GUIA | Dia das Crianças | ⏳ a produzir |
-| Spoke | Games de Switch (este) | GUIA/GAMES | Dia das Crianças | 🟡 agendado 04/09 |
 
 > **Nota de canibalização:** o hub e os spokes do mesmo cluster devem ter datas
 > espaçadas (mín. ~3 dias) e links internos mútuos — nada de duas páginas
