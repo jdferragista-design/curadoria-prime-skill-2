@@ -110,12 +110,18 @@ universal do Google.
 
 # P0 — canibalização e risco
 
-| URL | Ação |
-| --- | --- |
-| `/tablets-para-volta-as-aulas-2026/` | Auditar intenção, mercado e Régua. |
-| `/tablets-para-volta-as-aulas-2026-2/` | Auditar duplicidade/retarget antes de qualquer decisão de redirect. |
-| `/lg-au801-50-review/` e `/lg-55au801-review-2026/` | Confirmar produto/intenção e consolidar se equivalentes. |
-| `/apple-tv-4k/` | Golden visual; corrigir teste falso, prova social e migrar metodologia quando necessário. |
+**Conferido ao vivo em 29/08/2026** — os 4 clusters abaixo foram validados
+no site e não apresentam canibalização, teste falso nem schema enganoso.
+**Recaptura de preços 29/08 concluída** via curadoria-mercado/browser-harness
+(9 capturas na Amazon gravadas no LEDGER; Apple TV 4K sem estoque; LGs novos
+no LEDGER). Ver `skills/curadoria-mercado/assets/historico-precos/LEDGER.csv`.
+
+| URL | Ação | Status ao vivo |
+| --- | --- | --- |
+| `/tablets-para-volta-as-aulas-2026/` | Auditar intenção, mercado e Régua. | ✅ h1 "Tablets para Volta às Aulas 2026" (26/08) · trio S10 FE/iPad 11/A11+ · sem nota única (decisão editorial por cenário) · declara sem teste · **complementar ao -2**, não duplicidade · preços 12/08 |
+| `/tablets-para-volta-as-aulas-2026-2/` | Auditar duplicidade/retarget antes de qualquer decisão de redirect. | ✅ h1 "Alternativas ao Galaxy Tab S10 FE e ao iPad" (26/08) · intenção distinta, cruza com o canônico · **sem redirect necessário** · preços 12/08 |
+| `/lg-au801-50-review/` e `/lg-55au801-review-2026/` | Confirmar produto/intenção e consolidar se equivalentes. | ✅ **Produtos distintos**: AU801 50″ (nota 8,4, sem teste, documental) vs 55AU801 55″ (nota 8,5 Régua v2, sem teste) · **sem canibalização** · preços 13/08 |
+| `/apple-tv-4k/` | Golden visual; corrigir teste falso, prova social e migrar metodologia quando necessário. | ✅ Golden: 3ª geração 2022 64GB (A2737) · nota 8,5 Régua v2 · declara sem teste físico · JSON-LD **sem** aggregateRating/reviewCount · preços 10/08 |
 
 ---
 
@@ -123,11 +129,14 @@ universal do Google.
 
 | URL | Tipo |
 | --- | --- |
+| `/melhores-smartphones-custo-beneficio-2026/` | GUIA — **AGENDADO** 01/09/2026 08:00 (confirmado no WP) · novo artigo · re-angle de "até R$1500" para "custo-benefício por faixas" (maximiza links internos p/ 5 reviews) · arquivo em `articles/html_output/melhores-smartphones-custo-beneficio-2026.html` · preços/ratings reais capturados 29/08 na Amazon via browser-harness · 6 imagens reais do WP Media (hero + 5 produtos) · nota Régua 8,2/10 · aprovado no checker (0 erros) · prompts de imagem em `articles/html_output/PROMPTS-IMAGENS-*.md` |
+| `/melhores-jogos-nintendo-switch-2026/` | GUIA/GAMES — **AGENDADO 04/09/2026 08:00 (confirmado no WP)** · novo artigo do cluster Dia das Crianças 2026 (pivot do hub para "jogos/games") · arquivo em `articles/html_output/melhores-jogos-nintendo-switch-2026.html` · 5 itens: Switch Lite (🥇) + Mario Kart 8 Deluxe + Super Mario Bros. Wonder + Mario Party Superstars + Retro Game Stick (com ressalva) · produtos verificados ao vivo em 31/08/2026 · 10 capturas no LEDGER (5 SKUs × Amazon+ML) · aprovado no checker (0 erros) · 12 links sponsored · JSON-LD @graph (Article+ItemList+FAQPage+Breadcrumb, datePublished 04/09) · snippet otimizado (título 51/60 · descrição 138/160) · **imagens 5+autor+logo enviadas no WP Media e confirmadas HTTP 200** + hero Gemini aplicada (2 pontos: img no topo + image do JSON-LD) · datePublished = 04/09/2026 no agendamento (dateModified = 31/08/2026, data de verificação) |
 | `/power-bank-no-aviao-2026/` | GUIA — **CONCLUIDO** · agendado 25/08/2026 08:00 · novo artigo · arquivo em `articles/html_output/power-bank-no-aviao-regras-anac-2026.html` · aprovado no checker (0 erros) |
 | `/melhores-techs-custo-beneficio-2026/` | GUIA — **AGENDADO** 27/08/2026 08:00 · REPOSICIONADO de "volta às aulas" para evergreen "melhores techs custo-benefício para trabalhar e estudar" · mercado re-verificado: 14 capturas no LEDGER, total R$ 1.563,97 · fontes reconstruídas c/ fichas oficiais + preço Xiaomi inventado removido · visual alinhado ao golden (veredito 💡, alternativas 3 col.) · aprovado no checker (0 erros) · conferir imagens no WP Media antes de publicar |
 | `/tablet-infantil-dia-das-criancas-2026-3-melhores/` | LISTA — **AGENDADO** 29/08/2026 08:00 · novo artigo sazonal · arquivo em `articles/html_output/tablet-infantil-dia-das-criancas-2026-3-melhores.html` · preços/avaliações reais dos 3 SKUs (capturas 25/08 no LEDGER: Kid Pad R$ 856,75 ML/R$ 884,44 Amz · A9 R$ 1.114 ML sem estoque Amz · Vision R$ 409,52 Amz/R$ 571,12 ML) · notas unificadas 7,0/8,5/8,5 · padronização visual golden completa (índice 2 col., avaliações 6 cards 1/plataforma, grids lado a lado, bloco avaliação+🧮, botões cores oficiais ML/Amazon) · aprovado no checker (0 erros) · pendências p/ publicar: subir imagens no WP Media (`/2026/09/*.webp`) + URLs dos anúncios ML no LEDGER + re-verificar preços em 10/09/2026 |
 | `/presentes-dia-dos-pais-2026-tech-premium/` | LISTA/GUIA |
 | `/presentes-dia-dos-pais-tech-ate-300/` | LISTA/GUIA |
+| `/guia-presentes-dia-das-criancas-2026/` | GUIA — **PRONTO_PARA_REVISAO** · hub do cluster Dia das Crianças 2026 · arquivo em `articles/html_output/guia-presentes-dia-das-criancas-2026.html` · 6 produtos (Fisher-Price, Mega Bloks, LEGO Classic, Galaxy Tab Kids, Switch Lite, Arduino) · 14 seções · 2.771 palavras · aprovado no checker (0 erros, 0 alertas) · tags balanceadas · JSON-LD @graph completo · **pendências editoriais**: links de afiliado (`amzn.to/*`, `meli.la/*`) parecem placeholders — confirmar short links reais · preços (30/08) sem entrada no LEDGER · imagens (`/2026/09/*.webp`) iguais para 3 faixas etárias — confirmar upload no WP Media |
 | `/galaxy-watch7-44mm-vale-a-pena/` | REVIEW — saúde |
 | `/galaxy-s24-fe-em-2026/` | REVIEW |
 | `/fire-tv-stick-4k-wifi-6/` | REVIEW — **CONCLUIDO** · publicado 22/08/2026 · patch original aplicado; versão canônica em `3858-fire-tv-stick-4k-wifi-6-reconstruido.html` (recomendada para segunda atualização) |
