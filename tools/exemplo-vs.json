@@ -1,0 +1,80 @@
+{
+  "titulo": "Samsung Galaxy Book4 ou Lenovo IdeaPad Slim 3: Qual Notebook Comprar em 2026?",
+  "titulo_seo": "Samsung Galaxy Book4 vs Lenovo IdeaPad Slim 3: Qual Notebook Comprar em 2026?",
+  "slug": "samsung-galaxy-book4-vs-lenovo-ideapad-slim-3",
+  "meta_description": "Comparamos Samsung Galaxy Book4 vs Lenovo IdeaPad Slim 3. Especificações, desempenho, tela e preço. Qual notebook comprar em 2026?",
+  "categoria": "notebooks",
+  "categoria_url": "informatica",
+  "data_verificacao": "15/08/2026",
+  "data_publicacao": "15/08/2026",
+  "introducao": [
+    "A escolha entre o <strong>Samsung Galaxy Book4</strong> e o <strong>Lenovo IdeaPad Slim 3</strong> é uma das mais comuns para quem procura um notebook de entrada com bom desempenho em 2026. Os dois estão na faixa de R$ 2.600 a R$ 3.300, têm tela Full HD de 15,6 polegadas e processadores Intel Core i5 — mas cada um acerta em um ponto diferente: o Galaxy Book4 aposta no ecossistema Samsung e na portabilidade, enquanto o IdeaPad Slim 3 entrega o dobro de armazenamento por menos dinheiro.",
+    "Neste comparativo, analisamos as especificações oficiais dos dois fabricantes, cruzamos com as avaliações publicadas por compradores na Amazon e no Mercado Livre e aplicamos a Régua Curadoria Prime v2.0 para responder: <strong>qual notebook comprar em 2026</strong> para o seu perfil de uso?"
+  ],
+  "resposta_rapida_custo": "O Lenovo IdeaPad Slim 3 é a escolha mais econômica: R$ 600 a menos com o dobro de SSD (512GB vs 256GB). Para quem prioriza armazenamento e preço, é o vencedor.",
+  "resposta_rapida_desempenho": "O Samsung Galaxy Book4 tem processador de geração mais nova (i5-1335U vs i5-1235U) e melhor integração com o ecossistema Galaxy. Para quem já usa celular Samsung, é o upgrade mais coeso.",
+  "veredito_vencedor": "O Galaxy Book4 vence no placar geral pela combinação de processador mais novo, ecossistema e acabamento premium. A diferença de desempenho é pequena no dia a dia, mas a experiência integrada com smartphone Galaxy e o design mais fino justificam o investimento de R$ 600.",
+  "veredito_perdedor": "Se o orçamento é a prioridade absoluta, o IdeaPad Slim 3 entrega 90% da experiência por R$ 600 a menos, com o bônus de ter o dobro de armazenamento. É a escolha racional para trabalho pesado de arquivos sem gastar a mais.",
+  "para_quem_nao": [
+    "Se você precisa de GPU dedicada para edição de vídeo ou jogos — os dois usam gráficos integrados",
+    "Se você trabalha com mais de 16GB de RAM em múltiplas máquinas virtuais — ambos limitam em 8GB",
+    "Se você quer um notebook com tela touch ou conversível — nenhum dos dois oferece",
+    "Se você usa macOS ou prefere o ecossistema Apple — a integração Samsung não se aplica"
+  ],
+  "produto_a": {
+    "nome": "Samsung Galaxy Book4",
+    "nota": 8.5,
+    "preco": "R$ 3.299",
+    "rating": "4,6",
+    "img": "https://curadoriaprime.com/wp-content/uploads/2026/08/galaxy-book4-review.webp",
+    "descricao": "O Samsung Galaxy Book4 chega com processador Intel Core i5-1335U, 8GB de RAM e SSD de 256GB. Tela Full HD de 15,6 polegadas com bom brilho para uso externo. A grande vantagem é o ecossistema Samsung: você integra com Galaxy Buds, smartphone e tablet da marca.",
+    "pros": ["Tela Full HD com bom brilho (300 nits)", "SSD NVMe rápido", "Ecosystema Samsung (Galaxy AI, Continuity)", "Carregamento USB-C PD", "Design fino e leve (1,8 kg)"],
+    "contras": ["Apenas 8GB de RAM (soldado, sem upgrade)", "Teclado sem retroiluminação", "Webcam 720p apenas mediana", "Falante apenas mono", "Porta USB-A apenas 2.0 (não 3.0)"],
+    "quem": ["Você já tem smartphone Galaxy e quer integração", "Prioriza portabilidade e design fino", "Usa o notebook para estudo, trabalho de escritório e consumo de mídia"],
+    "links": {"amazon": "https://link.amazon/B0EXEMPLO_A", "mercadolivre": "https://meli.la/2Exemplo_A"}
+  },
+  "produto_b": {
+    "nome": "Lenovo IdeaPad Slim 3",
+    "nota": 8.0,
+    "preco": "R$ 2.699",
+    "rating": "4,5",
+    "img": "https://curadoriaprime.com/wp-content/uploads/2026/08/lenovo-ideapad-slim-3-review.webp",
+    "descricao": "O Lenovo IdeaPad Slim 3 oferece Intel Core i5-1235U, 8GB de RAM e SSD de 512GB pelo menor preço. Tela Full HD IPS de 15,6 polegadas. O destaque é o SSD de dobro da capacidade pelo mesmo preço do concorrente.",
+    "pros": ["SSD de 512GB (dobro do Galaxy Book4)", "Tela IPS com ângulos de visão amplos", "Portas USB-A e USB-C completas", "Teclado numérico dedicado", "Preço mais baixo da categoria"],
+    "contras": ["Processador geração anterior (12ª vs 13ª)", "Design mais simples e plástico", "Webcam com obturador de privacidade mas qualidade 720p", "Sem integração com ecossistema avançado", "Bateria de 3 células (autonomia mediana)"],
+    "quem": ["Você precisa de mais armazenamento (512GB vs 256GB)", "Orçamento é a prioridade principal", "Usa o notebook como ferramenta de trabalho e precisa de portas variadas"],
+    "links": {"amazon": "https://link.amazon/B0EXEMPLO_B", "mercadolivre": "https://meli.la/2Exemplo_B"}
+  },
+  "hero_brand_primary": "#1428A0",
+  "hero_brand_secondary": "#0a1550",
+  "hero_brand_accent": "#fde68a",
+  "tabela": {
+    "header": "linear-gradient(135deg,#1428A0,#0a1550)",
+    "linhas": [
+      ["Processador", "Intel Core i5-1335U (13ª geração)", "Intel Core i5-1235U (12ª geração)"],
+      ["RAM", "8GB LPDDR4x (soldado)", "8GB DDR4"],
+      ["Armazenamento", "SSD 256GB NVMe", "SSD 512GB NVMe"],
+      ["Tela", "15,6\" Full HD (300 nits)", "15,6\" Full HD IPS"],
+      ["Peso", "1,8 kg", "1,9 kg"],
+      ["Portas", "1 USB-C, 2 USB-A 2.0, HDMI", "1 USB-C, 2 USB-A 3.0, HDMI, SD Card"],
+      ["Bateria", "54 Wh (até 10h)", "47 Wh (até 8h)"],
+      ["Preço", "R$ 3.299", "R$ 2.699"]
+    ]
+  },
+  "faq": [
+    {"pergunta": "Qual tem melhor processador?", "resposta": "O Galaxy Book4 tem processador 13ª geração (i5-1335U), ligeiramente superior ao 12ª geração (i5-1235U) do IdeaPad. Na prática, a diferença é pequena para uso cotidiano."},
+    {"pergunta": "Qual tem melhor tela?", "resposta": "O IdeaPad Slim 3 tem tela IPS com ângulos de visão superiores. O Galaxy Book4 tem maior brilho (300 nits) para uso externo. Empate técnico."}
+  ],
+  "fontes": [
+    {"titulo": "Especificações oficiais — Samsung Brasil", "url": "https://www.samsung.com/br/"},
+    {"titulo": "Especificações oficiais — Lenovo Brasil", "url": "https://www.lenovo.com/br/"}
+  ],
+  "autor": {
+    "nome": "Cristiano Martins",
+    "papel": "Editor e Curador",
+    "bio": "Jornalista de tecnologia e fundador da Curadoria Prime.",
+    "img": "https://curadoriaprime.com/wp-content/uploads/2026/08/cristiano-curadoria-prime.jpg",
+    "alt": "Cristiano Martins — Curadoria Prime",
+    "social": "https://x.com/curadoriaprime"
+  }
+}
