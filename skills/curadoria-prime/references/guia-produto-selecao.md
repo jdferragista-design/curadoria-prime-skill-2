@@ -75,3 +75,22 @@ ler `card.querySelector('h2')` e `card.querySelector('.a-price .a-offscreen')`.
 `SyntaxError: Unexpected token ':'`. Usar ternário limpo ou expressão sem
 ponto-e-vírgula ambíguo. Recarregar a página antes de re-extrair (o resultado
 de busca pode estar desatualizado/estático).
+
+## LIÇÃO CRÍTICA: short link do editor prevalece sobre ASIN da busca
+
+Ao criar um review individual (ex: Switch Lite), a busca ao vivo pode retornar
+um ASIN **diferente** do usado no guia (ex: busca → `B09BDLVLW5`, guia →
+`B06MejMa2`). **NÃO trocar o short link do editor com base no ASIN da busca.**
+
+Motivo: o `/dp/B06MejMa2` direto pode abrir 404/erro no browser do agente
+(bloqueio anti-bot/geo), mas o **`link.amazon/B06MejMa2` gerado pelo editor no
+SiteStripe abre normalmente** e é o link afiliado correto da conta. O ASIN do
+short link do editor é o que vale.
+
+Regra: **o link do editor SEMPRE vence**. Ao gerar review, usar o short link
+que o editor já forneceu no guia (`link.amazon/<ASIN>` + `meli.la/<codigo>`),
+NUNCA o ASIN que o agente encontra na busca — salvo o editor confirmar troca.
+
+Validação: pedir ao editor para testar o link (`link.amazon/...` abre?) antes
+de considerar "ASIN desatualizado". A busca só serve para preço/rating atuais,
+não para substituir o short link afiliado.
