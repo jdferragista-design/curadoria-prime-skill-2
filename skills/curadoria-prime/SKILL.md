@@ -75,6 +75,16 @@ Não começar pelo HTML. Não definir nota/vencedor primeiro.
    slug antigo em outro bloco (ex: "Escolha rápida" com texto "Ver na Amazon"
    ≠ "Amazon" — não casa no replace).
 
+## Subir imagens direto na biblioteca do WP via REST (sessão 03/09/2026)
+
+Não precisa depender do upload manual do editor — dá para subir via API:
+- `POST /wp-json/wp/v2/media` com bytes no corpo + headers `Content-Type: image/jpeg` e `Content-Disposition: attachment; filename="nome.jpg"` → retorna id e source_url
+- `Content-Disposition` define o nome na biblioteca — **não usar duplo extensão** (`x.webp.jpg` → vira slug feio; apagar com `DELETE /media/{id}?force=true` e re-subir)
+- Setar alt/title com POST em `/media/{id}` (acessibilidade + SEO)
+- Definir imagem destacada do post: POST em `/posts/{id}` com `{"featured_media": <id>}`; verificar relendo o post
+- Fontes legítimas: biblioteca do WP (varrer `/wp-json/wp/v2/media?per_page=100&page=N`), assets.nintendo.com (URLs extraídas do HTML da página oficial; variante `ar_16:9,b_auto:border` = banner sem texto sobreposto), URLs já usadas em artigos publicados. Amazon bloqueia curl — usar browser ou as URLs que já estão no site.
+- Antes de inserir: `vision_analyze` cada candidata e escrever a legenda do que REALMENTE aparece; rejeitar fan-made/thumbnail de YouTube (ex: "Greetings from Moo Moo Meadows")
+
 ## Ferramentas do projeto (Python puro, na pasta tools/)
 
 - `checar_conformidade.py` — 16 checagens, exit 1 = bloqueia publicação

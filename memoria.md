@@ -593,34 +593,40 @@ Produzir o conteúdo do cluster "Dia das Crianças 2026", iniciando pelo hub/pil
 ### Próximos Passos
 - Iniciar a produção dos artigos "spoke" (apoio), começando por: "Tech Kids 2026: Melhores Tablets e Gadgets Educativos para Crianças".
 
-## Sessão 30/08/2026 — Implementação do Cluster "Dia das Crianças 2026" e Guia de Agentes
+## Sessão 03/09/2026 — Reconstrução dos 2 reviews do hub de games no golden completo + aplicação no WP
 
-### Objetivo
-Produzir o conteúdo do cluster "Dia das Crianças 2026", iniciando pelo hub/pillar guide, garantindo conformidade total com o padrão visual Golden.
+**Diagnóstico (pedido do editor: "revisar bloco a bloco"):** os reviews Switch Lite e Mario Kart, embora com checker 0 erros, estavam fora do `modelo-review-golden.html`: sem hero, sem imagem, sem metodologia âmbar, sem prova social, sem índice, sem resposta rápida, sem box 🧮 Régua v2.0, sem scorecard 3×2, sem bloco dark "Escolha rápida" final, sem links internos; e usavam a paleta da LISTA (`#5a4fcf`) em vez do azul do REVIEW (`#2997ff`). O bloco de autor tinha texto inventado ("jornalista, 10 anos") — corrigido para o fragmento canônico (motorista de app).
 
-### O que foi feito
+**Feito:**
+- Ambos reconstruídos com todos os blocos do golden + seções de **dicas de jogabilidade** (Switch Lite: grip, microSD, bateria, película, controle Bluetooth, NSO · Mario Kart: drift boost, assistentes, gestão de itens, combo personagem/kart, brake drift 200cc, atalhos, battle mode) — padrão para reviews de games.
+- Imagens: hero do Mario Kart apontava `2026/11/` (404) → corrigida para `2026/08/` (200); foto do autor `cristian-` → `cristiano-` (o typo estava no PRÓPRIO fragmento canônico, corrigido em `skills/curadoria-review/assets/fragmento-autor.html` + sync); logo JSON-LD sem pasta de data → `2026/01/cropped-image-270x270.jpg`. Todas as URLs verificadas HTTP 200.
+- JSON-LD expandido para @graph Article+Review+FAQPage+BreadcrumbList (com `offers` no Review).
+- Fontes reestruturadas no padrão do golden (parágrafos com links oficiais + artigos relacionados + varejo com rel=sponsored).
+- **Aplicação no WP via REST** (posts existentes, rascunhos): Mario Kart id 5090, Switch Lite id 5092 — PUT no `content.raw`, backup prévio em `articles/wp_raw_backups/`, verificação pós-gravação byte a byte. O editor tinha reeditado o 5092 entre os passes (heading "Fontes" h3→h2); backup dessa edição em `5092-...-edicao-editor-raw.html` antes da regravação final.
+- `.env` criado para credenciais WP + `.gitignore` atualizado (`.env`, `.env.*`) ANTES de qualquer credencial ir ao disco.
 
-**1. Guia `guia-presentes-dia-das-criancas-2026.html` (Clonagem do Padrão Golden)**
-- Realizado rewrite estrutural profundo para espelhamento técnico do `modelo-lista-golden.html`.
-- **Implementações Visuais:**
-    - Hero block com gradientes específicos.
-    - Metodologia com acentos em `#5a4fcf`.
-    - Seção "Matemática da Curadoria" com pesos percentuais de avaliação.
-    - **Sequência Modular de Produtos:** Imagem $\rightarrow$ Badges de Rank $\rightarrow$ Texto $\rightarrow$ Tabela Técnica (degradê roxo) $\rightarrow$ Prós (setas ▸) $\rightarrow$ Pontos de Atenção (borda vermelha grossa) $\rightarrow$ Veredito $\rightarrow$ Box de Compra centralizado.
-    - Conclusão com Tabela de Resumo e box "⚡ Escolha rápida" (Grid `repeat(3, 1fr)` com fallback mobile).
-    - Bloco de links do Cluster de Apoio e Rodapé Editorial.
-    - Bloco do Autor com dimensões de foto `72x72`.
-- **Técnico & SEO:**
-    - Implementação de JSON-LD `@graph` complexo (Article, ItemList, FAQ, Breadcrumb).
-    - Correção de links de afiliado para `rel="sponsored noopener noreferrer"`.
+**Lições:**
+- `source .env` no bash QUEBRA com senha de aplicação do WP (tem espaços → shell interpreta como comando). Fazer o parse do `.env` em Python, nunca via shell.
+- Post rascunho recém-criado na UI do editor pode ter slug vazio (`//`) — o PUT com `{"slug": ...}` resolve.
+- Antes de regravação em post que o editor mexeu na UI, comparar `content.raw` com o arquivo local e fazer backup do estado do WP — o editor pode ter feito ajustes manuais válidos.
+- Checker 0 erros NÃO significa alinhado ao golden — a revisão bloco a bloco contra o modelo é obrigatória antes de APLICADO_NO_WP.
 
-**2. Criação do arquivo `agent.md`**
-- Estabelecimento de diretrizes mandatórias para agentes de IA.
-- **Regras principais:**
-    - Fidelidade absoluta ao modelo canônico (proibido improvisar layouts).
-    - Padronização de cores (`#5a4fcf`, `#fde68a`) e componentes visuais.
-    - Compliance editorial: mínimo de 1500 palavras, proibição de citações fictícias e obrigatoriedade de fontes reais.
-    - Fluxo de validação: Comparação visual $\rightarrow$ `checar_conformidade.py` $\rightarrow$ Balanço de tags.
+---
 
-### Próximos Passos
-- Iniciar a produção dos artigos "spoke" (apoio), começando por: "Tech Kids 2026: Melhores Tablets e Gadgets Educativos para Crianças".
+## Sessão 03/09/2026 (noite) — Thumb/hero golden via Pillow + review Wonder criado + cluster agendado
+
+**Thumb/hero sem gerador de IA:** o estilo golden (fundo navy→roxo, raios magenta, partículas, piso refletivo, texto gradiente laranja→amarelo + ciano→azul com contorno e sombra 3D) é reproduzível 100% em Pillow — script em `/tmp/hermes-thumb/gen.py` (recriar ou versionar se necessário). Regras aprendidas:
+- Floodfill do branco pelas bordas (thresh 42-60) + erode alpha (MinFilter 3-5) + GaussianBlur 0.8 + **defringe** (pixels quase-brancos encostados em transparência → transparentes) = recorte limpo de foto de catálogo.
+- Sombra de contato: oval em camada separada com GaussianBlur(9), alpha ~70 — oval dura desenhada direto vira "pílula preta" sob caixa alta (pegou na thumb do Wonder).
+- Revisar por visão em rodadas (defeito → ajuste → re-revisar) até APROVADA; "2026" na thumb é intencional (ano do review, não do lançamento).
+- Upload de mídia binário via REST exige header `Content-Disposition: attachment; filename=...jpg` — sem ele o WP retorna 400.
+
+**Cluster Nintendo Switch agendado no WP (confirmado por leitura de volta, todos `future`, 08:00 America/Sao_Paulo, conteúdo idêntico byte a byte, destaque definido):**
+- 5084 hub `/melhores-jogos-nintendo-switch-2026/` — 04/09 (destaque 5083) · bloco "Análises completas do cluster" ganhou os 3 links de review
+- 5092 `/nintendo-switch-lite-review-2026/` — 07/09 (destaque 5106)
+- 5090 `/mario-kart-8-deluxe-review-2026/` — 09/09 (destaque 5107)
+- 5117 `/super-mario-bros-wonder-review-2026/` — 11/09 (destaque 5112) — **novo artigo criado nesta sessão**
+
+**Review Super Mario Bros. Wonder (post 5117):** golden completo, 4.150 palavras, nota 9,2, dicas de jogabilidade 7 tópicos. Dados do hub/LEDGER 31/08 (Amazon R$ 274,55 Pix 4,9★/1.487 Escolha da Amazon · ML R$ 329,96 5,0★/30 · links link.amazon/B01TVzGDg + meli.la/2K7rg1c). Imagens: 3 screenshots oficiais de assets.nintendo.com (página US da loja, IDs sob `store/software/switch/70010000068688/` — Mario+amigos de elefantes, fase Yoshis/foguetes, coop em bolhas) + thumb/hero Pillow. Rejeitada por visão: key art com logo/selo de prêmio sobreposto. datePublished JSON-LD alinhado à data de agendamento em todos os 3 reviews.
+
+**Lição de agendamento:** ao agendar, atualizar `datePublished` do JSON-LD (Article e Review) para a data de publicação — deixar dateModified na data da verificação de mercado.

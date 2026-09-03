@@ -1843,7 +1843,19 @@ Não inventar bio.
 
 Não reescrever credencial aprovada.
 
-Idealmente utilizar cadastro/fragmento canônico do autor.
+Idealmente utilizar cadastro/fragmento canônico do autor
+(`skills/curadoria-review/assets/fragmento-autor.html`).
+
+Não usar bio genérica ou inventada. O fragmento canônico do Cristiano é:
+"Cristiano Martins — fundador e editor-chefe da Curadoria Prime"
+"Motorista de aplicativo em Uberlândia (MG), com mais de 16 mil viagens
+entre Uber e 99 e rotina de 8+ horas por dia dependendo de GPS, apps e
+fones Bluetooth. Fundou a Curadoria Prime para analisar tecnologia por
+esse critério: o que aguenta o uso real do dia a dia — com preço
+verdadeiro e ficha técnica oficial."
+
+NUNCA usar "jornalista de tecnologia" ou "Há mais de 10 anos analisando
+produtos" — isso é factualmente incorreto.
 
 ---
 
@@ -1995,6 +2007,76 @@ Exemplos:
 - prioridade.
 
 Não repetir apenas o veredito três vezes.
+
+---
+
+# 82a. VEREDITO — BLOCO COMPLETO
+
+O veredito de REVIEW tem dois componentes obrigatórios, nesta ordem:
+
+### 1. 🧮 Como chegamos à nota (box âmbar)
+
+`background: #fffbeb; border: 1px solid #fde68a`
+
+Texto padrão explicando os 6 critérios com pesos fixos:
+Custo-benefício 30%, Satisfação verificada 25%, Ficha técnica 20%,
+Recursos e usabilidade 10%, Consenso técnico 10%, Confiança e suporte 5%.
+Incluir link para `/como-avaliamos/`. A nota no título (🧮 Como chegamos à
+nota X,X) deve bater com a nota do scorecard.
+
+### 2. Scorecard com badge + grid 3×2
+
+Container: `background: #fff; border: 1px solid #e2e8f0; border-radius: 14px`
+
+- **Cabeçalho**: nome do produto + badge escuro com gradiente
+  `linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)` exibindo a nota e
+  "Recomendado"/"Excelente"
+- **Grid 3×2** de critérios: cada card `background: #fff; border: 1px solid #e2e8f0`
+  com label uppercase, nota 36px colorida (verde #22c55e para ≥8.0,
+  âmbar #f59e0b para 7.0-7.9), e descrição curta
+- **Style responsivo** embutido no final do container:
+  `@media (max-width: 782px) → 2 colunas; @media (max-width: 480px) → 1 coluna`
+
+---
+
+# 82b. BLOCOS FINAIS (ordem obrigatória após o veredito)
+
+Após o veredito e os parágrafos finais de recomendação, inserir nesta
+ordem:
+
+1. **🎯 Escolha rápida** — container dark gradiente
+   `linear-gradient(135deg,#1d1d1f 0%,#000000 100%)` com título, resumo em
+   `#c7c7cc`, e dois botões de compra (Amazon e ML) lado a lado com
+   `rel="sponsored"`. Incluir link interno para artigo relacionado no
+   rodapé do bloco.
+
+2. **⚠️ Transparência final** — box âmbar `#fffbeb`/`#fde68a` repetindo
+   a divulgação de afiliados.
+
+3. **📚 Fontes consultadas** — container `#f8fafc`/`#e2e8f0` com três
+   parágrafos:
+   - Oficiais (fabricante): links `rel="noopener"`
+   - Artigos relacionados (Curadoria Prime): links internos para o cluster
+   - Varejo (preços/avaliações): links afiliados `rel="sponsored"`
+
+4. **Bloco do autor** — fragmento canônico (ver seção AUTOR/BIO).
+
+5. **JSON-LD** — @graph com Article + Review + FAQPage + BreadcrumbList.
+
+---
+
+# 82c. REVIEW DE JOGOS — CONTEÚDO ESPECÍFICO
+
+Para reviews de jogos (games, software, entretenimento), incluir
+obrigatoriamente uma seção **"💡 Dicas de jogabilidade"** (ou "Dicas
+de corrida", "Dicas de gameplay") com conteúdo prático baseado em
+relatos de compradores e guias da comunidade. Estrutura sugerida:
+
+- 5 a 7 dicas numeradas, cada uma com título em negrito e 2-4 parágrafos
+- Conteúdo focado em: mecânicas do jogo, estratégias, configurações
+   ideais, acessórios recomendados e modos de dificuldade
+- Fontes: relatos de compradores verificados, guias oficiais e
+  comunidades de jogadores
 
 ---
 

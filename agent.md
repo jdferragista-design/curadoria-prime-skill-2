@@ -3,18 +3,26 @@
 Este documento define as regras mandatórias para qualquer agente que atue na criação ou edição de conteúdo para o Curadoria Prime.
 
 ## 1. Fidelidade ao Modelo Canônico (Regra de Ouro)
-**Analisar o modelo canônico (ex: `modelo-lista-golden.html`) e seguir fielmente a estrutura, bloco e visual.**
+**Seguir fielmente o HTML golden do TIPO de conteúdo — ele é a régua canônica:**
+- Review → `skills/curadoria-review/assets/modelos/modelo-review-golden.html`
+- Lista → `skills/curadoria-review/assets/modelos/modelo-lista-golden.html`
+- VS → `skills/curadoria-review/assets/modelos/modelo-vs-golden.html`
 - Não improvisar layouts.
 - Não remover blocos obrigatórios.
 - Replicar pixel-perfeitamente cores, sombras, gradientes e espaçamentos.
 - Manter a hierarquia de tags HTML e classes CSS do modelo.
 
 ## 2. Padrões Visuais e Cores
-- **Cores Primárias:** `#5a4fcf` (Roxo/Azul) para acentos, botões de índice e FAQs.
-- **Cores de Destaque:** `#fde68a` (Amarelo) para boxes de metodologia/notas.
-- **Vereditos:** Fundo `#f0fdf4` com borda esquerda `#22c55e` (verde).
-- **Pontos de Atenção:** Bloco com borda esquerda grossa vermelha.
-- **Escolha Rápida:** Grid de 3 colunas (`repeat(3, 1fr)`) com fallback para 1 coluna em mobile (<782px).
+**Não existe uma paleta única entre os tipos.** Cada tipo usa a paleta do seu próprio
+golden (ex.: o acento `#5a4fcf/#764ba2` é do **lista**; o review usa `#2997ff`). Sempre
+consulte o golden do tipo. Referência para **REVIEW** (`modelo-review-golden.html`):
+- **Header de impacto (hero):** `linear-gradient(135deg,#1d1d1f 0%,#000000 100%)`, texto `#fff`, destaque realçado em `#2997ff`.
+- **Boxes de metodologia/transparência/nota (âmbar):** `#fffbeb` + borda `#fde68a` + texto `#78350f`.
+- **Boxes de seção** ("O que dizem os compradores", "Índice"): `#f8fafc` + borda `#e2e8f0`, título `#1e293b`.
+- **Grid de ofertas/compra:** container branco, borda `#e9ecef`; cards por loja — Amazon borda `#FF9900`, Mercado Livre borda `#3485DB`. CTAs por loja: ML `#2d3277→#1a1f5c`, Amazon `#ff9900→#ff8500`, dark `#1d1d1f→#000`.
+- **Resposta rápida (grid 3 colunas):** ✅ `#f0fdf4`/`#22c55e` · 🤔 `#eff6ff`/`#3b82f6` · ⏳ `#fffbeb`/`#f59e0b`.
+- **Veredito:** badge de nota `linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%)`; scorecard em grid 3×2 (Custo-benefício `#f59e0b`, demais `#22c55e`).
+- **Escolha Rápida:** container dark + grid `repeat(3, 1fr)` com fallback para 1 coluna em mobile (<782px).
 
 ## 3. Compliance Editorial e Conteúdo
 - **Extensão:** Mínimo de ~1500 palavras para guias e reviews profundos.

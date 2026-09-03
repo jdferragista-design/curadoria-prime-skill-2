@@ -11,6 +11,8 @@ para o ambiente do agente via script, nunca editadas fora do repo.
 | Origem (repo) | Destino (agente) | Script |
 | --- | --- | --- |
 | `skills/curadoria-prime/` | `~/.hermes/skills/productivity/curadoria-prime/` | `tools/sync_skills.sh` |
+| `skills/curadoria-prime-market-audit/` | `~/.hermes/skills/productivity/curadoria-prime-market-audit/` | `tools/sync_skills.sh` |
+| `skills/content-layout-audit/` | `~/.hermes/skills/productivity/content-layout-audit/` | `tools/sync_skills.sh` |
 | `skills/curadoria-review/` | `~/.claude/skills/curadoria-review/` | `tools/sync_skills.sh` |
 | `skills/curadoria-mercado/` | `~/.claude/skills/curadoria-mercado/` | `tools/sync_skills.sh` |
 | `skills/curadoria-reach/` | `~/.claude/skills/curadoria-reach/` | `tools/sync_skills.sh` |
