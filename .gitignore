@@ -1,5 +1,8 @@
 # Config local com credenciais (apiKey em texto plano) — nunca versionar
 opencode.json
+.env
+.env.*
+.vscode/
 
 # Dependências
 node_modules/

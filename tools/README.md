@@ -23,6 +23,7 @@ está certo e o script tem um bug.
 | `ledger.py` | registra e consulta capturas reais de preço | ao pesquisar mercado |
 | `corrigir_artigos.py` | remediação em lote dos artigos já no ar | mutirão de correção |
 | `publicar_wp.py` | envia como rascunho via WP REST API | ao publicar |
+| `openrouter.py` | acesso a LLMs via OpenRouter (chat, modelos) | pesquisa/escrita assistida |
 
 Todos são Python 3 puro, sem dependência externa. Rodam com `python3 <script> --help`.
 
@@ -193,6 +194,44 @@ App Password: WordPress → Usuários → Perfil → "Senhas de aplicativo" → 
 
 Publica sempre como **rascunho**. Nunca como post público — a revisão humana é a
 última linha e não deve ser automatizável.
+
+## `openrouter.py`
+
+```bash
+export OPENROUTER_API_KEY="sk-or-..."
+python3 openrouter.py chat --model openai/gpt-4o-mini \
+  --prompt "Qual a capital do Brasil?"
+python3 openrouter.py chat --model anthropic/claude-3-5-sonnet-20241022 \
+  --prompt "Explique brevemente o que são headers HTTP"
+python3 openrouter.py chat --prompt "..." --system "Responda como um especialista em tecnologia"
+python3 openrouter.py modelos --limit 20
+```
+
+API key via `export OPENROUTER_API_KEY=...` (ou `--key` no CLI). Integração com a
+API do OpenRouter (https://openrouter.ai) — gateway unificado de LLMs via endpoint
+compatível com a OpenAI. Modelos suportados: GPT-4o, GPT-4o-mini, Claude 3.5, etc.
+
+Útil para: pesquisa auxiliar (extrair dados de páginas oficiais), reescrever
+textos, corrigir gramática, gerar prompts de imagem (via Vision models), ou
+qualquer tarefa criativa apoiada pela curadoria.
+
+Como módulo Python:
+```python
+from openrouter import chat_simples
+
+texto = chat_simples(
+  "Resuma em 3 linhas: Bluetooth 5.3 vs 5.2",
+  model="openai/gpt-4o-mini",
+  system_prompt="Você é um redator técnico do Curadoria Prime.",
+  temperature=0.3,
+  max_tokens=500,
+)
+```
+
+Modelos qualificados/preferidos (em `MODELOS_PADRAO`):
+- `gpt-4o-mini` — rápido e barato, bom para tarefas simples
+- `gpt-4o` — equilibra velocidade, capacidade e custo
+- `claude-3-5-sonnet` — análise profunda, reescrita editorial
 
 ---
 
