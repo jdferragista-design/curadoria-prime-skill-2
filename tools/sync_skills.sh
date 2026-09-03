@@ -33,6 +33,8 @@ DIRS=(
   "skills/curadoria-review    $CLAUDE/curadoria-review"
   "skills/curadoria-mercado   $CLAUDE/curadoria-mercado"
   "skills/curadoria-reach     $CLAUDE/curadoria-reach"
+  "skills/curadoria-prime-market-audit  $HERMES/productivity/curadoria-prime-market-audit"
+  "skills/content-layout-audit          $HERMES/productivity/content-layout-audit"
 )
 
 MODE="DRY-RUN"
