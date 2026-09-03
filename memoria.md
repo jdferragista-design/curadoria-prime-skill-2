@@ -630,3 +630,13 @@ Produzir o conteúdo do cluster "Dia das Crianças 2026", iniciando pelo hub/pil
 **Review Super Mario Bros. Wonder (post 5117):** golden completo, 4.150 palavras, nota 9,2, dicas de jogabilidade 7 tópicos. Dados do hub/LEDGER 31/08 (Amazon R$ 274,55 Pix 4,9★/1.487 Escolha da Amazon · ML R$ 329,96 5,0★/30 · links link.amazon/B01TVzGDg + meli.la/2K7rg1c). Imagens: 3 screenshots oficiais de assets.nintendo.com (página US da loja, IDs sob `store/software/switch/70010000068688/` — Mario+amigos de elefantes, fase Yoshis/foguetes, coop em bolhas) + thumb/hero Pillow. Rejeitada por visão: key art com logo/selo de prêmio sobreposto. datePublished JSON-LD alinhado à data de agendamento em todos os 3 reviews.
 
 **Lição de agendamento:** ao agendar, atualizar `datePublished` do JSON-LD (Article e Review) para a data de publicação — deixar dateModified na data da verificação de mercado.
+
+---
+
+## Sessão 03/09/2026 (madrugada) — Reviews Party/Stick produzidos + automação X→Telegram
+
+- **Mario Party Superstars** (post 5127, AGENDADO 21/09 08:00): golden completo, 4.110 palavras, nota 8,8, 7 dicas de jogabilidade, 3 screenshots oficiais Nintendo (produto ID `70010000042934` — hashes de 64 chars, não 40), thumb/hero Pillow destaque 5122. Checker 0 erros.
+- **Retro Game Stick Lite 4K** (post 5131, AGENDADO 23/09 08:00): review honesto "com ressalva", nota 6,6 (mais baixa do cluster, intencional — 3,8★/82 Amz), ficha marcada como "declarada" (sem fonte oficial de marca genérica), thumb/hero com **cartão arredondado** em vez de recorte (curva neon do anúncio entrelaça o kit — recorte impossível; `card_from_art()` no gen.py). Destaque 5128. Hub 5084 com os 5 links de review.
+- **Automação X→Telegram**: cron `x-post-cluster-games` (430be0725f8b, 30min) com monitor `~/.hermes/scripts/detecta_publicacoes_cluster.py` + lista `cluster-games-wp.json`; detecta publish → gera post X ≤280 chars → entrega no Telegram 1113664916; Cristiano publica manualmente. Guard-rail NO_REPLY em tick silencioso.
+- **Lição WP/REST**: endpoint single-post `/posts/{id}` retorna **401** no WAF do site mesmo sem auth; a coleção `?include=ids` funciona e só lista `publish` — presença = publicado (base do detector).
+- **Push GitHub pendente**: HTTPS remote com senha embutida rejeitado ("Password authentication is not supported") — precisa de PAT ou SSH. Commits locais prontos (6).

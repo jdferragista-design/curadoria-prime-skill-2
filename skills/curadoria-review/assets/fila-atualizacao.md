@@ -288,8 +288,8 @@ de indexação antes do pico de intenção de compra. Todos os slots às 08:00.
 
 | Data | Artigo | Tipo | Racional | Dados necessários |
 |---|---|---|---|---|
-| **21/09 (seg)** | `/mario-party-superstars-review-2026/` — "Mario Party Superstars Vale a Pena em 2026?" | REVIEW (4º item do hub Switch) | Fecha o funil do cluster Dia das Crianças: é o "jogo de festa" que o hub recomenda para reunir a família; link interno do hub já existe | LEDGER 31/08 ✓ (Amazon R$ 329,97 · 4,7★/15.517 · link.amazon/B0deWjzCP · ML R$ 337,33 · meli.la/1rT9qWx) · imagem de capa já no WP Media ✓ · screenshots oficiais via assets.nintendo.com (ID da loja a coletar) · thumb/hero via `tools/gerar_thumb_hero.py` |
-| **23/09 (qua)** | `/retro-game-stick-lite-4k-review-2026/` — "Retro Game Stick Lite 4K Vale a Pena? Review Honesto" | REVIEW (5º e último item do hub — "com ressalva") | Última peça do cluster; ângulo de review crítico de marca genérica diferencia o site (ninguém faz review honesto de stick retrô); cauda longa "console retrô barato" | LEDGER 31/08 ✓ (Amazon R$ 132,90 · 3,8★/82 · link.amazon/B0cwmQ4PU · ML R$ 109 · meli.la/19UvVAb) · SEM imagem no WP Media — buscar fotos do anúncio/loja e validar por visão antes |
+| **21/09 (seg)** | `/mario-party-superstars-review-2026/` — "Mario Party Superstars Vale a Pena em 2026?" | REVIEW — **AGENDADO 21/09/2026 08:00 (confirmado no WP, post 5127)** · 4.110 palavras · nota 8,8 · checker 0 erros · 3 screenshots oficiais Nintendo (store/software/switch/70010000042934, validados por visão; key art com logo rejeitada) · thumb/hero Pillow (destaque 5122) · dicas de jogabilidade 7 tópicos · hub atualizado com o link |
+| **23/09 (qua)** | `/retro-game-stick-lite-4k-review-2026/` — "Retro Game Stick Lite 4K Vale a Pena? Review Honesto" | REVIEW — **AGENDADO 23/09/2026 08:00 (confirmado no WP, post 5131)** · 2.864+ palavras · nota 6,6 ("bom com ressalvas" — mais baixa do cluster, intencional) · checker 0 erros · imagens: arte do fabricante da biblioteca WP (id 5078) + thumb/hero Pillow com **cartão arredondado** (recorte impossível: curva neon entrelaçada no kit) · destaque 5128 · hub atualizado com o link |
 | **25/09 (sex)** | `/apple-tv-4k/` — RE-ANGLE (atualização de artigo existente, não novo) | REVIEW existente — P0 URGENTE | Único P0 aberto: preço oficial subiu (jun/26) e nova geração é iminente (set/out/26) — artigo desatualizado queima autoridade e comissões; re-angle "esperar a nova geração ou comprar agora?" captura a dúvida real de busca | Recaptura de preço/estoque na execução (curadoria-mercado) · checar anúncio de nova geração da Apple até a data · manter URL/canonical · Régua v2.0 se houver nota |
 
 Sequência de produção por artigo (padrão da casa): curadoria-mercado
@@ -302,3 +302,10 @@ Alternativas na manga (se algum slot furar):
 - `/melhor-fone-bluetooth-ate-500-reais-2026/` (P2, LISTA) — evergreen, pico em Dia das Crianças também.
 - `/galaxy-watch7-44mm-vale-a-pena/` (P1, REVIEW saúde).
 - `/guia-presentes-dia-das-criancas-2026/` está CANCELADO — não reativar (hub de jogos ocupa o espaço).
+
+---
+
+## Automação de divulgação X → Telegram (criada 03/09/2026)
+
+- Cron `x-post-cluster-games` (id 430be0725f8b, a cada 30min): monitor `~/.hermes/scripts/detecta_publicacoes_cluster.py` detecta quando um post do cluster (lista em `~/.hermes/scripts/cluster-games-wp.json`) passa a `publish` no WP; a cada detecção, o agente gera o post do X (≤280 chars, PT-BR, sem dados inventados) e envia ao Telegram do editor — **o Cristiano publica no X manualmente**.
+- Detector usa a coleção pública do REST (`include=`): posts `future` não aparecem; presença = publicado. Endpoint single-post retorna 401 (WAF) — não usar.
