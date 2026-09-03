@@ -277,3 +277,28 @@ Backups dos raws originais: `articles/wp_raw_backups/`.
 Espelho do raw corrigido: `articles/wp_raw_mirror/articles/html_output/`.
 Detalhes: `articles/correcoes/RELATORIO-CORRECOES-P0-2026-08-27.md` (seção
 "Aplicação no WordPress").
+
+---
+
+# Pauta 21/09 · 23/09 · 25/09/2026 (rascunho — planejada em 03/09/2026)
+
+Janela estratégica: entre a Primavera Hot Sale (meados/set) e o pico de
+pesquisa de Dia das Crianças (12/10). Publicar nesta janela dá ~2,5 semanas
+de indexação antes do pico de intenção de compra. Todos os slots às 08:00.
+
+| Data | Artigo | Tipo | Racional | Dados necessários |
+|---|---|---|---|---|
+| **21/09 (seg)** | `/mario-party-superstars-review-2026/` — "Mario Party Superstars Vale a Pena em 2026?" | REVIEW (4º item do hub Switch) | Fecha o funil do cluster Dia das Crianças: é o "jogo de festa" que o hub recomenda para reunir a família; link interno do hub já existe | LEDGER 31/08 ✓ (Amazon R$ 329,97 · 4,7★/15.517 · link.amazon/B0deWjzCP · ML R$ 337,33 · meli.la/1rT9qWx) · imagem de capa já no WP Media ✓ · screenshots oficiais via assets.nintendo.com (ID da loja a coletar) · thumb/hero via `tools/gerar_thumb_hero.py` |
+| **23/09 (qua)** | `/retro-game-stick-lite-4k-review-2026/` — "Retro Game Stick Lite 4K Vale a Pena? Review Honesto" | REVIEW (5º e último item do hub — "com ressalva") | Última peça do cluster; ângulo de review crítico de marca genérica diferencia o site (ninguém faz review honesto de stick retrô); cauda longa "console retrô barato" | LEDGER 31/08 ✓ (Amazon R$ 132,90 · 3,8★/82 · link.amazon/B0cwmQ4PU · ML R$ 109 · meli.la/19UvVAb) · SEM imagem no WP Media — buscar fotos do anúncio/loja e validar por visão antes |
+| **25/09 (sex)** | `/apple-tv-4k/` — RE-ANGLE (atualização de artigo existente, não novo) | REVIEW existente — P0 URGENTE | Único P0 aberto: preço oficial subiu (jun/26) e nova geração é iminente (set/out/26) — artigo desatualizado queima autoridade e comissões; re-angle "esperar a nova geração ou comprar agora?" captura a dúvida real de busca | Recaptura de preço/estoque na execução (curadoria-mercado) · checar anúncio de nova geração da Apple até a data · manter URL/canonical · Régua v2.0 se houver nota |
+
+Sequência de produção por artigo (padrão da casa): curadoria-mercado
+(recaptura na véspera) → golden do tipo → dicas de jogabilidade (games) →
+imagens validadas por visão → thumb/hero Pillow → checker 0 erros →
+revisão bloco a bloco vs golden → rascunho WP + destaque → AGENDAR só
+após OK do editor.
+
+Alternativas na manga (se algum slot furar):
+- `/melhor-fone-bluetooth-ate-500-reais-2026/` (P2, LISTA) — evergreen, pico em Dia das Crianças também.
+- `/galaxy-watch7-44mm-vale-a-pena/` (P1, REVIEW saúde).
+- `/guia-presentes-dia-das-criancas-2026/` está CANCELADO — não reativar (hub de jogos ocupa o espaço).
