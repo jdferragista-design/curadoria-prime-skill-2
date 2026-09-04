@@ -99,26 +99,33 @@ def cutout_white(path, thresh=42, erode=3):
 
 def place_product(canvas, prod, cx, base_y, target_h, reflect=True):
     prod = prod.resize((int(prod.width * target_h / prod.height), target_h), Image.LANCZOS)
-    # sombra de contato suave (oval borrada, integrada ao chao)
-    sh_layer = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
-    sd = ImageDraw.Draw(sh_layer)
-    sw = int(prod.width * 0.52)
-    sd.ellipse([cx - sw, base_y - 4, cx + sw, base_y + 16], fill=(0, 0, 0, 70))
-    sh_layer = sh_layer.filter(ImageFilter.GaussianBlur(9))
-    canvas.alpha_composite(sh_layer)
     d = ImageDraw.Draw(canvas)
     px = cx - prod.width // 2
     py = base_y - prod.height
-    canvas.alpha_composite(prod, (px, py))
     if reflect:
         mir = prod.transpose(Image.FLIP_TOP_BOTTOM)
         mask = Image.new("L", mir.size, 0)
         md = ImageDraw.Draw(mask)
         fade_h = mir.height
         for y in range(fade_h):
-            md.line([(0, y), (mir.width, y)], fill=int(70 * (1 - y / fade_h)))
+            md.line([(0, y), (mir.width, y)], fill=int(55 * (1 - y / fade_h) ** 1.6))
         mir.putalpha(mask)
-        canvas.alpha_composite(mir, (px, base_y + 6))
+        canvas.alpha_composite(mir, (px, base_y + 1))
+    # sombra de contato + escurecimento do chao ao pe do produto (ancoragem)
+    sh_layer = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    sd = ImageDraw.Draw(sh_layer)
+    sw = int(prod.width * 0.62)
+    sd.ellipse([cx - sw, base_y - 2, cx + sw, base_y + 26], fill=(0, 0, 0, 150))
+    sd.ellipse([cx - int(sw * 0.7), base_y - 1, cx + int(sw * 0.7), base_y + 12], fill=(0, 0, 0, 190))
+    sh_layer = sh_layer.filter(ImageFilter.GaussianBlur(10))
+    canvas.alpha_composite(sh_layer)
+    canvas.alpha_composite(prod, (px, py))
+    # micro-sombra rente a base (AO), por cima do produto
+    ao = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    ad = ImageDraw.Draw(ao)
+    ad.rectangle([px + 2, base_y - 5, px + prod.width - 2, base_y + 2], fill=(0, 0, 0, 120))
+    ao = ao.filter(ImageFilter.GaussianBlur(5))
+    canvas.alpha_composite(ao)
 
 def gradient_text(img, text, font, cx, top_y, c1, c2, outline=(10, 10, 25), stroke=8, shadow=(0, 0, 0, 200), shadow_off=10):
     d = ImageDraw.Draw(img)
@@ -204,5 +211,30 @@ build(W_PX, H_PX, wonder, "SUPER MARIO BROS.", "WONDER — VALE A PENA?", "REVIE
       prod_h_ratio=0.44, base_ratio=0.86).save("./thumb-super-mario-bros-wonder.jpg", quality=90)
 build(970, 546, wonder, "", "", "", with_text=False, prod_h_ratio=0.62).save("./hero-super-mario-bros-wonder.jpg", quality=90)
 print("wonder geradas")
+
+# ---------- MARIO PARTY SUPERSTARS ----------
+party = cutout_white("./party-box.webp", thresh=60, erode=5)
+build(W_PX, H_PX, party, "MARIO PARTY", "SUPERSTARS — VALE A PENA?", "REVIEW COMPLETO 2026",
+      prod_h_ratio=0.44, base_ratio=0.86).save("./thumb-mario-party.jpg", quality=90)
+build(970, 546, party, "", "", "", with_text=False, prod_h_ratio=0.62).save("./hero-mario-party.jpg", quality=90)
+print("party geradas")
+
+# ---------- RETRO GAME STICK LITE 4K ----------
+# arte do fabricante com curva decorativa entrelacada: usar como cartao (sem recorte)
+def card_from_art(path, target_h, radius=28):
+    art = Image.open(path).convert("RGB")
+    art = art.resize((int(art.width * target_h / art.height), target_h), Image.LANCZOS)
+    mask = Image.new("L", art.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, art.width - 1, art.height - 1], radius=radius, fill=255)
+    rgba = art.convert("RGBA"); rgba.putalpha(mask)
+    return rgba
+
+stick = card_from_art("./stick-kit.webp", 330)
+build(W_PX, H_PX, stick, "RETRO GAME STICK", "VALE A PENA?", "REVIEW COMPLETO 2026",
+      prod_h_ratio=0.40, base_ratio=0.86).save("./thumb-retro-stick.jpg", quality=90)
+build(970, 546, stick, "", "", "", with_text=False, prod_h_ratio=0.72).save("./hero-retro-stick.jpg", quality=90)
+print("stick geradas")
+
+
 
 print("geradas imagens")
