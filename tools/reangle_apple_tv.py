@@ -4,18 +4,34 @@
 Uso: python3 reangle_apple_tv.py  (restaura do backup, aplica, ancora, valida)"""
 import re, json, shutil, sys
 
-RAW = "/tmp/apple-tv-4k-raw.html"
+RAW = "/home/ubuntu/curadoria-prime-skill-2/articles/wp_raw_backups/4537-apple-tv-4k-pre-reangle-2026-09-04.html"
 OUT = "/home/ubuntu/curadoria-prime-skill-2/articles/html_output/apple-tv-4k-reangle-2026-09.html"
 
 shutil.copy(RAW, OUT)
 c = open(OUT, encoding="utf-8").read()
 n_subs = 0
 
+def conv(s):
+    """Converte string do formato 'renderizado' para variantes do 'raw' do WP."""
+    return (s.replace("&#8220;", "\u201c").replace("&#8221;", "\u201d")
+             .replace("&#8217;", "\u2019")
+             .replace('decoding="async" ', "")
+             .replace('rel="noopener nofollow"', 'rel="noopener"'))
+
+def conv2(s):
+    """Variante com aspas retas (o editor re-salvou o post e o WP normalizou)."""
+    return (conv(s).replace("\u201c", '"').replace("\u201d", '"')
+            .replace("\u2019", "'"))
+
 def rep(old, new, count=1):
     global c, n_subs
-    assert c.count(old) == count, f"CONTAGEM {c.count(old)} != {count}: {old[:70]!r}"
-    c = c.replace(old, new)
-    n_subs += 1
+    for fn in (lambda x: x, conv, conv2):
+        o2, n2 = fn(old), fn(new)
+        if c.count(o2) == count:
+            c = c.replace(o2, n2)
+            n_subs += 1
+            return
+    raise AssertionError(f"CONTAGEM {c.count(old)} != {count}: {old[:70]!r}")
 
 # ── PARTE 1: meta, hero, badges, metodologia, prova social ──────────────
 rep("""<!-- META DESCRIÇÃO SEO (copiar no Rank Math — 143c · ~845px/920px):
@@ -51,8 +67,11 @@ rep("""Preços capturados pelo editor em <strong>10/08/2026</strong> na página 
 
 # ── PARTE 3: cards de compra (reordenados) ───────────────────────────────
 start = c.find('  <!-- Card 1 — Menor preço (ML internacional) -->')
-end = c.find('</div>\n\n\n\n<h2 class="wp-block-heading">📋 Ficha técnica oficial')
-assert start > -1 and end > start, (start, end)
+assert start > -1
+_h2ficha = c.find('<h2 class="wp-block-heading">📋 Ficha técnica oficial', start)
+assert _h2ficha > start
+end = c.rfind("<!-- wp:heading", start, _h2ficha)   # corta antes do comentario do heading
+assert end > start
 assert c[start:end].count('<!-- Card') == 3
 
 new_block = '''  <!-- Card 1 — Apple Store (recomendado) -->
@@ -91,6 +110,9 @@ new_block = '''  <!-- Card 1 — Apple Store (recomendado) -->
     </div>
     <p style="font-size: 14px; color: #666; margin: 0;">Em agosto, a Amazon era a segunda rota nacional (R$ 2.299). Hoje o anúncio oficial da 64GB (A2737) está marcado como <strong>&#8220;Não disponível. Não temos previsão de quando este produto estará disponível novamente&#8221;</strong> — e a 128GB segue o mesmo caminho. Não indicamos os anúncios de terceiros com &#8220;mais opções de compra&#8221; porque vendedor, procedência e garantia variam a cada oferta. Se você prefere a Amazon por pontos ou frete Prime, acompanhe o reabastecimento — mas não pague acima da loja oficial por ansiedade de estoque.</p>
   </div>
+
+</div>
+<!-- /wp:html -->
 
 '''
 c = c[:start] + new_block + c[end:]
@@ -176,31 +198,72 @@ rep("A Apple TV 4K transforma qualquer TV com HDMI em uma central de streaming 4
 rep('"image": "https://curadoriaprime.com/wp-content/uploads/2026/07/destaque-review-apple-tv-4k-vale-a-pena-2026.jpg",',
     '"image": "https://curadoriaprime.com/wp-content/uploads/2026/09/apple-tv-4k-agora-ou-esperar-destaque.jpg",')
 
+# ── PARTE 6c: funil reforçado para os rivais baratos (edicao do editor 04/09) ──
+FIRE = "https://curadoriaprime.com/fire-tv-stick-4k-wifi-6/"
+
+# linha do Fire na tabela comparacao -> link para o review
+rep('<td style="padding: 12px 14px; border-bottom: 1px solid #edf2f7; font-weight: 600;">Fire TV Stick 4K / 4K Max</td>',
+    f'<td style="padding: 12px 14px; border-bottom: 1px solid #edf2f7; font-weight: 600;"><a href="{FIRE}" rel="noopener" style="color:#1d4ed8;">Fire TV Stick 4K / 4K Max</a></td>')
+
+# "quem NAO e" -> stick linkado
+rep("<li>seu uso é <strong>Netflix/YouTube básico</strong> — um stick de ~R$ 350 resolve;</li>",
+    f'<li>seu uso é <strong>Netflix/YouTube básico</strong> — um <a href="{FIRE}" rel="noopener" style="color:#1d4ed8;">stick 4K de ~R$ 350</a> resolve (temos review completo);</li>')
+
+# paragrafo apos a tabela -> frase de funil
+rep("""a Apple TV é investimento em experiência, não em especificação.""",
+    f"""a Apple TV é investimento em experiência, não em especificação. Em nosso <a href="{FIRE}" rel="noopener">review do Fire TV Stick 4K com Wi-Fi 6</a> mostramos por que ele entrega os mesmos apps por um sétimo do preço.""")
+
+# escolha rapida dark -> terceiro botao (editorial, sem sponsored)
+rep("""🍎 Apple Store — R$ 2.499 + 3 meses grátis</a>
+</div>""",
+f"""🍎 Apple Store — R$ 2.499 + 3 meses grátis</a>
+<a style="background: transparent; border: 1px solid #5a5a60; color: #fff; text-decoration: none; padding: 13px 22px; border-radius: 8px; font-weight: 800; font-size: 15px;" href="{FIRE}" rel="noopener">🎯 Só quer os apps? Fire Stick 4K →</a>
+</div>""")
+
+# FAQ card resposta 1 -> link do rival (so a versao visivel; JSON-LD fica texto puro)
+rep("""quem não tem pressa deve esperar os 5 dias antes de decidir.</p>""",
+    f"""quem não tem pressa deve esperar os 5 dias antes de decidir. Para uso básico, veja nosso <a href="{FIRE}" rel="noopener">review do Fire TV Stick 4K</a>.</p>""")
+
+# aplicando hoje: dateModified = 04/09
+rep('"dateModified": "2026-09-25T08:00:00-03:00",',
+    '"dateModified": "2026-09-04T08:00:00-03:00",')
+
 # ── PARTE 7: reordenacao estrutural vs golden ───────────────────────────
 # 7a. Mover bloco "Prós e contras" para logo apos o bloco "Onde comprar"
-#     (ordem dos reviews do cluster: compra -> pros/contras -> ficha)
-i_pros_h2 = c.find('<h2 class="wp-block-heading">✅ Prós e contras da Apple TV 4K</h2>')
-assert i_pros_h2 > -1
-i_pros_end = c.find('<h2 class="wp-block-heading">🎯 Para quem a Apple TV 4K', i_pros_h2)
+#     (corte comment-aware: inclui o <!-- wp:heading --> de abertura e para
+#      antes do comentario do proximo heading)
+def block_bounds(c, h2_text):
+    i_h2 = c.find(h2_text)
+    assert i_h2 > -1, h2_text[:40]
+    i_open = c.rfind("<!-- wp:heading", 0, i_h2)
+    assert i_open > -1 and i_h2 - i_open < 200
+    return i_open, i_h2
+
+i_pros_open, i_pros_h2 = block_bounds(c, '<h2 class="wp-block-heading">✅ Prós e contras da Apple TV 4K</h2>')
+i_next_h2 = c.find('<h2 class="wp-block-heading">🎯 Para quem a Apple TV 4K', i_pros_h2)
+assert i_next_h2 > i_pros_h2
+i_pros_end = c.rfind("<!-- wp:heading", i_pros_h2, i_next_h2)
 assert i_pros_end > i_pros_h2
-pros_block = c[i_pros_h2:i_pros_end]
-c = c[:i_pros_h2] + c[i_pros_end:]
-i_ficha = c.find('<h2 class="wp-block-heading">📋 Ficha técnica oficial')
-assert i_ficha > -1
-c = c[:i_ficha] + pros_block + "\n\n\n\n" + c[i_ficha:]
+pros_block = c[i_pros_open:i_pros_end]
+c = c[:i_pros_open] + c[i_pros_end:]
+i_ficha_open, _ = block_bounds(c, '<h2 class="wp-block-heading">📋 Ficha técnica oficial')
+c = c[:i_ficha_open] + pros_block.rstrip() + "\n\n" + c[i_ficha_open:]
 
 # 7b. Mover bloco do autor (byline) para depois de "Fontes consultadas"
-i_aut = c.find('<div style="display: flex; gap: 16px; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px 20px; margin-bottom: 28px;">\n<img decoding="async" src="https://curadoriaprime.com/wp-content/uploads/2026/08/cristiano-curadoria-prime.jpg"')
+i_aut = c.find('<div style="display: flex; gap: 16px; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px 20px; margin-bottom: 28px;">')
 assert i_aut > -1, "byline nao achado"
-i_aut_end = c.find('<h2 class="wp-block-heading">📚 Fontes consultadas</h2>')
-assert i_aut_end > i_aut
-byline = c[i_aut:i_aut_end]
-c = c[:i_aut] + c[i_aut_end:]
+i_aut_open = c.rfind("<!-- wp:html", 0, i_aut)
+i_fontes_h2 = c.find('<h2 class="wp-block-heading">📚 Fontes consultadas</h2>')
+assert i_fontes_h2 > i_aut
+byline = c[i_aut_open:i_fontes_h2]
+c = c[:i_aut_open] + c[i_fontes_h2:]
 # inserir depois do bloco de fontes (div que fecha apos o paragrafo Varejo)
 i_fontes_div_end = c.find('</div>', c.find('Mercado Livre — oferta internacional (impostos não inclusos)</a>.</p>'))
 assert i_fontes_div_end > -1
-i_fontes_div_end += len('</div>')
-c = c[:i_fontes_div_end] + "\n\n\n\n" + byline.rstrip() + c[i_fontes_div_end:]
+i_fontes_close = c.find("<!-- /wp:html -->", i_fontes_div_end)
+assert i_fontes_close > -1
+i_fontes_close += len("<!-- /wp:html -->")
+c = c[:i_fontes_close] + "\n\n" + byline.rstrip() + c[i_fontes_close:]
 
 # ── PARTE 8: anchors do indice (lambda — NUNCA '\\1' em str.replace) ─────
 mapping = {
