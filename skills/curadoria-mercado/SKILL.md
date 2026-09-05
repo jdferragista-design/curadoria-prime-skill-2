@@ -163,3 +163,24 @@ oficiais mostram.
 
 Se faltar a outra loja: devolver **o link que ele deve abrir**,
 não um preço inventado.
+
+## ML atrás de login wall: sessão logada via VNC (04/09/2026)
+
+Mercado Livre bloqueia curl/headless e até browser sem login (muro
+`/gz/account-verification`). Quando a captura não sai sem login:
+
+1. Stack na VM: `Xvfb :99` + Chromium com `--user-data-dir` persistente +
+   `x11vnc` (só localhost) + `websockify`/noVNC na 6080. O editor conecta
+   via túnel SSH (`-L 6080:127.0.0.1:6080`) e faz login no ML dentro do
+   noVNC. Pitfall: senha VNC >8 chars quebra a autenticação DES — usar
+   `-nopw` com `-localhost` é mais simples e seguro atrás do túnel.
+2. O harness de browser anexa no Chromium pela porta 9222; `js()` pode
+   retornar `{}` nesse setup — usar `cdp("Runtime.evaluate", ...)` direto.
+3. A lista de busca renderiza vazia mesmo logado; abrir páginas de produto
+   por URL funciona. Verificar SEMPRE disponibilidade: preço de catálogo
+   capturado por busca pode estar morto horas depois ("indisponível —
+   escolha outra variação").
+4. Oferta internacional no ML: o preço anunciado NÃO inclui impostos de
+   importação — checar o texto "sujeito à declaração de importação" e
+   registrar a ressalva no LEDGER/artigo.
+5. Login expira; derrubar o stack VNC ao terminar a captura.
